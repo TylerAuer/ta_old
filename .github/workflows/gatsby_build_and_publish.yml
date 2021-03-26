@@ -1,6 +1,9 @@
-name: Build (no publish)
+name: Build and Publish to GH Pages
 
-on: pull_request
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,4 +15,3 @@ jobs:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
-          skip-publish: true
