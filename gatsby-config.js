@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/ta',
   plugins: [
     {
       resolve: `gatsby-plugin-emotion`,
