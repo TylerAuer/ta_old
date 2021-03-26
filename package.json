@@ -1,48 +1,36 @@
 {
-  "name": "gatsby-starter-ts",
-  "description": "A TypeScript starter for Gatsby that includes all you need to build amazing projects",
+  "name": "Tyler Auer's Portfolio",
+  "description": "Digital Portfolio and Blogs for Tyler Auer",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (https://joaopedro.dev)",
+  "author": "Tyler Auer <Tyler.Auer@gmail.com> (https://tylerauer.com)",
   "license": "MIT",
-  "keywords": [
-    "gatsby",
-    "starter",
-    "typescript"
-  ],
+  "keywords": [],
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "type-check": "tsc",
-    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "postinstall": "husky install"
-  },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "gatsby": "3.1.1",
+    "gatsby-plugin-emotion": "^6.1.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "tsconfig-paths-webpack-plugin": "3.5.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "12.0.1",
-    "@commitlint/config-conventional": "12.0.1",
     "@types/node": "14.14.35",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.2",
     "@typescript-eslint/eslint-plugin": "4.18.0",
     "@typescript-eslint/parser": "4.18.0",
     "babel-plugin-root-import": "6.6.0",
-    "commitizen": "4.2.3",
-    "cz-conventional-changelog": "3.3.0",
     "eslint": "7.22.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.1.0",
@@ -52,14 +40,7 @@
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "5.2.0",
-    "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "typescript": "4.2.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
   }
 }
