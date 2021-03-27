@@ -3,7 +3,7 @@ name: Build (no publish)
 on: pull_request
 
 jobs:
-  build:
+  build-no-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
