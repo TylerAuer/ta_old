@@ -23,6 +23,8 @@ const globalStyles = css`
     line-height: 1.6;
     margin: 0;
     color: ${colors['grey-dark']};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,

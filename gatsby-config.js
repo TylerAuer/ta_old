@@ -1,6 +1,14 @@
 module.exports = {
   pathPrefix: '/ta',
   plugins: [
+    { resolve: `gatsby-transformer-remark`, options: { footnotes: true } },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
