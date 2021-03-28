@@ -11,10 +11,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm run test:cypres:ci
+          build: npm run test:cypres:ci
           record: true
           wait-on: http://localhost:8080
-          # start: npm run test:cypress:ci
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Allows Cypress accurately ID branch, run vs re-run, etc.
