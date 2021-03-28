@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-export enum Widths {
+export enum WIDTHS {
   bleed = '100%',
   wide = '1000px',
   standard = '800px',
@@ -14,12 +14,12 @@ export enum Widths {
 }
 
 interface Props {
-  width?: Widths;
+  width?: WIDTHS;
 }
 
 export const SetWidth: React.FC<Props> = ({
   children,
-  width = Widths.standard,
+  width = WIDTHS.standard,
 }) => (
   <div
     css={css`
