@@ -1,7 +1,18 @@
 module.exports = {
+  siteMetadata: {
+    title: `Tyler Auer Portfolio`,
+    author: `Tyler Auer`,
+    description: `A home base for everything Tyler, for better or for worse.`,
+    siteUrl: `https://tylerauer.com/`,
+    social: {
+      twitter: `tylerauer`,
+    },
+  },
   pathPrefix: '/ta',
   plugins: [
-    { resolve: `gatsby-transformer-remark`, options: { footnotes: true } },
+    /**
+     * Makes posts directory available to the Data Layer
+     */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -9,6 +20,16 @@ module.exports = {
         path: `${__dirname}/src/posts/`,
       },
     },
+    /**
+     * Converts .mdx files into html (and handles inline react components)
+     */
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {},
+    },
+    /**
+     * Adds support for @emotion CSS in JS
+     */
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
@@ -20,6 +41,9 @@ module.exports = {
         cssPropOptimization: true,
       },
     },
+    /**
+     * Import Google fonts for the site
+     */
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
