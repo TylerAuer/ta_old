@@ -12,7 +12,6 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run test:cypress:ci
-          wait-on: http://localhost:8000
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
