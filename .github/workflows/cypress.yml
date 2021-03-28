@@ -13,7 +13,7 @@ jobs:
         with:
           build: npm run test:cypres:ci
           record: true
-          wait-on: http://localhost:8080
+          wait-on: http://localhost:8000
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Allows Cypress accurately ID branch, run vs re-run, etc.
