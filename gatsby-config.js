@@ -1,15 +1,47 @@
 module.exports = {
+  siteMetadata: {
+    title: `Tyler Auer Portfolio`,
+    author: `Tyler Auer`,
+    description: `A home base for everything Tyler, for better or for worse.`,
+    siteUrl: `https://tylerauer.com/`,
+    social: {
+      twitter: `tylerauer`,
+    },
+  },
   pathPrefix: '/ta',
   plugins: [
-    { resolve: `gatsby-transformer-remark`, options: { footnotes: true } },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `code`,
+    //     path: `${__dirname}/src/posts/code`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
+        name: `adventure`,
+        path: `${__dirname}/src/posts/adventure`,
       },
     },
     {
+      // Converts .mdx files into html (and handles inline react components)
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        // defaultLayouts: {
+        // code: require.resolve('./src/templates/CodePost.tsx'),
+        // adventure: require.resolve('./src/templates/AdventurePost.tsx'),
+        // },
+      },
+    },
+    // {
+    //   resolve: 'gatsby-plugin-page-creator',
+    //   options: {
+    //     path: `${__dirname}/src/posts`,
+    //   },
+    // },
+    {
+      // Adds support for @emotion CSS in JS
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
@@ -21,6 +53,7 @@ module.exports = {
       },
     },
     {
+      // Import Google fonts for the site
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
