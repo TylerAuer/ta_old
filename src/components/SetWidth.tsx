@@ -2,15 +2,13 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 export enum WIDTHS {
-  bleed = '100%',
-  wide = '1000px',
-  standard = '800px',
-  narrow = '600px',
-  half = '400px',
-  quarter = '200px',
-  three_quarters = '600px',
-  third = '266.6px',
-  two_thirds = '533.2px',
+  standard = 800,
+  narrow = 600,
+  half = 400,
+  quarter = 200,
+  three_quarters = 600,
+  third = 266.6,
+  two_thirds = 533.2,
 }
 
 interface Props {
@@ -23,7 +21,9 @@ export const SetWidth: React.FC<Props> = ({
 }) => (
   <div
     css={css`
-      width: ${width};
+      box-sizing: content-box;
+      width: ${width}px;
+      padding-right: ${WIDTHS.standard - width}px;
       margin: 0 auto;
     `}
   >
