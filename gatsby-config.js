@@ -10,38 +10,27 @@ module.exports = {
   },
   pathPrefix: '/ta',
   plugins: [
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `code`,
-    //     path: `${__dirname}/src/posts/code`,
-    //   },
-    // },
+    /**
+     * Makes posts directory available to the Data Layer
+     */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `adventure`,
-        path: `${__dirname}/src/posts/adventure`,
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
       },
     },
+    /**
+     * Converts .mdx files into html (and handles inline react components)
+     */
     {
-      // Converts .mdx files into html (and handles inline react components)
       resolve: `gatsby-plugin-mdx`,
-      options: {
-        // defaultLayouts: {
-        // code: require.resolve('./src/templates/CodePost.tsx'),
-        // adventure: require.resolve('./src/templates/AdventurePost.tsx'),
-        // },
-      },
+      options: {},
     },
-    // {
-    //   resolve: 'gatsby-plugin-page-creator',
-    //   options: {
-    //     path: `${__dirname}/src/posts`,
-    //   },
-    // },
+    /**
+     * Adds support for @emotion CSS in JS
+     */
     {
-      // Adds support for @emotion CSS in JS
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
@@ -52,8 +41,10 @@ module.exports = {
         cssPropOptimization: true,
       },
     },
+    /**
+     * Import Google fonts for the site
+     */
     {
-      // Import Google fonts for the site
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
