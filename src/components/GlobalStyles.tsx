@@ -10,7 +10,12 @@ const globalStyles = css`
     --color-page-bg: white;
 
     --color-text-body: #434343;
-    --color-h1-and-h2: #222;
+    --color-h1: #222;
+    --color-h2: #222;
+    --color-h3: #da4167;
+    --color-h4: #222;
+    --color-h5: #da4167;
+    --color-h6: #222;
     --color-h2-border: #222;
     --color-h3-h4-h5-h6: #da4167;
 
@@ -57,22 +62,35 @@ const globalStyles = css`
     line-height: 1.4;
   }
 
-  h1,
-  h2 {
-    color: var(--color-h1-and-h2);
-    margin: ${SPACING.xl} auto ${SPACING.sm} auto;
+  h1 {
+    color: var(--color-h1);
+    padding: ${SPACING.xl} auto ${SPACING.md} auto;
   }
 
   h2 {
+    color: var(--color-h2);
+    padding: ${SPACING.xl} auto ${SPACING.md} auto;
     border-bottom: 3px solid var(--color-h2-border);
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--color-h3-h4-h5-h6);
-    margin: ${SPACING.lg} auto ${SPACING.xs} auto;
+  h3 {
+    color: var(--color-h3);
+    padding-top: ${SPACING.lg};
+    padding-bottom: ${SPACING.sm};
+  }
+
+  h4 {
+    color: var(--color-h4);
+    font-style: italic;
+    padding-top: ${SPACING.lg};
+    padding-bottom: ${SPACING.sm};
+  }
+
+  h5 {
+    color: var(--color-h5);
+    font-style: italic;
+    padding-top: ${SPACING.lg};
+    padding-bottom: ${SPACING.sm};
   }
 
   a {
