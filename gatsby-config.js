@@ -48,8 +48,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Nunito`,
-          'JetBrains Mono',
+          `Nunito\:400,400i,700,700i,900,900i`,
+          'JetBrains Mono:400,400i,700,700i',
           // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
         display: 'swap',

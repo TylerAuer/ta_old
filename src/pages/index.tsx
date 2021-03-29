@@ -1,23 +1,24 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
+import { Link, PageProps } from 'gatsby';
 
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { SetWidth } from '@/components/SetWidth';
-import { Header } from '@/components/Nav';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 const Home: React.FC<PageProps> = () => (
   <GlobalStyles>
     <Header />
     <main>
-      <section>
+      <section id="about">
         <SetWidth>
           <h1>Tyler Auer</h1>
           <div>Teacher turned software developer</div>
 
           <p>
-            After teaching math for twelve years, I taught myself to code. At{' '}
-            <a href="nextdoor.com">Nextdoor</a>, I build systems to help
-            developers move fast and effectively. At home, I enjoy creating
+            After teaching math for twelve years, I taught myself to code. Now I
+            build systems to help developers at{' '}
+            <a href="nextdoor.com">Nextdoor</a> move fast. I also enjoy creating
             puzzles, games, and interactives.
           </p>
           <div>Two Thirds Truth and One Third Lies About Me</div>
@@ -28,13 +29,13 @@ const Home: React.FC<PageProps> = () => (
           </ul>
         </SetWidth>
       </section>
-      <section>
+      <section id="projects">
         <SetWidth>
-          <h2>Favorite Projects</h2>
+          <h2>Projects</h2>
           <h3>Bad Calculators</h3>
           <p>
-            A collection of puzzles built with pitifully, painfully, unhelpful,
-            bad calculators.
+            A collection of puzzles built from painfully bad calculators with
+            150k puzzle attempts by users.
           </p>
           <h3>Fruit Matrix</h3>
           <p>
@@ -44,25 +45,36 @@ const Home: React.FC<PageProps> = () => (
           </p>
           <h3>Super Stupid Props Charity Game</h3>
           <p>
-            A Super Bowl props game where the winner selects a charity to donate
-            a community pot. In 2021 we donated $1,568 to the Pancreatic Cancer
-            Action Network.
+            A Super Bowl props game where players optionally contribute to a
+            community pot and the winner selects a charity to donate the pot to.
+            In 2021 we donated $1,568 to the Pancreatic Cancer Action Network!{' '}
+            <Link to="/">Sign up</Link> to play next year; donations optional.
           </p>
         </SetWidth>
       </section>
-      <section>
+      <section id="blogs">
         <SetWidth>
-          <h2>Blogging</h2>
-          <h3>Code</h3>
-          <h4>Linked Lists</h4>
-          <p>Are they lists, really?</p>
-          <h4>What the heck is a $PATH</h4>
-          <p>I'm not sure I know.</p>
-          <h4>On changing careers</h4>
-          <p>If you want to, you should (with caveats).</p>
+          <h2>Blogs</h2>
+          <article>
+            <h3>Code</h3>
+            <h4>Linked Lists</h4>
+            <p>Are they lists, really?</p>
+            <h4>What the heck is a $PATH</h4>
+            <p>I'm not sure I know.</p>
+            <h4>On changing careers</h4>
+            <p>If you want to, you should (with caveats).</p>
+          </article>
+          <article>
+            <h3>Adventure</h3>
+            <h4>Cody Peak Scramble</h4>
+            <p>More fun when the tram is running.</p>
+            <h4>Cody Peak Scramble</h4>
+            <p>More fun when the tram is running.</p>
+          </article>
         </SetWidth>
       </section>
     </main>
+    <Footer />
   </GlobalStyles>
 );
 

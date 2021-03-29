@@ -66,14 +66,11 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMdx.edges;
 
     posts.forEach((post) => {
-      const templates = {
-        adventure: path.resolve(`./src/templates/AdventureTemplate.tsx`),
-        code: path.resolve(`./src/templates/CodeTemplate.tsx`),
-      };
+      const template = path.resolve('./src/templates/post.tsx');
 
       createPage({
         path: post.node.fields.path,
-        component: templates[post.node.fields.blog],
+        component: template,
         context: {
           slug: post.node.fields.slug,
         },
