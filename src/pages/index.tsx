@@ -8,6 +8,7 @@ import { SetWidth } from '@/components/SetWidth';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Chip } from '@/components/Chip';
+import { Flex, FlexJustification } from '@/components/Flex';
 
 const FeaturedPost = ({ post }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
@@ -102,7 +103,10 @@ const Home: React.FC<PageProps> = ({ data }) => {
           <SetWidth>
             <h2>Writing</h2>
             <section>
-              <h3>Code Blog</h3>
+              <Flex flex={FlexJustification.split}>
+                <h3>Code Blog</h3>
+                <Chip to="/code">See more posts</Chip>
+              </Flex>
               <ol>
                 {featuredCodePosts.map((post) => (
                   <FeaturedPost post={post} />
@@ -110,7 +114,9 @@ const Home: React.FC<PageProps> = ({ data }) => {
               </ol>
             </section>
             <section>
-              <h3>Adventure Blog</h3>
+              <h3>
+                Adventure Blog <Chip to="/adventure">See more posts</Chip>
+              </h3>
               <ol>
                 {featuredAdventurePosts.map((post) => (
                   <FeaturedPost post={post} />
