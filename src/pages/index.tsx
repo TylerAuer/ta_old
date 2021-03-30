@@ -1,24 +1,49 @@
 import React from 'react';
 import { graphql, Link, PageProps } from 'gatsby';
+import { css } from '@emotion/react';
 
 import { GlobalStyles } from '@/components/GlobalStyles';
+import { SPACING } from '@/constants';
 import { SetWidth } from '@/components/SetWidth';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Chip } from '@/components/Chip';
 
 const FeaturedPost = ({ post }) => {
-  const { date_created, title, subtitle, category, tags, location } = post.frontmatter;
-  const { blog } = post.fields;
+  const { title, subtitle, category, tags, location } = post.frontmatter;
+  const { blog, path } = post.fields;
+
+  const titleStyle = css`
+    font-style: normal;
+    font-weight: bold;
+    margin: ${SPACING.sm} 0;
+    line-height: 1.2;
+    padding: 0;
+  `;
+
+  const subtitleStyle = css`
+    font-size: 1.6rem;
+    font-style: italic;
+  `;
 
   return (
     <article>
-      <h4>{title}</h4>
-      <div>{subtitle}</div>
-      {location && <div>{location}</div>}
-      {tags.map((tag) => (
+      <h4 css={titleStyle}>
+        <Link to={path}>{title}</Link>
+      </h4>
+      <div css={subtitleStyle}>
+        {subtitle}
+        {location && (
+          <>
+            {' - '}
+            {location}
+          </>
+        )}
+      </div>
+
+      {/* {tags.map((tag) => (
         <Chip to={`/${blog}/tag/${tag.toLowerCase()}`}>{tag}</Chip>
-      ))}
+      ))} */}
     </article>
   );
 };
@@ -78,15 +103,19 @@ const Home: React.FC<PageProps> = ({ data }) => {
             <h2>Writing</h2>
             <section>
               <h3>Code Blog</h3>
-              {featuredCodePosts.map((post) => (
-                <FeaturedPost post={post} />
-              ))}
+              <ol>
+                {featuredCodePosts.map((post) => (
+                  <FeaturedPost post={post} />
+                ))}
+              </ol>
             </section>
             <section>
               <h3>Adventure Blog</h3>
-              {featuredAdventurePosts.map((post) => (
-                <FeaturedPost post={post} />
-              ))}
+              <ol>
+                {featuredAdventurePosts.map((post) => (
+                  <FeaturedPost post={post} />
+                ))}
+              </ol>
             </section>
           </SetWidth>
         </section>
