@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, Link, PageProps } from 'gatsby';
 
 export default function adventure({ data }) {
-  console.log(data);
   return (
     <main>
       <h2>Adventure Blog</h2>
