@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { SPACING } from '@/styles';
+import { SPACING } from '@/constants';
 
 interface Props {
   vPadding?: SPACING;

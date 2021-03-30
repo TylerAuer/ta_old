@@ -1,6 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/react';
-import { SPACING } from '@/styles/spacing';
+import { SPACING } from '@/constants';
 
 const globalStyles = css`
   :root {
@@ -47,9 +47,22 @@ const globalStyles = css`
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.8;
-    margin: 0;
+    max-width: 95%;
+    margin: 0 auto;
     color: var(--color-text-body);
     background-color: var(--color-page-bg);
+  }
+
+  a {
+    color: var(--color-a);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 3px solid var(--color-a-underline);
+
+    &:hover {
+      color: var(--color-a-hover);
+      border-bottom-color: var(--color-a-underline-hover);
+    }
   }
 
   h1,
@@ -91,18 +104,6 @@ const globalStyles = css`
     font-style: italic;
     padding-top: ${SPACING.lg};
     padding-bottom: ${SPACING.sm};
-  }
-
-  a {
-    color: var(--color-a);
-    font-weight: 800;
-    text-decoration: none;
-    border-bottom: 3px solid var(--color-a-underline);
-
-    &:hover {
-      color: var(--color-a-hover);
-      border-bottom-color: var(--color-a-underline-hover);
-    }
   }
 `;
 

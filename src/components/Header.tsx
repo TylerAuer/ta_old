@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 import { SetWidth } from '@/components/SetWidth';
 import { Flex, FlexJustification } from '@/components/Flex';
-import { SPACING } from '@/styles';
+import { SPACING } from '@/constants';
 import { Padding } from './Padding';
 
 const Left: React.FC = () => (

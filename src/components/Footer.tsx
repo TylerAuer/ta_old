@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 import { SetWidth, WIDTHS } from '@/components/SetWidth';
 import { Flex, FlexJustification } from '@/components/Flex';
-import { SPACING } from '@/styles';
+import { SPACING } from '@/constants';
 import { Padding } from './Padding';
 
 export const Footer: React.FC = () => {

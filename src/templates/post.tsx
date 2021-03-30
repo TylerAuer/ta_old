@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { SetWidth, WIDTHS } from '@/components/SetWidth';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
-import { SPACING } from '@/styles';
+import { SPACING } from '@/constants';
 import { Chip } from '@/components/Chip';
 
 const TitleAndSubtitle = ({ title, subtitle }) => {
@@ -68,7 +68,7 @@ const PostMeta = ({ blog, category, date, update }) => {
   const keyStyle = css`
     font-weight: bold;
     color: #da4167;
-    padding-right: 0.5rem;
+    padding-right: 0.2rem;
 
     &:after {
       content: ':';

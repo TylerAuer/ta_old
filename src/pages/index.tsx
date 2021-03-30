@@ -54,7 +54,7 @@ const Home: React.FC<PageProps> = () => (
       </section>
       <section id="blogs">
         <SetWidth>
-          <h2>Blogs</h2>
+          <h2>Writing</h2>
           <article>
             <h3>Code</h3>
             <h4>Linked Lists</h4>
