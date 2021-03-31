@@ -19,7 +19,7 @@ const TitleAndSubtitle = ({ title, subtitle }) => {
       <h1
         id="title"
         css={css`
-          color: #da4167;
+          color: var(--color-high-punch);
         `}
       >
         {title}
@@ -67,7 +67,7 @@ const PostMeta = ({ blog, category, date, update }) => {
 
   const keyStyle = css`
     font-weight: bold;
-    color: #da4167;
+    color: var(--color-high-punch);
     padding-right: 0.2rem;
 
     &:after {
@@ -80,12 +80,12 @@ const PostMeta = ({ blog, category, date, update }) => {
     & > a {
       border: none;
       font-weight: inherit;
-      color: #da4167;
+      color: var(--color-high-punch);
       padding: 0 2px;
 
       &:hover {
         border: inherit;
-        border-bottom: 3px solid #da4167;
+        border-bottom: 3px solid var(--color-high-punch);
       }
     }
   `;

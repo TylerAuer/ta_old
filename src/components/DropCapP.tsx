@@ -32,8 +32,8 @@ export const DropCapP: React.FC = ({ children }) => {
             float: left;
             font-size: 5.7rem;
             font-family: var(--font-special);
-            border-left: 3px solid #da4167;
-            border-top: 3px solid #da4167;
+            border-left: 3px solid var(--color-punch);
+            border-top: 3px solid var(--color-punch);
             margin-right: 1rem;
             line-height: 1;
           `}
