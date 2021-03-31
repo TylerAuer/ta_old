@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/react';
-import { SetWidth } from '@/components/SetWidth';
+import { Box } from '@/components/Box';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { SPACING } from '@/constants';
-import { Padding } from './Padding';
 
 const Left: React.FC = () => (
   <Link to="/">
@@ -32,14 +31,12 @@ const Right: React.FC = () => {
 export const Header: React.FC = () => {
   return (
     <header>
-      <Padding vPadding={SPACING.xxl}>
-        <SetWidth>
-          <Flex flex={FlexJustification.split}>
-            <Left />
-            <Right />
-          </Flex>
-        </SetWidth>
-      </Padding>
+      <Box vMargin={SPACING.xxl}>
+        <Flex flex={FlexJustification.split}>
+          <Left />
+          <Right />
+        </Flex>
+      </Box>
     </header>
   );
 };

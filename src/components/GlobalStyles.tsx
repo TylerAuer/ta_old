@@ -10,6 +10,7 @@ const globalStyles = css`
     --color-page-bg: white;
 
     --color-punch: #da4167;
+    --color-punch-dark: #ba2348;
     --color-punch-dim: #d8768f;
 
     --color-alt: #4361ee;
@@ -39,22 +40,28 @@ const globalStyles = css`
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.8;
-    max-width: 95%;
     margin: 0 auto;
     color: var(--color-text-body);
     background-color: var(--color-page-bg);
   }
 
   a {
-    color: var(--color-a);
-    font-weight: 600;
+    color: var(--color-text-body);
     text-decoration: none;
     border-bottom: 3px solid var(--color-punch-dim);
+    white-space: nowrap;
 
     &:hover {
-      color: var(--color-a-hover);
+      color: var(--color-punch-dark);
       border-bottom-color: var(--color-punch);
     }
+  }
+
+  p {
+    box-sizing: content-box;
+    margin: ${SPACING.lg} auto;
+    padding-right: 200px;
+    width: 600px;
   }
 
   h1,
@@ -65,6 +72,8 @@ const globalStyles = css`
   h6 {
     font-family: var(--font-special);
     line-height: 1.3;
+    margin: ${SPACING.xl} auto;
+    width: 800px;
   }
 
   h1 {

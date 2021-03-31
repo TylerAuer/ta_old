@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SetWidth, WIDTHS } from '@/components/SetWidth';
+import { Box } from '@/components/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
 import { SPACING } from '@/constants';
@@ -10,20 +10,9 @@ import { Chip } from '@/components/Chip';
 
 const TitleAndSubtitle = ({ title, subtitle }) => {
   return (
-    <div
-      id="title-and-subtitle"
-      css={css`
-        margin: ${SPACING.lg} 0;
-      `}
-    >
-      <h1
-        id="title"
-        css={css`
-          color: var(--color-high-punch);
-        `}
-      >
-        {title}
-      </h1>
+    <Box id="title-and-subtitle" vMargin={SPACING.lg}>
+      <h1 id="title">{title}</h1>
+
       {subtitle && (
         <div
           id="subtitle"
@@ -31,12 +20,13 @@ const TitleAndSubtitle = ({ title, subtitle }) => {
             color: #242424;
             font-family: var(--font-special);
             font-weight: bold;
+            margin: ${SPACING.lg} inherit;
           `}
         >
           {subtitle}
         </div>
       )}
-    </div>
+    </Box>
   );
 };
 
@@ -44,30 +34,24 @@ const Tags = ({ tags, blog }) => {
   if (!tags || !tags?.length) return null;
 
   return (
-    <div
-      id="post-tags"
-      css={css`
-        margin: ${SPACING.lg} 0;
-      `}
-    >
+    <Box id="post-tags" vMargin={SPACING.lg}>
       {tags.map((tag: string) => {
         const to = `/${blog}/tag/${tag.toLowerCase()}`;
         return <Chip to={to}>{tag}</Chip>;
       })}
-    </div>
+    </Box>
   );
 };
 
 const PostMeta = ({ blog, category, date, update }) => {
   const container = css`
-    margin: ${SPACING.xl} 0;
     font-size: 1.4rem;
     font-family: var(--font-special);
   `;
 
   const keyStyle = css`
     font-weight: bold;
-    color: var(--color-high-punch);
+    color: var(--color-punch);
     padding-right: 0.2rem;
 
     &:after {
@@ -91,7 +75,7 @@ const PostMeta = ({ blog, category, date, update }) => {
   `;
 
   return (
-    <div css={container} id="post-meta">
+    <Box vMargin={SPACING.xl} sx={container} id="post-meta">
       <div>
         <span css={keyStyle}>By</span> Tyler Auer
       </div>
@@ -102,7 +86,7 @@ const PostMeta = ({ blog, category, date, update }) => {
       <div>
         <span css={keyStyle}>On</span> {date}
       </div>
-    </div>
+    </Box>
   );
 };
 
@@ -116,21 +100,17 @@ export default ({ data }) => {
       <Header />
       <main>
         <article>
-          <SetWidth>
-            <header>
-              <TitleAndSubtitle title={title} subtitle={subtitle} />
-              <Tags blog={blog} tags={tags} />
-              <PostMeta
-                blog={blog}
-                category={category}
-                date={date_created}
-                update={date_last_updated}
-              />
-            </header>
-          </SetWidth>
-          <SetWidth width={WIDTHS.narrow}>
-            <MDXRenderer>{post.body}</MDXRenderer>
-          </SetWidth>
+          <header>
+            <TitleAndSubtitle title={title} subtitle={subtitle} />
+            <Tags blog={blog} tags={tags} />
+            <PostMeta
+              blog={blog}
+              category={category}
+              date={date_created}
+              update={date_last_updated}
+            />
+          </header>
+          <MDXRenderer>{post.body}</MDXRenderer>
         </article>
       </main>
       <Footer />
