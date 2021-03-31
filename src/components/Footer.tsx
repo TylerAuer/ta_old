@@ -8,7 +8,7 @@ import { SPACING } from '@/constants';
 export const Footer: React.FC = () => {
   return (
     <header>
-      <Box vMargin={SPACING.xxl}>
+      <Box vMargin={SPACING.xxxl}>
         <nav>
           <Flex flex={FlexJustification.even}>
             <div>Twitter</div>

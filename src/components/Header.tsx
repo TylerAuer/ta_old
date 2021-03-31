@@ -31,7 +31,7 @@ const Right: React.FC = () => {
 export const Header: React.FC = () => {
   return (
     <header>
-      <Box vMargin={SPACING.xxl}>
+      <Box vMargin={SPACING.xxxl}>
         <Flex flex={FlexJustification.split}>
           <Left />
           <Right />

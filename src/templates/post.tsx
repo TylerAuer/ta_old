@@ -64,12 +64,13 @@ const PostMeta = ({ blog, category, date, update }) => {
     & > a {
       border: none;
       font-weight: inherit;
-      color: var(--color-high-punch);
+      color: var(--color-punch);
       padding: 0 2px;
 
       &:hover {
+        color: var(--color-punch-dark);
         border: inherit;
-        border-bottom: 3px solid var(--color-high-punch);
+        border-bottom: 2px solid var(--color-punch);
       }
     }
   `;

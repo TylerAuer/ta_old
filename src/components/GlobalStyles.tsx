@@ -43,6 +43,7 @@ const globalStyles = css`
     margin: 0 auto;
     color: var(--color-text-body);
     background-color: var(--color-page-bg);
+    max-width: 95%;
   }
 
   a {
@@ -74,6 +75,7 @@ const globalStyles = css`
     line-height: 1.3;
     margin: ${SPACING.xl} auto;
     width: 800px;
+    max-width: 100%;
   }
 
   h1 {
