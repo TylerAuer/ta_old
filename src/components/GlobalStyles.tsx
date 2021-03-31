@@ -9,24 +9,16 @@ const globalStyles = css`
 
     --color-page-bg: white;
 
+    --color-punch: #da4167;
+    --color-punch-dim: #d8768f;
+
+    --color-alt: #4361ee;
+
     --color-text-body: #434343;
-    --color-h1: #222;
-    --color-h2: #222;
-    --color-h3: #da4167;
-    --color-h4: #222;
-    --color-h5: #da4167;
-    --color-h6: #222;
-    --color-h2-border: #222;
-    --color-h3-h4-h5-h6: #da4167;
+    --color-text-header: #222;
 
-    --color-headline: #da4167;
-
-    --color-a: #3c3c3c;
+    --color-a: #323232;
     --color-a-hover: black;
-    --color-a-underline: #d8768f;
-    --color-a-underline-hover: #da4167;
-
-    --unused: #4361ee;
   }
 
   *,
@@ -57,11 +49,11 @@ const globalStyles = css`
     color: var(--color-a);
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 3px solid var(--color-a-underline);
+    border-bottom: 3px solid var(--color-punch-dim);
 
     &:hover {
       color: var(--color-a-hover);
-      border-bottom-color: var(--color-a-underline-hover);
+      border-bottom-color: var(--color-punch);
     }
   }
 
@@ -72,38 +64,31 @@ const globalStyles = css`
   h5,
   h6 {
     font-family: var(--font-special);
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
   h1 {
-    color: var(--color-h1);
-    padding: ${SPACING.xl} auto ${SPACING.md} auto;
+    color: var(--color-punch);
+    font-size: 3.6rem;
   }
 
   h2 {
-    color: var(--color-h2);
-    padding: ${SPACING.xl} auto ${SPACING.md} auto;
-    border-bottom: 3px solid var(--color-h2-border);
+    color: var(--color-text-header);
+    border-bottom: 3px solid var(--color-punch);
   }
 
   h3 {
-    color: var(--color-h3);
-    padding-top: ${SPACING.lg};
-    padding-bottom: ${SPACING.sm};
+    color: var(--color-punch);
   }
 
   h4 {
-    color: var(--color-h4);
+    color: var(--color-text-header);
     font-style: italic;
-    padding-top: ${SPACING.lg};
-    padding-bottom: ${SPACING.sm};
   }
 
   h5 {
-    color: var(--color-h5);
+    color: var(--color-punch);
     font-style: italic;
-    padding-top: ${SPACING.lg};
-    padding-bottom: ${SPACING.sm};
   }
 `;
 

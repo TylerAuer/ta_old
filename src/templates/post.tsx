@@ -20,8 +20,6 @@ const TitleAndSubtitle = ({ title, subtitle }) => {
         id="title"
         css={css`
           color: #da4167;
-          font-size: 3rem;
-          margin-bottom: 0;
         `}
       >
         {title}
@@ -31,6 +29,8 @@ const TitleAndSubtitle = ({ title, subtitle }) => {
           id="subtitle"
           css={css`
             color: #242424;
+            font-family: var(--font-special);
+            font-weight: bold;
           `}
         >
           {subtitle}
@@ -97,9 +97,7 @@ const PostMeta = ({ blog, category, date, update }) => {
       </div>
       <div css={url}>
         <span css={keyStyle}>In</span> /<Link to={`/${blog}`}>{blog}</Link>/
-        <Link to={`/${blog}/category/${category.toLowerCase()}`}>
-          {category.toLowerCase()}
-        </Link>
+        <Link to={`/${blog}/category/${category.toLowerCase()}`}>{category.toLowerCase()}</Link>
       </div>
       <div>
         <span css={keyStyle}>On</span> {date}
@@ -110,14 +108,7 @@ const PostMeta = ({ blog, category, date, update }) => {
 
 export default ({ data }) => {
   const post = data.mdx;
-  const {
-    title,
-    subtitle,
-    tags,
-    category,
-    date_created,
-    date_last_updated,
-  } = post.frontmatter;
+  const { title, subtitle, tags, category, date_created, date_last_updated } = post.frontmatter;
   const { blog } = post.fields;
 
   return (

@@ -10,29 +10,33 @@ import { Footer } from '@/components/Footer';
 import { Chip } from '@/components/Chip';
 import { Flex, FlexJustification } from '@/components/Flex';
 
+const blogTitleStyle = css`
+  margin: 0;
+`;
+
+const postTitleStyle = css`
+  font-style: normal;
+  font-weight: bold;
+  margin: ${SPACING.sm} 0;
+  line-height: 1.2;
+  padding: 0;
+`;
+
+const postSubtitleStyle = css`
+  font-size: 1.6rem;
+  font-style: italic;
+`;
+
 const FeaturedPost = ({ post }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
   const { blog, path } = post.fields;
 
-  const titleStyle = css`
-    font-style: normal;
-    font-weight: bold;
-    margin: ${SPACING.sm} 0;
-    line-height: 1.2;
-    padding: 0;
-  `;
-
-  const subtitleStyle = css`
-    font-size: 1.6rem;
-    font-style: italic;
-  `;
-
   return (
     <article>
-      <h4 css={titleStyle}>
+      <h4 css={postTitleStyle}>
         <Link to={path}>{title}</Link>
       </h4>
-      <div css={subtitleStyle}>
+      <div css={postSubtitleStyle}>
         {subtitle}
         {location && (
           <>
@@ -104,7 +108,7 @@ const Home: React.FC<PageProps> = ({ data }) => {
             <h2>Writing</h2>
             <section>
               <Flex flex={FlexJustification.split}>
-                <h3>Code Blog</h3>
+                <h3 css={blogTitleStyle}>Code Blog</h3>
                 <Chip to="/code">See more posts</Chip>
               </Flex>
               <ol>
@@ -114,7 +118,7 @@ const Home: React.FC<PageProps> = ({ data }) => {
               </ol>
             </section>
             <section>
-              <h3>
+              <h3 css={blogTitleStyle}>
                 Adventure Blog <Chip to="/adventure">See more posts</Chip>
               </h3>
               <ol>
