@@ -1,81 +1,186 @@
 import React from 'react';
-import { Link, PageProps } from 'gatsby';
+import { graphql, Link, PageProps } from 'gatsby';
+import { css } from '@emotion/react';
 
 import { GlobalStyles } from '@/components/GlobalStyles';
-import { SetWidth } from '@/components/SetWidth';
+import { SPACING } from '@/constants';
+import { Box } from '@/components/Box';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { Chip } from '@/components/Chip';
+import { Flex, FlexJustification } from '@/components/Flex';
 
-const Home: React.FC<PageProps> = () => (
-  <GlobalStyles>
-    <Header />
-    <main>
-      <section id="about">
-        <SetWidth>
-          <h1>Tyler Auer</h1>
-          <div>Teacher turned software developer</div>
+const blogTitleStyle = css`
+  margin: 0;
+`;
 
-          <p>
-            After teaching math for twelve years, I taught myself to code. Now I
-            build systems to help developers at{' '}
-            <a href="nextdoor.com">Nextdoor</a> move fast. I also enjoy creating
-            puzzles, games, and interactives.
-          </p>
-          <div>Two Thirds Truth and One Third Lies About Me</div>
-          <ul>
-            <li>I love bread</li>
-            <li>I own over 100 board games</li>
-            <li>Has been pushed through the ocean by dolphins</li>
-          </ul>
-        </SetWidth>
-      </section>
-      <section id="projects">
-        <SetWidth>
-          <h2>Projects</h2>
-          <h3>Bad Calculators</h3>
-          <p>
-            A collection of puzzles built from painfully bad calculators with
-            150k puzzle attempts by users.
-          </p>
-          <h3>Fruit Matrix</h3>
-          <p>
-            Rate fruit based on tastiness and ease of eating then see how your
-            ratings compare to everyone else's with detailed analytics in this
-            full-stack app inspired by XKCD and the NYTimes.
-          </p>
-          <h3>Super Stupid Props Charity Game</h3>
-          <p>
-            A Super Bowl props game where players optionally contribute to a
-            community pot and the winner selects a charity to donate the pot to.
-            In 2021 we donated $1,568 to the Pancreatic Cancer Action Network!{' '}
-            <Link to="/">Sign up</Link> to play next year; donations optional.
-          </p>
-        </SetWidth>
-      </section>
-      <section id="blogs">
-        <SetWidth>
-          <h2>Blogs</h2>
-          <article>
-            <h3>Code</h3>
-            <h4>Linked Lists</h4>
-            <p>Are they lists, really?</p>
-            <h4>What the heck is a $PATH</h4>
-            <p>I'm not sure I know.</p>
-            <h4>On changing careers</h4>
-            <p>If you want to, you should (with caveats).</p>
-          </article>
-          <article>
-            <h3>Adventure</h3>
-            <h4>Cody Peak Scramble</h4>
-            <p>More fun when the tram is running.</p>
-            <h4>Cody Peak Scramble</h4>
-            <p>More fun when the tram is running.</p>
-          </article>
-        </SetWidth>
-      </section>
-    </main>
-    <Footer />
-  </GlobalStyles>
+const NameAndBio = () => (
+  <section id="name-and-bio">
+    <h1>Tyler Auer</h1>
+    <Box
+      css={css`
+        font-family: var(--font-special);
+      `}
+    >
+      Teacher turned software developer
+    </Box>
+
+    <p>
+      After teaching math for twelve years, I taught myself to code. Now I build systems to help
+      developers at <a href="nextdoor.com">Nextdoor</a> move fast. I also enjoy creating puzzles,
+      games, and interactives.
+    </p>
+  </section>
 );
 
+const TruthAndLies = () => (
+  <section id="truths-and-lies">
+    <Box>
+      <h2>Two Thirds Truth and One Third Lies About Me</h2>
+      <ul>
+        <li>I love bread</li>
+        <li>I own over 100 board games</li>
+        <li>Has been pushed through the ocean by dolphins</li>
+      </ul>
+    </Box>
+  </section>
+);
+
+const Projects = () => (
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Bad Calculators</h3>
+    <p>
+      A collection of puzzles built from painfully bad calculators with 150k puzzle attempts by
+      users.
+    </p>
+    <h3>Fruit Matrix</h3>
+    <p>
+      Rate fruit based on tastiness and ease of eating then see how your ratings compare to everyone
+      else's with detailed analytics in this full-stack app inspired by XKCD and the NYTimes.
+    </p>
+
+    <h3>Super Stupid Props Charity Game</h3>
+
+    <p>
+      A Super Bowl props game where players optionally contribute to a community pot and the winner
+      selects a charity to donate the pot to. In 2021 we donated $1,568 to the Pancreatic Cancer
+      Action Network! <Link to="/">Sign up</Link> to play next year; donations optional.
+    </p>
+  </section>
+);
+const FeaturedPost = ({ post }) => {
+  const { title, subtitle, category, tags, location } = post.frontmatter;
+  const { blog, path } = post.fields;
+
+  const titleSubtitleContainer = css``;
+
+  const titleCss = css`
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    width: auto;
+  `;
+
+  const subtitleCss = css`
+    font-size: 1.6rem;
+    font-style: italic;
+  `;
+
+  const categoryCss = css`
+    font-family: var(--font-special);
+    color: var(--color-punch);
+    font-size: 1.6rem;
+    text-align: left;
+  `;
+
+  return (
+    <article
+      css={css`
+        margin: ${SPACING.xl} 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      `}
+    >
+      <div css={titleSubtitleContainer}>
+        <h4 css={titleCss}>{title}</h4>
+        <div css={subtitleCss}>{subtitle}</div>
+        {!!tags.length && (
+          <div>
+            {tags.map((tag) => (
+              <Chip to={`/${blog}/tag/${tag.toLowerCase()}`}>{tag}</Chip>
+            ))}
+          </div>
+        )}
+      </div>
+      <div css={categoryCss}>{category}</div>
+    </article>
+  );
+};
+
+const BlogWithFeatPosts = ({ title, posts }) => {
+  return (
+    <section id={`${title.toLowerCase()}-featured-posts`}>
+      <h3>{title}</h3>
+      <Box id="adventure-writing">
+        {posts.map((post) => (
+          <FeaturedPost key={post.fields.path} post={post} />
+        ))}
+      </Box>
+    </section>
+  );
+};
+
+const Writing = ({ posts }) => {
+  const featCodePosts = posts.filter((post) => post.fields.blog === 'code');
+  const featAdventurePosts = posts.filter((post) => post.fields.blog === 'adventure');
+
+  return (
+    <section id="Writing">
+      <h2>Writing</h2>
+      <BlogWithFeatPosts title="Code" posts={featCodePosts} />
+      <BlogWithFeatPosts title="Adventure" posts={featAdventurePosts} />
+    </section>
+  );
+};
+
+const Home: React.FC<PageProps> = ({ data }) => {
+  const posts = data.allMdx.nodes;
+  return (
+    <GlobalStyles>
+      <Header />
+      <main>
+        <NameAndBio />
+        {/* <TruthAndLies /> */}
+        <Projects />
+        <Writing posts={posts} />
+      </main>
+      <Footer />
+    </GlobalStyles>
+  );
+};
+
 export default Home;
+
+export const codeFeaturedQuery = graphql`
+  query {
+    allMdx(filter: { frontmatter: { featured: { eq: true } } }) {
+      nodes {
+        fields {
+          blog
+          path
+        }
+        frontmatter {
+          category
+          date_created(formatString: "MMMM D, YYYY")
+          featured
+          location
+          subtitle
+          tags
+          title
+        }
+      }
+    }
+  }
+`;

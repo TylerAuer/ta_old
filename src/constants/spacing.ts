@@ -6,6 +6,7 @@ export enum SPACING {
   md = '1rem',
   lg = '1.5rem',
   xl = '3rem',
-  xxl = '5rem',
+  xxl = '4rem',
+  xxxl = '5rem',
   standard = '.75rem',
 }
