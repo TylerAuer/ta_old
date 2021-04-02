@@ -13,7 +13,7 @@
     "clean": "gatsby clean",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "type-check": "tsc",
-    "develop": "gatsby develop",
+    "develop": "npm run clean && npm run start",
     "cy:open": "cypress open",
     "cy:run": "cypress run --record",
     "test:cypress": "start-server-and-test develop http://localhost:8000 cy:open",
