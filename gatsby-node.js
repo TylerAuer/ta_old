@@ -1,6 +1,8 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { buildPostPages } = require('./utlis/build_post_pages');
+const { buildBlogPages } = require('./utlis/build_blog_pages');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -34,47 +36,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  return graphql(
-    `
-      {
-        allMdx {
-          edges {
-            node {
-              id
-              fields {
-                path
-                blog
-              }
-              frontmatter {
-                title
-              }
-              body
-            }
-          }
-        }
-      }
-    `,
-  ).then((result) => {
-    if (result.errors) {
-      throw result.errors;
-    }
-
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges;
-
-    posts.forEach((post) => {
-      const template = path.resolve('./src/templates/post.tsx');
-
-      createPage({
-        path: post.node.fields.path,
-        component: template,
-        context: {
-          slug: post.node.fields.slug,
-        },
-      });
-    });
-  });
+  await buildPostPages(graphql, createPage);
+  await buildBlogPages(graphql, createPage);
 };
