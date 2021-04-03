@@ -12,7 +12,7 @@ export const Chip: React.FC<Props> = ({ children, to, sx }) => {
     padding: 2px 1rem 0 1rem;
     display: inline-block;
     border: none;
-    background: #ffafc4;
+    background: var(--color-punch-bright);
     border-radius: 3px;
     font-size: 1.2rem;
     color: #282828;

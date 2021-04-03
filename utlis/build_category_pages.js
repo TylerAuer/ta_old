@@ -28,13 +28,16 @@ exports.buildCategoryPages = async (graphql, createPage) => {
   const blogs = Object.keys(data.data);
 
   blogs.forEach((blog) => {
-    data.data[blog].group.forEach((cat) => {
+    data.data[blog].group.forEach((category) => {
       createPage({
-        path: `/${blog}/category/${cat.fieldValue.toLowerCase()}/`,
+        path: `/${blog}/category/${category.fieldValue.toLowerCase()}/`,
         component: path.resolve('./src/templates/cat_and_tag.tsx'),
         context: {
           blog: blog,
-          cat: cat.fieldValue,
+          label: category.fieldValue,
+          isCategory: true,
+          isTag: false,
+          type: 'Category',
         },
       });
     });

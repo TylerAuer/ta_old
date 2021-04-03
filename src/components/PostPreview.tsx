@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 import { SPACING } from '@/constants';
 import { Chip } from '@/components/Chip';
@@ -5,6 +6,7 @@ import { Chip } from '@/components/Chip';
 export const PostPreview = ({ post }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
   const { blog, path } = post.fields;
+  console.log(post);
 
   const titleSubtitleContainer = css``;
 
@@ -13,6 +15,10 @@ export const PostPreview = ({ post }) => {
     font-weight: bold;
     margin: 0;
     width: auto;
+
+    &:hover {
+      color: var(--color-punch);
+    }
   `;
 
   const subtitleCss = css`
@@ -25,6 +31,12 @@ export const PostPreview = ({ post }) => {
     color: var(--color-punch);
     font-size: 1.6rem;
     text-align: left;
+    border-color: transparent;
+
+    &:hover {
+      border-color: var(--color-punch);
+      color: var(--color-punch-dark);
+    }
   `;
 
   return (
@@ -37,7 +49,9 @@ export const PostPreview = ({ post }) => {
       `}
     >
       <div css={titleSubtitleContainer}>
-        <h4 css={titleCss}>{title}</h4>
+        <Link to={path}>
+          <h4 css={titleCss}>{title}</h4>
+        </Link>
         <div css={subtitleCss}>{subtitle}</div>
         {!!tags.length && (
           <div>
@@ -47,7 +61,9 @@ export const PostPreview = ({ post }) => {
           </div>
         )}
       </div>
-      <div css={categoryCss}>{category}</div>
+      <Link css={categoryCss} to={`/${blog}/category/${category.toLowerCase()}`}>
+        {category}
+      </Link>
     </article>
   );
 };
