@@ -22,7 +22,7 @@ exports.buildBlogPages = async (graphql, createPage) => {
     const blog = b.fieldValue;
 
     createPage({
-      path: `/${blog}`,
+      path: `/${blog}/`,
       component: path.resolve('./src/templates/blog_list.tsx'),
       context: {
         blog: blog,

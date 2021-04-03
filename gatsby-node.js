@@ -3,6 +3,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const { buildPostPages } = require('./utlis/build_post_pages');
 const { buildBlogPages } = require('./utlis/build_blog_pages');
+const { buildCategoryPages } = require('./utlis/build_category_pages');
+const { buildTagPages } = require('./utlis/build_tag_pages');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -41,4 +43,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   await buildPostPages(graphql, createPage);
   await buildBlogPages(graphql, createPage);
+  await buildCategoryPages(graphql, createPage);
+  await buildTagPages(graphql, createPage);
 };

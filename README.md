@@ -6,10 +6,10 @@ This is my portfolio site.
 
 ### V1
 
-- Build blog pages listing posts
-  - Featured posts up top
-- Build homepage
-- Change Width component to CSS Grid maybe?
+- ~~Build blog pages listing posts~~
+  - ~~Featured posts up top~~
+- ~~Build homepage~~
+- ~~Change Width component to CSS Grid maybe?~~
 - Make mobile friendly
 - Port over old posts from mountain of code
   - Code Blocks

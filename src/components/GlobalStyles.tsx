@@ -9,6 +9,7 @@ const globalStyles = css`
 
     --color-page-bg: white;
 
+    --color-punch-bright: #ffafc4;
     --color-punch: #da4167;
     --color-punch-dark: #ba2348;
     --color-punch-dim: #d8768f;
