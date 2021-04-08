@@ -6,10 +6,7 @@ This is my portfolio site.
 
 ### V1
 
-- ~~Build blog pages listing posts~~
-  - ~~Featured posts up top~~
-- ~~Build homepage~~
-- ~~Change Width component to CSS Grid maybe?~~
+- Helmet for SEO
 - Make mobile friendly
 - Port over old posts from mountain of code
   - Code Blocks
@@ -25,7 +22,6 @@ This is my portfolio site.
     - Failure on the JMT
     - Dayhiking Over the Tetons
     - Pinnacles trailrun loop
-- Helmet for SEO
 - Add Google Analytics
 - Replace old site
 

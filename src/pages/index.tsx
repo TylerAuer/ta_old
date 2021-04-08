@@ -60,7 +60,14 @@ const Projects = () => (
     <p>
       A Super Bowl props game where players optionally contribute to a community pot and the winner
       selects a charity to donate the pot to. In 2021 we donated $1,568 to the Pancreatic Cancer
-      Action Network! <Link to="/">Sign up</Link> to play next year; donations optional.
+      Action Network!{' '}
+      <a
+        target="_blank"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
+      >
+        Sign up
+      </a>{' '}
+      to play next year; donations optional.
     </p>
 
     <h3>Fruit Matrix</h3>
