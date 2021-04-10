@@ -30,6 +30,7 @@ interface Props {
   id?: string;
   className?: string;
   vMargin?: SPACING;
+  role?: string;
 }
 
 export const Box: React.FC<Props> = ({
@@ -39,6 +40,7 @@ export const Box: React.FC<Props> = ({
   className,
   vMargin,
   width = 'standard',
+  role = '',
 }) => {
   const style = css`
     // Use selected width
@@ -52,7 +54,7 @@ export const Box: React.FC<Props> = ({
   `;
 
   return (
-    <div id={id} className={className} css={style}>
+    <div role={role} id={id} className={className} css={style}>
       {children}
     </div>
   );

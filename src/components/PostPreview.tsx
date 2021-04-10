@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { SPACING } from '@/constants';
 import { Chip } from '@/components/Chip';
 
-export const PostPreview = ({ post }) => {
+export const PostPreview = ({ post, role }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
   const { blog, path } = post.fields;
   console.log(post);
@@ -47,6 +47,7 @@ export const PostPreview = ({ post }) => {
         justify-content: space-between;
         align-items: center;
       `}
+      role={role}
     >
       <div css={titleSubtitleContainer}>
         <Link to={path}>
