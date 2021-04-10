@@ -47,42 +47,50 @@ const TruthAndLies = () => (
   </section>
 );
 
-const Projects = () => (
-  <section role="list" id="projects">
-    <h2>Projects</h2>
-    <div role="listitem">
-      <h3>Bad Calculators</h3>
-      <p>
-        Mathy puzzles on pitiful, miserable calculators. These brain melters are addictive: ~5K
-        users have amassed over 150k puzzle attempts. Bring a pencil and paper (or a BFS algorithm).
-      </p>
-    </div>
-    <div role="listitem">
-      <h3>Super Stupid Props Charity Game</h3>
-      <p>
-        A Super Bowl props game where players optionally contribute to a community pot and the
-        winner selects a charity to donate the pot to. In 2021 we donated $1,568 to the Pancreatic
-        Cancer Action Network!{' '}
-        <a
-          target="_blank"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
-        >
-          Sign up
-        </a>{' '}
-        to play next year; donations optional.
-      </p>
-    </div>
-    <div role="listitem">
-      <h3>Fruit Matrix</h3>
-      <p>
-        Drag-and-drop fruit on a two-axis graph to rate each type's tastiness and easeof eating.
-        Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}
-        <Link to="https://fruit.tylerauer.com/#/data/#histograms">charts</Link> aggregating every
-        rating the site has ever seen.
-      </p>
-    </div>
-  </section>
-);
+const Projects = () => {
+  const projTitleCss = css`
+    margin-bottom: 0;
+    line-height: 1.3;
+    color: var(--color-text-header);
+  `;
+
+  return (
+    <section role="list" id="projects">
+      <h2>Projects</h2>
+      <div role="listitem">
+        <h3 css={projTitleCss}>Bad Calculators</h3>
+        <p>
+          Mathy puzzles on pitiful, miserable calculators. These brain melters are addictive: ~5K
+          users have amassed over 150k puzzle attempts. Bring a pencil (or a BFS algorithm).
+        </p>
+      </div>
+      <div role="listitem">
+        <h3 css={projTitleCss}>Super Stupid Props Charity Game</h3>
+        <p>
+          A Super Bowl props game where players optionally contribute to a community pot donated to
+          a charity of the winner's choosing. In 2021 we donated $1,568 to the Pancreatic Cancer
+          Action Network!{' '}
+          <a
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
+          >
+            Sign up
+          </a>{' '}
+          to play next year; donations optional.
+        </p>
+      </div>
+      <div role="listitem">
+        <h3 css={projTitleCss}>Fruit Matrix</h3>
+        <p>
+          Drag-and-drop fruit on a two-axis graph to rate each type's tastiness and easeof eating.
+          Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}
+          <Link to="https://fruit.tylerauer.com/#/data/#histograms">charts</Link> aggregating every
+          rating the site has ever seen.
+        </p>
+      </div>
+    </section>
+  );
+};
 
 const BlogWithFeatPosts = ({ title, posts }) => {
   return (

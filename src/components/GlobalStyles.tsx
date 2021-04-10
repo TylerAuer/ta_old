@@ -85,7 +85,7 @@ const globalStyles = css`
   }
 
   h2 {
-    color: var(--color-text-header);
+    color: var(--color-punch);
     border-bottom: 3px solid var(--color-punch);
   }
 
