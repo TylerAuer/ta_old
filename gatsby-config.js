@@ -10,8 +10,21 @@ module.exports = {
   },
   pathPrefix: '/ta',
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     /**
      * Makes posts directory available to the Data Layer
+     */
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    /**
+     * Makes images directory available
      */
     {
       resolve: `gatsby-source-filesystem`,
