@@ -1,4 +1,3 @@
-import { format } from 'node:path';
 import * as React from 'react';
 import { css, SerializedStyles } from '@emotion/react';
 import { SPACING } from '@/constants';

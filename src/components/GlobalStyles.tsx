@@ -21,6 +21,10 @@ const globalStyles = css`
 
     --color-a: #323232;
     --color-a-hover: black;
+
+    // https://stackoverflow.com/questions/42966641/how-to-transform-black-into-any-given-color-using-only-css-filters/43960991#43960991
+    --punch-filter: invert(36%) sepia(65%) saturate(1035%) hue-rotate(305deg) brightness(90%)
+      contrast(94%);
   }
 
   *,
