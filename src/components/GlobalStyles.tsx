@@ -74,6 +74,12 @@ const globalStyles = css`
     width: 600px;
   }
 
+  ul,
+  ol {
+    width: 800px;
+    margin: ${SPACING.lg} auto;
+  }
+
   h1,
   h2,
   h3,
@@ -110,6 +116,18 @@ const globalStyles = css`
   h5 {
     color: var(--color-punch);
     font-style: italic;
+  }
+
+  code {
+    color: black;
+    background-color: var(--color-grey-bg);
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+
+  pre {
+    font-family: var(--font-special);
+    font-size: 1.4rem;
   }
 `;
 
