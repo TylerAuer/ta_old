@@ -1,7 +1,8 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import { Box } from './Box';
 import palenight from 'prism-react-renderer/themes/palenight';
+import { Box } from './Box';
+import rangeParser from 'parse-numeric-range';
 
 // Two other dark themes that are nice
 // import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
@@ -109,6 +110,21 @@ export const SyntaxHighlighter = (props) => {
     border-top-right-radius: ${filename ? 0 : 8}px;
   `;
 
+  // Create a closure that determines if we have
+  // to highlight the given index
+  const calculateLinesToHighlight = (meta) => {
+    const RE = /{([\d,-]+)}/;
+    if (RE.test(meta)) {
+      const strlineNumbers = RE.exec(meta)[1];
+      const lineNumbers = rangeParser(strlineNumbers);
+      return (index) => lineNumbers.includes(index + 1);
+    } else {
+      return () => false;
+    }
+  };
+
+  const shouldHighlightLine = calculateLinesToHighlight(metastring);
+
   return (
     <WindowFrame filename={filename}>
       <Highlight
@@ -118,14 +134,20 @@ export const SyntaxHighlighter = (props) => {
         theme={palenight}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre css={codeCss} className={className} style={style}>
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
+          <pre css={codeCss} className={className} style={{ ...style }}>
+            {tokens.map((line, index) => {
+              const lineProps = getLineProps({ line, key: index });
+              if (shouldHighlightLine(index)) {
+                lineProps.className = `${lineProps.className} highlight-line`;
+              }
+              return (
+                <div key={index} {...lineProps}>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              );
+            })}
           </pre>
         )}
       </Highlight>

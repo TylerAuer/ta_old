@@ -131,6 +131,10 @@ const globalStyles = css`
   pre {
     font-family: var(--font-special);
     font-size: 1.4rem;
+
+    & .highlight-line {
+      background-color: rgba(152, 152, 152, 0.2);
+    }
   }
 `;
 
