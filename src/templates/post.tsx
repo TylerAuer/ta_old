@@ -7,6 +7,7 @@ import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
 import { SPACING } from '@/constants';
 import { Chip } from '@/components/Chip';
+import PostProvider from '@/components/PostProvider';
 
 const TitleAndSubtitle = ({ title, subtitle }) => {
   return (
@@ -111,7 +112,9 @@ export default ({ data }) => {
               update={date_last_updated}
             />
           </header>
-          <MDXRenderer>{post.body}</MDXRenderer>
+          <PostProvider>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </PostProvider>
         </article>
       </main>
       <Footer />

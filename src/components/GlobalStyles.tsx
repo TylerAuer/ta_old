@@ -25,6 +25,9 @@ const globalStyles = css`
     --color-a-hover: black;
 
     --color-grey-bg: #ebebeb;
+    --color-grey-bg-dark: #2b2b2b;
+
+    --shadow-subtle: -4px 4px 8px rgba(36, 36, 36, 0.2);
 
     // https://stackoverflow.com/questions/42966641/how-to-transform-black-into-any-given-color-using-only-css-filters/43960991#43960991
     --punch-filter: invert(36%) sepia(65%) saturate(1035%) hue-rotate(305deg) brightness(90%)
@@ -74,6 +77,12 @@ const globalStyles = css`
     width: 600px;
   }
 
+  ul,
+  ol {
+    width: 800px;
+    margin: ${SPACING.lg} auto;
+  }
+
   h1,
   h2,
   h3,
@@ -110,6 +119,22 @@ const globalStyles = css`
   h5 {
     color: var(--color-punch);
     font-style: italic;
+  }
+
+  code {
+    color: black;
+    background-color: var(--color-grey-bg);
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+
+  pre {
+    font-family: var(--font-special);
+    font-size: 1.4rem;
+
+    & .highlight-line {
+      background-color: rgba(152, 152, 152, 0.2);
+    }
   }
 `;
 
