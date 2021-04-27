@@ -6,19 +6,22 @@ This is my portfolio site.
 
 ### V1
 
-- Helmet for SEO
+> **REMEMBER**
+> No more style improvements until v1 is done
+
 - Make mobile friendly
 - Fix footnote styling
 - Style footer
+- Post features
+  - Map embed
+  - Slideshow embed
+  - Photo embed
 - Write 3 adventure posts
-  - Features
-    - Map embed
-    - Slideshow embed
-  - Posts
-    - Cody Peak Scramble
-    - Failure on the JMT
-    - Dayhiking Over the Tetons
-    - Pinnacles trailrun loop
+  - ~~Cody Peak Scramble~~
+  - Failure on the JMT
+  - Dayhiking Over the Tetons
+  - Pinnacles trailrun loop
+  - The Splendor of Phelps Lake at the Pace of a Three-year Old
 - Add Google Analytics
 - Replace old site
 
@@ -28,3 +31,4 @@ This is my portfolio site.
 - Add bookshelf
 - Add photo gallery
 - Add elevation label to Leaflet Maps
+- Add *optional* copy button to code blocks
