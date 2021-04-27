@@ -11,8 +11,8 @@ const standardCss = css`
 `;
 
 const pCss = css`
-  width: 600px;
-  padding-right: 200px;
+  width: 650px;
+  padding-right: 150px;
 `;
 
 type Width = 'wide' | 'standard' | 'p';

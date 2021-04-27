@@ -1,8 +1,9 @@
 import React from 'react';
 import { graphql, Link, PageProps } from 'gatsby';
 import { css } from '@emotion/react';
-import { SPACING } from '@/constants';
+import { Helmet } from 'react-helmet';
 
+import { SPACING } from '@/constants';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { Box } from '@/components/Box';
 import { Header } from '@/components/Header';
@@ -35,7 +36,7 @@ const NameAndBio = () => {
       <Box css={subtitleCss}>Teacher turned software developer</Box>
       <p>
         After teaching math for twelve years, I taught myself to code. Now I build infrastructure to
-        help developers at <a href="nextdoor.com">Nextdoor</a> ship features efficiently.
+        help developers at <a href="http://nextdoor.com">Nextdoor</a> ship features efficiently.
       </p>
       <p>
         When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles, and
@@ -156,8 +157,8 @@ const Projects = () => {
             </Chip>
 
             <p>
-              Drag-and-drop fruit on a two-axis graph to rate each type's tastiness and easeof
-              eating. Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}
+              Drag-and-drop fruit on a two-axis graph to rate each's tastiness and ease of eating.
+              Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}
               <Link to="https://fruit.tylerauer.com/#/data/#histograms">charts</Link> aggregating
               every rating the site has ever seen.
             </p>
@@ -251,6 +252,13 @@ const Home: React.FC<PageProps> = ({ data }) => {
   const posts = data.allMdx.nodes;
   return (
     <GlobalStyles>
+      <Helmet>
+        <title>Tyler Auer - Math teacher turned software developer</title>
+        <meta
+          name="description"
+          content={`"Stupid" projects and ramblings about code and adventure.`}
+        />
+      </Helmet>
       <Header />
       <main>
         <NameAndBio />

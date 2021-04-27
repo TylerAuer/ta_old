@@ -73,8 +73,8 @@ const globalStyles = css`
   p {
     box-sizing: content-box;
     margin: ${SPACING.lg} auto;
-    padding-right: 200px;
-    width: 600px;
+    padding-right: 150px;
+    width: 650px;
   }
 
   ul,

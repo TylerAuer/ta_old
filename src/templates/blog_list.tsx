@@ -1,5 +1,7 @@
 import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
+import { Helmet } from 'react-helmet';
+
 import { Box } from '@/components/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { Header } from '@/components/Header';
@@ -17,6 +19,10 @@ export default ({ data, pageContext }) => {
 
   return (
     <GlobalStyles>
+      <Helmet>
+        <title>{blog[0].toUpperCase() + blog.slice(1)} Blog - Tyler Auer</title>
+        <meta name="description" content={`Tyler Auer's blog about ${blog}`} />
+      </Helmet>
       <Header />
       <main>
         <Box>
