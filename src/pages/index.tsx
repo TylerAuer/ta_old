@@ -35,12 +35,13 @@ const NameAndBio = () => {
       <h1 css={titleCss}>Tyler Auer</h1>
       <Box css={subtitleCss}>Teacher turned software developer</Box>
       <p>
-        After teaching math for twelve years, I taught myself to code. Now I build infrastructure to
-        help developers at <a href="http://nextdoor.com">Nextdoor</a> ship features efficiently.
+        After teaching math for twelve years, I taught myself to code. Now I build social capital
+        systems at <a href="http://nextdoor.com">Nextdoor</a> that motivate users to build community
+        in their neighborhoods.
       </p>
       <p>
-        When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles, and
-        long walks on exposed ridgelines.
+        When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
+        playing board games, and long walks on exposed ridgelines.
       </p>
     </section>
   );
