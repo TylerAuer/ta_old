@@ -1,5 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Helmet } from 'react-helmet';
+
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Box } from '@/components/Box';
@@ -99,6 +101,10 @@ export default ({ data }) => {
 
   return (
     <GlobalStyles>
+      <Helmet>
+        <title>{`${title} - Tyler Auer's ${blog[0].toUpperCase() + blog.slice(1)} Blog`}</title>
+        <meta name="description" content={`${title}: ${subtitle} by Tyler Auer`} />
+      </Helmet>
       <Header />
       <main>
         <article>

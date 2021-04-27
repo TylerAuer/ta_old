@@ -8,11 +8,8 @@ This is my portfolio site.
 
 - Helmet for SEO
 - Make mobile friendly
-- Port over old posts from mountain of code
-  - Code Blocks
-    - Can have window frame
-    - Can have numbered lines
-    - Can have line highlights
+- Fix footnote styling
+- Style footer
 - Write 3 adventure posts
   - Features
     - Map embed
