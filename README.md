@@ -9,14 +9,14 @@ This is my portfolio site.
 > **REMEMBER**
 > No more style improvements until v1 is done
 
-- Make mobile friendly
+- Make mobile friendly + fix spacing
 - Fix footnote styling
 - Style footer
 - Post features
-  - Map embed
-  - Slideshow embed
-  - Photo embed
-- Write 3 adventure posts
+  - ~~Slideshow embed~~
+  - ~~Photo embed~~
+- Support drafts of posts
+- Write 3 adventure posts; ideas:
   - ~~Cody Peak Scramble~~
   - Failure on the JMT
   - Dayhiking Over the Tetons
@@ -24,11 +24,11 @@ This is my portfolio site.
   - The Splendor of Phelps Lake at the Pace of a Three-year Old
 - Add Google Analytics
 - Replace old site
-
 ### V2
 
+- Map embed
+- Add elevation label to Leaflet Maps
 - Rotating two truths and a lie (disguise what are truths and what are lies)
 - Add bookshelf
 - Add photo gallery
-- Add elevation label to Leaflet Maps
 - Add *optional* copy button to code blocks

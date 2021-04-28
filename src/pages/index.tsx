@@ -18,6 +18,7 @@ import {
   CodeIcon,
   MountainsIcon,
 } from '@/components/Icons';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const NameAndBio = () => {
   const titleCss = css`

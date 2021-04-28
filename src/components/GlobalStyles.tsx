@@ -136,6 +136,19 @@ const globalStyles = css`
       background-color: rgba(152, 152, 152, 0.2);
     }
   }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  figcaption {
+    color: var(--color-a);
+    font-style: italic;
+    font-family: var(--font-special);
+    font-size: 1.6rem;
+    line-height: 1.35;
+  }
 `;
 
 export const GlobalStyles: React.FC = ({ children }) => (
