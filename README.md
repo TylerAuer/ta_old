@@ -16,7 +16,8 @@ This is my portfolio site.
   - Map embed
   - Slideshow embed
   - Photo embed
-- Write 3 adventure posts
+- Support drafts of posts
+- Write 3 adventure posts; ideas:
   - ~~Cody Peak Scramble~~
   - Failure on the JMT
   - Dayhiking Over the Tetons
