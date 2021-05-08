@@ -59,15 +59,7 @@ const globalStyles = css`
   }
 
   a {
-    color: var(--color-text-body);
     text-decoration: none;
-    border-bottom: 3px solid var(--color-punch-dim);
-    white-space: nowrap;
-
-    &:hover {
-      color: var(--color-punch-dark);
-      border-bottom-color: var(--color-punch);
-    }
   }
 
   ul,

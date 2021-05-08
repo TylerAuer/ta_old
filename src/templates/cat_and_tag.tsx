@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
@@ -7,21 +7,22 @@ import { GlobalStyles } from '@/components/GlobalStyles';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { PostPreview } from '@/components/PostPreview';
+import { A } from '@/components/A';
+
 import { SPACING } from '@/constants';
 
-const blogDesc = {
-  code: 'Learnings and musings bathed in monitor glow.',
-  adventure: 'Seeking out Type II fun in nature and life.',
-};
-
-const h1LabelCss = css`
-  color: #282828;
-  background: var(--color-punch-bright);
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-`;
-
 export default ({ data, pageContext }) => {
+  const h1LabelCss = css`
+    color: #282828;
+    background: var(--color-punch-bright);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+  `;
+
+  const blogLinkCss = css`
+    border-bottom: none;
+  `;
+
   const { blog, label, type } = pageContext;
 
   let postsToList = [];
@@ -53,7 +54,10 @@ export default ({ data, pageContext }) => {
         >
           <header>
             <h1>
-              <span css={h1LabelCss}>{label}</span> in <Link to={`/${blog}`}>{blog}</Link>
+              <span css={h1LabelCss}>{label}</span> in{' '}
+              <A sx={blogLinkCss} href={`/${blog}`}>
+                {blog}
+              </A>
             </h1>
             <Subtitle />
           </header>
