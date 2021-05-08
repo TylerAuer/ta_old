@@ -13,8 +13,9 @@ import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
 import { Block } from '@/components/Block';
 import { Flex, FlexJustification } from '@/components/Flex';
+import { A } from '@/components/A';
+
 import { Icon } from '@/components/Icon';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const NameAndBio = () => {
   const titleCss = css`
@@ -34,7 +35,7 @@ const NameAndBio = () => {
       <Block>
         <p>
           After teaching math for twelve years, I taught myself to code. Now I build social capital
-          systems at <a href="http://nextdoor.com">Nextdoor</a> that motivate users to build
+          systems at <A href="http://nextdoor.com">Nextdoor</A> that motivate users to build
           community in their neighborhoods.
         </p>
         <p>
@@ -46,18 +47,18 @@ const NameAndBio = () => {
   );
 };
 
-// const TruthAndLies = () => (
-//   <section id="truths-and-lies">
-//     <Box>
-//       <h2>Two Thirds Truth and One Third Lies About Me</h2>
-//       <ul>
-//         <li>I love bread</li>
-//         <li>I own over 100 board games</li>
-//         <li>Has been pushed through the ocean by dolphins</li>
-//       </ul>
-//     </Box>
-//   </section>
-// );
+const TruthAndLies = () => (
+  <section id="truths-and-lies">
+    <Box>
+      <h2>Two Thirds Truth and One Third Lies About Me</h2>
+      <ul>
+        <li>I love bread</li>
+        <li>I own over 100 board games</li>
+        <li>Has been pushed through the ocean by dolphins</li>
+      </ul>
+    </Box>
+  </section>
+);
 
 const Projects = () => {
   const projectCss = css`
@@ -79,8 +80,7 @@ const Projects = () => {
       width: 5rem;
       height: auto;
       filter: var(--punch-filter);
-      margin-right: 5rem;
-      margin-left: 1.5rem;
+      margin-left: 2rem;
     }
   `;
 
@@ -93,7 +93,6 @@ const Projects = () => {
       <h2>Projects</h2>
       <Box role="listitem">
         <div css={projectCss}>
-          <Icon icon="calculator" />
           <div>
             <Flex flex={FlexJustification.start}>
               <h3>Bad Calculators</h3>
@@ -111,11 +110,11 @@ const Projects = () => {
               ~5K users have amassed over 150k puzzle attempts. Bring a pencil (or a BFS algorithm).
             </p>
           </div>
+          <Icon icon="calculator" />
         </div>
       </Box>
       <Box role="listitem">
         <div css={projectCss}>
-          <Icon icon="football" />
           <div>
             <Flex flex={FlexJustification.start}>
               <h3>Super Stupid Props</h3>
@@ -135,21 +134,18 @@ const Projects = () => {
               A Super Bowl props game where players optionally contribute to a community pot donated
               to a charity of the winner's choosing. In 2021 we donated $1,568 to the Pancreatic
               Cancer Action Network!{' '}
-              <a
-                target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
-              >
+              <A href="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform">
                 Sign up
-              </a>{' '}
+              </A>{' '}
               to play next year; donations optional.
             </p>
           </div>
+          <Icon icon="football" />
         </div>
       </Box>
 
       <Box role="listitem">
         <div css={projectCss}>
-          <Icon icon="fruit" />
           <div>
             <Flex flex={FlexJustification.start}>
               <h3>Fruit Matrix</h3>
@@ -172,6 +168,7 @@ const Projects = () => {
               every rating the site has ever seen.
             </p>
           </div>
+          <Icon icon="fruit" />
         </div>
       </Box>
     </section>
@@ -199,10 +196,11 @@ const Writing = ({ posts }) => {
       vertical-align: center;
       font-size: 2.7rem;
       color: var(--color-text-header);
-      margin: ${SPACING.lg} 0;
+      margin: ${SPACING.md} 0;
 
       & a {
         border: none;
+        color: inherit;
 
         &:hover {
           color: inherit;
@@ -219,6 +217,7 @@ const Writing = ({ posts }) => {
 
   const btnCss = css`
     text-align: center;
+    margin: ${SPACING.xl} 0;
   `;
 
   return (
