@@ -80,9 +80,9 @@ const PostMeta = ({ blog, category, date, update }) => {
 
   return (
     <Box vMargin={SPACING.xl} sx={container} id="post-meta">
-      <div>
+      {/* <div>
         <span css={keyStyle}>By</span> Tyler Auer
-      </div>
+      </div> */}
       <div css={url}>
         <span css={keyStyle}>In</span> /<Link to={`/${blog}`}>{blog}</Link>/
         <Link to={`/${blog}/category/${category.toLowerCase()}`}>{category.toLowerCase()}</Link>
