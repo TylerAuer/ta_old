@@ -11,6 +11,8 @@ import { Footer } from '@/components/Footer';
 import { Chip } from '@/components/Chip';
 import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
+import { Block } from '@/components/Block';
+import { Flex, FlexJustification } from '@/components/Flex';
 import {
   CalculatorIcon,
   FootballIcon,
@@ -35,31 +37,33 @@ const NameAndBio = () => {
     <section id="name-and-bio">
       <h1 css={titleCss}>Tyler Auer</h1>
       <Box css={subtitleCss}>Teacher turned software developer</Box>
-      <p>
-        After teaching math for twelve years, I taught myself to code. Now I build social capital
-        systems at <a href="http://nextdoor.com">Nextdoor</a> that motivate users to build community
-        in their neighborhoods.
-      </p>
-      <p>
-        When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
-        playing board games, and long walks on exposed ridgelines.
-      </p>
+      <Block>
+        <p>
+          After teaching math for twelve years, I taught myself to code. Now I build social capital
+          systems at <a href="http://nextdoor.com">Nextdoor</a> that motivate users to build
+          community in their neighborhoods.
+        </p>
+        <p>
+          When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
+          playing board games, and long walks on exposed ridgelines.
+        </p>
+      </Block>
     </section>
   );
 };
 
-const TruthAndLies = () => (
-  <section id="truths-and-lies">
-    <Box>
-      <h2>Two Thirds Truth and One Third Lies About Me</h2>
-      <ul>
-        <li>I love bread</li>
-        <li>I own over 100 board games</li>
-        <li>Has been pushed through the ocean by dolphins</li>
-      </ul>
-    </Box>
-  </section>
-);
+// const TruthAndLies = () => (
+//   <section id="truths-and-lies">
+//     <Box>
+//       <h2>Two Thirds Truth and One Third Lies About Me</h2>
+//       <ul>
+//         <li>I love bread</li>
+//         <li>I own over 100 board games</li>
+//         <li>Has been pushed through the ocean by dolphins</li>
+//       </ul>
+//     </Box>
+//   </section>
+// );
 
 const Projects = () => {
   const projectCss = css`
@@ -76,9 +80,7 @@ const Projects = () => {
       display: inline-block;
       vertical-align: middle;
     }
-    & p {
-      width: 100%;
-    }
+
     & img {
       width: 5rem;
       height: auto;
@@ -99,13 +101,17 @@ const Projects = () => {
         <div css={projectCss}>
           <CalculatorIcon />
           <div>
-            <h3>Bad Calculators</h3>
-            <Chip sx={chipCss} to="https://www.badcalculators.com/">
-              Live
-            </Chip>
-            <Chip sx={chipCss} to="https://github.com/TylerAuer/bad-calculators">
-              Source
-            </Chip>
+            <Flex flex={FlexJustification.start}>
+              <h3>Bad Calculators</h3>
+              <div>
+                <Chip sx={chipCss} to="https://www.badcalculators.com/">
+                  Live
+                </Chip>
+                <Chip sx={chipCss} to="https://github.com/TylerAuer/bad-calculators">
+                  Source
+                </Chip>
+              </div>
+            </Flex>
             <p>
               Mathy puzzles on pitiful, miserable calculators. These brain melters are addictive:
               ~5K users have amassed over 150k puzzle attempts. Bring a pencil (or a BFS algorithm).
@@ -117,16 +123,20 @@ const Projects = () => {
         <div css={projectCss}>
           <FootballIcon />
           <div>
-            <h3>Super Stupid Props</h3>
-            <Chip
-              sx={chipCss}
-              to="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
-            >
-              Sign Up
-            </Chip>
-            <Chip sx={chipCss} to="https://github.com/TylerAuer/super-bowl-props-lv">
-              Source
-            </Chip>
+            <Flex flex={FlexJustification.start}>
+              <h3>Super Stupid Props</h3>
+              <div>
+                <Chip
+                  sx={chipCss}
+                  to="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
+                >
+                  Sign Up
+                </Chip>
+                <Chip sx={chipCss} to="https://github.com/TylerAuer/super-bowl-props-lv">
+                  Source
+                </Chip>
+              </div>
+            </Flex>
             <p>
               A Super Bowl props game where players optionally contribute to a community pot donated
               to a charity of the winner's choosing. In 2021 we donated $1,568 to the Pancreatic
@@ -147,17 +157,20 @@ const Projects = () => {
         <div css={projectCss}>
           <FruitIcon />
           <div>
-            <h3>Fruit Matrix</h3>
-            <Chip sx={chipCss} to="https://fruit.tylerauer.com">
-              Live
-            </Chip>
-            <Chip sx={chipCss} to="https://fruit.tylerauer.com/#/data">
-              Data
-            </Chip>
-            <Chip sx={chipCss} to="https://github.com/TylerAuer/fruit">
-              Source
-            </Chip>
-
+            <Flex flex={FlexJustification.start}>
+              <h3>Fruit Matrix</h3>
+              <div>
+                <Chip sx={chipCss} to="https://fruit.tylerauer.com">
+                  Live
+                </Chip>
+                <Chip sx={chipCss} to="https://fruit.tylerauer.com/#/data">
+                  Data
+                </Chip>
+                <Chip sx={chipCss} to="https://github.com/TylerAuer/fruit">
+                  Source
+                </Chip>
+              </div>
+            </Flex>
             <p>
               Drag-and-drop fruit on a two-axis graph to rate each's tastiness and ease of eating.
               Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}

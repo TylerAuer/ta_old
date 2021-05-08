@@ -3,12 +3,13 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Box } from './Box';
 
 interface Props {
-  to: string;
   sx?: SerializedStyles;
   style?: 'note' | 'warning';
+  className?: string;
+  id?: string;
 }
 
-export const Block: React.FC<Props> = ({ children, sx, style = 'note' }) => {
+export const Block: React.FC<Props> = ({ children, sx, className, id, style = 'note' }) => {
   const s = css`
     padding: 1rem 2rem;
     border: none;
@@ -26,7 +27,7 @@ export const Block: React.FC<Props> = ({ children, sx, style = 'note' }) => {
   `;
 
   return (
-    <Box>
+    <Box className={className} id={id}>
       <div css={s}>{children}</div>
     </Box>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { Flex, FlexJustification } from './Flex';
+
+import { P } from '@/components/P';
 
 export const DropCapP: React.FC = ({ children }) => {
   const pArray = children.toString().split(' ');
@@ -25,7 +26,7 @@ export const DropCapP: React.FC = ({ children }) => {
   `;
 
   return (
-    <p>
+    <P>
       <span aria-hidden="true">
         <span
           css={css`
@@ -43,6 +44,6 @@ export const DropCapP: React.FC = ({ children }) => {
         {rest}
       </span>
       <span css={visibleOnlyToScreenReaders}>{firstWord}</span> {restOfP}
-    </p>
+    </P>
   );
 };
