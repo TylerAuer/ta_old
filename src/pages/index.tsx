@@ -101,7 +101,7 @@ const Projects = () => {
         <div css={projectCss}>
           <CalculatorIcon />
           <div>
-            <Flex flexWrap flex={FlexJustification.start}>
+            <Flex flex={FlexJustification.start}>
               <h3>Bad Calculators</h3>
               <div>
                 <Chip sx={chipCss} to="https://www.badcalculators.com/">
@@ -123,7 +123,7 @@ const Projects = () => {
         <div css={projectCss}>
           <FootballIcon />
           <div>
-            <Flex flexWrap flex={FlexJustification.start}>
+            <Flex flex={FlexJustification.start}>
               <h3>Super Stupid Props</h3>
               <div>
                 <Chip
@@ -157,7 +157,7 @@ const Projects = () => {
         <div css={projectCss}>
           <FruitIcon />
           <div>
-            <Flex flexWrap flex={FlexJustification.start}>
+            <Flex flex={FlexJustification.start}>
               <h3>Fruit Matrix</h3>
               <div>
                 <Chip sx={chipCss} to="https://fruit.tylerauer.com">
