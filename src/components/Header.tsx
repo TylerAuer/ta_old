@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/react';
+
 import { Box } from '@/components/Box';
+import { Icon } from '@/components/Icon';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { SPACING } from '@/constants';
 
 const Left: React.FC = () => (
   <Link to="/">
-    <div>@ Tyler Auer</div>
+    <div>Tyler Auer</div>
   </Link>
 );
 
@@ -19,10 +21,10 @@ const Right: React.FC = () => {
   return (
     <nav>
       <Link css={s} to="/code">
-        Code
+        <Icon icon="code" />
       </Link>
       <Link css={s} to="/adventure">
-        Adventure
+        <Icon icon="mountains" />
       </Link>
     </nav>
   );

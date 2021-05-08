@@ -13,13 +13,7 @@ import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
 import { Block } from '@/components/Block';
 import { Flex, FlexJustification } from '@/components/Flex';
-import {
-  CalculatorIcon,
-  FootballIcon,
-  FruitIcon,
-  CodeIcon,
-  MountainsIcon,
-} from '@/components/Icons';
+import { Icon } from '@/components/Icon';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const NameAndBio = () => {
@@ -99,7 +93,7 @@ const Projects = () => {
       <h2>Projects</h2>
       <Box role="listitem">
         <div css={projectCss}>
-          <CalculatorIcon />
+          <Icon icon="calculator" />
           <div>
             <Flex flex={FlexJustification.start}>
               <h3>Bad Calculators</h3>
@@ -121,7 +115,7 @@ const Projects = () => {
       </Box>
       <Box role="listitem">
         <div css={projectCss}>
-          <FootballIcon />
+          <Icon icon="football" />
           <div>
             <Flex flex={FlexJustification.start}>
               <h3>Super Stupid Props</h3>
@@ -155,7 +149,7 @@ const Projects = () => {
 
       <Box role="listitem">
         <div css={projectCss}>
-          <FruitIcon />
+          <Icon icon="fruit" />
           <div>
             <Flex flex={FlexJustification.start}>
               <h3>Fruit Matrix</h3>
@@ -234,7 +228,7 @@ const Writing = ({ posts }) => {
         <Box>
           <h3>
             <Link to="/code">
-              <CodeIcon />
+              <Icon icon="code" />
               Code
             </Link>
           </h3>
@@ -249,7 +243,7 @@ const Writing = ({ posts }) => {
         <Box>
           <h3>
             <Link to="/adventure">
-              <MountainsIcon />
+              <Icon icon="mountains" />
               Adventure
             </Link>
           </h3>
