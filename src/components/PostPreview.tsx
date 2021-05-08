@@ -1,10 +1,32 @@
 import { Link } from 'gatsby';
 import { css } from '@emotion/react';
-import { SPACING } from '@/constants';
+
 import { Chip } from '@/components/Chip';
+import { A } from '@/components/A';
 import { Flex, FlexJustification } from '@/components/Flex';
 
-export const PostPreview = ({ post, role }) => {
+import { SPACING } from '@/constants';
+
+type PostPreviewType = {
+  frontmatter: {
+    title: string;
+    subtitle: string;
+    category: string;
+    tags: string[];
+    location: string;
+  };
+  fields: {
+    blog: string;
+    path: string;
+  };
+};
+
+type Props = {
+  post: PostPreviewType;
+  role?: string;
+};
+
+export const PostPreview: React.FC<Props> = ({ post, role }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
   const { blog, path } = post.fields;
 
@@ -30,6 +52,7 @@ export const PostPreview = ({ post, role }) => {
     font-size: 1.6rem;
     text-align: left;
     border-color: transparent;
+    font-weight: 600;
 
     &:hover {
       border-color: var(--color-punch);

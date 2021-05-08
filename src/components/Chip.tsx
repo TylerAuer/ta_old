@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { css, SerializedStyles } from '@emotion/react';
+
+import { A } from '@/components/A';
 
 interface Props {
   to: string;
@@ -35,8 +36,8 @@ export const Chip: React.FC<Props> = ({ children, to, sx }) => {
   `;
 
   return (
-    <Link css={s} to={to}>
+    <A css={s} href={to}>
       {children}
-    </Link>
+    </A>
   );
 };

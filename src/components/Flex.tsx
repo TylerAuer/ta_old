@@ -13,13 +13,15 @@ interface Props {
   direction?: 'rows' | 'col';
   sx?: SerializedStyles;
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
+  align?: 'center';
 }
 
 export const Flex: React.FC<Props> = ({
   children,
   flex = FlexJustification.even,
   direction = 'row',
-  wrap: flexWrap = 'wrap',
+  wrap = 'wrap',
+  align = 'center',
   sx,
 }) => (
   <div
@@ -27,9 +29,9 @@ export const Flex: React.FC<Props> = ({
       display: flex;
       justify-content: ${flex};
       flex-direction: ${direction};
-      align-items: center;
 
-      ${flexWrap ? `flex-wrap: ${flexWrap};` : ''}
+      ${wrap ? `flex-wrap: ${wrap};` : ''}
+      ${align ? `align-items: ${align};` : ''}
       ${sx}
     `}
   >
