@@ -2,13 +2,9 @@ import * as React from 'react';
 import { css, SerializedStyles } from '@emotion/react';
 import { SPACING } from '@/constants';
 
-interface Props {
-  sx?: SerializedStyles;
-  id?: string;
-  className?: string;
-}
+import { HtmlElementPropsType } from '@/types';
 
-export const P: React.FC<Props> = ({ sx, id, className, children }) => {
+export const P: React.FC<HtmlElementPropsType> = ({ sx, id, className, children }) => {
   const pCss = css`
     box-sizing: content-box;
     margin: ${SPACING.lg} auto;

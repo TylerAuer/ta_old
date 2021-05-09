@@ -25,16 +25,6 @@ module.exports = {
       },
     },
     /**
-     * Makes images directory available
-     */
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
-      },
-    },
-    /**
      * Converts .mdx files into html (and handles inline react components)
      */
     {

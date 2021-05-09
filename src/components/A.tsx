@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { Link } from 'gatsby';
 
-interface Props {
+import { HtmlElementPropsType } from '@/types';
+
+type Props = {
   href: string;
-  sx?: SerializedStyles;
-  id?: string;
-  className?: string;
-}
+} & HtmlElementPropsType;
 
 export const A: React.FC<Props> = ({ href, sx, id, className, children }) => {
   const aCss = css`
