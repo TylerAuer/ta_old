@@ -1,14 +1,14 @@
 import React from 'react';
 import { css, SerializedStyles } from '@emotion/react';
+import { HtmlElementPropsType } from '@/types';
 
 import { A } from '@/components/A';
 
-interface Props {
+type Props = {
   to: string;
-  sx?: SerializedStyles;
-}
+} & HtmlElementPropsType;
 
-export const Chip: React.FC<Props> = ({ children, to, sx }) => {
+export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
   const s = css`
     padding: 2px 1rem 0 1rem;
     display: inline-block;
@@ -36,7 +36,7 @@ export const Chip: React.FC<Props> = ({ children, to, sx }) => {
   `;
 
   return (
-    <A css={s} href={to}>
+    <A css={s} id={id} className={className} href={to}>
       {children}
     </A>
   );

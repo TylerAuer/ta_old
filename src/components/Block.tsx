@@ -1,13 +1,12 @@
 import { SPACING } from '@/constants';
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { Box } from './Box';
 
-interface Props {
-  sx?: SerializedStyles;
+import { HtmlElementPropsType } from '@/types';
+
+type Props = {
   style?: 'note' | 'warning';
-  className?: string;
-  id?: string;
-}
+} & HtmlElementPropsType;
 
 export const Block: React.FC<Props> = ({ children, sx, className, id, style = 'note' }) => {
   const s = css`

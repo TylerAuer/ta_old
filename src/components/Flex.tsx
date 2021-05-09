@@ -1,5 +1,7 @@
 import React from 'react';
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+
+import { HtmlElementPropsType } from '@/types';
 
 export enum FlexJustification {
   split = 'space-between',
@@ -8,13 +10,12 @@ export enum FlexJustification {
   start = 'start',
 }
 
-interface Props {
+type Props = {
   flex?: FlexJustification;
   direction?: 'rows' | 'col';
-  sx?: SerializedStyles;
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
   align?: 'center';
-}
+} & HtmlElementPropsType;
 
 export const Flex: React.FC<Props> = ({
   children,
@@ -22,9 +23,13 @@ export const Flex: React.FC<Props> = ({
   direction = 'row',
   wrap = 'wrap',
   align = 'center',
+  id,
+  className,
   sx,
 }) => (
   <div
+    id={id}
+    className={className}
     css={css`
       display: flex;
       justify-content: ${flex};

@@ -1,5 +1,3 @@
-import { SerializedStyles } from '@emotion/react';
-
 import calculator from '../img/icons/009-calculator.svg';
 import code from '../img/icons/015-coding.svg';
 import football from '../img/icons/010-american-football.svg';
@@ -8,12 +6,13 @@ import github from '../img/icons/005-github.svg';
 import mountains from '../img/icons/013-mountains.svg';
 import twitter from '../img/icons/003-twitter.svg';
 
+import { HtmlElementPropsType } from '@/types';
+
 type Props = {
   icon: 'calculator' | 'code' | 'football' | 'fruit' | 'github' | 'mountains' | 'twitter';
-  sx?: SerializedStyles;
-};
+} & HtmlElementPropsType;
 
-export const Icon: React.FC<Props> = ({ sx, icon }) => {
+export const Icon: React.FC<Props> = ({ sx, icon, id, className }) => {
   const src = {
     calculator,
     code,
@@ -24,5 +23,5 @@ export const Icon: React.FC<Props> = ({ sx, icon }) => {
     twitter,
   };
 
-  return <img css={sx} src={src[icon]} alt={icon} />;
+  return <img id={id} className={className} css={sx} src={src[icon]} alt={icon} />;
 };

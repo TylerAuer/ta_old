@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+
+import { HtmlElementPropsType } from '@/types';
 import { SPACING } from '@/constants';
 
 const wideCss = css`
@@ -23,14 +25,11 @@ const widthOptions = {
   p: pCss,
 };
 
-interface Props {
+type Props = {
   width?: Width;
-  sx?: SerializedStyles;
-  id?: string;
-  className?: string;
   vMargin?: SPACING;
   role?: string;
-}
+} & HtmlElementPropsType;
 
 export const Box: React.FC<Props> = ({
   children,

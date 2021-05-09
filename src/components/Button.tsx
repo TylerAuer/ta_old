@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
-interface Props {
+import { HtmlElementPropsType } from '@/types';
+
+type Props = {
   to: string;
-  sx?: SerializedStyles;
-}
+} & HtmlElementPropsType;
 
-export const Button: React.FC<Props> = ({ children, to, sx }) => {
+export const Button: React.FC<Props> = ({ children, to, sx, id, className }) => {
   const s = css`
     padding: 1rem 2rem;
     border: none;
@@ -30,7 +31,7 @@ export const Button: React.FC<Props> = ({ children, to, sx }) => {
   `;
 
   return (
-    <Link css={s} to={to}>
+    <Link id={id} className={className} css={s} to={to}>
       {children}
     </Link>
   );
