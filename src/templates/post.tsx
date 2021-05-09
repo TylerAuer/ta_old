@@ -40,7 +40,11 @@ const Tags = ({ tags, blog }) => {
     <Box id="post-tags" vMargin={SPACING.lg}>
       {tags.map((tag: string) => {
         const to = `/${blog}/tag/${tag.toLowerCase()}`;
-        return <Chip to={to}>{tag}</Chip>;
+        return (
+          <Chip key={tag} to={to}>
+            {tag}
+          </Chip>
+        );
       })}
     </Box>
   );
