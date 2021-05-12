@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-yaml`,
     /**
      * Makes posts directory available to the Data Layer
      */
@@ -22,6 +23,16 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts/`,
+      },
+    },
+    /**
+     * Collects book data
+     */
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `books`,
+        path: `${__dirname}/src/components/bookshelf/`,
       },
     },
     /**
