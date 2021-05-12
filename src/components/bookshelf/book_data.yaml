@@ -11,7 +11,7 @@
     - long
 - 
   title: All Systems Red
-  cover: ./covers/./covers/Wells-All-Systems-Red.jpg
+  cover: ./covers/Wells-All-Systems-Red.jpg
   amazon_url: https://www.amazon.com/All-Systems-Red-Murderbot-Diaries/dp/1250214718/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1586794755&sr=1-1
   goodreads_url: https://www.goodreads.com/book/show/33387769-all-systems-red
   indiebound_url: https://www.indiebound.org/book/9780765397539
@@ -351,7 +351,7 @@
   title: Stitches
 - 
   amazon_url: https://www.amazon.com/gp/product/1501181416/
-  cover: ./covers/"St\xE5lenhag-The-Electric-State.jpg"
+  cover: ./covers/Stalenhag-The-Electric-State.jpg
   goodreads_url: https://www.goodreads.com/book/show/38642323-the-electric-state
   indiebound_url: https://www.indiebound.org/book/9781501181412
   library_url: https://www.worldcat.org/search?q=9781501181412
@@ -383,7 +383,7 @@
   title: Goodbye Summer, Hello Autumn
 - 
   amazon_url: https://www.amazon.com/gp/product/0763690457/
-  cover: ./covers/"Love-Juli\xE1n-Is-a-Mermaid.jpg"
+  cover: ./covers/Love-Julian-Is-a-Mermaid.jpg
   goodreads_url: https://www.goodreads.com/book/show/26532714-juli-n-is-a-mermaid
   indiebound_url: https://www.indiebound.org/book/9780763690458
   library_url: https://www.worldcat.org/search?q=9780763690458
