@@ -6,13 +6,16 @@ export type HtmlElementPropsType = {
   className?: string;
 };
 
-export type GenreType =
-  | 'adventure'
-  | 'fantasy'
-  | 'fiction'
-  | 'graphic novel'
-  | 'non-fiction'
-  | 'short stories'
-  | 'sci-fi'
-  | 'science & math'
-  | 'series';
+export type GenreFilterToggleType = {
+  adventure: boolean;
+  fantasy: boolean;
+  fiction: boolean;
+  'graphic novel': boolean;
+  nonfiction: boolean;
+  'short stories': boolean;
+  'sci-fi': boolean;
+  'science & math': boolean;
+  series: boolean;
+  long: boolean;
+  short: boolean;
+};
