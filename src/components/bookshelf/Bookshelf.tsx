@@ -3,28 +3,41 @@ import React, { useState } from 'react';
 import { BookshelfFilters } from '@/components/bookshelf/BookshelfFilters';
 import { BookshelfMasonryGrid } from '@/components/bookshelf/BookshelfMasonryGrid';
 
-import { BookType, GenreType } from '@/types';
+import { GenreFilterToggleType } from '@/types';
+
+const initialToggleState: GenreFilterToggleType = {
+  adventure: false,
+  fantasy: false,
+  fiction: false,
+  'graphic novel': false,
+  nonfiction: false,
+  'short stories': false,
+  'sci-fi': false,
+  'science & math': false,
+  series: false,
+  long: false,
+  short: false,
+  'sports & games': false,
+  history: false,
+  'best of the best': false,
+  'young-adult': false,
+};
 
 export const Bookshelf: React.FC = () => {
-  const [activeFilters, setActiveFilters] = useState<GenreType[]>([]);
+  const [activeFilters, setActiveFilters] = useState(initialToggleState);
 
-  const addFilter = (filterToAdd: GenreType) => {
-    setActiveFilters((prev) => [...prev, filterToAdd]);
+  const toggleFilter = (filterToToggle: keyof GenreFilterToggleType) => {
+    setActiveFilters((prev) => ({ ...prev, [filterToToggle]: !prev[filterToToggle] }));
   };
 
-  const removeFilter = (filterToRemove: GenreType) => {
-    setActiveFilters((prev) => prev.filter((f) => f !== filterToRemove));
-  };
-
-  const resetFilters = () => setActiveFilters([]);
+  const resetFilters = () => setActiveFilters(initialToggleState);
 
   return (
     <>
       <BookshelfFilters
-        addFilter={addFilter}
-        removeFilter={removeFilter}
+        toggleFilter={toggleFilter}
         resetFilters={resetFilters}
-        activeFilters={activeFilters}
+        filterStates={activeFilters}
       />
       <BookshelfMasonryGrid activeFilters={activeFilters} />
     </>

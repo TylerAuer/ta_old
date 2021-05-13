@@ -1,14 +1,14 @@
-import { useLayoutEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
 
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
-import { GenreType } from '@/types';
+import { GenreFilterToggleType } from '@/types';
+import { SourceMap } from 'node:module';
 
 type Props = {
-  activeFilters: GenreType[];
+  activeFilters: GenreFilterToggleType;
 };
 
 export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters }) => {
@@ -32,23 +32,41 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters }) => {
     }
   `);
 
+  // Don't render anything until the window width is known
   if (windowWidth === 0) return null;
 
   const books = query.allBookDataYaml.nodes;
+  let filteredBooks = [];
 
+  const isAnyFilterActive = Object.values(activeFilters).some((value) => value);
+  if (isAnyFilterActive) {
+    for (let book of books) {
+      console.log(book);
+      if (book.genres) {
+        for (let genre of book.genres) {
+          if (genre && activeFilters[genre]) {
+            filteredBooks.push(book);
+            break;
+          }
+        }
+      }
+    }
+  } else {
+    filteredBooks = books;
+  }
+
+  // Design preferences
   const gutterInPixels = 10;
-
-  // Will make these dynamic based on window size
   const maximumColumnWidth = 200;
 
+  // Compute columns values and generate arrays to hold heights and objects
   const columnCount = Math.ceil(windowWidth / maximumColumnWidth);
   const columnWidth = windowWidth / columnCount;
-
   const columnHeights = new Array(columnCount).fill(0);
   const columnsOfCovers = new Array(columnCount).fill(null).map(() => Array(0));
 
   // Populate columns with appropriate books
-  for (let book of books) {
+  for (let book of filteredBooks) {
     const columnIndexForNextBook = getShortestColumnIndex(columnHeights);
 
     // Add book to correct column
