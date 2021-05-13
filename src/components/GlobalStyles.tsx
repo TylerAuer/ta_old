@@ -25,6 +25,7 @@ const globalStyles = css`
     --color-a-hover: black;
 
     --color-grey-bg: #ebebeb;
+    --color-grey-bg-medium: #c0c0c0;
     --color-grey-bg-dark: #2b2b2b;
 
     --shadow-subtle: -4px 4px 8px rgba(36, 36, 36, 0.2);

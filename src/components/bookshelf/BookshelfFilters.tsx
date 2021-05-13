@@ -1,4 +1,11 @@
+import { css } from '@emotion/react';
+
+import { Toggle } from '@/components/Toggle';
+import { Box } from '@/components/Box';
+
 import { GenreFilterToggleType } from '@/types';
+import { Flex, FlexJustification } from '../Flex';
+import { SPACING } from '@/constants';
 
 type Props = {
   toggleFilter: (filter: keyof GenreFilterToggleType) => void;
@@ -8,8 +15,16 @@ type Props = {
 
 export const BookshelfFilters: React.FC<Props> = ({ toggleFilter, resetFilters, filterStates }) => {
   const btns = Object.keys(filterStates).map((genre) => (
-    <button onClick={() => toggleFilter(genre as keyof GenreFilterToggleType)}>{genre}</button>
+    <Toggle
+      state={filterStates[genre]}
+      content={genre}
+      onClick={() => toggleFilter(genre as keyof GenreFilterToggleType)}
+    />
   ));
 
-  return <div>{btns}</div>;
+  return (
+    <Box vMargin={SPACING.xl}>
+      <Flex flex={FlexJustification.center}>{btns}</Flex>
+    </Box>
+  );
 };
