@@ -17,6 +17,10 @@ const initialToggleState: GenreFilterToggleType = {
   series: false,
   long: false,
   short: false,
+  'sports & games': false,
+  history: false,
+  'best of the best': false,
+  'young-adult': false,
 };
 
 export const Bookshelf: React.FC = () => {

@@ -18,4 +18,8 @@ export type GenreFilterToggleType = {
   series: boolean;
   long: boolean;
   short: boolean;
+  'sports & games': boolean;
+  history: boolean;
+  'best of the best': boolean;
+  'young-adult': boolean;
 };

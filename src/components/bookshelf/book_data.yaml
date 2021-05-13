@@ -43,32 +43,34 @@
     - sci-fi
     - short stories
 - 
+  title: Exhalation
   amazon_url: https://smile.amazon.com/Exhalation-Stories-Ted-Chiang/dp/1101947888/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1586797323&sr=1-1
   cover: ./covers/Chiang-Exhalation.jpg
   goodreads_url: https://www.goodreads.com/book/show/52222275-exhalation
   indiebound_url: https://www.indiebound.org/book/9781101947883
   library_url: https://www.worldcat.org/search?q=9781101947883
   pages: '350'
-  title: Exhalation
   genres:
     - sci-fi
     - short stories
 - 
+  title: Blood, Sweat, and Pixels
   amazon_url: https://www.amazon.com/Blood-Sweat-Pixels-Triumphant-Turbulent/dp/0062651234/ref=tmm_pap_title_0?_encoding=UTF8&amp;qid=&amp;sr=
   cover: ./covers/Schreier-Blood,-Sweat,-and-Pixels.jpg
   goodreads_url: https://www.goodreads.com/book/show/33640770-blood-sweat-and-pixels
   indiebound_url: https://www.indiebound.org/book/9780062651235
   library_url: https://www.worldcat.org/search?q=9780062651235
   pages: '278'
-  title: Blood, Sweat, and Pixels
+  genres:
+    - sports & games
 - 
+  title: The Last Wish
   amazon_url: https://smile.amazon.com/Last-Wish-Introducing-Witcher/dp/0316497541/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1586805772&sr=1-1
   cover: ./covers/Sapkowski-The-Last-Wish.jpg
   goodreads_url: https://www.goodreads.com/book/show/33784346-the-last-wish
   indiebound_url: https://www.indiebound.org/book/9780316438964
   library_url: https://www.worldcat.org/search?q=9780316438964
   pages: '320'
-  title: The Last Wish
   genres:
     - fantasy
     - short-stories
@@ -237,6 +239,8 @@
   library_url: https://www.worldcat.org/search?q=9780393356595
   pages: '336'
   title: Limits of the Known
+  genres:
+    - adventure
 - 
   amazon_url: https://www.amazon.com/gp/product/073522935X
   cover: ./covers/Doerrfeld-The-Rabbit-Listened.jpg
@@ -245,6 +249,8 @@
   library_url: https://www.worldcat.org/search?q=9780735229358
   pages: '32'
   title: The Rabbit Listened
+  genres:
+    - picture book
 - 
   amazon_url: https://www.amazon.com/gp/product/0141001828
   cover: ./covers/Philbrick-In-the-Heart-of-the-Sea.jpg
@@ -253,6 +259,8 @@
   library_url: https://www.worldcat.org/search?q=9780141001821
   pages: '302'
   title: In the Heart of the Sea
+  genres:
+    - adventure
 - 
   amazon_url: https://www.amazon.com/gp/product/1847925170
   cover: ./covers/Rhodes-The-World-As-It-Is.jpg
@@ -261,6 +269,9 @@
   library_url: https://www.worldcat.org/search?q=9781847925176
   pages: '480'
   title: The World As It Is
+  genres:
+    - social science
+    - history
 - 
   amazon_url: https://www.amazon.com/Homo-Deus-Brief-History-Tomorrow-dp-0062464310/dp/0062464310
   cover: ./covers/Harari-Homo-Deus.jpg
@@ -269,6 +280,9 @@
   library_url: https://www.worldcat.org/search?q=9781910701881
   pages: '448'
   title: Homo Deus
+  genres:
+    - social science
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/075640407X
   cover: ./covers/Rothfuss-The-Name-of-the-Wind.jpg
@@ -277,6 +291,10 @@
   library_url: https://www.worldcat.org/search?q=9780756404079
   pages: '662'
   title: The Name of the Wind
+  genres:
+    - fantasy
+    - long
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0804139024
   cover: ./covers/Weir-The-Martian.jpg
@@ -285,6 +303,9 @@
   library_url: https://www.worldcat.org/search?q=9780804139021
   pages: '369'
   title: The Martian
+  genres:
+    - sci-fi
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0763665959
   cover: ./covers/Becker-Quest.jpg
@@ -293,6 +314,10 @@
   library_url: https://www.worldcat.org/search?q=9780763665951
   pages: '32'
   title: Quest
+  genres:
+    - fantasy
+    - picture book
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0061969559
   cover: ./covers/Lore-I-Am-Number-Four.jpg
@@ -301,6 +326,9 @@
   library_url: https://www.worldcat.org/search?q=9780061969553
   pages: '440'
   title: I Am Number Four
+  genres:
+    - fantasy
+    - young-adult
 - 
   amazon_url: https://www.amazon.com/gp/product/1406342327
   cover: ./covers/Haughton-Shh-We-Have-a-Plan.jpg
@@ -309,6 +337,8 @@
   library_url: https://www.worldcat.org/search?q=9781406342321
   pages: '48'
   title: Shh! We Have a Plan
+  genres:
+    - picture book
 - 
   amazon_url: https://www.amazon.com/gp/product/0763699012
   cover: ./covers/Teckentrup-Where's-the-Baby.jpg
@@ -317,6 +347,8 @@
   library_url: https://www.worldcat.org/search?q=9780763699017
   pages: '32'
   title: Where's the Baby?
+  genres:
+    - picture book
 - 
   amazon_url: https://www.amazon.com/Information-History-Theory-Flood-dp-1400096235
   cover: ./covers/Gleick-The-Information.jpg
@@ -325,6 +357,9 @@
   library_url: https://www.worldcat.org/search?q=9781400096237
   pages: '544'
   title: The Information
+  genres:
+    - science & math
+    - long 
 - 
   amazon_url: https://www.amazon.com/gp/product/0525509283/
   cover: ./covers/Kendi-How-to-Be-an-Antiracist.jpg
@@ -333,6 +368,9 @@
   library_url: https://www.worldcat.org/search?q=9780525509288
   pages: '305'
   title: How to Be an Antiracist
+  genres: 
+    - social science
+    - history
 - 
   amazon_url: https://www.amazon.com/gp/product/076532699X/
   cover: ./covers/Addison-The-Goblin-Emperor.jpg
@@ -341,6 +379,8 @@
   library_url: https://www.worldcat.org/search?q=9780765326997
   pages: '446'
   title: The Goblin Emperor
+  genres:
+    - fantasy
 - 
   amazon_url: https://www.amazon.com/gp/product/0393068579/
   cover: ./covers/Small-Stitches.jpg
@@ -349,6 +389,8 @@
   library_url: https://www.worldcat.org/search?q=9780393068573
   pages: '329'
   title: Stitches
+  genres:
+    - graphic novel
 - 
   amazon_url: https://www.amazon.com/gp/product/1501181416/
   cover: ./covers/Stalenhag-The-Electric-State.jpg
@@ -357,6 +399,9 @@
   library_url: https://www.worldcat.org/search?q=9781501181412
   pages: '144'
   title: The Electric State
+  genres:
+    - graphic novel
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0062390856/
   cover: ./covers/Stephens-Davidowitz-Everybody-Lies.jpg
@@ -365,6 +410,9 @@
   library_url: https://www.worldcat.org/search?q=9780062390851
   pages: '338'
   title: Everybody Lies
+  genres:
+    - social science
+    - science & math
 - 
   amazon_url: https://www.amazon.com/Rendezvous-Rama-Arthur-C-Clarke/dp/0358380227
   cover: ./covers/Clarke-Rendezvous-with-Rama.jpg
@@ -373,6 +421,9 @@
   library_url: https://www.worldcat.org/search?q=9780553287899
   pages: '245'
   title: Rendezvous with Rama
+  genres:
+    - sci-fi
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/1627794158/
   cover: ./covers/Pak-Goodbye-Summer,-Hello-Autumn.jpg
@@ -381,6 +432,8 @@
   library_url: https://www.worldcat.org/search?q=9781627794152
   pages: '32'
   title: Goodbye Summer, Hello Autumn
+  genres:
+    - picture book
 - 
   amazon_url: https://www.amazon.com/gp/product/0763690457/
   cover: ./covers/Love-Julian-Is-a-Mermaid.jpg
@@ -389,6 +442,8 @@
   library_url: https://www.worldcat.org/search?q=9780763690458
   pages: '80'
   title: "Juli\xE1n Is a Mermaid"
+  genres:
+    - picture book
 - 
   amazon_url: https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144324/
   cover: ./covers/Walker-Why-We-Sleep.jpg
@@ -397,6 +452,8 @@
   library_url: https://www.worldcat.org/search?q=
   pages: '368'
   title: Why We Sleep
+  genres:
+    - science & math
 - 
   amazon_url: https://www.amazon.com/gp/product/0307346609/
   cover: ./covers/Brooks-World-War-Z.jpg
@@ -405,6 +462,9 @@
   library_url: https://www.worldcat.org/search?q=9780307346605
   pages: '342'
   title: World War Z
+  genres:
+    - fantasy
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/1627790365/
   cover: ./covers/Christian-Algorithms-to-Live-By.jpg
@@ -413,6 +473,8 @@
   library_url: https://www.worldcat.org/search?q=9781627790369
   pages: '368'
   title: Algorithms to Live By
+  genres:
+    - science & math
 - 
   amazon_url: https://www.amazon.com/gp/product/1101904224/
   cover: ./covers/Crouch-Dark-Matter.jpg
@@ -421,6 +483,8 @@
   library_url: https://www.worldcat.org/search?q=9781101904220
   pages: '342'
   title: Dark Matter
+  genres:
+    - sci-fi
 - 
   amazon_url: https://www.amazon.com/gp/product/1594205221/
   cover: ./covers/Ellenberg-How-Not-to-Be-Wrong.jpg
@@ -429,14 +493,8 @@
   library_url: https://www.worldcat.org/search?q=9781594205224
   pages: '480'
   title: How Not to Be Wrong
-- 
-  amazon_url: https://www.amazon.com/gp/product/076531178X/
-  cover: ./covers/Sanderson-The-Final-Empire.jpg
-  goodreads_url: https://www.goodreads.com/book/show/68428.The_Final_Empire
-  indiebound_url: https://www.indiebound.org/book/9780765311788
-  library_url: https://www.worldcat.org/search?q=9780765311788
-  pages: '541'
-  title: The Final Empire
+  genres:
+    - science & math
 - 
   amazon_url: https://www.amazon.com/gp/product/0544272994
   cover: ./covers/Munroe-What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg
@@ -445,6 +503,9 @@
   library_url: https://www.worldcat.org/search?q=9780544272996
   pages: '303'
   title: What If?
+  genres:
+    - science and math
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/1984826786/
   cover: ./covers/Brooks-Devolution.jpg
@@ -453,6 +514,8 @@
   library_url: https://www.worldcat.org/search?q=9781984826787
   pages: '286'
   title: Devolution
+  genres:
+    - fantasy
 - 
   amazon_url: https://www.amazon.com/gp/product/0553418815/
   cover: ./covers/O'Neil-Weapons-of-Math-Destruction.jpg
@@ -461,6 +524,9 @@
   library_url: https://www.worldcat.org/search?q=9780553418811
   pages: '259'
   title: Weapons of Math Destruction
+  genres:
+    - social science
+    - science & math
 - 
   amazon_url: https://www.amazon.com/gp/product/0385494785
   cover: ./covers/Krakauer-Into-Thin-Air.jpg
@@ -469,6 +535,8 @@
   library_url: https://www.worldcat.org/search?q=9780385494786
   pages: '368'
   title: Into Thin Air
+  genres:
+    - adventure
 - 
   amazon_url: https://www.amazon.com/gp/product/074349282X/
   cover: ./covers/Ralston-Between-a-Rock-and-a-Hard-Place.jpg
@@ -477,3 +545,5 @@
   library_url: https://www.worldcat.org/search?q=9780743492829
   pages: '368'
   title: Between a Rock and a Hard Place
+  genres:
+    - adventure
