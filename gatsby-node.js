@@ -1,10 +1,10 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const { buildPostPages } = require('./utlis/build_post_pages');
-const { buildBlogPages } = require('./utlis/build_blog_pages');
-const { buildCategoryPages } = require('./utlis/build_category_pages');
-const { buildTagPages } = require('./utlis/build_tag_pages');
+const { buildPostPages } = require('./utils/build/build_post_pages');
+const { buildBlogPages } = require('./utils/build/build_blog_pages');
+const { buildCategoryPages } = require('./utils/build/build_category_pages');
+const { buildTagPages } = require('./utils/build/build_tag_pages');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
