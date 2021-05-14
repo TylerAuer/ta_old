@@ -16,10 +16,9 @@ export type GenreFilterToggleType = {
   'sci-fi': boolean;
   'science & math': boolean;
   series: boolean;
-  long: boolean;
-  short: boolean;
   'sports & games': boolean;
   history: boolean;
   'best of the best': boolean;
-  'young-adult': boolean;
+  'mystery & thriller': boolean;
+  memoir: boolean;
 };

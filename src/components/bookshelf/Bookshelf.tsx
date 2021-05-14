@@ -15,12 +15,11 @@ const initialToggleState: GenreFilterToggleType = {
   'sci-fi': false,
   'science & math': false,
   series: false,
-  long: false,
-  short: false,
   'sports & games': false,
   history: false,
   'best of the best': false,
-  'young-adult': false,
+  'mystery & thriller': false,
+  memoir: false,
 };
 
 export const Bookshelf: React.FC = () => {

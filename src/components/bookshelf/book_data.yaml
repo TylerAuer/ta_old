@@ -8,7 +8,7 @@
   pages: '719'
   genres:
     - fantasy
-    - long
+    - series
 - 
   title: All Systems Red
   cover: ./covers/Wells-All-Systems-Red.jpg
@@ -19,7 +19,6 @@
   pages: '152'
   genres:
     - sci-fi
-    - short
 - 
   title: Bossypants
   cover: ./covers/Fey-Bossypants.jpg
@@ -41,7 +40,6 @@
   pages: '286'
   genres:
     - sci-fi
-    - short stories
 - 
   title: Exhalation
   amazon_url: https://smile.amazon.com/Exhalation-Stories-Ted-Chiang/dp/1101947888/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1586797323&sr=1-1
@@ -52,7 +50,7 @@
   pages: '350'
   genres:
     - sci-fi
-    - short stories
+    - best of the best
 - 
   title: Blood, Sweat, and Pixels
   amazon_url: https://www.amazon.com/Blood-Sweat-Pixels-Triumphant-Turbulent/dp/0062651234/ref=tmm_pap_title_0?_encoding=UTF8&amp;qid=&amp;sr=
@@ -74,6 +72,7 @@
   genres:
     - fantasy
     - short-stories
+    - series
 - 
   amazon_url: https://www.amazon.com/Why-Were-Polarized-Ezra-Klein/dp/147670032X/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=
   cover: ./covers/Klein-Why-We're-Polarized.jpg
@@ -125,6 +124,7 @@
   title: The Storm Whale
   genre:
     - picture book
+    - series
 - 
   amazon_url: https://www.amazon.com/Dear-Girls-Intimate-Untold-Secrets/dp/052550883X
   cover: ./covers/Wong-Dear-Girls.jpg
@@ -167,6 +167,7 @@
   genres:
     - comedy
     - memoir
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/Education-Idealist-Memoir-Samantha-Power/dp/0062820699
   cover: ./covers/Power-The-Education-of-an-Idealist.jpg
@@ -188,7 +189,7 @@
   title: Magic for Liars
   genres:
     - fantasy
-    - mystery
+    - mystery & thriller
 - 
   amazon_url: https://www.amazon.com/gp/product/1476733953/
   cover: ./covers/Howey-Wool.jpg
@@ -199,7 +200,7 @@
   title: Wool
   genres:
     - sci-fi
-    - thriller
+    - mystery & thriller
 - 
   amazon_url: https://www.amazon.com/gp/product/0312427565
   cover: ./covers/Wolfe-The-Right-Stuff.jpg
@@ -209,8 +210,9 @@
   pages: '352'
   title: The Right Stuff
   genres:
-    - science
+    - science & math
     - history
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0670919985
   cover: ./covers/Alderman-The-Power.jpg
@@ -221,6 +223,7 @@
   title: The Power
   genres:
     - fantasy
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/1524759783
   cover: ./covers/Crouch-Recursion.jpg
@@ -231,6 +234,7 @@
   title: Recursion
   genres:
     - sci-fi
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/Limits-Known-David-Roberts/dp/0393609863
   cover: ./covers/Roberts-Limits-of-the-Known.jpg
@@ -241,6 +245,7 @@
   title: Limits of the Known
   genres:
     - adventure
+    - memoir
 - 
   amazon_url: https://www.amazon.com/gp/product/073522935X
   cover: ./covers/Doerrfeld-The-Rabbit-Listened.jpg
@@ -251,6 +256,7 @@
   title: The Rabbit Listened
   genres:
     - picture book
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0141001828
   cover: ./covers/Philbrick-In-the-Heart-of-the-Sea.jpg
@@ -261,6 +267,7 @@
   title: In the Heart of the Sea
   genres:
     - adventure
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/1847925170
   cover: ./covers/Rhodes-The-World-As-It-Is.jpg
@@ -272,6 +279,7 @@
   genres:
     - social science
     - history
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/Homo-Deus-Brief-History-Tomorrow-dp-0062464310/dp/0062464310
   cover: ./covers/Harari-Homo-Deus.jpg
@@ -293,8 +301,8 @@
   title: The Name of the Wind
   genres:
     - fantasy
-    - long
     - best of the best
+    - series
 - 
   amazon_url: https://www.amazon.com/gp/product/0804139024
   cover: ./covers/Weir-The-Martian.jpg
@@ -305,6 +313,7 @@
   title: The Martian
   genres:
     - sci-fi
+    - mystery & thriller
     - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/0763665959
@@ -328,7 +337,7 @@
   title: I Am Number Four
   genres:
     - fantasy
-    - young-adult
+    - series
 - 
   amazon_url: https://www.amazon.com/gp/product/1406342327
   cover: ./covers/Haughton-Shh-We-Have-a-Plan.jpg
@@ -359,7 +368,6 @@
   title: The Information
   genres:
     - science & math
-    - long 
 - 
   amazon_url: https://www.amazon.com/gp/product/0525509283/
   cover: ./covers/Kendi-How-to-Be-an-Antiracist.jpg
@@ -485,6 +493,7 @@
   title: Dark Matter
   genres:
     - sci-fi
+    - mystery & thriller
 - 
   amazon_url: https://www.amazon.com/gp/product/1594205221/
   cover: ./covers/Ellenberg-How-Not-to-Be-Wrong.jpg
@@ -537,6 +546,7 @@
   title: Into Thin Air
   genres:
     - adventure
+    - best of the best
 - 
   amazon_url: https://www.amazon.com/gp/product/074349282X/
   cover: ./covers/Ralston-Between-a-Rock-and-a-Hard-Place.jpg
