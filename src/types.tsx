@@ -28,11 +28,11 @@ export type GenreFilterToggleStateType = { [key in keyof typeof GenresEnum]: boo
 
 export type BookDataType = {
   title: string;
-  amazon_url: string;
   cover: string;
-  goodreads_url: string;
-  indiebound_url: string;
-  library_url: string;
   pages: string;
   genres: GenresEnum[];
+  amazon_url?: string;
+  goodreads_url?: string;
+  indiebound_url?: string;
+  library_url?: string;
 };
