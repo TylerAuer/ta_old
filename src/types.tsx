@@ -31,7 +31,6 @@ export type BookDataType = {
   cover: string;
   pages: string;
   genres: GenresEnum[];
-  amazon_url?: string;
   goodreads_url?: string;
   indiebound_url?: string;
   library_url?: string;
