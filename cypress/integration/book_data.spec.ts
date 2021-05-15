@@ -37,7 +37,20 @@ describe('Check genres', () => {
       });
     });
   });
-});
 
-// it(`${genre} is in GenreEnum [${book.title}]`, () => {
-// });
+  const minUseOfGenre = 5;
+  context(`every genre is used with >= ${minUseOfGenre} books`, () => {
+    const genreUseCount: { [key: string]: number } = {};
+    bookData.forEach((book) => {
+      book.genres.forEach((genre) => {
+        if (!genreUseCount[genre]) genreUseCount[genre] = 0;
+        genreUseCount[genre]++;
+      });
+    });
+    Object.entries(genreUseCount).forEach(([genre, count]) => {
+      it(`${genre} is used >= ${minUseOfGenre} times`, () => {
+        expect(count).to.be.greaterThan(minUseOfGenre - 1);
+      });
+    });
+  });
+});
