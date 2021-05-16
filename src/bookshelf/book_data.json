@@ -553,18 +553,6 @@
     ]
   },
   {
-    "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
-    "author": "Matthew Walker",
-    "cover": "./covers/Matthew-Walker-Why-We-Sleep--U.jpg",
-    "pages": "368",
-    "goodreads_url": "https://www.goodreads.com/book/show/34466963-why-we-sleep",
-    "indiebound_url": null,
-    "library_url": null,
-    "genres": [
-      "science & math"
-    ]
-  },
-  {
     "title": "World War Z: An Oral History of the Zombie War",
     "author": "Max Brooks",
     "cover": "./covers/Max-Brooks-World-War-Z--An-Ora.jpg",
@@ -654,19 +642,6 @@
     ]
   },
   {
-    "title": "Into Thin Air: A Personal Account of the Mount Everest Disaster",
-    "author": "Jon Krakauer",
-    "cover": "./covers/Jon-Krakauer-Into-Thin-Air--A-.jpg",
-    "pages": "368",
-    "goodreads_url": "https://www.goodreads.com/book/show/1898.Into_Thin_Air",
-    "indiebound_url": null,
-    "library_url": null,
-    "genres": [
-      "adventure",
-      "best of the best"
-    ]
-  },
-  {
     "title": "Between a Rock and a Hard Place",
     "author": "Aron Ralston",
     "cover": "./covers/Aron-Ralston-Between-a-Rock-an.jpg",
@@ -691,19 +666,6 @@
       "comedy",
       "graphic novel",
       "memoir"
-    ]
-  },
-  {
-    "title": "The Fifth Season",
-    "author": "N.K. Jemisin",
-    "cover": "./covers/N-K--Jemisin-The-Fifth-Season.jpg",
-    "pages": "468",
-    "goodreads_url": "https://www.goodreads.com/book/show/19161852-the-fifth-season",
-    "indiebound_url": null,
-    "library_url": null,
-    "genres": [
-      "fantasy",
-      "series"
     ]
   },
   {
@@ -747,7 +709,7 @@
   },
   {
     "title": "March: Book One",
-    "author": "John             LewisAndrew AydinNate Powell",
+    "author": "John Lewis, Andrew Aydin, & Nate Powell",
     "cover": "./covers/John-------------LewisAndrew-A.jpg",
     "pages": "128",
     "goodreads_url": "https://www.goodreads.com/book/show/17346698-march",
@@ -796,6 +758,44 @@
     "genres": [
       "history",
       "social science"
+    ]
+  },
+  {
+    "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+    "author": "Matthew Walker",
+    "cover": "./covers/Matthew-Walker-Why-We-Sleep--U.jpg",
+    "pages": "368",
+    "goodreads_url": "https://www.goodreads.com/book/show/36709369-why-we-sleep",
+    "indiebound_url": "https://www.indiebound.org/book/9781501144325",
+    "library_url": "https://www.worldcat.org/search?q=9781501144325",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "Into Thin Air: A Personal Account of the Mt. Everest Disaster",
+    "author": "Jon Krakauer",
+    "cover": "./covers/Jon-Krakauer-Into-Thin-Air--A-.jpg",
+    "pages": "293",
+    "goodreads_url": "https://www.goodreads.com/book/show/871781.Into_Thin_Air",
+    "indiebound_url": "https://www.indiebound.org/book/9780679457527",
+    "library_url": "https://www.worldcat.org/search?q=9780679457527",
+    "genres": [
+      "adventure",
+      "best of the best"
+    ]
+  },
+  {
+    "title": "The Fifth Season",
+    "author": "N.K. Jemisin",
+    "cover": "./covers/N-K--Jemisin-The-Fifth-Season.jpg",
+    "pages": "471",
+    "goodreads_url": "https://www.goodreads.com/book/show/34314712-the-fifth-season",
+    "indiebound_url": "https://www.indiebound.org/book/9780316229296",
+    "library_url": "https://www.worldcat.org/search?q=9780316229296",
+    "genres": [
+      "fantasy",
+      "series"
     ]
   }
 ]
