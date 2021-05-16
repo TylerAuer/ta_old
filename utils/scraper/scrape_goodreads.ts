@@ -27,6 +27,11 @@ export const scrapeGoodreads = async (
   const isbn = $('span[itemprop=isbn]').text().trim();
   const pages = $('span[itemprop=numberOfPages]').text().split(' ')[0];
 
+  // ISBN is used to construct urls so abort if ISBN is not found.
+  if (!isbn) {
+    throw new Error('ISBN not found, check the Goodreads page for ISBN13');
+  }
+
   // Filename without path
   const coverFileName =
     (author + ' ' + title)
@@ -46,10 +51,10 @@ export const scrapeGoodreads = async (
   const buffer = await imgRes.buffer();
   fs.writeFile(coverDestination, buffer, () => {});
 
-  const indiebound_url = isbn ? 'https://www.indiebound.org/book/' + isbn : null;
-  const library_url = isbn ? 'https://www.worldcat.org/search?q=' + isbn : null;
+  const indiebound_url = 'https://www.indiebound.org/book/' + isbn;
+  const library_url = 'https://www.worldcat.org/search?q=' + isbn;
 
-  return {
+  const data = {
     title,
     author,
     cover,
@@ -58,4 +63,10 @@ export const scrapeGoodreads = async (
     indiebound_url,
     library_url,
   };
+
+  Object.entries(data).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+  });
+
+  return data;
 };
