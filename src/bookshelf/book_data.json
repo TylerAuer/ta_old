@@ -102,7 +102,7 @@
     "indiebound_url": "https://www.indiebound.org/book/9781476700328",
     "library_url": "https://www.worldcat.org/search?q=9781476700328",
     "genres": [
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -126,7 +126,7 @@
     "indiebound_url": "https://www.indiebound.org/book/9780553804645",
     "library_url": "https://www.worldcat.org/search?q=9780553804645",
     "genres": [
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -356,7 +356,7 @@
     "library_url": "https://www.worldcat.org/search?q=9781910701881",
     "genres": [
       "best of the best",
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -460,7 +460,7 @@
     "library_url": "https://www.worldcat.org/search?q=9780525509288",
     "genres": [
       "history",
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -511,7 +511,7 @@
     "genres": [
       "best of the best",
       "science & math",
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -638,7 +638,7 @@
     "library_url": "https://www.worldcat.org/search?q=9780553418811",
     "genres": [
       "science & math",
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -757,7 +757,7 @@
     "library_url": "https://www.worldcat.org/search?q=9781473637467",
     "genres": [
       "history",
-      "social science"
+      "social & political sciences"
     ]
   },
   {
@@ -794,6 +794,213 @@
     "indiebound_url": "https://www.indiebound.org/book/9780316229296",
     "library_url": "https://www.worldcat.org/search?q=9780316229296",
     "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "Jonathan Strange & Mr Norrell",
+    "author": "Susanna ClarkePortia Rosenberg",
+    "cover": "./covers/Susanna-ClarkePortia-Rosenberg.jpg",
+    "pages": "782",
+    "goodreads_url": "https://www.goodreads.com/book/show/76852.Jonathan_Strange_Mr_Norrell",
+    "indiebound_url": "https://www.indiebound.org/book/9781582344164",
+    "library_url": "https://www.worldcat.org/search?q=9781582344164",
+    "genres": [
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Grokking Algorithms An Illustrated Guide For Programmers and Other Curious People",
+    "author": "Aditya Y. Bhargava",
+    "cover": "./covers/Aditya-Y--Bhargava-Grokking-Al.jpg",
+    "pages": "256",
+    "goodreads_url": "https://www.goodreads.com/book/show/22847284-grokking-algorithms-an-illustrated-guide-for-programmers-and-other-curio",
+    "indiebound_url": "https://www.indiebound.org/book/9781617292231",
+    "library_url": "https://www.worldcat.org/search?q=9781617292231",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "Piranesi",
+    "author": "Susanna Clarke",
+    "cover": "./covers/Susanna-Clarke-Piranesi.jpg",
+    "pages": "245",
+    "goodreads_url": "https://www.goodreads.com/book/show/50202953-piranesi",
+    "indiebound_url": "https://www.indiebound.org/book/9781635575637",
+    "library_url": "https://www.worldcat.org/search?q=9781635575637",
+    "genres": [
+      "best of the best",
+      "fantasy"
+    ]
+  },
+  {
+    "title": "The Fire Never Goes Out: A Memoir in Pictures",
+    "author": "Noelle Stevenson",
+    "cover": "./covers/Noelle-Stevenson-The-Fire-Neve.jpg",
+    "pages": "208",
+    "goodreads_url": "https://www.goodreads.com/book/show/45169737-the-fire-never-goes-out",
+    "indiebound_url": "https://www.indiebound.org/book/9780062278272",
+    "library_url": "https://www.worldcat.org/search?q=9780062278272",
+    "genres": [
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Ninth House",
+    "author": "Leigh Bardugo",
+    "cover": "./covers/Leigh-Bardugo-Ninth-House.jpg",
+    "pages": "459",
+    "goodreads_url": "https://www.goodreads.com/book/show/43263680-ninth-house",
+    "indiebound_url": "https://www.indiebound.org/book/9781250313072",
+    "library_url": "https://www.worldcat.org/search?q=9781250313072",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "Adulthood Is a Myth",
+    "author": "Sarah Andersen",
+    "cover": "./covers/Sarah-Andersen-Adulthood-Is-a-.jpg",
+    "pages": "112",
+    "goodreads_url": "https://www.goodreads.com/book/show/25855506-adulthood-is-a-myth",
+    "indiebound_url": "https://www.indiebound.org/book/9781449474195",
+    "library_url": "https://www.worldcat.org/search?q=9781449474195",
+    "genres": [
+      "comedy",
+      "graphic novel"
+    ]
+  },
+  {
+    "title": "Binti",
+    "author": "Nnedi Okorafor",
+    "cover": "./covers/Nnedi-Okorafor-Binti.jpg",
+    "pages": "96",
+    "goodreads_url": "https://www.goodreads.com/book/show/25667918-binti",
+    "indiebound_url": "https://www.indiebound.org/book/9780765384461",
+    "library_url": "https://www.worldcat.org/search?q=9780765384461",
+    "genres": [
+      "sci-fi",
+      "series"
+    ]
+  },
+  {
+    "title": "So You Want to Talk About Race",
+    "author": "Ijeoma Oluo",
+    "cover": "./covers/Ijeoma-Oluo-So-You-Want-to-Tal.jpg",
+    "pages": "248",
+    "goodreads_url": "https://www.goodreads.com/book/show/35099718-so-you-want-to-talk-about-race",
+    "indiebound_url": "https://www.indiebound.org/book/9781580056779",
+    "library_url": "https://www.worldcat.org/search?q=9781580056779",
+    "genres": [
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "Here",
+    "author": "Richard McGuire",
+    "cover": "./covers/Richard-McGuire-Here.jpg",
+    "pages": "304",
+    "goodreads_url": "https://www.goodreads.com/book/show/20587888-here",
+    "indiebound_url": "https://www.indiebound.org/book/9780241145968",
+    "library_url": "https://www.worldcat.org/search?q=9780241145968",
+    "genres": [
+      "graphic novel",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "Invisible Women: Data Bias in a World Designed for Men",
+    "author": "Caroline Criado Pérez",
+    "cover": "./covers/Caroline-Criado-P-rez-Invisibl.jpg",
+    "pages": "411",
+    "goodreads_url": "https://www.goodreads.com/book/show/41104077-invisible-women",
+    "indiebound_url": "https://www.indiebound.org/book/9781419729072",
+    "library_url": "https://www.worldcat.org/search?q=9781419729072",
+    "genres": [
+      "history",
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "A Promised Land",
+    "author": "Barack Obama",
+    "cover": "./covers/Barack-Obama-A-Promised-Land.jpg",
+    "pages": "751",
+    "goodreads_url": "https://www.goodreads.com/book/show/55359022-a-promised-land",
+    "indiebound_url": "https://www.indiebound.org/book/9781524763169",
+    "library_url": "https://www.worldcat.org/search?q=9781524763169",
+    "genres": [
+      "history",
+      "memoir",
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "The New One: Painfully True Stories from a Reluctant Dad",
+    "author": "Mike Birbiglia",
+    "cover": "./covers/Mike-Birbiglia-The-New-One--Pa.jpg",
+    "pages": "256",
+    "goodreads_url": "https://www.goodreads.com/en/book/show/52894214",
+    "indiebound_url": "https://www.indiebound.org/book/9781538701515",
+    "library_url": "https://www.worldcat.org/search?q=9781538701515",
+    "genres": [
+      "best of the best",
+      "comedy",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Through the Woods",
+    "author": "Emily Carroll",
+    "cover": "./covers/Emily-Carroll-Through-the-Wood.jpg",
+    "pages": "208",
+    "goodreads_url": "https://www.goodreads.com/book/show/18659623-through-the-woods",
+    "indiebound_url": "https://www.indiebound.org/book/9781442465954",
+    "library_url": "https://www.worldcat.org/search?q=9781442465954",
+    "genres": [
+      "graphic novel"
+    ]
+  },
+  {
+    "title": "The Uninhabitable Earth: Life After Warming",
+    "author": "David Wallace-Wells",
+    "cover": "./covers/David-Wallace-Wells-The-Uninha.jpg",
+    "pages": "310",
+    "goodreads_url": "https://www.goodreads.com/book/show/41552709-the-uninhabitable-earth",
+    "indiebound_url": "https://www.indiebound.org/book/9780525576709",
+    "library_url": "https://www.worldcat.org/search?q=9780525576709",
+    "genres": [
+      "best of the best",
+      "science & math",
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win",
+    "author": "Maria Konnikova",
+    "cover": "./covers/Maria-Konnikova-The-Biggest-Bl.jpg",
+    "pages": "368",
+    "goodreads_url": "https://www.goodreads.com/book/show/49814228-the-biggest-bluff",
+    "indiebound_url": "https://www.indiebound.org/book/9780525522621",
+    "library_url": "https://www.worldcat.org/search?q=9780525522621",
+    "genres": [
+      "sports & games"
+    ]
+  },
+  {
+    "title": "Assassin's Apprentice",
+    "author": "Robin HobbMagali Villeneuve",
+    "cover": "./covers/Robin-HobbMagali-Villeneuve-As.jpg",
+    "pages": "451",
+    "goodreads_url": "https://www.goodreads.com/book/show/43573035-assassin-s-apprentice",
+    "indiebound_url": "https://www.indiebound.org/book/9781984817853",
+    "library_url": "https://www.worldcat.org/search?q=9781984817853",
+    "genres": [
+      "best of the best",
       "fantasy",
       "series"
     ]
