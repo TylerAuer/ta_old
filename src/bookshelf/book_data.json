@@ -1004,5 +1004,137 @@
       "fantasy",
       "series"
     ]
+  },
+  {
+    "title": "The Ministry for the Future",
+    "author": "Kim Stanley Robinson",
+    "cover": "./covers/Kim-Stanley-Robinson-The-Minis.jpg",
+    "pages": "563",
+    "goodreads_url": "https://www.goodreads.com/en/book/show/50998056",
+    "indiebound_url": "https://www.indiebound.org/book/9780316300131",
+    "library_url": "https://www.worldcat.org/search?q=9780316300131",
+    "genres": [
+      "sci-fi",
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "Storm Front",
+    "author": "Jim Butcher",
+    "cover": "./covers/Jim-Butcher-Storm-Front.jpg",
+    "pages": "355",
+    "goodreads_url": "https://www.goodreads.com/book/show/47212.Storm_Front",
+    "indiebound_url": "https://www.indiebound.org/book/9780451457813",
+    "library_url": "https://www.worldcat.org/search?q=9780451457813",
+    "genres": [
+      "fantasy",
+      "mystery & thriller",
+      "series"
+    ]
+  },
+  {
+    "title": "Solutions and Other Problems",
+    "author": "Allie Brosh",
+    "cover": "./covers/Allie-Brosh-Solutions-and-Othe.jpg",
+    "pages": "519",
+    "goodreads_url": "https://www.goodreads.com/book/show/51323365-solutions-and-other-problems",
+    "indiebound_url": "https://www.indiebound.org/book/9781982156947",
+    "library_url": "https://www.worldcat.org/search?q=9781982156947",
+    "genres": [
+      "comedy",
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Code: The Hidden Language of Computer Hardware and Software",
+    "author": "Charles Petzold",
+    "cover": "./covers/Charles-Petzold-Code--The-Hidd.jpg",
+    "pages": "400",
+    "goodreads_url": "https://www.goodreads.com/book/show/44882.Code",
+    "indiebound_url": "https://www.indiebound.org/book/9780735611313",
+    "library_url": "https://www.worldcat.org/search?q=9780735611313",
+    "genres": [
+      "best of the best",
+      "science & math",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "How to Invent Everything: A Survival Guide for the Stranded Time Traveler",
+    "author": "Ryan North",
+    "cover": "./covers/Ryan-North-How-to-Invent-Every.jpg",
+    "pages": "437",
+    "goodreads_url": "https://www.goodreads.com/book/show/39026990-how-to-invent-everything",
+    "indiebound_url": "https://www.indiebound.org/book/9780735220140",
+    "library_url": "https://www.worldcat.org/search?q=9780735220140",
+    "genres": [
+      "science & math",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "The Rise and Fall of the Dinosaurs: A New History of a Lost World",
+    "author": "Stephen Brusatte",
+    "cover": "./covers/Stephen-Brusatte-The-Rise-and-.jpg",
+    "pages": "404",
+    "goodreads_url": "https://www.goodreads.com/book/show/35820369-the-rise-and-fall-of-the-dinosaurs",
+    "indiebound_url": "https://www.indiebound.org/book/9780062490421",
+    "library_url": "https://www.worldcat.org/search?q=9780062490421",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "Endurance: Shackleton's Incredible Voyage",
+    "author": "Alfred Lansing",
+    "cover": "./covers/Alfred-Lansing-Endurance--Shac.jpg",
+    "pages": "282",
+    "goodreads_url": "https://www.goodreads.com/book/show/139069.Endurance",
+    "indiebound_url": "https://www.indiebound.org/book/9780786706211",
+    "library_url": "https://www.worldcat.org/search?q=9780786706211",
+    "genres": [
+      "adventure",
+      "best of the best"
+    ]
+  },
+  {
+    "title": "Elantris",
+    "author": "Brandon Sanderson",
+    "cover": "./covers/Brandon-Sanderson-Elantris.jpg",
+    "pages": "638",
+    "goodreads_url": "https://www.goodreads.com/book/show/68427.Elantris",
+    "indiebound_url": "https://www.indiebound.org/book/9780765350374",
+    "library_url": "https://www.worldcat.org/search?q=9780765350374",
+    "genres": [
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Mistborn: The Final Empire",
+    "author": "Brandon Sanderson",
+    "cover": "./covers/Brandon-Sanderson-Mistborn--Th.jpg",
+    "pages": "541",
+    "goodreads_url": "https://www.goodreads.com/eu/book/show/68428",
+    "indiebound_url": "https://www.indiebound.org/book/9780765311788",
+    "library_url": "https://www.worldcat.org/search?q=9780765311788",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "Between the World and Me",
+    "author": "Ta-Nehisi Coates",
+    "cover": "./covers/Ta-Nehisi-Coates-Between-the-W.jpg",
+    "pages": "152",
+    "goodreads_url": "https://www.goodreads.com/book/show/25489625-between-the-world-and-me",
+    "indiebound_url": "https://www.indiebound.org/book/9780812993547",
+    "library_url": "https://www.worldcat.org/search?q=9780812993547",
+    "genres": [
+      "best of the best",
+      "social & political sciences"
+    ]
   }
 ]
