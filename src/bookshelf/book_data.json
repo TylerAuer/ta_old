@@ -692,5 +692,110 @@
       "graphic novel",
       "memoir"
     ]
+  },
+  {
+    "title": "The Fifth Season",
+    "author": "N.K. Jemisin",
+    "cover": "./covers/N-K--Jemisin-The-Fifth-Season.jpg",
+    "pages": "468",
+    "goodreads_url": "https://www.goodreads.com/book/show/19161852-the-fifth-season",
+    "indiebound_url": null,
+    "library_url": null,
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "A Natural History of Dragons",
+    "author": "Marie Brennan",
+    "cover": "./covers/Marie-Brennan-A-Natural-Histor.jpg",
+    "pages": "334",
+    "goodreads_url": "https://www.goodreads.com/book/show/12974372-a-natural-history-of-dragons",
+    "indiebound_url": "https://www.indiebound.org/book/9780765331960",
+    "library_url": "https://www.worldcat.org/search?q=9780765331960",
+    "genres": [
+      "fantasy",
+      "series",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "A Wizard of Earthsea",
+    "author": "Ursula K. Le Guin",
+    "cover": "./covers/Ursula-K--Le-Guin-A-Wizard-of-.jpg",
+    "pages": "210",
+    "goodreads_url": "https://www.goodreads.com/book/show/16029682-a-wizard-of-earthsea",
+    "indiebound_url": "https://www.indiebound.org/book/9780553383041",
+    "library_url": "https://www.worldcat.org/search?q=9780553383041",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "How To: Absurd Scientific Advice for Common Real-World Problems",
+    "author": "Randall Munroe",
+    "cover": "./covers/Randall-Munroe-How-To--Absurd-.jpg",
+    "pages": "320",
+    "goodreads_url": "https://www.goodreads.com/book/show/43852758-how-to",
+    "indiebound_url": "https://www.indiebound.org/book/9780525537090",
+    "library_url": "https://www.worldcat.org/search?q=9780525537090",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "March: Book One",
+    "author": "John             LewisAndrew AydinNate Powell",
+    "cover": "./covers/John-------------LewisAndrew-A.jpg",
+    "pages": "128",
+    "goodreads_url": "https://www.goodreads.com/book/show/17346698-march",
+    "indiebound_url": "https://www.indiebound.org/book/9781603093002",
+    "library_url": "https://www.worldcat.org/search?q=9781603093002",
+    "genres": [
+      "graphic novel",
+      "history",
+      "series"
+    ]
+  },
+  {
+    "title": "Extra Lives: Why Video Games Matter",
+    "author": "Tom Bissell",
+    "cover": "./covers/Tom-Bissell-Extra-Lives--Why-V.jpg",
+    "pages": "204",
+    "goodreads_url": "https://www.goodreads.com/book/show/7059033-extra-lives?ac=1&from_search=true&qid=gqApy6E9jb&rank=1",
+    "indiebound_url": "https://www.indiebound.org/book/9780307378705",
+    "library_url": "https://www.worldcat.org/search?q=9780307378705",
+    "genres": [
+      "sports & games",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "Fun Home: A Family Tragicomic",
+    "author": "Alison Bechdel",
+    "cover": "./covers/Alison-Bechdel-Fun-Home--A-Fam.jpg",
+    "pages": "232",
+    "goodreads_url": "https://www.goodreads.com/book/show/26135825-fun-home",
+    "indiebound_url": "https://www.indiebound.org/book/9780618871711",
+    "library_url": "https://www.worldcat.org/search?q=9780618871711",
+    "genres": [
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think",
+    "author": "Hans RoslingOla RoslingAnna Rosling Rönnlund",
+    "cover": "./covers/Hans-RoslingOla-RoslingAnna-Ro.jpg",
+    "pages": "342",
+    "goodreads_url": "https://www.goodreads.com/book/show/34890015-factfulness?ac=1&from_search=true&qid=oOywJOL7yn&rank=1",
+    "indiebound_url": "https://www.indiebound.org/book/9781473637467",
+    "library_url": "https://www.worldcat.org/search?q=9781473637467",
+    "genres": [
+      "history",
+      "social science"
+    ]
   }
 ]
