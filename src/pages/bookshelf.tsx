@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Bookshelf } from '@/components/bookshelf/Bookshelf';
+import { Bookshelf } from '@/bookshelf/Bookshelf';
 
 const BookshelfPage: React.FC = () => (
   <GlobalStyles>

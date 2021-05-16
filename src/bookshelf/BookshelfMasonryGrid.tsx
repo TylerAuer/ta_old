@@ -4,18 +4,17 @@ import { css } from '@emotion/react';
 
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
-import { GenreFilterToggleType } from '@/types';
-import { SourceMap } from 'node:module';
+import { GenreFilterToggleStateType } from '@/types';
 
 type Props = {
-  activeFilters: GenreFilterToggleType;
+  activeFilters: GenreFilterToggleStateType;
 };
 
 export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters }) => {
   const windowWidth = useWindowWidth();
   const query = useStaticQuery(graphql`
     {
-      allBookDataYaml {
+      allBookDataJson {
         nodes {
           cover {
             childImageSharp {
@@ -35,7 +34,7 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters }) => {
   // Don't render anything until the window width is known
   if (windowWidth === 0) return null;
 
-  const books = query.allBookDataYaml.nodes;
+  const books = query.allBookDataJson.nodes;
   let filteredBooks = [];
 
   const isAnyFilterActive = Object.values(activeFilters).some((value) => value);

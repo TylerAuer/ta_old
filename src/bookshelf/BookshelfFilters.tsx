@@ -3,14 +3,14 @@ import { css } from '@emotion/react';
 import { Toggle } from '@/components/Toggle';
 import { Box } from '@/components/Box';
 
-import { GenreFilterToggleType } from '@/types';
-import { Flex, FlexJustification } from '../Flex';
+import { GenreFilterToggleStateType, GenresEnum } from '@/types';
+import { Flex, FlexJustification } from '../components/Flex';
 import { SPACING } from '@/constants';
 
 type Props = {
-  toggleFilter: (filter: keyof GenreFilterToggleType) => void;
+  toggleFilter: (filter: GenresEnum) => void;
   resetFilters: () => void;
-  filterStates: GenreFilterToggleType;
+  filterStates: GenreFilterToggleStateType;
 };
 
 export const BookshelfFilters: React.FC<Props> = ({ toggleFilter, resetFilters, filterStates }) => {
@@ -18,7 +18,7 @@ export const BookshelfFilters: React.FC<Props> = ({ toggleFilter, resetFilters, 
     <Toggle
       state={filterStates[genre]}
       content={genre}
-      onClick={() => toggleFilter(genre as keyof GenreFilterToggleType)}
+      onClick={() => toggleFilter(GenresEnum[genre])}
     />
   ));
 

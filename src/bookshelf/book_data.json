@@ -1,0 +1,801 @@
+[
+  {
+    "title": "Fire & Blood",
+    "author": "George R.R. Martin",
+    "cover": "./covers/George-R-R--MartinDoug-Wheatle.jpg",
+    "pages": "719",
+    "goodreads_url": "https://www.goodreads.com/book/show/39943621-fire-blood",
+    "indiebound_url": "https://www.indiebound.org/book/9781524796280",
+    "library_url": "https://www.worldcat.org/search?q=9781524796280",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "All Systems Red",
+    "author": "Martha Wells",
+    "cover": "./covers/Martha-Wells-All-Systems-Red.jpg",
+    "pages": "152",
+    "goodreads_url": "https://www.goodreads.com/book/show/33387769-all-systems-red",
+    "indiebound_url": "https://www.indiebound.org/book/9780765397539",
+    "library_url": "https://www.worldcat.org/search?q=9780765397539",
+    "genres": [
+      "mystery & thriller",
+      "sci-fi",
+      "series",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "Bossypants",
+    "author": "Tina Fey",
+    "cover": "./covers/Tina-Fey-Bossypants.jpg",
+    "pages": "277",
+    "goodreads_url": "https://www.goodreads.com/book/show/9476337-bossypants",
+    "indiebound_url": "https://www.indiebound.org/book/9780316056861",
+    "library_url": "https://www.worldcat.org/search?q=9780316056861",
+    "genres": [
+      "comedy",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Stories of Your Life and Others",
+    "author": "Ted Chiang",
+    "cover": "./covers/Ted-Chiang-Stories-of-Your-Lif.jpg",
+    "pages": "286",
+    "goodreads_url": "https://www.goodreads.com/book/show/28503870-stories-of-your-life-and-others",
+    "indiebound_url": "https://www.indiebound.org/book/9781101972120",
+    "library_url": "https://www.worldcat.org/search?q=9781101972120",
+    "genres": [
+      "sci-fi",
+      "short stories"
+    ]
+  },
+  {
+    "title": "Exhalation",
+    "author": "Ted Chiang",
+    "cover": "./covers/Ted-Chiang-Exhalation.jpg",
+    "pages": "350",
+    "goodreads_url": "https://www.goodreads.com/book/show/52222275-exhalation",
+    "indiebound_url": "https://www.indiebound.org/book/9781101947883",
+    "library_url": "https://www.worldcat.org/search?q=9781101947883",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "short stories"
+    ]
+  },
+  {
+    "title": "Blood, Sweat, and Pixels",
+    "author": "Jason Schreier",
+    "cover": "./covers/Jason-Schreier-Blood--Sweat--a.jpg",
+    "pages": "278",
+    "goodreads_url": "https://www.goodreads.com/book/show/33640770-blood-sweat-and-pixels",
+    "indiebound_url": "https://www.indiebound.org/book/9780062651235",
+    "library_url": "https://www.worldcat.org/search?q=9780062651235",
+    "genres": [
+      "sports & games"
+    ]
+  },
+  {
+    "title": "The Last Wish",
+    "author": "Andrzej Sapkowski",
+    "cover": "./covers/Andrzej-SapkowskiDanusia-Stok-.jpg",
+    "pages": "320",
+    "goodreads_url": "https://www.goodreads.com/book/show/33784346-the-last-wish",
+    "indiebound_url": "https://www.indiebound.org/book/9780316438964",
+    "library_url": "https://www.worldcat.org/search?q=9780316438964",
+    "genres": [
+      "fantasy",
+      "series",
+      "short stories"
+    ]
+  },
+  {
+    "title": "Why We're Polarized",
+    "author": "Ezra Klein",
+    "cover": "./covers/Ezra-Klein-Why-We-re-Polarized.jpg",
+    "pages": "336",
+    "goodreads_url": "https://www.goodreads.com/book/show/52098718-why-we-re-polarized",
+    "indiebound_url": "https://www.indiebound.org/book/9781476700328",
+    "library_url": "https://www.worldcat.org/search?q=9781476700328",
+    "genres": [
+      "social science"
+    ]
+  },
+  {
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "cover": "./covers/Erin-MorgensternMatthias-Brand.jpg",
+    "pages": "391",
+    "goodreads_url": "https://www.goodreads.com/book/show/9361589-the-night-circus",
+    "indiebound_url": "https://www.indiebound.org/book/9780385534635",
+    "library_url": "https://www.worldcat.org/search?q=9780385534635",
+    "genres": [
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Blindspot: Hidden Biases of Good People",
+    "author": "Mahzarin R. Banaji & Anthony G. Greenwald",
+    "cover": "./covers/Mahzarin-R--BanajiAnthony-G--G.jpg",
+    "pages": "254",
+    "goodreads_url": "https://www.goodreads.com/book/show/13131582-blindspot",
+    "indiebound_url": "https://www.indiebound.org/book/9780553804645",
+    "library_url": "https://www.worldcat.org/search?q=9780553804645",
+    "genres": [
+      "social science"
+    ]
+  },
+  {
+    "title": "Nimona",
+    "author": "Noelle Stevenson",
+    "cover": "./covers/Noelle-Stevenson-Nimona.jpg",
+    "pages": "266",
+    "goodreads_url": "https://www.goodreads.com/book/show/23131088-nimona",
+    "indiebound_url": "https://www.indiebound.org/book/9780062278234",
+    "library_url": "https://www.worldcat.org/search?q=9780062278234",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "graphic novel",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "The Storm Whale",
+    "author": "Benji Davies",
+    "cover": "./covers/Benji-Davies-The-Storm-Whale.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/20518879-the-storm-whale",
+    "indiebound_url": "https://www.indiebound.org/book/9780805099676",
+    "library_url": "https://www.worldcat.org/search?q=9780805099676",
+    "genres": [
+      "picture book",
+      "series",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "Dear Girls",
+    "author": "Ali Wong",
+    "cover": "./covers/Ali-WongJustin-Hakuta-Dear-Gir.jpg",
+    "pages": "240",
+    "goodreads_url": "https://www.goodreads.com/book/show/44600621-dear-girls",
+    "indiebound_url": "https://www.indiebound.org/book/9780525508830",
+    "library_url": "https://www.worldcat.org/search?q=9780525508830",
+    "genres": [
+      "comedy",
+      "memoir"
+    ]
+  },
+  {
+    "title": "The Encyclopedia of Early Earth",
+    "author": "Isabel Greenberg",
+    "cover": "./covers/Isabel-Greenberg-The-Encyclope.jpg",
+    "pages": "176",
+    "goodreads_url": "https://www.goodreads.com/book/show/17412749-the-encyclopedia-of-early-earth",
+    "indiebound_url": "https://www.indiebound.org/book/9780385678155",
+    "library_url": "https://www.worldcat.org/search?q=9780385678155",
+    "genres": [
+      "graphic novel",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "Giraffes Can't Dance",
+    "author": "Giles Andreae & Guy Parker-Rees",
+    "cover": "./covers/Giles-AndreaeGuy-Parker-Rees-G.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/765148.Giraffes_Can_t_Dance",
+    "indiebound_url": "https://www.indiebound.org/book/9780439287197",
+    "library_url": "https://www.worldcat.org/search?q=9780439287197",
+    "genres": [
+      "picture book"
+    ]
+  },
+  {
+    "title": "Born a Crime: Stories From a South African Childhood",
+    "author": "Trevor Noah",
+    "cover": "./covers/Trevor-Noah-Born-a-Crime--Stor.jpg",
+    "pages": "289",
+    "goodreads_url": "https://www.goodreads.com/book/show/29780253-born-a-crime",
+    "indiebound_url": "https://www.indiebound.org/book/9780385689229",
+    "library_url": "https://www.worldcat.org/search?q=9780385689229",
+    "genres": [
+      "best of the best",
+      "comedy",
+      "memoir"
+    ]
+  },
+  {
+    "title": "The Education of an Idealist: A Memoir",
+    "author": "Samantha Power",
+    "cover": "./covers/Samantha-Power-The-Education-o.jpg",
+    "pages": "592",
+    "goodreads_url": "https://www.goodreads.com/book/show/42872088-the-education-of-an-idealist",
+    "indiebound_url": "https://www.indiebound.org/book/9780062820716",
+    "library_url": "https://www.worldcat.org/search?q=9780062820716",
+    "genres": [
+      "history",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Magic for Liars",
+    "author": "Sarah Gailey",
+    "cover": "./covers/Sarah-Gailey-Magic-for-Liars.jpg",
+    "pages": "336",
+    "goodreads_url": "https://www.goodreads.com/book/show/41555947-magic-for-liars",
+    "indiebound_url": "https://www.indiebound.org/book/9781250174611",
+    "library_url": "https://www.worldcat.org/search?q=9781250174611",
+    "genres": [
+      "fantasy",
+      "mystery & thriller"
+    ]
+  },
+  {
+    "title": "Wool",
+    "author": "Hugh Howey",
+    "cover": "./covers/Hugh-Howey-Wool.jpg",
+    "pages": "511",
+    "goodreads_url": "https://www.goodreads.com/book/show/17164655-wool",
+    "indiebound_url": "https://www.indiebound.org/book/9781476733951",
+    "library_url": "https://www.worldcat.org/search?q=9781476733951",
+    "genres": [
+      "best of the best",
+      "mystery & thriller",
+      "sci-fi",
+      "series",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "The Right Stuff",
+    "author": "Tom Wolfe",
+    "cover": "./covers/Tom-Wolfe-The-Right-Stuff.jpg",
+    "pages": "352",
+    "goodreads_url": "https://www.goodreads.com/book/show/3030093-the-right-stuff",
+    "indiebound_url": "https://www.indiebound.org/book/9780312427566",
+    "library_url": "https://www.worldcat.org/search?q=9780312427566",
+    "genres": [
+      "best of the best",
+      "history",
+      "science & math"
+    ]
+  },
+  {
+    "title": "The Power",
+    "author": "Naomi Alderman",
+    "cover": "./covers/Naomi-Alderman-The-Power.jpg",
+    "pages": "341",
+    "goodreads_url": "https://www.goodreads.com/book/show/29751398-the-power",
+    "indiebound_url": "https://www.indiebound.org/book/9780670919987",
+    "library_url": "https://www.worldcat.org/search?q=9780670919987",
+    "genres": [
+      "best of the best",
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Recursion",
+    "author": "Blake Crouch",
+    "cover": "./covers/Blake-Crouch-Recursion.jpg",
+    "pages": "329",
+    "goodreads_url": "https://www.goodreads.com/book/show/42046112",
+    "indiebound_url": "https://www.indiebound.org/book/9781524759780",
+    "library_url": "https://www.worldcat.org/search?q=9781524759780",
+    "genres": [
+      "best of the best",
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "Limits of the Known",
+    "author": "David  Roberts",
+    "cover": "./covers/David--Roberts-Limits-of-the-K.jpg",
+    "pages": "336",
+    "goodreads_url": "https://www.goodreads.com/book/show/40180026-limits-of-the-known",
+    "indiebound_url": "https://www.indiebound.org/book/9780393356595",
+    "library_url": "https://www.worldcat.org/search?q=9780393356595",
+    "genres": [
+      "adventure",
+      "memoir"
+    ]
+  },
+  {
+    "title": "The Rabbit Listened",
+    "author": "Cori Doerrfeld",
+    "cover": "./covers/Cori-Doerrfeld-The-Rabbit-List.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/35248504-the-rabbit-listened",
+    "indiebound_url": "https://www.indiebound.org/book/9780735229358",
+    "library_url": "https://www.worldcat.org/search?q=9780735229358",
+    "genres": [
+      "best of the best",
+      "picture book",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "In the Heart of the Sea: The Tragedy of the Whaleship Essex",
+    "author": "Nathaniel Philbrick",
+    "cover": "./covers/Nathaniel-Philbrick-In-the-Hea.jpg",
+    "pages": "302",
+    "goodreads_url": "https://www.goodreads.com/book/show/17780.In_the_Heart_of_the_Sea",
+    "indiebound_url": "https://www.indiebound.org/book/9780141001821",
+    "library_url": "https://www.worldcat.org/search?q=9780141001821",
+    "genres": [
+      "adventure",
+      "best of the best"
+    ]
+  },
+  {
+    "title": "The World As It Is: Inside the Obama White House",
+    "author": "Ben  Rhodes",
+    "cover": "./covers/Ben--Rhodes-The-World-As-It-Is.jpg",
+    "pages": "480",
+    "goodreads_url": "https://www.goodreads.com/book/show/38458392",
+    "indiebound_url": "https://www.indiebound.org/book/9781847925176",
+    "library_url": "https://www.worldcat.org/search?q=9781847925176",
+    "genres": [
+      "best of the best",
+      "history",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Homo Deus: A Brief History of Tomorrow",
+    "author": "Yuval Noah Harari",
+    "cover": "./covers/Yuval-Noah-Harari-Homo-Deus--A.jpg",
+    "pages": "448",
+    "goodreads_url": "https://www.goodreads.com/book/show/28092870-homo-deus",
+    "indiebound_url": "https://www.indiebound.org/book/9781910701881",
+    "library_url": "https://www.worldcat.org/search?q=9781910701881",
+    "genres": [
+      "best of the best",
+      "social science"
+    ]
+  },
+  {
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "cover": "./covers/Patrick-Rothfuss-The-Name-of-t.jpg",
+    "pages": "662",
+    "goodreads_url": "https://www.goodreads.com/book/show/186074.The_Name_of_the_Wind",
+    "indiebound_url": "https://www.indiebound.org/book/9780756404079",
+    "library_url": "https://www.worldcat.org/search?q=9780756404079",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "cover": "./covers/Andy-Weir-The-Martian.jpg",
+    "pages": "384",
+    "goodreads_url": "https://www.goodreads.com/book/show/18007564-the-martian",
+    "indiebound_url": "https://www.indiebound.org/book/9780804139021",
+    "library_url": "https://www.worldcat.org/search?q=9780804139021",
+    "genres": [
+      "best of the best",
+      "mystery & thriller",
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "Quest",
+    "author": "Aaron Becker",
+    "cover": "./covers/Aaron-Becker-Quest.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/20708773-quest",
+    "indiebound_url": "https://www.indiebound.org/book/9780763665951",
+    "library_url": "https://www.worldcat.org/search?q=9780763665951",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "picture book"
+    ]
+  },
+  {
+    "title": "I Am Number Four",
+    "author": "Pittacus Lore",
+    "cover": "./covers/Pittacus-Lore-I-Am-Number-Four.jpg",
+    "pages": "440",
+    "goodreads_url": "https://www.goodreads.com/book/show/7747374-i-am-number-four",
+    "indiebound_url": "https://www.indiebound.org/book/9780061969553",
+    "library_url": "https://www.worldcat.org/search?q=9780061969553",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "Shh! We Have a Plan",
+    "author": "Chris Haughton",
+    "cover": "./covers/Chris-Haughton-Shh--We-Have-a-.jpg",
+    "pages": "48",
+    "goodreads_url": "https://www.goodreads.com/book/show/18743522-shh-we-have-a-plan",
+    "indiebound_url": "https://www.indiebound.org/book/9781406342321",
+    "library_url": "https://www.worldcat.org/search?q=9781406342321",
+    "genres": [
+      "picture book"
+    ]
+  },
+  {
+    "title": "Where's the Baby?",
+    "author": "Britta Teckentrup",
+    "cover": "./covers/Britta-Teckentrup-Where-s-the-.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/35793041-where-s-the-baby",
+    "indiebound_url": "https://www.indiebound.org/book/9780763699017",
+    "library_url": "https://www.worldcat.org/search?q=9780763699017",
+    "genres": [
+      "picture book"
+    ]
+  },
+  {
+    "title": "The Information: A History, A Theory, A Flood",
+    "author": "James Gleick",
+    "cover": "./covers/James-Gleick-The-Information--.jpg",
+    "pages": "544",
+    "goodreads_url": "https://www.goodreads.com/book/show/12279559-the-information",
+    "indiebound_url": "https://www.indiebound.org/book/9781400096237",
+    "library_url": "https://www.worldcat.org/search?q=9781400096237",
+    "genres": [
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "How to Be an Antiracist",
+    "author": "Ibram X. Kendi",
+    "cover": "./covers/Ibram-X--Kendi-How-to-Be-an-An.jpg",
+    "pages": "320",
+    "goodreads_url": "https://www.goodreads.com/book/show/40265832-how-to-be-an-antiracist",
+    "indiebound_url": "https://www.indiebound.org/book/9780525509288",
+    "library_url": "https://www.worldcat.org/search?q=9780525509288",
+    "genres": [
+      "history",
+      "social science"
+    ]
+  },
+  {
+    "title": "The Goblin Emperor",
+    "author": "Katherine Addison",
+    "cover": "./covers/Katherine-Addison-The-Goblin-E.jpg",
+    "pages": "446",
+    "goodreads_url": "https://www.goodreads.com/book/show/17910048-the-goblin-emperor",
+    "indiebound_url": "https://www.indiebound.org/book/9780765326997",
+    "library_url": "https://www.worldcat.org/search?q=9780765326997",
+    "genres": [
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Stitches",
+    "author": "David Small",
+    "cover": "./covers/David-Small-Stitches.jpg",
+    "pages": "329",
+    "goodreads_url": "https://www.goodreads.com/book/show/6407014-stitches",
+    "indiebound_url": "https://www.indiebound.org/book/9780393068573",
+    "library_url": "https://www.worldcat.org/search?q=9780393068573",
+    "genres": [
+      "fantasy"
+    ]
+  },
+  {
+    "title": "The Electric State",
+    "author": "Simon Stålenhag",
+    "cover": "./covers/Simon-St-lenhag-The-Electric-S.jpg",
+    "pages": "144",
+    "goodreads_url": "https://www.goodreads.com/book/show/38642323-the-electric-state",
+    "indiebound_url": "https://www.indiebound.org/book/9781501181412",
+    "library_url": "https://www.worldcat.org/search?q=9781501181412",
+    "genres": [
+      "best of the best",
+      "graphic novel"
+    ]
+  },
+  {
+    "title": "Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are",
+    "author": "Seth Stephens-DavidowitzSteven Pinker",
+    "cover": "./covers/Seth-Stephens-DavidowitzSteven.jpg",
+    "pages": "338",
+    "goodreads_url": "https://www.goodreads.com/book/show/28512671-everybody-lies",
+    "indiebound_url": "https://www.indiebound.org/book/9780062390851",
+    "library_url": "https://www.worldcat.org/search?q=9780062390851",
+    "genres": [
+      "best of the best",
+      "science & math",
+      "social science"
+    ]
+  },
+  {
+    "title": "Rendezvous with Rama",
+    "author": "Arthur C. Clarke",
+    "cover": "./covers/Arthur-C--Clarke-Rendezvous-wi.jpg",
+    "pages": "245",
+    "goodreads_url": "https://www.goodreads.com/book/show/774928.Rendezvous_with_Rama",
+    "indiebound_url": "https://www.indiebound.org/book/9780553287899",
+    "library_url": "https://www.worldcat.org/search?q=9780553287899",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "series"
+    ]
+  },
+  {
+    "title": "Goodbye Summer, Hello Autumn",
+    "author": "Kenard Pak",
+    "cover": "./covers/Kenard-Pak-Goodbye-Summer--Hel.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/25774391-goodbye-summer-hello-autumn",
+    "indiebound_url": "https://www.indiebound.org/book/9781627794152",
+    "library_url": "https://www.worldcat.org/search?q=9781627794152",
+    "genres": [
+      "picture book"
+    ]
+  },
+  {
+    "title": "Julián Is a Mermaid",
+    "author": "Jessica     Love",
+    "cover": "./covers/Jessica-----Love-Juli-n-Is-a-M.jpg",
+    "pages": "80",
+    "goodreads_url": "https://www.goodreads.com/book/show/26532714-juli-n-is-a-mermaid",
+    "indiebound_url": "https://www.indiebound.org/book/9780763690458",
+    "library_url": "https://www.worldcat.org/search?q=9780763690458",
+    "genres": [
+      "picture book"
+    ]
+  },
+  {
+    "title": "World War Z: An Oral History of the Zombie War",
+    "author": "Max Brooks",
+    "cover": "./covers/Max-Brooks-World-War-Z--An-Ora.jpg",
+    "pages": "342",
+    "goodreads_url": "https://www.goodreads.com/book/show/8908.World_War_Z",
+    "indiebound_url": "https://www.indiebound.org/book/9780307346605",
+    "library_url": "https://www.worldcat.org/search?q=9780307346605",
+    "genres": [
+      "best of the best",
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Algorithms to Live By: The Computer Science of Human Decisions",
+    "author": "Brian ChristianTom  Griffiths",
+    "cover": "./covers/Brian-ChristianTom--Griffiths-.jpg",
+    "pages": "368",
+    "goodreads_url": "https://www.goodreads.com/book/show/25666050-algorithms-to-live-by",
+    "indiebound_url": "https://www.indiebound.org/book/9781627790369",
+    "library_url": "https://www.worldcat.org/search?q=9781627790369",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "Dark Matter",
+    "author": "Blake Crouch",
+    "cover": "./covers/Blake-Crouch-Dark-Matter.jpg",
+    "pages": "342",
+    "goodreads_url": "https://www.goodreads.com/book/show/27833670-dark-matter",
+    "indiebound_url": "https://www.indiebound.org/book/9781101904220",
+    "library_url": "https://www.worldcat.org/search?q=9781101904220",
+    "genres": [
+      "mystery & thriller",
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "How Not to Be Wrong: The Power of Mathematical Thinking",
+    "author": "Jordan Ellenberg",
+    "cover": "./covers/Jordan-Ellenberg-How-Not-to-Be.jpg",
+    "pages": "480",
+    "goodreads_url": "https://www.goodreads.com/book/show/18693884-how-not-to-be-wrong",
+    "indiebound_url": "https://www.indiebound.org/book/9781594205224",
+    "library_url": "https://www.worldcat.org/search?q=9781594205224",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
+    "author": "Randall Munroe",
+    "cover": "./covers/Randall-Munroe-What-If--Seriou.jpg",
+    "pages": "303",
+    "goodreads_url": "https://www.goodreads.com/book/show/21413662-what-if-serious-scientific-answers-to-absurd-hypothetical-questions",
+    "indiebound_url": "https://www.indiebound.org/book/9780544272996",
+    "library_url": "https://www.worldcat.org/search?q=9780544272996",
+    "genres": [
+      "best of the best",
+      "science & math"
+    ]
+  },
+  {
+    "title": "Devolution: A Firsthand Account of the Rainier Sasquatch Massacre",
+    "author": "Max Brooks",
+    "cover": "./covers/Max-Brooks-Devolution--A-First.jpg",
+    "pages": "286",
+    "goodreads_url": "https://www.goodreads.com/book/show/52454426-devolution",
+    "indiebound_url": "https://www.indiebound.org/book/9781984826787",
+    "library_url": "https://www.worldcat.org/search?q=9781984826787",
+    "genres": [
+      "fantasy",
+      "mystery & thriller"
+    ]
+  },
+  {
+    "title": "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy",
+    "author": "Cathy O'Neil",
+    "cover": "./covers/Cathy-O-Neil-Weapons-of-Math-D.jpg",
+    "pages": "259",
+    "goodreads_url": "https://www.goodreads.com/book/show/28186015-weapons-of-math-destruction",
+    "indiebound_url": "https://www.indiebound.org/book/9780553418811",
+    "library_url": "https://www.worldcat.org/search?q=9780553418811",
+    "genres": [
+      "science & math",
+      "social science"
+    ]
+  },
+  {
+    "title": "Between a Rock and a Hard Place",
+    "author": "Aron Ralston",
+    "cover": "./covers/Aron-Ralston-Between-a-Rock-an.jpg",
+    "pages": "368",
+    "goodreads_url": "https://www.goodreads.com/book/show/166562.Between_a_Rock_and_a_Hard_Place",
+    "indiebound_url": "https://www.indiebound.org/book/9780743492829",
+    "library_url": "https://www.worldcat.org/search?q=9780743492829",
+    "genres": [
+      "adventure"
+    ]
+  },
+  {
+    "title": "Hyperbole and a Half: Unfortunate Situations, Flawed Coping Mechanisms, Mayhem, and Other Things That Happened",
+    "author": "Allie Brosh",
+    "cover": "./covers/Allie-Brosh-Hyperbole-and-a-Ha.jpg",
+    "pages": "371",
+    "goodreads_url": "https://www.goodreads.com/book/show/17571564-hyperbole-and-a-half",
+    "indiebound_url": "https://www.indiebound.org/book/9781451666175",
+    "library_url": "https://www.worldcat.org/search?q=9781451666175",
+    "genres": [
+      "best of the best",
+      "comedy",
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "A Natural History of Dragons",
+    "author": "Marie Brennan",
+    "cover": "./covers/Marie-Brennan-A-Natural-Histor.jpg",
+    "pages": "334",
+    "goodreads_url": "https://www.goodreads.com/book/show/12974372-a-natural-history-of-dragons",
+    "indiebound_url": "https://www.indiebound.org/book/9780765331960",
+    "library_url": "https://www.worldcat.org/search?q=9780765331960",
+    "genres": [
+      "fantasy",
+      "series",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "A Wizard of Earthsea",
+    "author": "Ursula K. Le Guin",
+    "cover": "./covers/Ursula-K--Le-Guin-A-Wizard-of-.jpg",
+    "pages": "210",
+    "goodreads_url": "https://www.goodreads.com/book/show/16029682-a-wizard-of-earthsea",
+    "indiebound_url": "https://www.indiebound.org/book/9780553383041",
+    "library_url": "https://www.worldcat.org/search?q=9780553383041",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "How To: Absurd Scientific Advice for Common Real-World Problems",
+    "author": "Randall Munroe",
+    "cover": "./covers/Randall-Munroe-How-To--Absurd-.jpg",
+    "pages": "320",
+    "goodreads_url": "https://www.goodreads.com/book/show/43852758-how-to",
+    "indiebound_url": "https://www.indiebound.org/book/9780525537090",
+    "library_url": "https://www.worldcat.org/search?q=9780525537090",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "March: Book One",
+    "author": "John Lewis, Andrew Aydin, & Nate Powell",
+    "cover": "./covers/John-------------LewisAndrew-A.jpg",
+    "pages": "128",
+    "goodreads_url": "https://www.goodreads.com/book/show/17346698-march",
+    "indiebound_url": "https://www.indiebound.org/book/9781603093002",
+    "library_url": "https://www.worldcat.org/search?q=9781603093002",
+    "genres": [
+      "graphic novel",
+      "history",
+      "series"
+    ]
+  },
+  {
+    "title": "Extra Lives: Why Video Games Matter",
+    "author": "Tom Bissell",
+    "cover": "./covers/Tom-Bissell-Extra-Lives--Why-V.jpg",
+    "pages": "204",
+    "goodreads_url": "https://www.goodreads.com/book/show/7059033-extra-lives?ac=1&from_search=true&qid=gqApy6E9jb&rank=1",
+    "indiebound_url": "https://www.indiebound.org/book/9780307378705",
+    "library_url": "https://www.worldcat.org/search?q=9780307378705",
+    "genres": [
+      "sports & games",
+      "under the radar"
+    ]
+  },
+  {
+    "title": "Fun Home: A Family Tragicomic",
+    "author": "Alison Bechdel",
+    "cover": "./covers/Alison-Bechdel-Fun-Home--A-Fam.jpg",
+    "pages": "232",
+    "goodreads_url": "https://www.goodreads.com/book/show/26135825-fun-home",
+    "indiebound_url": "https://www.indiebound.org/book/9780618871711",
+    "library_url": "https://www.worldcat.org/search?q=9780618871711",
+    "genres": [
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think",
+    "author": "Hans RoslingOla RoslingAnna Rosling Rönnlund",
+    "cover": "./covers/Hans-RoslingOla-RoslingAnna-Ro.jpg",
+    "pages": "342",
+    "goodreads_url": "https://www.goodreads.com/book/show/34890015-factfulness?ac=1&from_search=true&qid=oOywJOL7yn&rank=1",
+    "indiebound_url": "https://www.indiebound.org/book/9781473637467",
+    "library_url": "https://www.worldcat.org/search?q=9781473637467",
+    "genres": [
+      "history",
+      "social science"
+    ]
+  },
+  {
+    "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+    "author": "Matthew Walker",
+    "cover": "./covers/Matthew-Walker-Why-We-Sleep--U.jpg",
+    "pages": "368",
+    "goodreads_url": "https://www.goodreads.com/book/show/36709369-why-we-sleep",
+    "indiebound_url": "https://www.indiebound.org/book/9781501144325",
+    "library_url": "https://www.worldcat.org/search?q=9781501144325",
+    "genres": [
+      "science & math"
+    ]
+  },
+  {
+    "title": "Into Thin Air: A Personal Account of the Mt. Everest Disaster",
+    "author": "Jon Krakauer",
+    "cover": "./covers/Jon-Krakauer-Into-Thin-Air--A-.jpg",
+    "pages": "293",
+    "goodreads_url": "https://www.goodreads.com/book/show/871781.Into_Thin_Air",
+    "indiebound_url": "https://www.indiebound.org/book/9780679457527",
+    "library_url": "https://www.worldcat.org/search?q=9780679457527",
+    "genres": [
+      "adventure",
+      "best of the best"
+    ]
+  },
+  {
+    "title": "The Fifth Season",
+    "author": "N.K. Jemisin",
+    "cover": "./covers/N-K--Jemisin-The-Fifth-Season.jpg",
+    "pages": "471",
+    "goodreads_url": "https://www.goodreads.com/book/show/34314712-the-fifth-season",
+    "indiebound_url": "https://www.indiebound.org/book/9780316229296",
+    "library_url": "https://www.worldcat.org/search?q=9780316229296",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  }
+]

@@ -6,20 +6,33 @@ export type HtmlElementPropsType = {
   className?: string;
 };
 
-export type GenreFilterToggleType = {
-  adventure: boolean;
-  fantasy: boolean;
-  fiction: boolean;
-  'graphic novel': boolean;
-  nonfiction: boolean;
-  'short stories': boolean;
-  'sci-fi': boolean;
-  'science & math': boolean;
-  series: boolean;
-  long: boolean;
-  short: boolean;
-  'sports & games': boolean;
-  history: boolean;
-  'best of the best': boolean;
-  'young-adult': boolean;
+export enum GenresEnum {
+  'adventure' = 'adventure',
+  'best of the best' = 'best of the best',
+  'comedy' = 'comedy',
+  'fantasy' = 'fantasy',
+  'graphic novel' = 'graphic novel',
+  'history' = 'history',
+  'memoir' = 'memoir',
+  'mystery & thriller' = 'mystery & thriller',
+  'picture book' = 'picture book',
+  'sci-fi' = 'sci-fi',
+  'science & math' = 'science & math',
+  'series' = 'series',
+  'short stories' = 'short stories',
+  'social science' = 'social science',
+  'sports & games' = 'sports & games',
+  'under the radar' = 'under the radar',
+}
+
+export type GenreFilterToggleStateType = { [key in keyof typeof GenresEnum]: boolean };
+
+export type BookDataType = {
+  title: string;
+  cover: string;
+  pages: string;
+  genres: GenresEnum[];
+  goodreads_url?: string;
+  indiebound_url?: string;
+  library_url?: string;
 };
