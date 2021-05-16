@@ -17,6 +17,31 @@ import { A } from '@/components/A';
 
 import { Icon } from '@/components/Icon';
 
+const Home: React.FC<PageProps> = ({ data }) => {
+  const posts = data.allMdx.nodes;
+  return (
+    <GlobalStyles>
+      <Helmet>
+        <title>Tyler Auer - Math teacher turned software developer</title>
+        <meta
+          name="description"
+          content={`"Stupid" projects and ramblings about code and adventure.`}
+        />
+      </Helmet>
+      <Header />
+      <main>
+        <NameAndBio />
+        {/* <TruthAndLies /> */}
+        <Projects />
+        <Writing posts={posts} />
+      </main>
+      <Footer />
+    </GlobalStyles>
+  );
+};
+
+export default Home;
+
 const NameAndBio = () => {
   const titleCss = css`
     margin: 0.5rem auto;
@@ -171,6 +196,26 @@ const Projects = () => {
           <Icon icon="fruit" />
         </div>
       </Box>
+
+      <Box role="listitem">
+        <div css={projectCss}>
+          <div>
+            <Flex flex={FlexJustification.start}>
+              <h3>Bookshelf</h3>
+              <div>
+                <Chip sx={chipCss} to="/bookshelf">
+                  Live
+                </Chip>
+              </div>
+            </Flex>
+            <p>
+              A big 'ol pile of my favorite books presented in a slick masonry grid with filters for
+              themes and genres.
+            </p>
+          </div>
+          <Icon icon="book" />
+        </div>
+      </Box>
     </section>
   );
 };
@@ -255,31 +300,6 @@ const Writing = ({ posts }) => {
     </section>
   );
 };
-
-const Home: React.FC<PageProps> = ({ data }) => {
-  const posts = data.allMdx.nodes;
-  return (
-    <GlobalStyles>
-      <Helmet>
-        <title>Tyler Auer - Math teacher turned software developer</title>
-        <meta
-          name="description"
-          content={`"Stupid" projects and ramblings about code and adventure.`}
-        />
-      </Helmet>
-      <Header />
-      <main>
-        <NameAndBio />
-        {/* <TruthAndLies /> */}
-        <Projects />
-        <Writing posts={posts} />
-      </main>
-      <Footer />
-    </GlobalStyles>
-  );
-};
-
-export default Home;
 
 export const codeFeaturedQuery = graphql`
   query {
