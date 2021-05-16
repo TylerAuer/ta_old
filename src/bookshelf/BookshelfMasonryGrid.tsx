@@ -1,46 +1,29 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
 
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
-import { GenreFilterToggleStateType } from '@/types';
+import { GenreFilterToggleStateType, GenresEnum } from '@/types';
+import { useEffect, useState } from 'react';
 
 type Props = {
   activeFilters: GenreFilterToggleStateType;
+  books: any;
 };
 
-export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters }) => {
+export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) => {
   const windowWidth = useWindowWidth();
-  const query = useStaticQuery(graphql`
-    {
-      allBookDataJson {
-        nodes {
-          cover {
-            childImageSharp {
-              gatsbyImageData(width: 450, placeholder: DOMINANT_COLOR)
-              resize {
-                aspectRatio
-              }
-            }
-            name
-          }
-          genres
-        }
-      }
-    }
-  `);
 
   // Don't render anything until the window width is known
-  if (windowWidth === 0) return null;
+  if (windowWidth === 0) {
+    return null;
+  }
 
-  const books = query.allBookDataJson.nodes;
   let filteredBooks = [];
 
   const isAnyFilterActive = Object.values(activeFilters).some((value) => value);
   if (isAnyFilterActive) {
     for (let book of books) {
-      console.log(book);
       if (book.genres) {
         for (let genre of book.genres) {
           if (genre && activeFilters[genre]) {
