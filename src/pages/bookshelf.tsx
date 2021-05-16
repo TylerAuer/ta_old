@@ -12,7 +12,6 @@ const BookshelfPage: React.FC = () => (
       <title>Bookshelf - Tyler Auer</title>
       <meta name="description" content="Tyler's favorite books" />
     </Helmet>
-    <Header />
     <main>
       <Bookshelf />
     </main>

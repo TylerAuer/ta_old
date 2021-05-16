@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { css } from '@emotion/react';
 
 import { BookshelfFilters } from '@/bookshelf/BookshelfFilters';
 import { BookshelfMasonryGrid } from '@/bookshelf/BookshelfMasonryGrid';
+import { IconNavList } from '@/components/IconNavList';
 
 import { GenreFilterToggleStateType, GenresEnum } from '@/types';
+import { Box } from '@/components/Box';
 
 const initialToggleState = generateInitialActiveFilterState();
 const MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY = 5;
@@ -63,6 +66,7 @@ export const Bookshelf: React.FC = () => {
 
   return (
     <>
+      <BookshelfHeader />
       <BookshelfFilters
         toggleFilter={toggleFilter}
         resetFilters={resetFilters}
@@ -71,6 +75,35 @@ export const Bookshelf: React.FC = () => {
       />
       <BookshelfMasonryGrid activeFilters={activeFilters} books={books} />
     </>
+  );
+};
+
+const BookshelfHeader: React.FC = () => {
+  const s = css`
+    text-align: center;
+
+    & p {
+      text-align: left;
+    }
+  `;
+
+  return (
+    <div css={s}>
+      <h1>Tyler's Bookshelf</h1>
+      <IconNavList />
+
+      <Box>
+        <p>
+          I love reading and discussing books. So, it just felt right to throw together a list of
+          some of my favorites for others to peruse.
+        </p>
+        <p>
+          My favorite genres are sci-fi, fantasy, graphic novels, and nonfiction adventure. I read
+          around a book a week and am always trying to read more books than my wife in a year. I was
+          close in 2020, but she's crushed me every other year.
+        </p>
+      </Box>
+    </div>
   );
 };
 
