@@ -58,6 +58,9 @@ export const Footer: React.FC = () => {
           <Link to="/adventure">
             <Icon icon="mountains" />
           </Link>
+          <Link to="/bookshelf">
+            <Icon icon="book" />
+          </Link>
         </nav>
       </Box>
     </footer>
