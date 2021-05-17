@@ -118,7 +118,7 @@
     ]
   },
   {
-    "title": "Blindspot: Hidden Biases of Good People",
+    "title": "Blindspot",
     "author": "Mahzarin R. Banaji & Anthony G. Greenwald",
     "cover": "./covers/Mahzarin-R--BanajiAnthony-G--G.jpg",
     "pages": "254",
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "title": "Born a Crime: Stories From a South African Childhood",
+    "title": "Born a Crime",
     "author": "Trevor Noah",
     "cover": "./covers/Trevor-Noah-Born-a-Crime--Stor.jpg",
     "pages": "289",
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "title": "The Education of an Idealist: A Memoir",
+    "title": "The Education of an Idealist",
     "author": "Samantha Power",
     "cover": "./covers/Samantha-Power-The-Education-o.jpg",
     "pages": "592",
@@ -320,7 +320,7 @@
     ]
   },
   {
-    "title": "In the Heart of the Sea: The Tragedy of the Whaleship Essex",
+    "title": "In the Heart of the Sea",
     "author": "Nathaniel Philbrick",
     "cover": "./covers/Nathaniel-Philbrick-In-the-Hea.jpg",
     "pages": "302",
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "title": "The World As It Is: Inside the Obama White House",
+    "title": "The World As It Is",
     "author": "Ben  Rhodes",
     "cover": "./covers/Ben--Rhodes-The-World-As-It-Is.jpg",
     "pages": "480",
@@ -347,7 +347,7 @@
     ]
   },
   {
-    "title": "Homo Deus: A Brief History of Tomorrow",
+    "title": "Homo Deus",
     "author": "Yuval Noah Harari",
     "cover": "./covers/Yuval-Noah-Harari-Homo-Deus--A.jpg",
     "pages": "448",
@@ -439,7 +439,7 @@
     ]
   },
   {
-    "title": "The Information: A History, A Theory, A Flood",
+    "title": "The Information",
     "author": "James Gleick",
     "cover": "./covers/James-Gleick-The-Information--.jpg",
     "pages": "544",
@@ -501,8 +501,8 @@
     ]
   },
   {
-    "title": "Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are",
-    "author": "Seth Stephens-DavidowitzSteven Pinker",
+    "title": "Everybody Lies",
+    "author": "Seth Stephens-Davidowitz",
     "cover": "./covers/Seth-Stephens-DavidowitzSteven.jpg",
     "pages": "338",
     "goodreads_url": "https://www.goodreads.com/book/show/28512671-everybody-lies",
@@ -542,8 +542,8 @@
   },
   {
     "title": "Julián Is a Mermaid",
-    "author": "Jessica     Love",
-    "cover": "./covers/Jessica-----Love-Juli-n-Is-a-M.jpg",
+    "author": "Jessica Love",
+    "cover": "./covers/Jessica-Love-Julian-Is-a-M.jpg",
     "pages": "80",
     "goodreads_url": "https://www.goodreads.com/book/show/26532714-juli-n-is-a-mermaid",
     "indiebound_url": "https://www.indiebound.org/book/9780763690458",
@@ -553,7 +553,7 @@
     ]
   },
   {
-    "title": "World War Z: An Oral History of the Zombie War",
+    "title": "World War Z",
     "author": "Max Brooks",
     "cover": "./covers/Max-Brooks-World-War-Z--An-Ora.jpg",
     "pages": "342",
@@ -566,8 +566,8 @@
     ]
   },
   {
-    "title": "Algorithms to Live By: The Computer Science of Human Decisions",
-    "author": "Brian ChristianTom  Griffiths",
+    "title": "Algorithms to Live By",
+    "author": "Brian Christian & Tom Griffiths",
     "cover": "./covers/Brian-ChristianTom--Griffiths-.jpg",
     "pages": "368",
     "goodreads_url": "https://www.goodreads.com/book/show/25666050-algorithms-to-live-by",
@@ -591,7 +591,7 @@
     ]
   },
   {
-    "title": "How Not to Be Wrong: The Power of Mathematical Thinking",
+    "title": "How Not to Be Wrong",
     "author": "Jordan Ellenberg",
     "cover": "./covers/Jordan-Ellenberg-How-Not-to-Be.jpg",
     "pages": "480",
@@ -603,7 +603,7 @@
     ]
   },
   {
-    "title": "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
+    "title": "What If?",
     "author": "Randall Munroe",
     "cover": "./covers/Randall-Munroe-What-If--Seriou.jpg",
     "pages": "303",
@@ -616,7 +616,7 @@
     ]
   },
   {
-    "title": "Devolution: A Firsthand Account of the Rainier Sasquatch Massacre",
+    "title": "Devolution",
     "author": "Max Brooks",
     "cover": "./covers/Max-Brooks-Devolution--A-First.jpg",
     "pages": "286",
@@ -629,7 +629,7 @@
     ]
   },
   {
-    "title": "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy",
+    "title": "Weapons of Math Destruction",
     "author": "Cathy O'Neil",
     "cover": "./covers/Cathy-O-Neil-Weapons-of-Math-D.jpg",
     "pages": "259",
@@ -654,7 +654,7 @@
     ]
   },
   {
-    "title": "Hyperbole and a Half: Unfortunate Situations, Flawed Coping Mechanisms, Mayhem, and Other Things That Happened",
+    "title": "Hyperbole and a Half",
     "author": "Allie Brosh",
     "cover": "./covers/Allie-Brosh-Hyperbole-and-a-Ha.jpg",
     "pages": "371",
@@ -710,7 +710,7 @@
   {
     "title": "March: Book One",
     "author": "John Lewis, Andrew Aydin, & Nate Powell",
-    "cover": "./covers/John-------------LewisAndrew-A.jpg",
+    "cover": "./covers/John-Lewis-Andrew-A.jpg",
     "pages": "128",
     "goodreads_url": "https://www.goodreads.com/book/show/17346698-march",
     "indiebound_url": "https://www.indiebound.org/book/9781603093002",
@@ -722,7 +722,7 @@
     ]
   },
   {
-    "title": "Extra Lives: Why Video Games Matter",
+    "title": "Extra Lives",
     "author": "Tom Bissell",
     "cover": "./covers/Tom-Bissell-Extra-Lives--Why-V.jpg",
     "pages": "204",
@@ -748,8 +748,8 @@
     ]
   },
   {
-    "title": "Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think",
-    "author": "Hans RoslingOla RoslingAnna Rosling Rönnlund",
+    "title": "Factfulness",
+    "author": "Hans Rosling",
     "cover": "./covers/Hans-RoslingOla-RoslingAnna-Ro.jpg",
     "pages": "342",
     "goodreads_url": "https://www.goodreads.com/book/show/34890015-factfulness?ac=1&from_search=true&qid=oOywJOL7yn&rank=1",
@@ -773,7 +773,7 @@
     ]
   },
   {
-    "title": "Into Thin Air: A Personal Account of the Mt. Everest Disaster",
+    "title": "Into Thin Air",
     "author": "Jon Krakauer",
     "cover": "./covers/Jon-Krakauer-Into-Thin-Air--A-.jpg",
     "pages": "293",
@@ -800,7 +800,7 @@
   },
   {
     "title": "Jonathan Strange & Mr Norrell",
-    "author": "Susanna ClarkePortia Rosenberg",
+    "author": "Susanna Clarke",
     "cover": "./covers/Susanna-ClarkePortia-Rosenberg.jpg",
     "pages": "782",
     "goodreads_url": "https://www.goodreads.com/book/show/76852.Jonathan_Strange_Mr_Norrell",
@@ -811,7 +811,7 @@
     ]
   },
   {
-    "title": "Grokking Algorithms An Illustrated Guide For Programmers and Other Curious People",
+    "title": "Grokking Algorithms",
     "author": "Aditya Y. Bhargava",
     "cover": "./covers/Aditya-Y--Bhargava-Grokking-Al.jpg",
     "pages": "256",
@@ -836,7 +836,7 @@
     ]
   },
   {
-    "title": "The Fire Never Goes Out: A Memoir in Pictures",
+    "title": "The Fire Never Goes Out",
     "author": "Noelle Stevenson",
     "cover": "./covers/Noelle-Stevenson-The-Fire-Neve.jpg",
     "pages": "208",
@@ -913,7 +913,7 @@
     ]
   },
   {
-    "title": "Invisible Women: Data Bias in a World Designed for Men",
+    "title": "Invisible Women",
     "author": "Caroline Criado Pérez",
     "cover": "./covers/Caroline-Criado-P-rez-Invisibl.jpg",
     "pages": "411",
@@ -940,8 +940,8 @@
     ]
   },
   {
-    "title": "The New One: Painfully True Stories from a Reluctant Dad",
-    "author": "Mike Birbiglia",
+    "title": "The New One",
+    "author": "Mike Birbiglia & J. Hope Stein",
     "cover": "./covers/Mike-Birbiglia-The-New-One--Pa.jpg",
     "pages": "256",
     "goodreads_url": "https://www.goodreads.com/en/book/show/52894214",
@@ -966,7 +966,7 @@
     ]
   },
   {
-    "title": "The Uninhabitable Earth: Life After Warming",
+    "title": "The Uninhabitable Earth",
     "author": "David Wallace-Wells",
     "cover": "./covers/David-Wallace-Wells-The-Uninha.jpg",
     "pages": "310",
@@ -980,7 +980,7 @@
     ]
   },
   {
-    "title": "The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win",
+    "title": "The Biggest Bluff",
     "author": "Maria Konnikova",
     "cover": "./covers/Maria-Konnikova-The-Biggest-Bl.jpg",
     "pages": "368",
@@ -993,7 +993,7 @@
   },
   {
     "title": "Assassin's Apprentice",
-    "author": "Robin HobbMagali Villeneuve",
+    "author": "Robin Hobb",
     "cover": "./covers/Robin-HobbMagali-Villeneuve-As.jpg",
     "pages": "451",
     "goodreads_url": "https://www.goodreads.com/book/show/43573035-assassin-s-apprentice",
@@ -1061,7 +1061,7 @@
     ]
   },
   {
-    "title": "How to Invent Everything: A Survival Guide for the Stranded Time Traveler",
+    "title": "How to Invent Everything",
     "author": "Ryan North",
     "cover": "./covers/Ryan-North-How-to-Invent-Every.jpg",
     "pages": "437",
@@ -1074,7 +1074,7 @@
     ]
   },
   {
-    "title": "The Rise and Fall of the Dinosaurs: A New History of a Lost World",
+    "title": "The Rise and Fall of the Dinosaurs",
     "author": "Stephen Brusatte",
     "cover": "./covers/Stephen-Brusatte-The-Rise-and-.jpg",
     "pages": "404",
