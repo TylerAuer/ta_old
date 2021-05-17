@@ -23,6 +23,7 @@ export enum GenresEnum {
   'social & political sciences' = 'social & political sciences',
   'sports & games' = 'sports & games',
   'under the radar' = 'under the radar',
+  'young adult' = 'young adult',
 }
 
 export type GenreFilterToggleStateType = { [key in keyof typeof GenresEnum]: boolean };

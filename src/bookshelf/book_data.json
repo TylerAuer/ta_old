@@ -411,7 +411,8 @@
     "library_url": "https://www.worldcat.org/search?q=9780061969553",
     "genres": [
       "fantasy",
-      "series"
+      "series",
+      "young adult"
     ]
   },
   {
@@ -1135,6 +1136,142 @@
     "genres": [
       "best of the best",
       "social & political sciences"
+    ]
+  },
+  {
+    "title": "Into the Wild",
+    "author": "Jon Krakauer",
+    "cover": "./covers/Jon-Krakauer-Into-the-Wild.jpg",
+    "pages": "207",
+    "goodreads_url": "https://www.goodreads.com/book/show/1845.Into_the_Wild",
+    "indiebound_url": "https://www.indiebound.org/book/9780385486804",
+    "library_url": "https://www.worldcat.org/search?q=9780385486804",
+    "genres": [
+      "adventure"
+    ]
+  },
+  {
+    "title": "Eiger Dreams",
+    "author": "Jon Krakauer",
+    "cover": "./covers/Jon-Krakauer-Eiger-Dreams--Ven.jpg",
+    "pages": "186",
+    "goodreads_url": "https://www.goodreads.com/book/show/1897.Eiger_Dreams",
+    "indiebound_url": "https://www.indiebound.org/book/9780385488181",
+    "library_url": "https://www.worldcat.org/search?q=9780385488181",
+    "genres": [
+      "adventure"
+    ]
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "cover": "./covers/Yuval-Noah-Harari-Sapiens--A-B.jpg",
+    "pages": "443",
+    "goodreads_url": "https://www.goodreads.com/book/show/20839196-sapiens",
+    "indiebound_url": "https://www.indiebound.org/book/9780062316097",
+    "library_url": "https://www.worldcat.org/search?q=9780062316097",
+    "genres": [
+      "history",
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "Ender's Game",
+    "author": "Orson Scott Card",
+    "cover": "./covers/Orson-Scott-Card-Ender-s-Game.jpg",
+    "pages": "324",
+    "goodreads_url": "https://www.goodreads.com/book/show/375802.Ender_s_Game",
+    "indiebound_url": "https://www.indiebound.org/book/9780812550702",
+    "library_url": "https://www.worldcat.org/search?q=9780812550702",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "series",
+      "young adult"
+    ]
+  },
+  {
+    "title": "I Am Legend and Other Stories",
+    "author": "Richard Matheson",
+    "cover": "./covers/Richard-Matheson-I-Am-Legend-a.jpg",
+    "pages": "317",
+    "goodreads_url": "https://www.goodreads.com/book/show/547094.I_Am_Legend_and_Other_Stories",
+    "indiebound_url": "https://www.indiebound.org/book/9780312865047",
+    "library_url": "https://www.worldcat.org/search?q=9780312865047",
+    "genres": [
+      "fantasy",
+      "short stories"
+    ]
+  },
+  {
+    "title": "Maus",
+    "author": "Art Spiegelman",
+    "cover": "./covers/Art-Spiegelman-The-Complete-Ma.jpg",
+    "pages": "296",
+    "goodreads_url": "https://www.goodreads.com/book/show/15195.The_Complete_Maus",
+    "indiebound_url": "https://www.indiebound.org/book/9780141014081",
+    "library_url": "https://www.worldcat.org/search?q=9780141014081",
+    "genres": [
+      "graphic novel",
+      "history",
+      "series"
+    ]
+  },
+  {
+    "title": "Blankets",
+    "author": "Craig Thompson",
+    "cover": "./covers/Craig-Thompson-Blankets.jpg",
+    "pages": "592",
+    "goodreads_url": "https://www.goodreads.com/book/show/25179.Blankets",
+    "indiebound_url": "https://www.indiebound.org/book/9781891830433",
+    "library_url": "https://www.worldcat.org/search?q=9781891830433",
+    "genres": [
+      "best of the best",
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "cover": "./covers/George-R-R--Martin-A-Game-of-T.jpg",
+    "pages": "835",
+    "goodreads_url": "https://www.goodreads.com/book/show/13496.A_Game_of_Thrones",
+    "indiebound_url": "https://www.indiebound.org/book/9780553588484",
+    "library_url": "https://www.worldcat.org/search?q=9780553588484",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "The Golden Compass",
+    "author": "Philip Pullman",
+    "cover": "./covers/Philip-Pullman-The-Golden-Comp.jpg",
+    "pages": "399",
+    "goodreads_url": "https://www.goodreads.com/book/show/119322.The_Golden_Compass",
+    "indiebound_url": "https://www.indiebound.org/book/9780679879244",
+    "library_url": "https://www.worldcat.org/search?q=9780679879244",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "series",
+      "young adult"
+    ]
+  },
+  {
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "cover": "./covers/Lois-Lowry-The-Giver.jpg",
+    "pages": "208",
+    "goodreads_url": "https://www.goodreads.com/book/show/3636.The_Giver",
+    "indiebound_url": "https://www.indiebound.org/book/9780385732550",
+    "library_url": "https://www.worldcat.org/search?q=9780385732550",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "young adult"
     ]
   }
 ]
