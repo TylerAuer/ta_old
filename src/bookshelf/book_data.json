@@ -118,7 +118,7 @@
     ]
   },
   {
-    "title": "Blindspot: Hidden Biases of Good People",
+    "title": "Blindspot",
     "author": "Mahzarin R. Banaji & Anthony G. Greenwald",
     "cover": "./covers/Mahzarin-R--BanajiAnthony-G--G.jpg",
     "pages": "254",
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "title": "Born a Crime: Stories From a South African Childhood",
+    "title": "Born a Crime",
     "author": "Trevor Noah",
     "cover": "./covers/Trevor-Noah-Born-a-Crime--Stor.jpg",
     "pages": "289",
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "title": "The Education of an Idealist: A Memoir",
+    "title": "The Education of an Idealist",
     "author": "Samantha Power",
     "cover": "./covers/Samantha-Power-The-Education-o.jpg",
     "pages": "592",
@@ -320,7 +320,7 @@
     ]
   },
   {
-    "title": "In the Heart of the Sea: The Tragedy of the Whaleship Essex",
+    "title": "In the Heart of the Sea",
     "author": "Nathaniel Philbrick",
     "cover": "./covers/Nathaniel-Philbrick-In-the-Hea.jpg",
     "pages": "302",
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "title": "The World As It Is: Inside the Obama White House",
+    "title": "The World As It Is",
     "author": "Ben  Rhodes",
     "cover": "./covers/Ben--Rhodes-The-World-As-It-Is.jpg",
     "pages": "480",
@@ -347,7 +347,7 @@
     ]
   },
   {
-    "title": "Homo Deus: A Brief History of Tomorrow",
+    "title": "Homo Deus",
     "author": "Yuval Noah Harari",
     "cover": "./covers/Yuval-Noah-Harari-Homo-Deus--A.jpg",
     "pages": "448",
@@ -411,7 +411,8 @@
     "library_url": "https://www.worldcat.org/search?q=9780061969553",
     "genres": [
       "fantasy",
-      "series"
+      "series",
+      "young adult"
     ]
   },
   {
@@ -439,7 +440,7 @@
     ]
   },
   {
-    "title": "The Information: A History, A Theory, A Flood",
+    "title": "The Information",
     "author": "James Gleick",
     "cover": "./covers/James-Gleick-The-Information--.jpg",
     "pages": "544",
@@ -447,7 +448,7 @@
     "indiebound_url": "https://www.indiebound.org/book/9781400096237",
     "library_url": "https://www.worldcat.org/search?q=9781400096237",
     "genres": [
-      "sci-fi"
+      "science & math"
     ]
   },
   {
@@ -501,8 +502,8 @@
     ]
   },
   {
-    "title": "Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are",
-    "author": "Seth Stephens-DavidowitzSteven Pinker",
+    "title": "Everybody Lies",
+    "author": "Seth Stephens-Davidowitz",
     "cover": "./covers/Seth-Stephens-DavidowitzSteven.jpg",
     "pages": "338",
     "goodreads_url": "https://www.goodreads.com/book/show/28512671-everybody-lies",
@@ -542,8 +543,8 @@
   },
   {
     "title": "Julián Is a Mermaid",
-    "author": "Jessica     Love",
-    "cover": "./covers/Jessica-----Love-Juli-n-Is-a-M.jpg",
+    "author": "Jessica Love",
+    "cover": "./covers/Jessica-Love-Julian-Is-a-M.jpg",
     "pages": "80",
     "goodreads_url": "https://www.goodreads.com/book/show/26532714-juli-n-is-a-mermaid",
     "indiebound_url": "https://www.indiebound.org/book/9780763690458",
@@ -553,7 +554,7 @@
     ]
   },
   {
-    "title": "World War Z: An Oral History of the Zombie War",
+    "title": "World War Z",
     "author": "Max Brooks",
     "cover": "./covers/Max-Brooks-World-War-Z--An-Ora.jpg",
     "pages": "342",
@@ -566,8 +567,8 @@
     ]
   },
   {
-    "title": "Algorithms to Live By: The Computer Science of Human Decisions",
-    "author": "Brian ChristianTom  Griffiths",
+    "title": "Algorithms to Live By",
+    "author": "Brian Christian & Tom Griffiths",
     "cover": "./covers/Brian-ChristianTom--Griffiths-.jpg",
     "pages": "368",
     "goodreads_url": "https://www.goodreads.com/book/show/25666050-algorithms-to-live-by",
@@ -591,7 +592,7 @@
     ]
   },
   {
-    "title": "How Not to Be Wrong: The Power of Mathematical Thinking",
+    "title": "How Not to Be Wrong",
     "author": "Jordan Ellenberg",
     "cover": "./covers/Jordan-Ellenberg-How-Not-to-Be.jpg",
     "pages": "480",
@@ -603,7 +604,7 @@
     ]
   },
   {
-    "title": "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
+    "title": "What If?",
     "author": "Randall Munroe",
     "cover": "./covers/Randall-Munroe-What-If--Seriou.jpg",
     "pages": "303",
@@ -616,7 +617,7 @@
     ]
   },
   {
-    "title": "Devolution: A Firsthand Account of the Rainier Sasquatch Massacre",
+    "title": "Devolution",
     "author": "Max Brooks",
     "cover": "./covers/Max-Brooks-Devolution--A-First.jpg",
     "pages": "286",
@@ -629,7 +630,7 @@
     ]
   },
   {
-    "title": "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy",
+    "title": "Weapons of Math Destruction",
     "author": "Cathy O'Neil",
     "cover": "./covers/Cathy-O-Neil-Weapons-of-Math-D.jpg",
     "pages": "259",
@@ -654,7 +655,7 @@
     ]
   },
   {
-    "title": "Hyperbole and a Half: Unfortunate Situations, Flawed Coping Mechanisms, Mayhem, and Other Things That Happened",
+    "title": "Hyperbole and a Half",
     "author": "Allie Brosh",
     "cover": "./covers/Allie-Brosh-Hyperbole-and-a-Ha.jpg",
     "pages": "371",
@@ -696,7 +697,7 @@
     ]
   },
   {
-    "title": "How To: Absurd Scientific Advice for Common Real-World Problems",
+    "title": "How To",
     "author": "Randall Munroe",
     "cover": "./covers/Randall-Munroe-How-To--Absurd-.jpg",
     "pages": "320",
@@ -710,7 +711,7 @@
   {
     "title": "March: Book One",
     "author": "John Lewis, Andrew Aydin, & Nate Powell",
-    "cover": "./covers/John-------------LewisAndrew-A.jpg",
+    "cover": "./covers/John-Lewis-Andrew-A.jpg",
     "pages": "128",
     "goodreads_url": "https://www.goodreads.com/book/show/17346698-march",
     "indiebound_url": "https://www.indiebound.org/book/9781603093002",
@@ -722,7 +723,7 @@
     ]
   },
   {
-    "title": "Extra Lives: Why Video Games Matter",
+    "title": "Extra Lives",
     "author": "Tom Bissell",
     "cover": "./covers/Tom-Bissell-Extra-Lives--Why-V.jpg",
     "pages": "204",
@@ -748,8 +749,8 @@
     ]
   },
   {
-    "title": "Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think",
-    "author": "Hans RoslingOla RoslingAnna Rosling Rönnlund",
+    "title": "Factfulness",
+    "author": "Hans Rosling",
     "cover": "./covers/Hans-RoslingOla-RoslingAnna-Ro.jpg",
     "pages": "342",
     "goodreads_url": "https://www.goodreads.com/book/show/34890015-factfulness?ac=1&from_search=true&qid=oOywJOL7yn&rank=1",
@@ -773,7 +774,7 @@
     ]
   },
   {
-    "title": "Into Thin Air: A Personal Account of the Mt. Everest Disaster",
+    "title": "Into Thin Air",
     "author": "Jon Krakauer",
     "cover": "./covers/Jon-Krakauer-Into-Thin-Air--A-.jpg",
     "pages": "293",
@@ -800,7 +801,7 @@
   },
   {
     "title": "Jonathan Strange & Mr Norrell",
-    "author": "Susanna ClarkePortia Rosenberg",
+    "author": "Susanna Clarke",
     "cover": "./covers/Susanna-ClarkePortia-Rosenberg.jpg",
     "pages": "782",
     "goodreads_url": "https://www.goodreads.com/book/show/76852.Jonathan_Strange_Mr_Norrell",
@@ -811,7 +812,7 @@
     ]
   },
   {
-    "title": "Grokking Algorithms An Illustrated Guide For Programmers and Other Curious People",
+    "title": "Grokking Algorithms",
     "author": "Aditya Y. Bhargava",
     "cover": "./covers/Aditya-Y--Bhargava-Grokking-Al.jpg",
     "pages": "256",
@@ -836,7 +837,7 @@
     ]
   },
   {
-    "title": "The Fire Never Goes Out: A Memoir in Pictures",
+    "title": "The Fire Never Goes Out",
     "author": "Noelle Stevenson",
     "cover": "./covers/Noelle-Stevenson-The-Fire-Neve.jpg",
     "pages": "208",
@@ -913,7 +914,7 @@
     ]
   },
   {
-    "title": "Invisible Women: Data Bias in a World Designed for Men",
+    "title": "Invisible Women",
     "author": "Caroline Criado Pérez",
     "cover": "./covers/Caroline-Criado-P-rez-Invisibl.jpg",
     "pages": "411",
@@ -940,8 +941,8 @@
     ]
   },
   {
-    "title": "The New One: Painfully True Stories from a Reluctant Dad",
-    "author": "Mike Birbiglia",
+    "title": "The New One",
+    "author": "Mike Birbiglia & J. Hope Stein",
     "cover": "./covers/Mike-Birbiglia-The-New-One--Pa.jpg",
     "pages": "256",
     "goodreads_url": "https://www.goodreads.com/en/book/show/52894214",
@@ -966,7 +967,7 @@
     ]
   },
   {
-    "title": "The Uninhabitable Earth: Life After Warming",
+    "title": "The Uninhabitable Earth",
     "author": "David Wallace-Wells",
     "cover": "./covers/David-Wallace-Wells-The-Uninha.jpg",
     "pages": "310",
@@ -980,7 +981,7 @@
     ]
   },
   {
-    "title": "The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win",
+    "title": "The Biggest Bluff",
     "author": "Maria Konnikova",
     "cover": "./covers/Maria-Konnikova-The-Biggest-Bl.jpg",
     "pages": "368",
@@ -993,7 +994,7 @@
   },
   {
     "title": "Assassin's Apprentice",
-    "author": "Robin HobbMagali Villeneuve",
+    "author": "Robin Hobb",
     "cover": "./covers/Robin-HobbMagali-Villeneuve-As.jpg",
     "pages": "451",
     "goodreads_url": "https://www.goodreads.com/book/show/43573035-assassin-s-apprentice",
@@ -1061,7 +1062,7 @@
     ]
   },
   {
-    "title": "How to Invent Everything: A Survival Guide for the Stranded Time Traveler",
+    "title": "How to Invent Everything",
     "author": "Ryan North",
     "cover": "./covers/Ryan-North-How-to-Invent-Every.jpg",
     "pages": "437",
@@ -1074,7 +1075,7 @@
     ]
   },
   {
-    "title": "The Rise and Fall of the Dinosaurs: A New History of a Lost World",
+    "title": "The Rise and Fall of the Dinosaurs",
     "author": "Stephen Brusatte",
     "cover": "./covers/Stephen-Brusatte-The-Rise-and-.jpg",
     "pages": "404",
@@ -1135,6 +1136,142 @@
     "genres": [
       "best of the best",
       "social & political sciences"
+    ]
+  },
+  {
+    "title": "Into the Wild",
+    "author": "Jon Krakauer",
+    "cover": "./covers/Jon-Krakauer-Into-the-Wild.jpg",
+    "pages": "207",
+    "goodreads_url": "https://www.goodreads.com/book/show/1845.Into_the_Wild",
+    "indiebound_url": "https://www.indiebound.org/book/9780385486804",
+    "library_url": "https://www.worldcat.org/search?q=9780385486804",
+    "genres": [
+      "adventure"
+    ]
+  },
+  {
+    "title": "Eiger Dreams",
+    "author": "Jon Krakauer",
+    "cover": "./covers/Jon-Krakauer-Eiger-Dreams--Ven.jpg",
+    "pages": "186",
+    "goodreads_url": "https://www.goodreads.com/book/show/1897.Eiger_Dreams",
+    "indiebound_url": "https://www.indiebound.org/book/9780385488181",
+    "library_url": "https://www.worldcat.org/search?q=9780385488181",
+    "genres": [
+      "adventure"
+    ]
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "cover": "./covers/Yuval-Noah-Harari-Sapiens--A-B.jpg",
+    "pages": "443",
+    "goodreads_url": "https://www.goodreads.com/book/show/20839196-sapiens",
+    "indiebound_url": "https://www.indiebound.org/book/9780062316097",
+    "library_url": "https://www.worldcat.org/search?q=9780062316097",
+    "genres": [
+      "history",
+      "social & political sciences"
+    ]
+  },
+  {
+    "title": "Ender's Game",
+    "author": "Orson Scott Card",
+    "cover": "./covers/Orson-Scott-Card-Ender-s-Game.jpg",
+    "pages": "324",
+    "goodreads_url": "https://www.goodreads.com/book/show/375802.Ender_s_Game",
+    "indiebound_url": "https://www.indiebound.org/book/9780812550702",
+    "library_url": "https://www.worldcat.org/search?q=9780812550702",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "series",
+      "young adult"
+    ]
+  },
+  {
+    "title": "I Am Legend and Other Stories",
+    "author": "Richard Matheson",
+    "cover": "./covers/Richard-Matheson-I-Am-Legend-a.jpg",
+    "pages": "317",
+    "goodreads_url": "https://www.goodreads.com/book/show/547094.I_Am_Legend_and_Other_Stories",
+    "indiebound_url": "https://www.indiebound.org/book/9780312865047",
+    "library_url": "https://www.worldcat.org/search?q=9780312865047",
+    "genres": [
+      "fantasy",
+      "short stories"
+    ]
+  },
+  {
+    "title": "Maus",
+    "author": "Art Spiegelman",
+    "cover": "./covers/Art-Spiegelman-The-Complete-Ma.jpg",
+    "pages": "296",
+    "goodreads_url": "https://www.goodreads.com/book/show/15195.The_Complete_Maus",
+    "indiebound_url": "https://www.indiebound.org/book/9780141014081",
+    "library_url": "https://www.worldcat.org/search?q=9780141014081",
+    "genres": [
+      "graphic novel",
+      "history",
+      "series"
+    ]
+  },
+  {
+    "title": "Blankets",
+    "author": "Craig Thompson",
+    "cover": "./covers/Craig-Thompson-Blankets.jpg",
+    "pages": "592",
+    "goodreads_url": "https://www.goodreads.com/book/show/25179.Blankets",
+    "indiebound_url": "https://www.indiebound.org/book/9781891830433",
+    "library_url": "https://www.worldcat.org/search?q=9781891830433",
+    "genres": [
+      "best of the best",
+      "graphic novel",
+      "memoir"
+    ]
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "cover": "./covers/George-R-R--Martin-A-Game-of-T.jpg",
+    "pages": "835",
+    "goodreads_url": "https://www.goodreads.com/book/show/13496.A_Game_of_Thrones",
+    "indiebound_url": "https://www.indiebound.org/book/9780553588484",
+    "library_url": "https://www.worldcat.org/search?q=9780553588484",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "The Golden Compass",
+    "author": "Philip Pullman",
+    "cover": "./covers/Philip-Pullman-The-Golden-Comp.jpg",
+    "pages": "399",
+    "goodreads_url": "https://www.goodreads.com/book/show/119322.The_Golden_Compass",
+    "indiebound_url": "https://www.indiebound.org/book/9780679879244",
+    "library_url": "https://www.worldcat.org/search?q=9780679879244",
+    "genres": [
+      "best of the best",
+      "fantasy",
+      "series",
+      "young adult"
+    ]
+  },
+  {
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "cover": "./covers/Lois-Lowry-The-Giver.jpg",
+    "pages": "208",
+    "goodreads_url": "https://www.goodreads.com/book/show/3636.The_Giver",
+    "indiebound_url": "https://www.indiebound.org/book/9780385732550",
+    "library_url": "https://www.worldcat.org/search?q=9780385732550",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "young adult"
     ]
   }
 ]

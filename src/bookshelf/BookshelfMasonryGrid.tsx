@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
 
+import { BookModal } from './BookModal';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
-import { GenreFilterToggleStateType, GenresEnum } from '@/types';
-import { useEffect, useState } from 'react';
+import { GenreFilterToggleStateType } from '@/types';
 
 type Props = {
   activeFilters: GenreFilterToggleStateType;
@@ -12,7 +13,10 @@ type Props = {
 };
 
 export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) => {
+  const [userSelectedBook, setUserSelectedBook] = useState(null);
   const windowWidth = useWindowWidth();
+
+  const closeModal = () => setUserSelectedBook(null);
 
   // Don't render anything until the window width is known
   if (windowWidth === 0) {
@@ -20,7 +24,6 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
   }
 
   let filteredBooks = [];
-
   const isAnyFilterActive = Object.values(activeFilters).some((value) => value);
   if (isAnyFilterActive) {
     for (let book of books) {
@@ -60,27 +63,38 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
   }
 
   return (
-    <section
-      css={css`
-        display: flex;
-        align-items: flex-start;
-      `}
-    >
-      {columnsOfCovers.map((col, i) => (
-        <div
-          key={`column-${i}`}
-          css={css`
-            width: ${columnWidth}px;
-            display: inline-block;
-            margin: 0 ${gutterInPixels / 2}px;
-          `}
-        >
-          {col.map((book) => (
-            <GatsbyImage key={book.title} alt={book.title} image={getImage(book.cover)} />
-          ))}
-        </div>
-      ))}
-    </section>
+    <>
+      {userSelectedBook && <BookModal book={userSelectedBook} closeModal={closeModal} />}
+      <section
+        css={css`
+          display: flex;
+          align-items: flex-start;
+        `}
+      >
+        {columnsOfCovers.map((col, i) => (
+          <div
+            key={`column-${i}`}
+            css={css`
+              width: ${columnWidth}px;
+              display: inline-block;
+              margin: 0 ${gutterInPixels / 2}px;
+            `}
+          >
+            {col.map((book, i) => (
+              <GatsbyImage
+                key={book.title || i.toString()}
+                alt={book.title || i.toString()}
+                image={getImage(book.cover)}
+                onClick={() => setUserSelectedBook(book)}
+                css={css`
+                  cursor: pointer;
+                `}
+              />
+            ))}
+          </div>
+        ))}
+      </section>
+    </>
   );
 };
 
