@@ -25,6 +25,15 @@ describe('Check genres', () => {
     });
   });
 
+  context('every book has a cover images', () => {
+    bookData.forEach((book) => {
+      it(`${book.title}'s cover path points to an image file`, () => {
+        // .slice trims off the './' part that exists because Gatsby requires relative URLs
+        cy.readFile(`./src/bookshelf/${book.cover.slice(2)}`);
+      });
+    });
+  });
+
   context('every genre is in GenreEnum', () => {
     const genreSet = new Set<string>();
     bookData.forEach((book) => {
