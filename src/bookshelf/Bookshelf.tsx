@@ -5,35 +5,18 @@ import { css } from '@emotion/react';
 import { BookshelfFilters } from '@/bookshelf/BookshelfFilters';
 import { BookshelfMasonryGrid } from '@/bookshelf/BookshelfMasonryGrid';
 import { IconNavList } from '@/components/IconNavList';
-
-import { GenreFilterToggleStateType, GenresEnum } from '@/types';
 import { Box } from '@/components/Box';
+
+import { fisherYatesShuffle } from '../../utils/fisher_yates_shuffle';
+import { GenreFilterToggleStateType, GenresEnum } from '@/types';
 
 const initialToggleState = generateInitialActiveFilterState();
 const MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY = 5;
 
 export const Bookshelf: React.FC = () => {
   const [activeFilters, setActiveFilters] = useState(initialToggleState);
+  const [shuffledBooks, setShuffledBooks] = useState([]);
   const [genresWithEnoughUses, setGenresWithEnoughUses] = useState<GenresEnum[]>([]);
-
-  // On mount: counts how many times each genre is used so that filters without enough books
-  // can be stripped from the list
-  useEffect(() => {
-    const genreCounts = {};
-    books.forEach((book) => {
-      book.genres.forEach((genre) => {
-        if (!genreCounts[genre]) genreCounts[genre] = 0;
-        genreCounts[genre]++;
-      });
-    });
-
-    const genresWithMinUses = [];
-    Object.entries(genreCounts).forEach(([genre, count]) => {
-      if (count >= MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY) genresWithMinUses.push(genre);
-    });
-
-    setGenresWithEnoughUses(genresWithMinUses);
-  }, []);
 
   const query = useStaticQuery(graphql`
     {
@@ -55,8 +38,32 @@ export const Bookshelf: React.FC = () => {
   `);
   const books = query.allBookDataJson.nodes;
 
+  // On mount: counts how many times each genre is used so that filters without enough books
+  // can be stripped from the list
+  useEffect(() => {
+    const genreCounts = {};
+    books.forEach((book) => {
+      book.genres.forEach((genre) => {
+        if (!genreCounts[genre]) genreCounts[genre] = 0;
+        genreCounts[genre]++;
+      });
+    });
+
+    const genresWithMinUses = [];
+    Object.entries(genreCounts).forEach(([genre, count]) => {
+      if (count >= MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY) genresWithMinUses.push(genre);
+    });
+
+    setGenresWithEnoughUses(genresWithMinUses);
+  }, []);
+
+  // Shuffle the books
+  useEffect(() => {
+    setShuffledBooks(fisherYatesShuffle(books));
+  }, []);
+
   // Don't render until all processing is finished
-  if (!genresWithEnoughUses.length) return null;
+  if (!genresWithEnoughUses.length || !shuffledBooks.length) return null;
 
   const toggleFilter = (filterToToggle: GenresEnum) => {
     setActiveFilters((prev) => ({ ...prev, [filterToToggle]: !prev[filterToToggle] }));
@@ -73,7 +80,7 @@ export const Bookshelf: React.FC = () => {
         filterStates={activeFilters}
         genresWithEnoughUses={genresWithEnoughUses}
       />
-      <BookshelfMasonryGrid activeFilters={activeFilters} books={books} />
+      <BookshelfMasonryGrid activeFilters={activeFilters} books={shuffledBooks} />
     </>
   );
 };
