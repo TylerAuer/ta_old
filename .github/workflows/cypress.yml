@@ -5,6 +5,10 @@ on: [pull_request]
 jobs:
   cypress-run:
     runs-on: ubuntu-16.04
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3] # run 3 copies of the current job in parallel
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -13,6 +17,7 @@ jobs:
         with:
           start: npm run test:cypress:ci
           record: true
+          parallel: true
           wait-on: http://localhost:8000
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
