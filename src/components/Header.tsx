@@ -6,6 +6,7 @@ import { Box } from '@/components/Box';
 import { Icon } from '@/components/Icon';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { SPACING } from '@/constants';
+import { IconNavList } from './IconNavList';
 
 const Left: React.FC = () => (
   <Link
@@ -22,36 +23,7 @@ const Left: React.FC = () => (
 );
 
 const Right: React.FC = () => {
-  const s = css`
-    & a {
-      margin: 0 ${SPACING.md};
-    }
-
-    & img {
-      display: inline-block;
-      width: 3rem;
-    }
-  `;
-
-  return (
-    <nav css={s}>
-      <a href="https://github.com/TylerAuer">
-        <Icon icon="github" />
-      </a>
-      <a href="https://twitter.com/TylerAuer">
-        <Icon icon="twitter" />
-      </a>
-      <Link to="/code">
-        <Icon icon="code" />
-      </Link>
-      <Link to="/adventure">
-        <Icon icon="mountains" />
-      </Link>
-      <Link to="/bookshelf">
-        <Icon icon="book" />
-      </Link>
-    </nav>
-  );
+  return <IconNavList />;
 };
 
 export const Header: React.FC = () => {

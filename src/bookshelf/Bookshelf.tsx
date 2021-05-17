@@ -90,7 +90,7 @@ const BookshelfHeader: React.FC = () => {
   return (
     <div css={s}>
       <h1>Tyler's Bookshelf</h1>
-      <IconNavList />
+      <IconNavList includeHomeLink />
 
       <Box>
         <p>
