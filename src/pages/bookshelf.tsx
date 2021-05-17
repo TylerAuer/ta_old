@@ -15,7 +15,6 @@ const BookshelfPage: React.FC = () => (
     <main>
       <Bookshelf />
     </main>
-    <Footer />
   </GlobalStyles>
 );
 

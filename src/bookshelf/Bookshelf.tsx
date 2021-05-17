@@ -32,6 +32,12 @@ export const Bookshelf: React.FC = () => {
             name
           }
           genres
+          author
+          title
+          pages
+          goodreads_url
+          indiebound_url
+          library_url
         }
       }
     }

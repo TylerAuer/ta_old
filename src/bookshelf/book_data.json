@@ -447,7 +447,7 @@
     "indiebound_url": "https://www.indiebound.org/book/9781400096237",
     "library_url": "https://www.worldcat.org/search?q=9781400096237",
     "genres": [
-      "sci-fi"
+      "science & math"
     ]
   },
   {
@@ -696,7 +696,7 @@
     ]
   },
   {
-    "title": "How To: Absurd Scientific Advice for Common Real-World Problems",
+    "title": "How To",
     "author": "Randall Munroe",
     "cover": "./covers/Randall-Munroe-How-To--Absurd-.jpg",
     "pages": "320",
