@@ -1273,5 +1273,234 @@
       "sci-fi",
       "young adult"
     ]
+  },
+  {
+    "title": "The Complete Calvin and Hobbes",
+    "author": "Bill Watterson",
+    "cover": "./covers/Bill-Watterson-The-Complete-Ca.jpg",
+    "pages": "1456",
+    "goodreads_url": "https://www.goodreads.com/book/show/24812.The_Complete_Calvin_and_Hobbes",
+    "indiebound_url": "https://www.indiebound.org/book/9780740748479",
+    "library_url": "https://www.worldcat.org/search?q=9780740748479",
+    "genres": [
+      "best of the best",
+      "comedy",
+      "graphic novel"
+    ]
+  },
+  {
+    "title": "Desert Solitaire",
+    "author": "Edward Abbey",
+    "cover": "./covers/Edward-Abbey-Desert-Solitaire.jpg",
+    "pages": "337",
+    "goodreads_url": "https://www.goodreads.com/book/show/214614.Desert_Solitaire",
+    "indiebound_url": "https://www.indiebound.org/book/9780345326492",
+    "library_url": "https://www.worldcat.org/search?q=9780345326492",
+    "genres": [
+      "adventure",
+      "best of the best"
+    ]
+  },
+  {
+    "title": "Childhood's End",
+    "author": "Arthur C. Clarke",
+    "cover": "./covers/Arthur-C--Clarke-Childhood-s-E.jpg",
+    "pages": "240",
+    "goodreads_url": "https://www.goodreads.com/book/show/456620.Childhood_s_End",
+    "indiebound_url": "https://www.indiebound.org/book/9780345444059",
+    "library_url": "https://www.worldcat.org/search?q=9780345444059",
+    "genres": [
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "The Fountains of Paradise",
+    "author": "Arthur C. Clarke",
+    "cover": "./covers/Arthur-C--Clarke-The-Fountains.jpg",
+    "pages": "352",
+    "goodreads_url": "https://www.goodreads.com/book/show/149049.The_Fountains_of_Paradise",
+    "indiebound_url": "https://www.indiebound.org/book/9780446677943",
+    "library_url": "https://www.worldcat.org/search?q=9780446677943",
+    "genres": [
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "Me Talk Pretty One Day",
+    "author": "David Sedaris",
+    "cover": "./covers/David-Sedaris-Me-Talk-Pretty-O.jpg",
+    "pages": "272",
+    "goodreads_url": "https://www.goodreads.com/book/show/4137.Me_Talk_Pretty_One_Day",
+    "indiebound_url": "https://www.indiebound.org/book/9780349113913",
+    "library_url": "https://www.worldcat.org/search?q=9780349113913",
+    "genres": [
+      "best of the best",
+      "comedy",
+      "memoir"
+    ]
+  },
+  {
+    "title": "Holes",
+    "author": "Louis Sachar",
+    "cover": "./covers/Louis-Sachar-Holes.jpg",
+    "pages": "233",
+    "goodreads_url": "https://www.goodreads.com/book/show/38709.Holes",
+    "indiebound_url": "https://www.indiebound.org/book/9780439244190",
+    "library_url": "https://www.worldcat.org/search?q=9780439244190",
+    "genres": [
+      "fantasy",
+      "young adult"
+    ]
+  },
+  {
+    "title": "I, Robot",
+    "author": "Isaac Asimov",
+    "cover": "./covers/Isaac-Asimov-I--Robot.jpg",
+    "pages": "256",
+    "goodreads_url": "https://www.goodreads.com/book/show/50881206-i-robot",
+    "indiebound_url": "https://www.indiebound.org/book/9780553382563",
+    "library_url": "https://www.worldcat.org/search?q=9780553382563",
+    "genres": [
+      "best of the best",
+      "sci-fi",
+      "short stories"
+    ]
+  },
+  {
+    "title": "The Perfect Storm: A True Story of Men Against the Sea",
+    "author": "Sebastian Junger",
+    "cover": "./covers/Sebastian-Junger-The-Perfect-S.jpg",
+    "pages": "227",
+    "goodreads_url": "https://www.goodreads.com/book/show/108229.The_Perfect_Storm",
+    "indiebound_url": "https://www.indiebound.org/book/9780393050325",
+    "library_url": "https://www.worldcat.org/search?q=9780393050325",
+    "genres": [
+      "adventure"
+    ]
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. RowlingMary GrandPré",
+    "cover": "./covers/J-K--RowlingMary-GrandPr--Harr.jpg",
+    "pages": "309",
+    "goodreads_url": "https://www.goodreads.com/book/show/77523.Harry_Potter_and_the_Sorcerer_s_Stone",
+    "indiebound_url": "https://www.indiebound.org/book/9780590353403",
+    "library_url": "https://www.worldcat.org/search?q=9780590353403",
+    "genres": [
+      "fantasy",
+      "young adult",
+      "series"
+    ]
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "cover": "./covers/Cormac-McCarthy-The-Road.jpg",
+    "pages": "241",
+    "goodreads_url": "https://www.goodreads.com/book/show/6288.The_Road",
+    "indiebound_url": "https://www.indiebound.org/book/9780307265432",
+    "library_url": "https://www.worldcat.org/search?q=9780307265432",
+    "genres": [
+      "fantasy"
+    ]
+  },
+  {
+    "title": "Hair Love",
+    "author": "Matthew A. CherryVashti Harrison",
+    "cover": "./covers/Matthew-A--CherryVashti-Harris.jpg",
+    "pages": "32",
+    "goodreads_url": "https://www.goodreads.com/book/show/40944115-hair-love",
+    "indiebound_url": "https://www.indiebound.org/book/9780525553366",
+    "library_url": "https://www.worldcat.org/search?q=9780525553366",
+    "genres": [
+      "picture book"
+    ]
+  },
+  {
+    "title": "Swordspoint",
+    "author": "Ellen Kushner",
+    "cover": "./covers/Ellen-Kushner-Swordspoint.jpg",
+    "pages": "368",
+    "goodreads_url": "https://www.goodreads.com/book/show/8507794-swordspoint",
+    "indiebound_url": "https://www.indiebound.org/book/9780553585490",
+    "library_url": "https://www.worldcat.org/search?q=9780553585490",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "The Lies of Locke Lamora",
+    "author": "Scott Lynch",
+    "cover": "./covers/Scott-Lynch-The-Lies-of-Locke-.jpg",
+    "pages": "499",
+    "goodreads_url": "https://www.goodreads.com/book/show/127455.The_Lies_of_Locke_Lamora",
+    "indiebound_url": "https://www.indiebound.org/book/9780553804676",
+    "library_url": "https://www.worldcat.org/search?q=9780553804676",
+    "genres": [
+      "fantasy",
+      "series"
+    ]
+  },
+  {
+    "title": "Starship Troopers",
+    "author": "Robert A. Heinlein",
+    "cover": "./covers/Robert-A--Heinlein-Starship-Tr.jpg",
+    "pages": "263",
+    "goodreads_url": "https://www.goodreads.com/book/show/17214.Starship_Troopers",
+    "indiebound_url": "https://www.indiebound.org/book/9780441783588",
+    "library_url": "https://www.worldcat.org/search?q=9780441783588",
+    "genres": [
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "Scorecasting: The Hidden Influences Behind How Sports Are Played and Games Are Won",
+    "author": "Tobias J. MoskowitzL. Jon Wertheim",
+    "cover": "./covers/Tobias-J--MoskowitzL--Jon-Wert.jpg",
+    "pages": "255",
+    "goodreads_url": "https://www.goodreads.com/book/show/9379180-scorecasting",
+    "indiebound_url": "https://www.indiebound.org/book/9780307591791",
+    "library_url": "https://www.worldcat.org/search?q=9780307591791",
+    "genres": [
+      "social & political sciences",
+      "sports & games"
+    ]
+  },
+  {
+    "title": "Redshirts",
+    "author": "John Scalzi",
+    "cover": "./covers/John-Scalzi-Redshirts.jpg",
+    "pages": "320",
+    "goodreads_url": "https://www.goodreads.com/book/show/13055592-redshirts",
+    "indiebound_url": "https://www.indiebound.org/book/9780765316998",
+    "library_url": "https://www.worldcat.org/search?q=9780765316998",
+    "genres": [
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "Seveneves",
+    "author": "Neal Stephenson",
+    "cover": "./covers/Neal-Stephenson-Seveneves.jpg",
+    "pages": "867",
+    "goodreads_url": "https://www.goodreads.com/book/show/22826126-seveneves",
+    "indiebound_url": "https://www.indiebound.org/book/9780062190376",
+    "library_url": "https://www.worldcat.org/search?q=9780062190376",
+    "genres": [
+      "sci-fi"
+    ]
+  },
+  {
+    "title": "How to Do Nothing: Resisting the Attention Economy",
+    "author": "Jenny Odell",
+    "cover": "./covers/Jenny-Odell-How-to-Do-Nothing-.jpg",
+    "pages": "225",
+    "goodreads_url": "https://www.goodreads.com/book/show/42771901-how-to-do-nothing",
+    "indiebound_url": "https://www.indiebound.org/book/9781612197494",
+    "library_url": "https://www.worldcat.org/search?q=9781612197494",
+    "genres": [
+      "memoir"
+    ]
   }
 ]
