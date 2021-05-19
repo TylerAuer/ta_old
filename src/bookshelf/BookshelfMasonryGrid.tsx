@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 import { BookModal } from './BookModal';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
@@ -96,15 +98,21 @@ type BookCoverProps = {
 };
 
 const BookCover: React.FC<BookCoverProps> = ({ book, setModalBook }) => (
-  <GatsbyImage
-    key={book.title}
-    alt={book.title}
-    image={getImage(book.cover)}
-    onClick={() => setModalBook(book)}
-    css={css`
-      cursor: pointer;
-    `}
-  />
+  <motion.div
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.97 }}
+    transition={{ duration: 0.1 }}
+  >
+    <GatsbyImage
+      key={book.title}
+      alt={book.title}
+      image={getImage(book.cover)}
+      onClick={() => setModalBook(book)}
+      css={css`
+        cursor: pointer;
+      `}
+    />
+  </motion.div>
 );
 
 const getShortestColumnIndex = (heights: number[]): number => {
