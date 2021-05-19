@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 import { BookModal } from './BookModal';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
-import { GenreFilterToggleStateType } from '@/types';
+import { GenreFilterToggleStateType, BookFromGQLType } from '@/types';
 
 type Props = {
   activeFilters: GenreFilterToggleStateType;
-  books: any;
+  books: BookFromGQLType[];
 };
 
 export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) => {
-  const [userSelectedBook, setUserSelectedBook] = useState(null);
+  const [modalBook, setModalBook] = useState(null);
   const windowWidth = useWindowWidth();
 
-  const closeModal = () => setUserSelectedBook(null);
+  const closeModal = () => setModalBook(null);
 
   // Don't render anything until the window width is known
   if (windowWidth === 0) {
@@ -64,7 +66,7 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
 
   return (
     <>
-      {userSelectedBook && <BookModal book={userSelectedBook} closeModal={closeModal} />}
+      {modalBook && <BookModal book={modalBook} closeModal={closeModal} />}
       <section
         css={css`
           display: flex;
@@ -80,21 +82,49 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
               margin: 0 ${gutterInPixels / 2}px;
             `}
           >
-            {col.map((book, i) => (
-              <GatsbyImage
-                key={book.title || i.toString()}
-                alt={book.title || i.toString()}
-                image={getImage(book.cover)}
-                onClick={() => setUserSelectedBook(book)}
-                css={css`
-                  cursor: pointer;
-                `}
-              />
+            {col.map((book) => (
+              <BookCover book={book} setModalBook={setModalBook} />
             ))}
           </div>
         ))}
       </section>
     </>
+  );
+};
+
+type BookCoverProps = {
+  book: BookFromGQLType;
+  setModalBook: (book: BookFromGQLType) => void;
+};
+
+const BookCover: React.FC<BookCoverProps> = ({ book, setModalBook }) => {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  const covers = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.2 } },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.1 }}
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}
+      variants={covers}
+    >
+      <GatsbyImage
+        key={book.title}
+        alt={book.title}
+        image={getImage(book.cover)}
+        onClick={() => setModalBook(book)}
+        css={css`
+          cursor: pointer;
+        `}
+      />
+    </motion.div>
   );
 };
 
