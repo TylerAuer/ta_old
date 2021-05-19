@@ -97,23 +97,36 @@ type BookCoverProps = {
   setModalBook: (book: BookFromGQLType) => void;
 };
 
-const BookCover: React.FC<BookCoverProps> = ({ book, setModalBook }) => (
-  <motion.div
-    whileHover={{ scale: 1.03 }}
-    whileTap={{ scale: 0.97 }}
-    transition={{ duration: 0.1 }}
-  >
-    <GatsbyImage
-      key={book.title}
-      alt={book.title}
-      image={getImage(book.cover)}
-      onClick={() => setModalBook(book)}
-      css={css`
-        cursor: pointer;
-      `}
-    />
-  </motion.div>
-);
+const BookCover: React.FC<BookCoverProps> = ({ book, setModalBook }) => {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  const covers = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.2 } },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.1 }}
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}
+      variants={covers}
+    >
+      <GatsbyImage
+        key={book.title}
+        alt={book.title}
+        image={getImage(book.cover)}
+        onClick={() => setModalBook(book)}
+        css={css`
+          cursor: pointer;
+        `}
+      />
+    </motion.div>
+  );
+};
 
 const getShortestColumnIndex = (heights: number[]): number => {
   let minIndex = -1;
