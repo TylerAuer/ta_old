@@ -89,7 +89,7 @@ const Projects = () => {
   const projectCss = css`
     display: flex;
     justify-content: space-between;
-    vertical-align: middle;
+    align-items: center;
     margin: ${SPACING.xl} 0;
 
     & h3 {
@@ -101,11 +101,14 @@ const Projects = () => {
       vertical-align: middle;
     }
 
-    & img {
+    & .icon {
       width: 5rem;
-      height: auto;
-      filter: var(--punch-filter);
-      margin-left: 2rem;
+      flex-shrink: 0;
+      margin-left: 3rem;
+
+      & svg {
+        fill: var(--color-punch);
+      }
     }
   `;
 
@@ -135,7 +138,9 @@ const Projects = () => {
               ~5K users have amassed over 150k puzzle attempts. Bring a pencil (or a BFS algorithm).
             </p>
           </div>
-          <Icon icon="calculator" />
+          <div className="icon">
+            <Icon icon="calculator" />
+          </div>
         </div>
       </Box>
       <Box role="listitem">
@@ -165,7 +170,9 @@ const Projects = () => {
               to play next year; donations optional.
             </p>
           </div>
-          <Icon icon="football" />
+          <div className="icon">
+            <Icon icon="football" />
+          </div>
         </div>
       </Box>
 
@@ -193,7 +200,9 @@ const Projects = () => {
               every rating the site has ever seen.
             </p>
           </div>
-          <Icon icon="fruit" />
+          <div className="icon">
+            <Icon icon="fruit" />
+          </div>
         </div>
       </Box>
 
@@ -213,7 +222,9 @@ const Projects = () => {
               themes and genres.
             </p>
           </div>
-          <Icon icon="book" />
+          <div className="icon">
+            <Icon icon="book" />
+          </div>
         </div>
       </Box>
     </section>
@@ -253,7 +264,7 @@ const Writing = ({ posts }) => {
       }
     }
 
-    & img {
+    & svg {
       width: 3.5rem;
       margin-right: 2rem;
       vertical-align: middle;
