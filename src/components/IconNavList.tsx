@@ -13,11 +13,8 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = false }) => {
   const s = css`
     & a {
       margin: 0 ${SPACING.md};
-    }
-
-    & img {
-      display: inline-block;
       width: 3rem;
+      display: inline-block;
     }
   `;
 
