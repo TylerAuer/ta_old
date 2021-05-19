@@ -1,4 +1,5 @@
 import { SerializedStyles } from '@emotion/react';
+import { ImageDataLike } from 'gatsby-plugin-image';
 
 export type HtmlElementPropsType = {
   sx?: SerializedStyles;
@@ -27,6 +28,17 @@ export enum GenresEnum {
 }
 
 export type GenreFilterToggleStateType = { [key in keyof typeof GenresEnum]: boolean };
+
+export type BookFromGQLType = {
+  cover: ImageDataLike;
+  genres: GenresEnum[];
+  author: string;
+  title: string;
+  pages: string;
+  goodreads_url: string;
+  indiebound_url: string;
+  library_url: string;
+};
 
 export type BookDataType = {
   title: string;

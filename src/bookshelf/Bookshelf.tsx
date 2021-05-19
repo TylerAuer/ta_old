@@ -8,7 +8,7 @@ import { IconNavList } from '@/components/IconNavList';
 import { Box } from '@/components/Box';
 
 import { fisherYatesShuffle } from '../../utils/fisher_yates_shuffle';
-import { GenreFilterToggleStateType, GenresEnum } from '@/types';
+import { GenreFilterToggleStateType, GenresEnum, BookFromGQLType } from '@/types';
 
 const initialToggleState = generateInitialActiveFilterState();
 const MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY = 5;
@@ -42,7 +42,7 @@ export const Bookshelf: React.FC = () => {
       }
     }
   `);
-  const books = query.allBookDataJson.nodes;
+  const books: BookFromGQLType[] = query.allBookDataJson.nodes;
 
   // On mount: counts how many times each genre is used so that filters without enough books
   // can be stripped from the list
@@ -104,7 +104,6 @@ const BookshelfHeader: React.FC = () => {
     <div css={s}>
       <h1>Tyler's Bookshelf</h1>
       <IconNavList includeHomeLink />
-
       <Box>
         <p>
           I love reading and discussing books. So, it just felt right to throw together a list of
