@@ -5,18 +5,18 @@ import { css } from '@emotion/react';
 import { BookModal } from './BookModal';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
-import { GenreFilterToggleStateType } from '@/types';
+import { GenreFilterToggleStateType, BookFromGQLType } from '@/types';
 
 type Props = {
   activeFilters: GenreFilterToggleStateType;
-  books: any;
+  books: BookFromGQLType[];
 };
 
 export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) => {
-  const [userSelectedBook, setUserSelectedBook] = useState(null);
+  const [modalBook, setModalBook] = useState(null);
   const windowWidth = useWindowWidth();
 
-  const closeModal = () => setUserSelectedBook(null);
+  const closeModal = () => setModalBook(null);
 
   // Don't render anything until the window width is known
   if (windowWidth === 0) {
@@ -64,7 +64,7 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
 
   return (
     <>
-      {userSelectedBook && <BookModal book={userSelectedBook} closeModal={closeModal} />}
+      {modalBook && <BookModal book={modalBook} closeModal={closeModal} />}
       <section
         css={css`
           display: flex;
@@ -80,16 +80,8 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
               margin: 0 ${gutterInPixels / 2}px;
             `}
           >
-            {col.map((book, i) => (
-              <GatsbyImage
-                key={book.title || i.toString()}
-                alt={book.title || i.toString()}
-                image={getImage(book.cover)}
-                onClick={() => setUserSelectedBook(book)}
-                css={css`
-                  cursor: pointer;
-                `}
-              />
+            {col.map((book) => (
+              <BookCover book={book} setModalBook={setModalBook} />
             ))}
           </div>
         ))}
@@ -97,6 +89,23 @@ export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) 
     </>
   );
 };
+
+type BookCoverProps = {
+  book: BookFromGQLType;
+  setModalBook: (book: BookFromGQLType) => void;
+};
+
+const BookCover: React.FC<BookCoverProps> = ({ book, setModalBook }) => (
+  <GatsbyImage
+    key={book.title}
+    alt={book.title}
+    image={getImage(book.cover)}
+    onClick={() => setModalBook(book)}
+    css={css`
+      cursor: pointer;
+    `}
+  />
+);
 
 const getShortestColumnIndex = (heights: number[]): number => {
   let minIndex = -1;
