@@ -47,6 +47,18 @@ const globalStyles = css`
     padding: 0;
     margin: 0;
     font-family: var(--font-body);
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 58%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      font-size: 52%;
+    }
+
+    @media only screen and (max-width: 450px) {
+      font-size: 48%;
+    }
   }
 
   body {
