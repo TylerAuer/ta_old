@@ -6,9 +6,6 @@ This is my portfolio site.
 
 ### V1
 
-> **REMEMBER**
-> No more style improvements until v1 is done
-
 - Make mobile friendly + fix spacing
 - Fix footnote styling
 - Style footer
@@ -24,6 +21,7 @@ This is my portfolio site.
   - The Splendor of Phelps Lake at the Pace of a Three-year Old
 - Add Google Analytics
 - Replace old site
+- At endpoint for Bad Calculators to get total attempts @ build time
 ### V2
 
 - Map embed

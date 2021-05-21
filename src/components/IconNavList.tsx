@@ -15,6 +15,10 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = false }) => {
       margin: 0 ${SPACING.md};
       width: 3rem;
       display: inline-block;
+
+      @media only screen and (max-width: 450px) {
+        margin: 0 ${SPACING.md};
+      }
     }
   `;
 
