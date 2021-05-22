@@ -18,7 +18,15 @@ const Left: React.FC = () => (
     `}
     to="/"
   >
-    Tyler Auer
+    <Icon
+      icon="signature"
+      sx={css`
+        fill: var(--color-punch);
+        width: 15rem;
+        filter: drop-shadow(2px 2px var(--color-text-body));
+        transition: all 0.2s;
+      `}
+    />
   </Link>
 );
 
