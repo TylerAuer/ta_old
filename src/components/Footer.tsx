@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer>
-      <Box width="wide" sx={s} vMargin={SPACING.xxxl}>
+      <Box sx={s} vMargin={SPACING.xxxl}>
         <div>
           <div className="name">Tyler Auer</div>
           <div className="desc">Teacher turned developer</div>
