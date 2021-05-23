@@ -16,7 +16,7 @@ export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
     background: var(--color-punch-bright);
     border-radius: 3px;
     font-size: 1.2rem;
-    color: #282828;
+    color: var(--color-text-on-punch);
     font-family: var(--font-special);
     cursor: pointer;
     transition: all 0.2s;
