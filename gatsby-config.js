@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-mdx`,
     /**
      * Makes posts directory available to the Data Layer
      */
@@ -34,13 +35,6 @@ module.exports = {
         name: `books`,
         path: `${__dirname}/src/bookshelf/`,
       },
-    },
-    /**
-     * Converts .mdx files into html (and handles inline react components)
-     */
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {},
     },
     /**
      * Adds support for @emotion CSS in JS

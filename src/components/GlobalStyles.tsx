@@ -20,6 +20,7 @@ const globalStyles = css`
 
     --color-text-body: #434343;
     --color-text-header: #222;
+    --color-text-on-punch: #282828;
 
     --color-a: #323232;
     --color-a-hover: black;
@@ -122,8 +123,9 @@ const globalStyles = css`
   code {
     color: black;
     background-color: var(--color-grey-bg);
-    padding: 2px 4px;
-    border-radius: 2px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 1.7rem;
   }
 
   pre {
@@ -146,6 +148,14 @@ const globalStyles = css`
     font-family: var(--font-special);
     font-size: 1.6rem;
     line-height: 1.35;
+  }
+
+  a.footnote-ref {
+    border: none;
+    font-family: var(--font-special);
+    color: var(--color-punch);
+    margin: 0 3px 0 1px;
+    font-weight: bold;
   }
 `;
 

@@ -8,6 +8,7 @@
   "keywords": [],
   "scripts": {
     "start": "npm run develop",
+    "test": "npm run cy:open",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -51,6 +52,7 @@
   "devDependencies": {
     "@types/cheerio": "^0.22.28",
     "@types/inquirer": "^7.3.1",
+    "@types/mdx-js__react": "^1.5.3",
     "@types/node": "14.14.35",
     "@types/parse-numeric-range": "^0.0.1",
     "@types/react": "17.0.3",
@@ -60,6 +62,7 @@
     "@typescript-eslint/eslint-plugin": "4.18.0",
     "@typescript-eslint/parser": "4.18.0",
     "babel-plugin-root-import": "6.6.0",
+    "chalk": "^2.4.2",
     "cheerio": "^0.22.0",
     "cypress": "^7.3.0",
     "eslint": "7.22.0",

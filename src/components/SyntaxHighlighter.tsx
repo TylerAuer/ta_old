@@ -108,6 +108,7 @@ export const SyntaxHighlighter = (props) => {
     border-bottom-right-radius: 8px;
     border-top-left-radius: ${filename ? 0 : 8}px;
     border-top-right-radius: ${filename ? 0 : 8}px;
+    overflow-x: auto;
   `;
 
   // Create a closure that determines if we have
