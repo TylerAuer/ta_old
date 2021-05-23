@@ -123,8 +123,9 @@ const globalStyles = css`
   code {
     color: black;
     background-color: var(--color-grey-bg);
-    padding: 2px 4px;
-    border-radius: 2px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 1.7rem;
   }
 
   pre {

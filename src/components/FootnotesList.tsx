@@ -4,7 +4,11 @@ import { Box } from './Box';
 
 export const FootnoteList: React.FC = ({ children }) => {
   const s = css`
+    & hr {
+      border-color: var(--color-punch);
+    }
     & ol {
+      width: 100%;
       list-style: none;
       counter-reset: footnote-counter;
       padding: 0;
