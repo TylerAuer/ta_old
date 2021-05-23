@@ -3,6 +3,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import palenight from 'prism-react-renderer/themes/palenight';
 import { Box } from './Box';
 import rangeParser from 'parse-numeric-range';
+import { PrismTheme } from 'prism-react-renderer';
 
 // Two other dark themes that are nice
 // import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
@@ -132,7 +133,7 @@ export const SyntaxHighlighter = (props) => {
         {...defaultProps}
         code={props.children.props.children.trim()}
         language={language}
-        theme={palenight}
+        theme={theme}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre css={codeCss} className={className} style={{ ...style }}>
@@ -154,4 +155,69 @@ export const SyntaxHighlighter = (props) => {
       </Highlight>
     </WindowFrame>
   );
+};
+
+const theme: PrismTheme = {
+  plain: {
+    color: '#da4167',
+    backgroundColor: '#261414',
+  },
+  styles: [
+    {
+      types: ['prolog', 'constant', 'builtin'],
+      style: {
+        color: 'rgb(189, 147, 249)',
+      },
+    },
+    {
+      types: ['inserted', 'function'],
+      style: {
+        color: 'rgb(250, 178, 221)',
+      },
+    },
+    {
+      types: ['deleted'],
+      style: {
+        color: 'rgb(255, 85, 85)',
+      },
+    },
+    {
+      types: ['changed'],
+      style: {
+        color: 'rgb(255, 184, 108)',
+      },
+    },
+    {
+      types: ['punctuation', 'symbol'],
+      style: {
+        color: 'rgb(255, 222, 192)',
+      },
+    },
+    {
+      types: ['string', 'char', 'tag', 'selector'],
+      style: {
+        color: 'rgb(255, 121, 121)',
+      },
+    },
+    {
+      types: ['keyword', 'variable'],
+      style: {
+        color: '#ebb6df',
+        fontWeight: '800',
+      },
+    },
+    {
+      types: ['comment'],
+      style: {
+        color: 'rgb(125, 76, 76)',
+        fontStyle: 'italic',
+      },
+    },
+    {
+      types: ['attr-name'],
+      style: {
+        color: 'rgb(241, 250, 140)',
+      },
+    },
+  ],
 };
