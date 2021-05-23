@@ -8,6 +8,7 @@
   "keywords": [],
   "scripts": {
     "start": "npm run develop",
+    "test": "npm run cy:open",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -60,6 +61,7 @@
     "@typescript-eslint/eslint-plugin": "4.18.0",
     "@typescript-eslint/parser": "4.18.0",
     "babel-plugin-root-import": "6.6.0",
+    "chalk": "^2.4.2",
     "cheerio": "^0.22.0",
     "cypress": "^7.3.0",
     "eslint": "7.22.0",
