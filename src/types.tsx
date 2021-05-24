@@ -50,11 +50,11 @@ export type BookDataType = {
   library_url?: string;
 };
 
-const endpointJsonFile = {
-  all: [],
-  codePosts: [],
-  adventurePosts: [],
-  categoryPages: [],
-  tagPages: [],
-  otherPages: [],
+export type EndpointJsonFile = {
+  all: string[];
+  posts: string[];
+  categories: string[];
+  tags: string[];
+  otherPages: string[];
+  errorPages: string[];
 };

@@ -6,6 +6,8 @@ const { buildBlogPages } = require('./utils/build/build_blog_pages');
 const { buildCategoryPages } = require('./utils/build/build_category_pages');
 const { buildTagPages } = require('./utils/build/build_tag_pages');
 
+const errorPages = ['/404/', '/dev-404-page/', '/404.html'];
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -54,6 +56,7 @@ exports.onPreInit = async () => {
     categories: [],
     tags: [],
     otherPages: [],
+    errorPages: errorPages,
   };
 
   await fs.writeFileSync(
@@ -63,6 +66,9 @@ exports.onPreInit = async () => {
 };
 
 exports.onCreatePage = async ({ page }) => {
+  // Skip error pages, they get there own category
+  if (errorPages.includes(page.path)) return;
+
   // Adds endpoints to a fixture file Cypress can reference
   const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
   endpoints.all.push(page.path);
