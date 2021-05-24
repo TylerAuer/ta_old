@@ -6,9 +6,9 @@ This is my portfolio site.
 
 ### V1
 
-- Make mobile friendly + fix spacing
-- Fix footnote styling
-- Style footer
+- ~~Make mobile friendly + fix spacing~~
+- ~~Fix footnote styling~~
+- ~~Style footer~~
 - Post features
   - ~~Slideshow embed~~
   - ~~Photo embed~~
