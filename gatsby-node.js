@@ -48,10 +48,24 @@ exports.createPages = async ({ graphql, actions }) => {
 };
 
 exports.onPreInit = async () => {
-  await fs.writeFileSync(__dirname + '/cypress/fixtures/endpoints.txt', '');
+  const endpointJsonFile = {
+    all: [],
+    posts: [],
+    categories: [],
+    tags: [],
+    otherPages: [],
+  };
+
+  await fs.writeFileSync(
+    __dirname + '/cypress/fixtures/endpoints.json',
+    JSON.stringify(endpointJsonFile),
+  );
 };
 
 exports.onCreatePage = async ({ page }) => {
   // Adds endpoints to a fixture file Cypress can reference
-  await fs.appendFileSync('cypress/fixtures/endpoints.txt', page.path + '\n');
+  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
+  endpoints.all.push(page.path);
+  endpoints.otherPages.push(page.path);
+  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

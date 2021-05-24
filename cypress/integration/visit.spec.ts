@@ -1,7 +1,13 @@
 /// <reference types="cypress" />
 
-context('Simple demo tests to set up API', () => {
-  it('Can visit the homepage', () => {
-    cy.visit('/');
+const endpointFile = require('../fixtures/endpoints.txt');
+console.log(endpointFile);
+const endpoints = endpointFile.split('\n');
+
+context('Visit every endpoint', async () => {
+  endpoints.forEach((endpoint) => {
+    it(`Loads ${endpoint}`, () => {
+      cy.visit(endpoint);
+    });
   });
 });

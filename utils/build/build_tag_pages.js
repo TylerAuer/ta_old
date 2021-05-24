@@ -27,6 +27,8 @@ exports.buildTagPages = async (graphql, createPage) => {
 
   const blogs = Object.keys(data.data);
 
+  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
+
   blogs.forEach((blog) => {
     data.data[blog].group.forEach(async (tag) => {
       const urlPath = `/${blog}/tag/${tag.fieldValue.toLowerCase()}/`;
@@ -43,8 +45,9 @@ exports.buildTagPages = async (graphql, createPage) => {
         },
       });
 
-      // Adds endpoints to a fixture file Cypress can reference
-      await fs.appendFileSync('cypress/fixtures/endpoints.txt', urlPath + '\n');
+      endpoints.all.push(urlPath);
+      endpoints.categories.push(urlPath);
     });
   });
+  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

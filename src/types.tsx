@@ -49,3 +49,12 @@ export type BookDataType = {
   indiebound_url?: string;
   library_url?: string;
 };
+
+const endpointJsonFile = {
+  all: [],
+  codePosts: [],
+  adventurePosts: [],
+  categoryPages: [],
+  tagPages: [],
+  otherPages: [],
+};

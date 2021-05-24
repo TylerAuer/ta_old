@@ -23,4 +23,7 @@ yarn-error.log\*
 
 # cypress
 /cypress/examples/
-cypress/fixtures/endpoints.txt
+
+# list of endpoints dynamically generated when dev server starts
+# keep out of git to avoid unnecessary changes
+cypress/fixtures/endpoints.json
