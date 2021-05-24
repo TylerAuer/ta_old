@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-
 /**
  * Generate a page for each tag
  *
@@ -28,9 +28,11 @@ exports.buildTagPages = async (graphql, createPage) => {
   const blogs = Object.keys(data.data);
 
   blogs.forEach((blog) => {
-    data.data[blog].group.forEach((tag) => {
+    data.data[blog].group.forEach(async (tag) => {
+      const urlPath = `/${blog}/tag/${tag.fieldValue.toLowerCase()}/`;
+
       createPage({
-        path: `/${blog}/tag/${tag.fieldValue.toLowerCase()}/`,
+        path: urlPath,
         component: path.resolve('./src/templates/cat_and_tag.tsx'),
         context: {
           blog: blog,
@@ -40,6 +42,9 @@ exports.buildTagPages = async (graphql, createPage) => {
           type: 'Tag',
         },
       });
+
+      // Adds endpoints to a fixture file Cypress can reference
+      await fs.appendFileSync('cypress/fixtures/endpoints.txt', urlPath + '\n');
     });
   });
 };

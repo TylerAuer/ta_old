@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-
 /**
  * Generate Post Pages
  *
@@ -23,10 +23,15 @@ exports.buildPostPages = async (graphql, createPage) => {
   );
   const posts = allPosts.data.allMdx.edges;
 
-  posts.forEach((post) => {
+  posts.forEach(async (post) => {
+    urlPath = post.node.fields.path;
+
     createPage({
-      path: post.node.fields.path,
+      path: urlPath,
       component: path.resolve('./src/templates/post.tsx'),
     });
+
+    // Adds endpoints to a fixture file Cypress can reference
+    await fs.appendFileSync('cypress/fixtures/endpoints.txt', urlPath + '\n');
   });
 };

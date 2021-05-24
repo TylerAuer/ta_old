@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-
 /**
  * Generate Blog Pages
  *
@@ -18,15 +18,19 @@ exports.buildBlogPages = async (graphql, createPage) => {
 
   const blogWithListOfPosts = query.data.allMdx.group;
 
-  blogWithListOfPosts.forEach((b) => {
+  blogWithListOfPosts.forEach(async (b) => {
     const blog = b.fieldValue;
+    const urlPath = `/${blog}/`;
 
     createPage({
-      path: `/${blog}/`,
+      path: urlPath,
       component: path.resolve('./src/templates/blog_list.tsx'),
       context: {
         blog: blog,
       },
     });
+
+    // Adds endpoints to a fixture file Cypress can reference
+    await fs.appendFileSync('cypress/fixtures/endpoints.txt', urlPath + '\n');
   });
 };
