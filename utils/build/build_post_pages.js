@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-
 /**
  * Generate Post Pages
  *
@@ -23,10 +23,19 @@ exports.buildPostPages = async (graphql, createPage) => {
   );
   const posts = allPosts.data.allMdx.edges;
 
-  posts.forEach((post) => {
+  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
+
+  posts.forEach(async (post) => {
+    urlPath = post.node.fields.path;
+
     createPage({
-      path: post.node.fields.path,
+      path: urlPath,
       component: path.resolve('./src/templates/post.tsx'),
     });
+
+    endpoints.all.push(urlPath);
+    endpoints.posts.push(urlPath);
   });
+
+  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

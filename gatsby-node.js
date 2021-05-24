@@ -1,10 +1,12 @@
-const path = require('path');
+const fs = require('fs');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const { buildPostPages } = require('./utils/build/build_post_pages');
 const { buildBlogPages } = require('./utils/build/build_blog_pages');
 const { buildCategoryPages } = require('./utils/build/build_category_pages');
 const { buildTagPages } = require('./utils/build/build_tag_pages');
+
+const errorPages = ['/404/', '/dev-404-page/', '/404.html'];
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -45,4 +47,31 @@ exports.createPages = async ({ graphql, actions }) => {
   await buildBlogPages(graphql, createPage);
   await buildCategoryPages(graphql, createPage);
   await buildTagPages(graphql, createPage);
+};
+
+exports.onPreInit = async () => {
+  const endpointJsonFile = {
+    all: [],
+    posts: [],
+    categories: [],
+    tags: [],
+    otherPages: [],
+    errorPages: errorPages,
+  };
+
+  await fs.writeFileSync(
+    __dirname + '/cypress/fixtures/endpoints.json',
+    JSON.stringify(endpointJsonFile),
+  );
+};
+
+exports.onCreatePage = async ({ page }) => {
+  // Skip error pages, they get there own category
+  if (errorPages.includes(page.path)) return;
+
+  // Adds endpoints to a fixture file Cypress can reference
+  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
+  endpoints.all.push(page.path);
+  endpoints.otherPages.push(page.path);
+  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

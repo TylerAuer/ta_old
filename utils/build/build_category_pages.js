@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-
 /**
  * Generate Category Pages
  *
@@ -27,10 +27,14 @@ exports.buildCategoryPages = async (graphql, createPage) => {
 
   const blogs = Object.keys(data.data);
 
+  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
+
   blogs.forEach((blog) => {
-    data.data[blog].group.forEach((category) => {
+    data.data[blog].group.forEach(async (category) => {
+      const urlPath = `/${blog}/category/${category.fieldValue.toLowerCase()}/`;
+
       createPage({
-        path: `/${blog}/category/${category.fieldValue.toLowerCase()}/`,
+        path: urlPath,
         component: path.resolve('./src/templates/cat_and_tag.tsx'),
         context: {
           blog: blog,
@@ -40,6 +44,10 @@ exports.buildCategoryPages = async (graphql, createPage) => {
           type: 'Category',
         },
       });
+
+      endpoints.all.push(urlPath);
+      endpoints.categories.push(urlPath);
     });
   });
+  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

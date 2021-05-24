@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-
 /**
  * Generate Blog Pages
  *
@@ -18,15 +18,22 @@ exports.buildBlogPages = async (graphql, createPage) => {
 
   const blogWithListOfPosts = query.data.allMdx.group;
 
-  blogWithListOfPosts.forEach((b) => {
+  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
+
+  blogWithListOfPosts.forEach(async (b) => {
     const blog = b.fieldValue;
+    const urlPath = `/${blog}/`;
 
     createPage({
-      path: `/${blog}/`,
+      path: urlPath,
       component: path.resolve('./src/templates/blog_list.tsx'),
       context: {
         blog: blog,
       },
     });
+    endpoints.all.push(urlPath);
+    endpoints.otherPages.push(urlPath);
   });
+
+  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };
