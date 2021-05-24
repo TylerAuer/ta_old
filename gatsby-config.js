@@ -8,7 +8,6 @@ module.exports = {
       twitter: `tylerauer`,
     },
   },
-  pathPrefix: '/ta',
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
