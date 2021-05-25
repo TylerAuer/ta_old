@@ -70,9 +70,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ['G-V668W7ZV6F'],
-        // pluginConfig: {
-        //   respectDNT: true,
-        // },
       },
     },
   ],
