@@ -26,22 +26,28 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = false }) => {
     <nav css={s}>
       {includeHomeLink && (
         <Link to="/">
+          <span className="visible-hidden">Home</span>
           <Icon icon="home" />
         </Link>
       )}
       <a href="https://github.com/TylerAuer">
+        <span className="visible-hidden">GitHub</span>
         <Icon icon="github" />
       </a>
       <a href="https://twitter.com/TylerAuer">
+        <span className="visible-hidden">Twitter</span>
         <Icon icon="twitter" />
       </a>
       <Link to="/code">
+        <span className="visible-hidden">Code blog</span>
         <Icon icon="code" />
       </Link>
       <Link to="/adventure">
+        <span className="visible-hidden">Adventure blog</span>
         <Icon icon="mountains" />
       </Link>
       <Link to="/bookshelf">
+        <span className="visible-hidden">Bookshelf</span>
         <Icon icon="book" />
       </Link>
     </nav>
