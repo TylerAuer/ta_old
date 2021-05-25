@@ -63,14 +63,16 @@ module.exports = {
         display: 'swap',
       },
     },
+    /**
+     * Configures Google Analytics
+     */
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: ['G-V668W7ZV6F'],
-        pluginConfig: {
-          respectDNT: true,
-        },
+        // pluginConfig: {
+        //   respectDNT: true,
+        // },
       },
     },
   ],
