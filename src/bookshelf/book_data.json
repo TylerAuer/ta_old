@@ -1502,5 +1502,18 @@
     "genres": [
       "memoir"
     ]
+  },
+  {
+    "title": "Bury My Heart at Wounded Knee: An Indian History of the American West",
+    "author": "Dee Brown",
+    "cover": "./covers/Dee-Brown-Bury-My-Heart-at-Wou.jpg",
+    "pages": "487",
+    "goodreads_url": "https://www.goodreads.com/book/show/91450.Bury_My_Heart_at_Wounded_Knee",
+    "indiebound_url": "https://www.indiebound.org/book/9780099526407",
+    "library_url": "https://www.worldcat.org/search?q=9780099526407",
+    "genres": [
+      "best of the best",
+      "history"
+    ]
   }
 ]
