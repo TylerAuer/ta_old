@@ -63,5 +63,14 @@ module.exports = {
         display: 'swap',
       },
     },
+    /**
+     * Configures Google Analytics
+     */
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-V668W7ZV6F'],
+      },
+    },
   ],
 };
