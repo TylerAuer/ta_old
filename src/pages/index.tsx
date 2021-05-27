@@ -314,7 +314,7 @@ const Writing = ({ posts }) => {
 
 export const codeFeaturedQuery = graphql`
   query {
-    allMdx(filter: { frontmatter: { featured: { eq: true } } }) {
+    allMdx(filter: { frontmatter: { featured: { eq: true }, draft: { eq: false } } }) {
       nodes {
         fields {
           blog

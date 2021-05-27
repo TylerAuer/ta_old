@@ -53,7 +53,7 @@ export default ({ data, pageContext }) => {
 export const pageQuery = graphql`
   query($blog: String!) {
     allMdx(
-      filter: { fields: { blog: { eq: $blog } } }
+      filter: { fields: { blog: { eq: $blog } }, frontmatter: { draft: { eq: false } } }
       sort: { fields: frontmatter___date_created, order: DESC }
     ) {
       nodes {
