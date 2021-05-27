@@ -57,22 +57,20 @@ There are other fonts that offer ligatures like [Fira Code](https://github.com/t
 
 ## Emmet
 
-[Emmet](https://emmet.io/) is a plugin for code editors (it comes preinstalled with VS Code) that helps you generate HTML content quickly. Once you get the hang of it, you'll save tons of time typing out annoying HTML syntax with classes, IDs, and more. Here's an example straight from Emmet's docs:
+[Emmet](https://emmet.io/) is a plugin for code editors (it comes preinstalled with VS Code) that helps you generate HTML content quickly. Once you get the hang of it, you'll save tons of time typing out annoying HTML syntax with classes, IDs, and more.
 
-```HTML
-<!-- Emmet abbreviation -->
-#page>div.logo+ul#navigation>li*5>a{Item $}
+The syntax isn't too tricky to pick up, but it is extremely powerful. For example, here's a more complex command from the docs that generates HTML that would be a pain to type: `#page>div.logo+ul#navigation>li*5>a{Item $}`
 
-<!-- One key/click transforms that abbreviation into -->
+```html [] {}
 <div id="page">
-    <div class="logo"></div>
-    <ul id="navigation">
-        <li><a href="">Item 1</a></li>
-        <li><a href="">Item 2</a></li>
-        <li><a href="">Item 3</a></li>
-        <li><a href="">Item 4</a></li>
-        <li><a href="">Item 5</a></li>
-    </ul>
+  <div class="logo"></div>
+  <ul id="navigation">
+    <li><a href="">Item 1</a></li>
+    <li><a href="">Item 2</a></li>
+    <li><a href="">Item 3</a></li>
+    <li><a href="">Item 4</a></li>
+    <li><a href="">Item 5</a></li>
+  </ul>
 </div>
 ```
 
