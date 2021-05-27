@@ -17,14 +17,14 @@ Chances are you've used a hash map before because [your programming language of 
 
 [^1]: This may not be 100% accurate, but it is true enough for our purposes here.
 
-{{< highlight js>}}
+```js [] {}
 // a JavaScript object
 const aHashMap = {
-heightInInches: 73,
-weightInPounds: 200,
-ageInYears: 35
-}
-{{< /highlight >}}
+  heightInInches: 73,
+  weightInPounds: 200,
+  ageInYears: 35,
+};
+```
 
 Hash Maps are great to use in your code because they make it easy to access data. If I need a value, I can just reference its key (ex: `aHashMap.heightInInches`). My code editor will also recognize what I am typing and use autocomplete to help me.
 
@@ -38,10 +38,10 @@ A hash is a function that takes an input string and outputs an integer. In other
 
 A simple hash function might convert characters to their [ASCII](https://en.wikipedia.org/wiki/ASCII) values, like so:
 
-{{< highlight js>}}
+```js [] {}
 // This isn't a real function in JS, I just made it up as an example
 hashing_function('helloworld'); // returns: 104101108108111119111114108100
-{{< /highlight >}}
+```
 
 The output of the **hash function** is then used as an index for an array. That system, where an input goes into a hash function and provides a reference for where to find data in an array, is what is known as a **hash map**.
 
@@ -49,7 +49,7 @@ Wait, did you catch that I suddenly said array? Yeah, hash maps store data in ar
 
 Why does this matter? Well, it makes looking up values in the array much faster. Let's look at an array of key-value pairs stored in nested subarrays without hash mapping:
 
-```js
+```js [] {}
 const arrOfKeyValuePairs = [
   [heightInInches, 73],
   [weightInPounds, 20],
@@ -76,7 +76,7 @@ If you are wondering how long this array would need to be to handle **_HUGE_** i
 
 Instead, a prediction is made about the size of the array that will be needed and then the array's length is used with modulo to ensure the index is actually within the array's length. An example will help here:
 
-```js
+```js [] {}
 // Returns the number of characters in the input string
 function hash(inputString) {
   return inputString.length;
