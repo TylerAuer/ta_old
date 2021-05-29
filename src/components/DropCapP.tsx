@@ -37,6 +37,7 @@ export const DropCapP: React.FC = ({ children }) => {
             border-top: 3px solid var(--color-punch);
             margin-right: 1rem;
             line-height: 1;
+            text-transform: uppercase;
           `}
         >
           {dc}
