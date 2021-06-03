@@ -2,14 +2,13 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
 
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { Box } from '@/components/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
 import { SPACING } from '@/constants';
 import { Chip } from '@/components/Chip';
 import PostProvider from '@/components/PostProvider';
+import { PageBox } from '@/components/PageBox';
 
 const TitleAndSubtitle = ({ title, subtitle }) => {
   return (
@@ -109,25 +108,25 @@ export default ({ data }) => {
         <title>{`${title} - Tyler Auer's ${blog[0].toUpperCase() + blog.slice(1)} Blog`}</title>
         <meta name="description" content={`${title}: ${subtitle} by Tyler Auer`} />
       </Helmet>
-      <Header />
-      <main>
-        <article>
-          <header>
-            <TitleAndSubtitle title={title} subtitle={subtitle} />
-            <Tags blog={blog} tags={tags} />
-            <PostMeta
-              blog={blog}
-              category={category}
-              date={date_created}
-              update={date_last_updated}
-            />
-          </header>
-          <PostProvider>
-            <MDXRenderer>{post.body}</MDXRenderer>
-          </PostProvider>
-        </article>
-      </main>
-      <Footer />
+      <PageBox>
+        <main>
+          <article>
+            <header>
+              <TitleAndSubtitle title={title} subtitle={subtitle} />
+              <Tags blog={blog} tags={tags} />
+              <PostMeta
+                blog={blog}
+                category={category}
+                date={date_created}
+                update={date_last_updated}
+              />
+            </header>
+            <PostProvider>
+              <MDXRenderer>{post.body}</MDXRenderer>
+            </PostProvider>
+          </article>
+        </main>
+      </PageBox>
     </GlobalStyles>
   );
 };

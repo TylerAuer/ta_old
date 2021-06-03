@@ -4,12 +4,11 @@ import { Helmet } from 'react-helmet';
 
 import { Box } from '@/components/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { PostPreview } from '@/components/PostPreview';
 import { A } from '@/components/A';
 
 import { SPACING } from '@/constants';
+import { PageBox } from '@/components/PageBox';
 
 export default ({ data, pageContext }) => {
   const h1LabelCss = css`
@@ -44,33 +43,33 @@ export default ({ data, pageContext }) => {
         } Blog`}</title>
         <meta name="description" content={`${label} posts by Tyler Auer in a blog about ${blog}`} />
       </Helmet>
-      <Header />
-      <main>
-        <Box
-          css={css`
-            border-bottom: 3px solid var(--color-punch);
-            padding-bottom: ${SPACING.xxl};
-          `}
-        >
-          <header>
-            <h1>
-              <span css={h1LabelCss}>{label}</span> in{' '}
-              <A sx={blogLinkCss} href={`/${blog}`}>
-                {blog}
-              </A>
-            </h1>
-            <Subtitle />
-          </header>
-        </Box>
-        <Box>
-          <section>
-            {postsToList.map((p) => (
-              <PostPreview post={p} key={p.path} />
-            ))}
-          </section>
-        </Box>
-      </main>
-      <Footer />
+      <PageBox>
+        <main>
+          <Box
+            css={css`
+              border-bottom: 3px solid var(--color-punch);
+              padding-bottom: ${SPACING.xxl};
+            `}
+          >
+            <header>
+              <h1>
+                <span css={h1LabelCss}>{label}</span> in{' '}
+                <A sx={blogLinkCss} href={`/${blog}`}>
+                  {blog}
+                </A>
+              </h1>
+              <Subtitle />
+            </header>
+          </Box>
+          <Box>
+            <section>
+              {postsToList.map((p) => (
+                <PostPreview post={p} key={p.path} />
+              ))}
+            </section>
+          </Box>
+        </main>
+      </PageBox>
     </GlobalStyles>
   );
 };

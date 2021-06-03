@@ -9,7 +9,7 @@ type Props = {
   includeHomeLink?: boolean;
 };
 
-export const IconNavList: React.FC<Props> = ({ includeHomeLink = false }) => {
+export const IconNavList: React.FC<Props> = ({ includeHomeLink = true }) => {
   const s = css`
     & a {
       margin: 0 ${SPACING.md};
@@ -30,14 +30,6 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = false }) => {
           <Icon icon="home" />
         </Link>
       )}
-      <a href="https://github.com/TylerAuer">
-        <span className="visible-hidden">GitHub</span>
-        <Icon icon="github" />
-      </a>
-      <a href="https://twitter.com/TylerAuer">
-        <span className="visible-hidden">Twitter</span>
-        <Icon icon="twitter" />
-      </a>
       <Link to="/code">
         <span className="visible-hidden">Code blog</span>
         <Icon icon="code" />
@@ -50,6 +42,14 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = false }) => {
         <span className="visible-hidden">Bookshelf</span>
         <Icon icon="book" />
       </Link>
+      <a href="https://twitter.com/TylerAuer">
+        <span className="visible-hidden">Twitter</span>
+        <Icon icon="twitter" />
+      </a>
+      <a href="https://github.com/TylerAuer">
+        <span className="visible-hidden">GitHub</span>
+        <Icon icon="github" />
+      </a>
     </nav>
   );
 };

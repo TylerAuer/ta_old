@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { Box } from '@/components/Box';
-import { Icon } from '@/components/Icon';
-import { Flex, FlexJustification } from '@/components/Flex';
 import { SPACING } from '@/constants';
 import { IconNavList } from './IconNavList';
 
-export const Footer: React.FC = () => {
+type PropsType = {
+  includeHomeLink?: boolean;
+};
+
+export function Footer({ includeHomeLink = true }: PropsType) {
   const s = css`
     margin: 20rem auto 5rem auto;
     display: flex;
@@ -46,8 +47,8 @@ export const Footer: React.FC = () => {
           <div className="name">Tyler Auer</div>
           <div className="desc">Teacher turned developer</div>
         </div>
-        <IconNavList />
+        <IconNavList includeHomeLink={includeHomeLink} />
       </Box>
     </footer>
   );
-};
+}

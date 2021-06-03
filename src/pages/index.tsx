@@ -6,8 +6,6 @@ import { Helmet } from 'react-helmet';
 import { SPACING } from '@/constants';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { Box } from '@/components/Box';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { Chip } from '@/components/Chip';
 import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
@@ -16,6 +14,7 @@ import { Flex, FlexJustification } from '@/components/Flex';
 import { A } from '@/components/A';
 
 import { Icon } from '@/components/Icon';
+import { PageBox } from '@/components/PageBox';
 
 const Home: React.FC<PageProps> = ({ data }) => {
   const posts = data.allMdx.nodes;
@@ -28,14 +27,14 @@ const Home: React.FC<PageProps> = ({ data }) => {
           content={`"Stupid" projects and ramblings about code and adventure.`}
         />
       </Helmet>
-      <Header />
-      <main>
-        <NameAndBio />
-        {/* <TruthAndLies /> */}
-        <Projects />
-        <Writing posts={posts} />
-      </main>
-      <Footer />
+      <PageBox includeHomeLink={false}>
+        <main>
+          <NameAndBio />
+          {/* <TruthAndLies /> */}
+          <Projects />
+          <Writing posts={posts} />
+        </main>
+      </PageBox>
     </GlobalStyles>
   );
 };
