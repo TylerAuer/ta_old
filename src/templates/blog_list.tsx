@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import { Box } from '@/components/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { PageBox } from '@/components/PageBox';
 import { PostPreview } from '@/components/PostPreview';
 
 const blogDesc = {
@@ -23,29 +22,29 @@ export default ({ data, pageContext }) => {
         <title>{blog[0].toUpperCase() + blog.slice(1)} Blog - Tyler Auer</title>
         <meta name="description" content={`Tyler Auer's blog about ${blog}`} />
       </Helmet>
-      <Header />
-      <main>
-        <Box>
-          <header>
-            <h1
-              css={css`
-                text-transform: capitalize;
-              `}
-            >
-              {blog}
-            </h1>
-            <div>{blogDesc[blog]}</div>
-          </header>
-        </Box>
-        <Box>
-          <section>
-            {posts.map((p) => (
-              <PostPreview post={p} key={p.path} />
-            ))}
-          </section>
-        </Box>
-      </main>
-      <Footer />
+      <PageBox>
+        <main>
+          <Box>
+            <header>
+              <h1
+                css={css`
+                  text-transform: capitalize;
+                `}
+              >
+                {blog}
+              </h1>
+              <div>{blogDesc[blog]}</div>
+            </header>
+          </Box>
+          <Box>
+            <section>
+              {posts.map((p) => (
+                <PostPreview post={p} key={p.path} />
+              ))}
+            </section>
+          </Box>
+        </main>
+      </PageBox>
     </GlobalStyles>
   );
 };
@@ -53,7 +52,7 @@ export default ({ data, pageContext }) => {
 export const pageQuery = graphql`
   query($blog: String!) {
     allMdx(
-      filter: { fields: { blog: { eq: $blog } } }
+      filter: { fields: { blog: { eq: $blog } }, frontmatter: { draft: { eq: false } } }
       sort: { fields: frontmatter___date_created, order: DESC }
     ) {
       nodes {

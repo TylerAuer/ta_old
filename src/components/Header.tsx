@@ -30,19 +30,19 @@ const Left: React.FC = () => (
   </Link>
 );
 
-const Right: React.FC = () => {
-  return <IconNavList />;
+type PropsType = {
+  includeHomeLink?: boolean;
 };
 
-export const Header: React.FC = () => {
+export function Header({ includeHomeLink = true }: PropsType) {
   return (
     <header>
       <Box vMargin={SPACING.xxxl}>
         <Flex flex={FlexJustification.split}>
           <Left />
-          <Right />
+          <IconNavList includeHomeLink={includeHomeLink} />
         </Flex>
       </Box>
     </header>
   );
-};
+}

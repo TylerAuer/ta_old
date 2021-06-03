@@ -7,7 +7,7 @@ const globalStyles = css`
     --font-body: 'nunito', sans-serif;
     --font-special: 'JetBrains mono', serif;
 
-    --color-page-bg: white;
+    --color-page-bg: rgb(252, 252, 252);
 
     --color-punch-soft: rgba(255, 175, 196, 0.7);
     --color-punch-bright: #ffafc4;
@@ -19,7 +19,7 @@ const globalStyles = css`
     --color-alt: #4361ee;
 
     --color-text-body: #434343;
-    --color-text-header: #222;
+    --color-text-header: #3c3c3c;
     --color-text-on-punch: #282828;
 
     --color-a: #323232;
@@ -48,6 +48,7 @@ const globalStyles = css`
     padding: 0;
     margin: 0;
     font-family: var(--font-body);
+    background-color: var(--color-page-bg);
 
     @media only screen and (max-width: 1000px) {
       font-size: 58%;
@@ -68,7 +69,6 @@ const globalStyles = css`
     line-height: 1.8;
     margin: 0 auto;
     color: var(--color-text-body);
-    background-color: var(--color-page-bg);
     max-width: 95%;
   }
 
@@ -156,6 +156,23 @@ const globalStyles = css`
     color: var(--color-punch);
     margin: 0 3px 0 1px;
     font-weight: bold;
+  }
+
+  // Used for accessibility
+  .visible-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    &:focus {
+      clip: auto;
+      height: auto;
+      overflow: auto;
+      position: absolute;
+      width: auto;
+    }
   }
 `;
 
