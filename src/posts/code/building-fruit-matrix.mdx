@@ -6,7 +6,7 @@ date_last_updated: false
 category: 'Build it'
 tags: ['React', 'Postgres']
 featured: false
-draft: true
+draft: false
 ---
 
 I built the [Fruit Matrix](https://fruit.tylerauer.com/#/), an app where you can rate sixteen different fruits based on their tastiness and ease of eating then see how your ratings compare to everyone else's. Here's why I built it and what the development process was like.
@@ -19,13 +19,11 @@ Elementary students see lots of charts (pie charts, bar charts, etc.) but those 
 
 Consider this snapshot of the aggregate ratings on the Fruit Matrix:
 
-![Aggregate ratings on the Matrix](/imgs-for-posts/fruit-matrix-aggregate.png)
-
 The location of each single piece of fruit actually represents two pieces of information: the tastiness and easiness. Pineapples are highly rated in taste but have a low rating for easiness.
 
 To understand the graph you need to be able to consider both dimensions separately. Later, you'll also likely want to understand how they interact (correlate).
 
-This activity is fun! But, it doesn't require an app. You can print out sheets of paper then hang them on a bulletin board. In fact, teachers have been doing this for a long time. And, they've been using fruit since Randall Munroe's [xkcd](https://xkcd.com/) blog published comic #388.
+This activity is fun! But, it doesn't require an app. You can print out sheets of paper then hang them on a bulletin board. In fact, teachers have been doing this for a long time. And, they've been using fruit since Randall Munroe's [xkcd](https://xkcd.com/) blog published comic 388.
 
 The folks at [Desmos](https://www.desmos.com/) were the first to digitize the experience in a way that added value. In their lesson, [Pomegraphit](https://teacher.desmos.com/activitybuilder/custom/58cb067910f10b0a21d4db93), they keep track of an entire class's worth of data. By sharing activity codes, you can have them track a whole grade or school's ratings which was quite fun.
 
@@ -34,12 +32,6 @@ But, I wondered, what if you wanted to keep track of everyone's ratings, forever
 ## Building the Fruit Matrix
 
 My first attempt to build the Fruit Matrix was when I was a teacher. I knew a little Python and a bit of JQuery. I figured I could just google D3 and figure it out from there. Not so much.
-
-<img
-  class="img--half-right"
-  src="/imgs-for-posts/fruit-matrix-notes.jpg"
-  alt="Early notes for the Fruit Matrix"
-/>{' '}
 
 Fast-forward a couple years. I've finished my last year of teaching (while studying at nights) and am building a portfolio as I move into software development.
 
@@ -53,6 +45,6 @@ Two of my design requirements were in conflict here. I wanted to make sure the a
 
 [Browsers position items](https://javascript.info/coordinates) on the page relative to the top left corner of the web page.
 
-[^1]: It's way more complex than that, but the important thing to realize is that when the browser window changes size the value used to refer to an element's position also changes.
+It's way more complex than that, but the important thing to realize is that when the browser window changes size the value used to refer to an element's position also changes.
 
 The browser uses coordinates to position
