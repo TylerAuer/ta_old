@@ -12,6 +12,9 @@ const components = {
   a: A,
   // Target elements more precisely
   wrapper: ({ children }) => {
+    // Handle empty posts
+    if (!children) return <></>;
+
     const updatedChildren = children.map((child) => {
       // Target list of footnotes at bottom of post
       if (child.props.className === 'footnotes') {
@@ -19,6 +22,7 @@ const components = {
       }
       return child;
     });
+
     return <>{updatedChildren}</>;
   },
 };
