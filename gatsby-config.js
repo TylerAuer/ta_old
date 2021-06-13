@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-react-leaflet`,
     /**
      * Makes posts directory available to the Data Layer
      */
