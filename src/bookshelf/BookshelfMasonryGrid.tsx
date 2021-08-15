@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 import { BookModal } from './BookModal';
-import { useWindowWidth } from '@/hooks/useWindowWidth';
+import { useWindowWidth } from '@/hooks';
 
 import { GenreFilterToggleStateType, BookFromGQLType } from '@/types';
 

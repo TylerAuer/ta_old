@@ -75,3 +75,19 @@ exports.onCreatePage = async ({ page }) => {
   endpoints.otherPages.push(page.path);
   fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };
+
+// Prevents React Leaflet Objects from causing issues when Gatsby Builds
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-leaflet|leaflet/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
+};
