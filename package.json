@@ -8,7 +8,6 @@
   "keywords": [],
   "scripts": {
     "start": "npm run develop",
-    "test": "npm run cy:open",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -17,6 +16,8 @@
     "develop": "npm run clean && gatsby develop",
     "cy:open": "cypress open",
     "cy:run": "cypress run --record",
+    "test:old": "npm run cy:open",
+    "test": "jest",
     "test:cypress": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:cypress:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "add-book": "npx ts-node utils/scraper"
@@ -48,6 +49,7 @@
     "react-dom": "17.0.1",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.32.0",
+    "react-test-renderer": "^17.0.2",
     "tsconfig-paths-webpack-plugin": "3.5.1"
   },
   "devDependencies": {
@@ -62,7 +64,9 @@
     "@types/request": "^2.48.5",
     "@typescript-eslint/eslint-plugin": "4.18.0",
     "@typescript-eslint/parser": "4.18.0",
+    "babel-jest": "^27.2.2",
     "babel-plugin-root-import": "6.6.0",
+    "babel-preset-gatsby": "^1.14.0",
     "chalk": "^2.4.2",
     "cheerio": "^0.22.0",
     "cypress": "^7.3.0",
@@ -75,11 +79,14 @@
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "inquirer": "^7.3.3",
+    "jest": "^27.2.2",
     "node-fetch": "^2.6.1",
     "prettier": "2.2.1",
     "requests": "^0.3.0",
     "start-server-and-test": "^1.12.2",
+    "ts-jest": "^27.0.5",
     "ts-node": "^9.1.1",
     "typescript": "4.2.3"
   }
