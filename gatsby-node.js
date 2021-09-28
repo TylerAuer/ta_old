@@ -48,30 +48,3 @@ exports.createPages = async ({ graphql, actions }) => {
   await buildCategoryPages(graphql, createPage);
   await buildTagPages(graphql, createPage);
 };
-
-exports.onPreInit = async () => {
-  const endpointJsonFile = {
-    all: [],
-    posts: [],
-    categories: [],
-    tags: [],
-    otherPages: [],
-    errorPages: errorPages,
-  };
-
-  await fs.writeFileSync(
-    __dirname + '/cypress/fixtures/endpoints.json',
-    JSON.stringify(endpointJsonFile),
-  );
-};
-
-exports.onCreatePage = async ({ page }) => {
-  // Skip error pages, they get there own category
-  if (errorPages.includes(page.path)) return;
-
-  // Adds endpoints to a fixture file Cypress can reference
-  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
-  endpoints.all.push(page.path);
-  endpoints.otherPages.push(page.path);
-  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
-};

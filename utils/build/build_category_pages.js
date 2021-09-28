@@ -27,8 +27,6 @@ exports.buildCategoryPages = async (graphql, createPage) => {
 
   const blogs = Object.keys(data.data);
 
-  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
-
   blogs.forEach((blog) => {
     data.data[blog].group.forEach(async (category) => {
       const urlPath = `/${blog}/category/${category.fieldValue.toLowerCase()}/`;
@@ -44,10 +42,6 @@ exports.buildCategoryPages = async (graphql, createPage) => {
           type: 'Category',
         },
       });
-
-      endpoints.all.push(urlPath);
-      endpoints.categories.push(urlPath);
     });
   });
-  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };
