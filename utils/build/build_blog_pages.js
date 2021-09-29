@@ -18,8 +18,6 @@ exports.buildBlogPages = async (graphql, createPage) => {
 
   const blogWithListOfPosts = query.data.allMdx.group;
 
-  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
-
   blogWithListOfPosts.forEach(async (b) => {
     const blog = b.fieldValue;
     const urlPath = `/${blog}/`;
@@ -31,9 +29,5 @@ exports.buildBlogPages = async (graphql, createPage) => {
         blog: blog,
       },
     });
-    endpoints.all.push(urlPath);
-    endpoints.otherPages.push(urlPath);
   });
-
-  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

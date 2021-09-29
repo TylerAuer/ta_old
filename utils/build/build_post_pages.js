@@ -23,8 +23,6 @@ exports.buildPostPages = async (graphql, createPage) => {
   );
   const posts = allPosts.data.allMdx.edges;
 
-  const endpoints = JSON.parse(fs.readFileSync('cypress/fixtures/endpoints.json'));
-
   posts.forEach(async (post) => {
     urlPath = post.node.fields.path;
 
@@ -32,10 +30,5 @@ exports.buildPostPages = async (graphql, createPage) => {
       path: urlPath,
       component: path.resolve('./src/templates/post.tsx'),
     });
-
-    endpoints.all.push(urlPath);
-    endpoints.posts.push(urlPath);
   });
-
-  fs.writeFileSync('cypress/fixtures/endpoints.json', JSON.stringify(endpoints));
 };

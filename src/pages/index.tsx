@@ -12,6 +12,7 @@ import { PostPreview } from '@/components/PostPreview';
 import { Block } from '@/components/Block';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { A } from '@/components/A';
+import { TruthsAndLies } from '@/components/TruthsAndLies';
 
 import { Icon } from '@/components/Icon';
 import { PageBox } from '@/components/PageBox';
@@ -30,7 +31,7 @@ const Home: React.FC<PageProps> = ({ data }) => {
       <PageBox includeHomeLink={false}>
         <main>
           <NameAndBio />
-          {/* <TruthAndLies /> */}
+          {/* <TruthsAndLies count={5} /> */}
           <Projects />
           <Writing posts={posts} />
         </main>
@@ -70,19 +71,6 @@ const NameAndBio = () => {
     </section>
   );
 };
-
-const TruthAndLies = () => (
-  <section id="truths-and-lies">
-    <Box>
-      <h2>Two Thirds Truth and One Third Lies About Me</h2>
-      <ul>
-        <li>I love bread</li>
-        <li>I own over 100 board games</li>
-        <li>Has been pushed through the ocean by dolphins</li>
-      </ul>
-    </Box>
-  </section>
-);
 
 const Projects = () => {
   const projectCss = css`
