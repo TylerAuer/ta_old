@@ -1,5 +1,5 @@
 import bookData from './book_data.json';
-import { GenresEnum } from '../types';
+import { GenresEnum } from '../../types';
 import { existsSync } from 'fs';
 import path from 'path';
 
