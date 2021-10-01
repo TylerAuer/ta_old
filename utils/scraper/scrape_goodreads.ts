@@ -1,6 +1,8 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
+import { pathToFileURL } from 'url';
+import { pathToBookData, pathToBooksDir } from './constants';
 
 type ScrappedGoodreadsDataType = {
   title: string;
@@ -40,7 +42,7 @@ export const scrapeGoodreads = async (
       .join('-') + '.jpg';
 
   // Path to cover file from root
-  const coverDestination = 'src/bookshelf/covers/' + coverFileName;
+  const coverDestination = pathToBooksDir + '/covers/' + coverFileName;
 
   // Relative path from book_data.json (must be relative for Gatsby to ingest into GQL)
   const cover = './covers/' + coverFileName;

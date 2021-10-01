@@ -1,1 +1,2 @@
-export const pathToBookData = 'src/data/books/book_data.json';
+export const pathToBooksDir = 'src/data/books';
+export const pathToBookData = pathToBooksDir + '/book_data.json';
