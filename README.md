@@ -4,8 +4,8 @@ This is my portfolio site.
 
 ## FL Goals
 
-- Replace Cypress tests with Jest
-- Add tests of MDX files
+- ~~Replace Cypress tests with Jest~~
+- ~~Add tests of MDX files~~
 - Finish two coding posts
 - Finish two adventure posts
 - Clean up styles <-- Simple and good over complex
