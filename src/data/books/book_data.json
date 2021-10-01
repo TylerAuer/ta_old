@@ -1592,5 +1592,17 @@
     "genres": [
       "science & math"
     ]
+  },
+  {
+    "title": "Jurassic Park",
+    "author": "Michael Crichton",
+    "cover": "./covers/Michael-Crichton-Jurassic-Park.jpg",
+    "pages": "448",
+    "goodreads_url": "https://www.goodreads.com/book/show/13532157-jurassic-park",
+    "indiebound_url": "https://www.indiebound.org/book/9780345538987",
+    "library_url": "https://www.worldcat.org/search?q=9780345538987",
+    "genres": [
+      "sci-fi"
+    ]
   }
 ]

@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `books`,
-        path: `${__dirname}/src/bookshelf/`,
+        path: `${__dirname}/src/data/`,
       },
     },
     /**
