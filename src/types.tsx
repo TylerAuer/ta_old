@@ -61,3 +61,10 @@ export type EndpointJsonFile = {
 };
 
 export type StyleConstantObject = { [key: string]: SerializedStyles };
+
+export type ElementProps = {
+  className?: string;
+  id?: string;
+  sx?: SerializedStyles;
+  dataTestId: string;
+};
