@@ -18,7 +18,7 @@ const components = {
   // Target elements more precisely
   wrapper: ({ children }) => {
     // Handle empty posts
-    if (!children) return <></>;
+    if (!children) return <Fragment></Fragment>;
 
     const updatedChildren = children.map((child) => {
       // Target list of footnotes at bottom of post
