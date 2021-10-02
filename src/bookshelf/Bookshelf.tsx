@@ -9,6 +9,7 @@ import { Box } from '@/components/Box';
 
 import { fisherYatesShuffle } from '../utils/fisher_yates_shuffle';
 import { GenreFilterToggleStateType, GenresEnum, BookFromGQLType } from '@/types';
+import { Heading } from '@/elements/Heading';
 
 const initialToggleState = generateInitialActiveFilterState();
 const MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY = 5;
@@ -102,7 +103,7 @@ const BookshelfHeader: React.FC = () => {
 
   return (
     <div css={s}>
-      <h1>Tyler's Bookshelf</h1>
+      <Heading level={1}>Tyler's Bookshelf</Heading>
       <IconNavList includeHomeLink />
       <Box>
         <p>

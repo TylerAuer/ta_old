@@ -1,15 +1,20 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { SyntaxHighlighter } from '@/components/SyntaxHighlighter';
 import { P } from '@/components/P';
 import { A } from '@/components/A';
 import { FootnoteList } from '@/components/FootnotesList';
+import { H1, H2, H3, H4 } from '@/elements/Heading';
 
 const components = {
   // Target elements based on HTML tags
   pre: SyntaxHighlighter,
   p: P,
   a: A,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
   // Target elements more precisely
   wrapper: ({ children }) => {
     // Handle empty posts
@@ -23,7 +28,7 @@ const components = {
       return child;
     });
 
-    return <>{updatedChildren}</>;
+    return <Fragment>{updatedChildren}</Fragment>;
   },
 };
 
