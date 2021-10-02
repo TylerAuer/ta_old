@@ -66,5 +66,5 @@ export type ElementProps = {
   className?: string;
   id?: string;
   sx?: SerializedStyles;
-  dataTestId: string;
+  dataTestId?: string;
 };

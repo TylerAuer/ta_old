@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import { Icon } from '@/components/Icon';
 
 import { SPACING } from '@/constants';
+import { A } from '@/elements/A';
 
 type Props = {
   includeHomeLink?: boolean;
@@ -42,14 +43,14 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = true }) => {
         <span className="visible-hidden">Bookshelf</span>
         <Icon icon="book" />
       </Link>
-      <a href="https://twitter.com/TylerAuer">
+      <A to="https://twitter.com/TylerAuer">
         <span className="visible-hidden">Twitter</span>
         <Icon icon="twitter" />
-      </a>
-      <a href="https://github.com/TylerAuer">
+      </A>
+      <A to="https://github.com/TylerAuer">
         <span className="visible-hidden">GitHub</span>
         <Icon icon="github" />
-      </a>
+      </A>
     </nav>
   );
 };

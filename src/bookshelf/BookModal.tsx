@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
-import { A } from '@/components/A';
+import { A } from '@/elements/A';
 
 type Props = {
   book: any;
@@ -103,13 +103,13 @@ export const BookModal: React.FC<Props> = ({ book, closeModal }) => {
             <h2 className="title">{book.title}</h2>
             <div className="author">{book.author}</div>
             <div className="pages">{book.pages} pages</div>
-            <A className="link" href={book.goodreads_url}>
+            <A className="link" to={book.goodreads_url}>
               Goodreads
             </A>
-            <A className="link" href={book.indiebound_url}>
+            <A className="link" to={book.indiebound_url}>
               IndieBound
             </A>
-            <A className="link" href={book.library_url}>
+            <A className="link" to={book.library_url}>
               Library
             </A>
           </div>

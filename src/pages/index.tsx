@@ -11,14 +11,16 @@ import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
 import { Block } from '@/components/Block';
 import { Flex, FlexJustification } from '@/components/Flex';
-import { A } from '@/components/A';
+import { A } from '@/elements/A';
 import { TruthsAndLies } from '@/components/TruthsAndLies';
 
 import { Icon } from '@/components/Icon';
 import { PageBox } from '@/components/PageBox';
 import { Heading } from '@/elements/Heading';
 
-const Home: React.FC<PageProps> = ({ data }) => {
+// TODO: Figure out how to get this component to recognize data.allMdx
+// currently the "data: any" just ignores it
+const Home: React.FC<PageProps> = ({ data }: { data: any }) => {
   const posts = data.allMdx.nodes;
   return (
     <GlobalStyles>
@@ -63,8 +65,8 @@ const NameAndBio = () => {
       <Block>
         <p>
           After teaching math for twelve years, I taught myself to code. Now I build social capital
-          systems at <A href="http://nextdoor.com">Nextdoor</A> that motivate users to build
-          community in their neighborhoods.
+          systems at <A to="http://nextdoor.com">Nextdoor</A> that motivate users to build community
+          in their neighborhoods.
         </p>
         <p>
           When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
@@ -152,7 +154,7 @@ const Projects = () => {
               A Super Bowl props game where players optionally contribute to a community pot donated
               to a charity of the winner's choosing. In 2021 we donated $1,568 to the Pancreatic
               Cancer Action Network!{' '}
-              <A href="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform">
+              <A to="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform">
                 Sign up
               </A>{' '}
               to play next year; donations optional.

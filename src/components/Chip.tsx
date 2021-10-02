@@ -2,7 +2,7 @@ import React from 'react';
 import { css, SerializedStyles } from '@emotion/react';
 import { HtmlElementPropsType } from '@/types';
 
-import { A } from '@/components/A';
+import { A } from '@/elements/A';
 
 type Props = {
   to: string;
@@ -36,7 +36,7 @@ export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
   `;
 
   return (
-    <A css={s} id={id} className={className} href={to}>
+    <A css={s} id={id} className={className} to={to}>
       {children}
     </A>
   );
