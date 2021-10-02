@@ -9,22 +9,24 @@ import { SPACING } from '@/constants';
 import { Chip } from '@/components/Chip';
 import PostProvider from '@/components/PostProvider';
 import { PageBox } from '@/components/PageBox';
+import { Heading } from '@/elements/Heading';
+
+const SUBTITLE_CSS = css`
+  color: #242424;
+  font-family: var(--font-special);
+  font-weight: bold;
+  margin: ${SPACING.lg} inherit;
+`;
 
 const TitleAndSubtitle = ({ title, subtitle }) => {
   return (
     <Box id="title-and-subtitle" vMargin={SPACING.lg}>
-      <h1 id="title">{title}</h1>
+      <Heading level={1} id="title">
+        {title}
+      </Heading>
 
       {subtitle && (
-        <div
-          id="subtitle"
-          css={css`
-            color: #242424;
-            font-family: var(--font-special);
-            font-weight: bold;
-            margin: ${SPACING.lg} inherit;
-          `}
-        >
+        <div id="subtitle" css={SUBTITLE_CSS}>
           {subtitle}
         </div>
       )}

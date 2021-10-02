@@ -16,6 +16,7 @@ import { TruthsAndLies } from '@/components/TruthsAndLies';
 
 import { Icon } from '@/components/Icon';
 import { PageBox } from '@/components/PageBox';
+import { Heading } from '@/elements/Heading';
 
 const Home: React.FC<PageProps> = ({ data }) => {
   const posts = data.allMdx.nodes;
@@ -55,7 +56,9 @@ const NameAndBio = () => {
 
   return (
     <section id="name-and-bio">
-      <h1 css={titleCss}>Tyler Auer</h1>
+      <Heading level={1} sx={titleCss}>
+        Tyler Auer
+      </Heading>
       <Box css={subtitleCss}>Teacher turned software developer</Box>
       <Block>
         <p>
@@ -80,10 +83,8 @@ const Projects = () => {
     margin: ${SPACING.xl} 0;
 
     & h3 {
-      color: var(--color-text-header);
       width: auto;
       margin: 0.5rem 1.5rem 0.5rem 0;
-      font-size: 2.5rem;
       display: inline-block;
       vertical-align: middle;
     }
@@ -105,12 +106,12 @@ const Projects = () => {
 
   return (
     <section role="list" id="projects">
-      <h2>Projects</h2>
+      <Heading level={2}>Projects</Heading>
       <Box role="listitem">
         <div css={projectCss}>
           <div>
             <Flex flex={FlexJustification.start}>
-              <h3>Bad Calculators</h3>
+              <Heading level={3}>Bad Calculators</Heading>
               <div>
                 <Chip sx={chipCss} to="https://www.badcalculators.com/">
                   Live
@@ -134,7 +135,7 @@ const Projects = () => {
         <div css={projectCss}>
           <div>
             <Flex flex={FlexJustification.start}>
-              <h3>Super Stupid Props</h3>
+              <Heading level={3}>Super Stupid Props</Heading>
               <div>
                 <Chip
                   sx={chipCss}
@@ -167,7 +168,7 @@ const Projects = () => {
         <div css={projectCss}>
           <div>
             <Flex flex={FlexJustification.start}>
-              <h3>Fruit Matrix</h3>
+              <Heading level={3}>Fruit Matrix</Heading>
               <div>
                 <Chip sx={chipCss} to="https://fruit.tylerauer.com">
                   Live
@@ -197,7 +198,7 @@ const Projects = () => {
         <div css={projectCss}>
           <div>
             <Flex flex={FlexJustification.start}>
-              <h3>Bookshelf</h3>
+              <Heading level={3}>Bookshelf</Heading>
               <div>
                 <Chip sx={chipCss} to="/bookshelf">
                   Live
@@ -222,7 +223,7 @@ const BlogWithFeatPosts = ({ posts }) => {
   return (
     <Box role="list">
       {posts.map((post) => (
-        <PostPreview role="listitem" key={post.fields.path} post={post} />
+        <PostPreview hSize={3} role="listitem" key={post.fields.path} post={post} />
       ))}
     </Box>
   );
@@ -237,8 +238,6 @@ const Writing = ({ posts }) => {
     & h3 {
       display: inline-block;
       vertical-align: center;
-      font-size: 2.7rem;
-      color: var(--color-text-header);
       margin: ${SPACING.md} 0;
 
       & a {
@@ -264,16 +263,15 @@ const Writing = ({ posts }) => {
   `;
 
   return (
-    <section id="blogs">
-      <h2>Writing</h2>
-      <section css={blogCss} id="code-featured-posts">
+    <>
+      <section css={blogCss} id="code-posts">
         <Box>
-          <h3>
+          <Heading level={2}>
             <Link to="/code">
               <Icon icon="code" />
               Code
             </Link>
-          </h3>
+          </Heading>
         </Box>
         <BlogWithFeatPosts posts={featCodePosts} />
         <div css={btnCss}>
@@ -281,21 +279,21 @@ const Writing = ({ posts }) => {
         </div>
       </section>
 
-      <section css={blogCss} id="code-featured-posts">
+      <section css={blogCss} id="adventure-posts">
         <Box>
-          <h3>
+          <Heading level={2}>
             <Link to="/adventure">
               <Icon icon="mountains" />
               Adventure
             </Link>
-          </h3>
+          </Heading>
         </Box>
         <BlogWithFeatPosts posts={featAdventurePosts} />
         <div css={btnCss}>
           <Button to="/adventure">All adventure posts</Button>
         </div>
       </section>
-    </section>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { Chip } from '@/components/Chip';
-import { A } from '@/components/A';
+import { Heading } from '@/elements/Heading';
 import { Flex, FlexJustification } from '@/components/Flex';
 
 import { SPACING } from '@/constants';
@@ -24,9 +24,10 @@ type PostPreviewType = {
 type Props = {
   post: PostPreviewType;
   role?: string;
+  hSize?: 2 | 3 | 4;
 };
 
-export const PostPreview: React.FC<Props> = ({ post, role }) => {
+export const PostPreview: React.FC<Props> = ({ post, role, hSize = 2 }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
   const { blog, path } = post.fields;
 
@@ -76,7 +77,9 @@ export const PostPreview: React.FC<Props> = ({ post, role }) => {
       >
         <div>
           <Link to={path}>
-            <h4 css={titleCss}>{title}</h4>
+            <Heading level={hSize} css={titleCss}>
+              {title}
+            </Heading>
           </Link>
           <div css={subtitleCss}>{subtitle}</div>
           {!!tags.length && (

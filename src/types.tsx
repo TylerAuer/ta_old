@@ -59,3 +59,5 @@ export type EndpointJsonFile = {
   otherPages: string[];
   errorPages: string[];
 };
+
+export type StyleConstantObject = { [key: string]: SerializedStyles };

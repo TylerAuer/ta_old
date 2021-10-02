@@ -88,36 +88,10 @@ const globalStyles = css`
   h4,
   h5,
   h6 {
-    font-family: var(--font-special);
     line-height: 1.3;
     margin: ${SPACING.xl} auto;
     width: 800px;
     max-width: 100%;
-  }
-
-  h1 {
-    color: var(--color-punch);
-    font-size: 3.6rem;
-  }
-
-  h2 {
-    color: var(--color-punch);
-    padding-bottom: 3px;
-    border-bottom: 3px solid var(--color-punch);
-  }
-
-  h3 {
-    color: var(--color-punch);
-  }
-
-  h4 {
-    color: var(--color-text-header);
-    font-style: italic;
-  }
-
-  h5 {
-    color: var(--color-punch);
-    font-style: italic;
   }
 
   code {
