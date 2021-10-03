@@ -1,9 +1,8 @@
-import { StyleConstantObject as StyleConstantObject } from '@/types';
 import { css, SerializedStyles } from '@emotion/react';
 
 type Sizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 
-export const fontSize: StyleConstantObject = {
+export const fontSize: { [key in Sizes]: SerializedStyles } = {
   xxs: css`
     font-size: 12px;
   `,
@@ -27,7 +26,7 @@ export const fontSize: StyleConstantObject = {
   `,
 };
 
-export const fontFamily: StyleConstantObject = {
+export const fontFamily = {
   body: css`
     font-family: 'nunito', sans-serif;
   `,

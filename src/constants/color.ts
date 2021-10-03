@@ -1,21 +1,29 @@
-import { StyleConstantObject } from '@/types';
 import { css } from '@emotion/react';
+import { SerializedStyles } from '@emotion/serialize';
 
-const font: StyleConstantObject = {
-  standard: css`
+enum FontColors {
+  'base',
+  'baseDark',
+  'baseLight',
+  'primary',
+  'secondary',
+}
+
+const font = {
+  base: css`
     color: #434343;
   `,
-  dark: css`
+  baseDark: css`
     color: #252638;
   `,
-  light: css`
+  baseLight: css`
     color: #9a9bad;
   `,
-  blue: css`
-    color: #4361ee;
-  `,
-  red: css`
+  primary: css`
     color: #da4167;
+  `,
+  secondary: css`
+    color: #4361ee;
   `,
 };
 

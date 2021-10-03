@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
@@ -186,8 +186,8 @@ const Projects = () => {
             <p>
               Drag-and-drop fruit on a two-axis graph to rate each's tastiness and ease of eating.
               Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}
-              <Link to="https://fruit.tylerauer.com/#/data/#histograms">charts</Link> aggregating
-              every rating the site has ever seen.
+              <A to="https://fruit.tylerauer.com/#/data/#histograms">charts</A> aggregating every
+              rating the site has ever seen.
             </p>
           </div>
           <div className="icon">
@@ -225,7 +225,7 @@ const BlogWithFeatPosts = ({ posts }) => {
   return (
     <Box role="list">
       {posts.map((post) => (
-        <PostPreview hSize={3} role="listitem" key={post.fields.path} post={post} />
+        <PostPreview hLevel={3} role="listitem" key={post.fields.path} post={post} />
       ))}
     </Box>
   );
@@ -268,12 +268,12 @@ const Writing = ({ posts }) => {
     <>
       <section css={blogCss} id="code-posts">
         <Box>
-          <Heading level={2}>
-            <Link to="/code">
+          <A to="/code">
+            <Heading level={2}>
               <Icon icon="code" />
               Code
-            </Link>
-          </Heading>
+            </Heading>
+          </A>
         </Box>
         <BlogWithFeatPosts posts={featCodePosts} />
         <div css={btnCss}>
@@ -283,12 +283,12 @@ const Writing = ({ posts }) => {
 
       <section css={blogCss} id="adventure-posts">
         <Box>
-          <Heading level={2}>
-            <Link to="/adventure">
+          <A to="/adventure">
+            <Heading level={2}>
               <Icon icon="mountains" />
               Adventure
-            </Link>
-          </Heading>
+            </Heading>
+          </A>
         </Box>
         <BlogWithFeatPosts posts={featAdventurePosts} />
         <div css={btnCss}>

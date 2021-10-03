@@ -36,7 +36,7 @@ export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
   `;
 
   return (
-    <A css={s} id={id} className={className} to={to}>
+    <A sx={s} id={id} className={className} to={to}>
       {children}
     </A>
   );

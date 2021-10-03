@@ -60,8 +60,6 @@ export type EndpointJsonFile = {
   errorPages: string[];
 };
 
-export type StyleConstantObject = { [key: string]: SerializedStyles };
-
 export type ElementProps = {
   className?: string;
   id?: string;

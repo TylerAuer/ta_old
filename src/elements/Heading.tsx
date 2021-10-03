@@ -6,25 +6,25 @@ import { ReactNode } from 'react';
 const h1Css = css`
   ${fontSize.xxl};
   ${fontFamily.heading};
-  ${color.font.red};
+  ${color.font.primary};
 `;
 
 const h2Css = css`
   ${fontSize.xl};
   ${fontFamily.heading};
-  ${color.font.blue};
+  ${color.font.secondary};
 `;
 
 const h3Css = css`
   ${fontSize.lg};
   ${fontFamily.heading};
-  ${color.font.primary};
+  ${color.font.base};
 `;
 
 const h4Css = css`
   ${fontSize.md};
   ${fontFamily.heading};
-  ${color.font.blue};
+  ${color.font.secondary};
 `;
 
 type HeadingProps = {

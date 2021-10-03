@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { Box } from '@/components/Box';
@@ -7,9 +6,10 @@ import { Icon } from '@/components/Icon';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { SPACING } from '@/constants';
 import { IconNavList } from './IconNavList';
+import { A } from '@/elements';
 
 const Left: React.FC = () => (
-  <Link
+  <A
     css={css`
       color: var(--color-punch);
       font-family: var(--font-special);
@@ -27,7 +27,7 @@ const Left: React.FC = () => (
         transition: all 0.2s;
       `}
     />
-  </Link>
+  </A>
 );
 
 type PropsType = {

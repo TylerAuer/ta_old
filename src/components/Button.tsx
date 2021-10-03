@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { HtmlElementPropsType } from '@/types';
+import { A } from '@/elements/A';
 
 type Props = {
   to: string;
@@ -31,8 +31,8 @@ export const Button: React.FC<Props> = ({ children, to, sx, id, className }) => 
   `;
 
   return (
-    <Link id={id} className={className} css={s} to={to}>
+    <A id={id} className={className} css={s} to={to}>
       {children}
-    </Link>
+    </A>
   );
 };

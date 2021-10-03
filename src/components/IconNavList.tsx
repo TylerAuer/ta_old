@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { Icon } from '@/components/Icon';
@@ -26,23 +25,23 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = true }) => {
   return (
     <nav css={s}>
       {includeHomeLink && (
-        <Link to="/">
+        <A to="/">
           <span className="visible-hidden">Home</span>
           <Icon icon="home" />
-        </Link>
+        </A>
       )}
-      <Link to="/code">
+      <A to="/code">
         <span className="visible-hidden">Code blog</span>
         <Icon icon="code" />
-      </Link>
-      <Link to="/adventure">
+      </A>
+      <A to="/adventure">
         <span className="visible-hidden">Adventure blog</span>
         <Icon icon="mountains" />
-      </Link>
-      <Link to="/bookshelf">
+      </A>
+      <A to="/bookshelf">
         <span className="visible-hidden">Bookshelf</span>
         <Icon icon="book" />
-      </Link>
+      </A>
       <A to="https://twitter.com/TylerAuer">
         <span className="visible-hidden">Twitter</span>
         <Icon icon="twitter" />

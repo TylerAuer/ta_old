@@ -1,9 +1,8 @@
-import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { Chip } from '@/components/Chip';
-import { Heading } from '@/elements/Heading';
 import { Flex, FlexJustification } from '@/components/Flex';
+import { Heading, A } from '@/elements';
 
 import { SPACING } from '@/constants';
 
@@ -24,10 +23,10 @@ type PostPreviewType = {
 type Props = {
   post: PostPreviewType;
   role?: string;
-  hSize?: 2 | 3 | 4;
+  hLevel?: 2 | 3 | 4;
 };
 
-export const PostPreview: React.FC<Props> = ({ post, role, hSize = 2 }) => {
+export const PostPreview: React.FC<Props> = ({ post, role, hLevel = 2 }) => {
   const { title, subtitle, category, tags, location } = post.frontmatter;
   const { blog, path } = post.fields;
 
@@ -39,6 +38,10 @@ export const PostPreview: React.FC<Props> = ({ post, role, hSize = 2 }) => {
 
     &:hover {
       color: var(--color-punch);
+    }
+
+    &:visited {
+      color: inherit;
     }
   `;
 
@@ -76,11 +79,11 @@ export const PostPreview: React.FC<Props> = ({ post, role, hSize = 2 }) => {
         wrap={'wrap-reverse'}
       >
         <div>
-          <Link to={path}>
-            <Heading level={hSize} css={titleCss}>
+          <A to={path}>
+            <Heading level={hLevel} css={titleCss}>
               {title}
             </Heading>
-          </Link>
+          </A>
           <div css={subtitleCss}>{subtitle}</div>
           {!!tags.length && (
             <div>
@@ -90,9 +93,9 @@ export const PostPreview: React.FC<Props> = ({ post, role, hSize = 2 }) => {
             </div>
           )}
         </div>
-        <Link css={categoryCss} to={`/${blog}/category/${category.toLowerCase()}`}>
+        <A css={categoryCss} to={`/${blog}/category/${category.toLowerCase()}`}>
           {category}
-        </Link>
+        </A>
       </Flex>
     </article>
   );
