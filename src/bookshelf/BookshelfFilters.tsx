@@ -1,5 +1,5 @@
 import { Toggle } from '@/components/Toggle';
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 
 import { GenreFilterToggleStateType, GenresEnum } from '@/types';
 import { Flex, FlexJustification } from '../components/Flex';

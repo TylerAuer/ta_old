@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import palenight from 'prism-react-renderer/themes/palenight';
-import { Box } from './Box';
+import { Box } from '../elements/Box';
 import rangeParser from 'parse-numeric-range';
 import { PrismTheme } from 'prism-react-renderer';
 

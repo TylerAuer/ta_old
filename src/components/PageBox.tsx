@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 

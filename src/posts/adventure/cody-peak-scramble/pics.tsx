@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { Slideshow } from '@/components/Slideshow';
 
 export const CodyBowl = () => {

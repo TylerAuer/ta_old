@@ -1,12 +1,12 @@
 import { SPACING } from '@/constants';
 import { css } from '@emotion/react';
-import { Box } from './Box';
+import { Box } from '../elements/Box';
 
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 
 type Props = {
   style?: 'note' | 'warning';
-} & HtmlElementPropsType;
+} & ElementProps;
 
 export const Block: React.FC<Props> = ({ children, sx, className, id, style = 'note' }) => {
   const s = css`

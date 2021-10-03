@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 import { SPACING } from '@/constants';
 
 const wideCss = css`
@@ -29,7 +29,7 @@ type Props = {
   width?: Width;
   vMargin?: SPACING;
   role?: string;
-} & HtmlElementPropsType;
+} & ElementProps;
 
 export const Box: React.FC<Props> = ({
   children,

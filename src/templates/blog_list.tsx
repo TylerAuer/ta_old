@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { PageBox } from '@/components/PageBox';
 import { PostPreview } from '@/components/PostPreview';

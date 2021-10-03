@@ -1,12 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 import { A } from '@/elements/A';
 
 type Props = {
   to: string;
-} & HtmlElementPropsType;
+} & ElementProps;
 
 export const Button: React.FC<Props> = ({ children, to, sx, id, className }) => {
   const s = css`

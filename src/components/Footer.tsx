@@ -1,7 +1,6 @@
-import React from 'react';
 import { css } from '@emotion/react';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { SPACING } from '@/constants';
 import { IconNavList } from './IconNavList';
 

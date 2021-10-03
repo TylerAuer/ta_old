@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import { P } from '@/components/P';
+import { P } from '@/elements/P';
 
 export const DropCapP: React.FC = ({ children }) => {
   const pArray = children.toString().split(' ');

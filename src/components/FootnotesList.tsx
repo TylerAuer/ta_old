@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { Box } from './Box';
+import { Box } from '../elements/Box';
 
 export const FootnoteList: React.FC = ({ children }) => {
   const s = css`

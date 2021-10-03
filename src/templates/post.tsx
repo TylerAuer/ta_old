@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
 import { SPACING } from '@/constants';

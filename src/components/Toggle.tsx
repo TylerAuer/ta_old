@@ -1,12 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 
 type Props = {
   content: string;
   state: boolean;
   onClick: () => void;
-} & HtmlElementPropsType;
+} & ElementProps;
 
 export const Toggle: React.FC<Props> = ({ onClick, state, content, sx, id, className = '' }) => {
   const s = css`

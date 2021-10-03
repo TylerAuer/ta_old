@@ -1,8 +1,7 @@
-import { useStaticQuery, graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 
 type Props = {
   photoList: any;

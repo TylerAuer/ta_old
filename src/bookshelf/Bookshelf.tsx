@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 import { BookshelfFilters } from '@/bookshelf/BookshelfFilters';
 import { BookshelfMasonryGrid } from '@/bookshelf/BookshelfMasonryGrid';
 import { IconNavList } from '@/components/IconNavList';
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 
 import { fisherYatesShuffle } from '../utils/fisher_yates_shuffle';
 import { GenreFilterToggleStateType, GenresEnum, BookFromGQLType } from '@/types';

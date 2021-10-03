@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import { Icon } from '@/components/Icon';
+import { Icon } from '@/constants/Icon';
 
 import { SPACING } from '@/constants';
 import { A } from '@/elements/A';

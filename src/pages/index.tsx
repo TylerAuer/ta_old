@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import { SPACING } from '@/constants';
 import { GlobalStyles } from '@/components/GlobalStyles';
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { Chip } from '@/components/Chip';
 import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
@@ -14,7 +14,7 @@ import { Flex, FlexJustification } from '@/components/Flex';
 import { A } from '@/elements/A';
 import { TruthsAndLies } from '@/components/TruthsAndLies';
 
-import { Icon } from '@/components/Icon';
+import { Icon } from '@/constants/Icon';
 import { PageBox } from '@/components/PageBox';
 import { Heading } from '@/elements/Heading';
 
@@ -33,7 +33,7 @@ const Home: React.FC<PageProps> = ({ data }: { data: any }) => {
       </Helmet>
       <PageBox includeHomeLink={false}>
         <main>
-          <NameAndBio />
+          <Bio />
           {/* <TruthsAndLies count={5} /> */}
           <Projects />
           <Writing posts={posts} />
@@ -45,7 +45,7 @@ const Home: React.FC<PageProps> = ({ data }: { data: any }) => {
 
 export default Home;
 
-const NameAndBio = () => {
+const Bio = () => {
   const titleCss = css`
     margin: 0.5rem auto;
   `;
@@ -58,10 +58,6 @@ const NameAndBio = () => {
 
   return (
     <section id="name-and-bio">
-      <Heading level={1} sx={titleCss}>
-        Tyler Auer
-      </Heading>
-      <Box css={subtitleCss}>Teacher turned software developer</Box>
       <Block>
         <p>
           After teaching math for twelve years, I taught myself to code. Now I build social capital

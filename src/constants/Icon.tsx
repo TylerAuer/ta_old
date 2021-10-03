@@ -1,4 +1,4 @@
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 import React from 'react';
 
 type IconType =
@@ -9,34 +9,45 @@ type IconType =
   | 'fruit'
   | 'github'
   | 'home'
-  | 'linkedin'
+  | 'linkedIn'
   | 'mountains'
   | 'signature'
   | 'twitter';
 
 type IconProps = {
   icon: IconType;
-} & HtmlElementPropsType;
+} & ElementProps;
 
-export const Icon: React.FC<IconProps> = ({ sx, icon, id, className }) => {
-  const nameMap: { [K in IconType]: React.ReactElement } = {
-    book: <BookIcon sx={sx} id={id} className={className} />,
-    calculator: <CalculatorIcon sx={sx} id={id} className={className} />,
-    code: <CodeIcon sx={sx} id={id} className={className} />,
-    football: <FootballIcon sx={sx} id={id} className={className} />,
-    fruit: <FruitIcon sx={sx} id={id} className={className} />,
-    github: <GithubIcon sx={sx} id={id} className={className} />,
-    home: <HomeIcon sx={sx} id={id} className={className} />,
-    linkedin: <LinkedInIcon sx={sx} id={id} className={className} />,
-    mountains: <MountainsIcon sx={sx} id={id} className={className} />,
-    signature: <SignatureIcon sx={sx} id={id} className={className} />,
-    twitter: <TwitterIcon sx={sx} id={id} className={className} />,
-  };
+export const Icon: React.FC<IconProps> = ({ sx, icon, id, className, dataTestId }) => {
+  const props = { sx, id, className, dataTestId };
 
-  return nameMap[icon];
+  switch (icon) {
+    case 'book':
+      return <BookIcon {...props} />;
+    case 'calculator':
+      return <CalculatorIcon {...props} />;
+    case 'code':
+      return <CodeIcon {...props} />;
+    case 'football':
+      return <FootballIcon {...props} />;
+    case 'fruit':
+      return <FruitIcon {...props} />;
+    case 'github':
+      return <GithubIcon {...props} />;
+    case 'home':
+      return <HomeIcon {...props} />;
+    case 'linkedIn':
+      return <LinkedInIcon {...props} />;
+    case 'mountains':
+      return <MountainsIcon {...props} />;
+    case 'signature':
+      return <SignatureIcon {...props} />;
+    case 'twitter':
+      return <TwitterIcon {...props} />;
+  }
 };
 
-const BookIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const BookIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={`0 0 296.999 296.999`}
@@ -49,7 +60,7 @@ const BookIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
   </svg>
 );
 
-const CalculatorIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const CalculatorIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
@@ -61,7 +72,7 @@ const CalculatorIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) =
   </svg>
 );
 
-const TwitterIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const TwitterIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
@@ -73,7 +84,7 @@ const TwitterIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
   </svg>
 );
 
-const CodeIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const CodeIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 511.997 511.997"
@@ -85,7 +96,7 @@ const CodeIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
   </svg>
 );
 
-const FootballIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const FootballIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512.001 512.001"
@@ -97,7 +108,7 @@ const FootballIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => 
   </svg>
 );
 
-const FruitIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const FruitIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
@@ -110,7 +121,7 @@ const FruitIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
   </svg>
 );
 
-const GithubIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const GithubIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -122,7 +133,7 @@ const GithubIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
   </svg>
 );
 
-const HomeIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const HomeIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 495.398 495.398"
@@ -135,7 +146,7 @@ const HomeIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
   </svg>
 );
 
-const MountainsIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const MountainsIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 329.999 329.999"
@@ -147,7 +158,7 @@ const MountainsIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) =>
   </svg>
 );
 
-const LinkedInIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const LinkedInIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
@@ -159,7 +170,7 @@ const LinkedInIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => 
   </svg>
 );
 
-const SignatureIcon: React.FC<HtmlElementPropsType> = ({ sx, id, className }) => (
+const SignatureIcon: React.FC<ElementProps> = ({ sx, id, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 174 61"
