@@ -3,7 +3,7 @@ import { Box } from '@/elements/Box';
 
 import { GenreFilterToggleStateType, GenresEnum } from '@/types';
 import { Flex, FlexJustification } from '../components/Flex';
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 
 type Props = {
   toggleFilter: (filter: GenresEnum) => void;
@@ -31,7 +31,7 @@ export const BookshelfFilters: React.FC<Props> = ({
   });
 
   return (
-    <Box vMargin={SPACING.xl}>
+    <Box vMargin={spacing.xl}>
       <Flex flex={FlexJustification.center}>{btns}</Flex>
     </Box>
   );

@@ -1,37 +1,35 @@
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/serialize';
 
-enum FontColors {
-  'base',
-  'baseDark',
-  'baseLight',
-  'primary',
-  'secondary',
-}
+const blackest = 'black';
+//const blacker =
+const black = '#252638';
+// const blackless
+// const blackleast
 
-const font = {
-  base: css`
-    color: #434343;
-  `,
-  baseDark: css`
-    color: #252638;
-  `,
-  baseLight: css`
-    color: #9a9bad;
-  `,
-  primary: css`
-    color: #da4167;
-  `,
-  secondary: css`
-    color: #4361ee;
-  `,
-};
+// const greyest = '#434343';
+// const greyer = '#434343';
+const grey = '#434343';
+// const greyless = '#434343';
+// const greyleast = '#434343';
 
-export const color = {
-  font,
-};
+const blueGrey = '#9a9bad';
 
-// --color-page-bg: rgb(252, 252, 252);
+// const lightGreyest = 'rgb(252, 252, 252)';
+// const lightGreyer = '#ebebeb';
+const lightGrey = '#fcfcfc';
+// const lightGreyless = 'rgb(252, 252, 252)';
+// const lightGreyleast = 'rgb(252, 252, 252)';
+
+// const pinkest = '#da4167';
+// const pinker = '#da4167';
+const pink = '#da4167';
+const pinkless = 'rgba(255, 175, 196, 0.7)';
+// const pinkleast = 'rgba(255, 175, 196, 0.7)';
+
+const redPink = '#ba2348';
+
+const blue = '#4361ee';
 
 // --color-punch-soft: rgba(255, 175, 196, 0.7);
 // --color-punch-bright: #ffafc4;
@@ -52,3 +50,29 @@ export const color = {
 // --color-grey-bg: #ebebeb;
 // --color-grey-bg-medium: #c0c0c0;
 // --color-grey-bg-dark: #2b2b2b;
+
+const font = {
+  fontBase: grey,
+  fontBaseDark: black,
+  fontBaseLight: blueGrey,
+  fontPrimary: pink,
+  fontPrimaryDark: redPink,
+  fontSecondary: blue,
+};
+
+const bg = {
+  bgBase: lightGrey,
+  bgBaseDark: black,
+  bgPrimary: pinkless,
+};
+
+const border = {
+  borderPrimary: pink,
+  borderSecondary: blue,
+};
+
+export const color = {
+  ...font,
+  ...bg,
+  ...border,
+};

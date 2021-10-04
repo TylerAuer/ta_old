@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { Box } from '@/elements/Box';
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 import { IconNavList } from './IconNavList';
 import { A, Heading } from '@/elements';
 
@@ -8,7 +8,7 @@ const CONTAINER_SX = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: ${SPACING.xxxl} 0;
+  margin: ${spacing.xxxl} 0;
 `;
 
 const NAME_SX = css`

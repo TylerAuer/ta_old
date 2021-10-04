@@ -29,10 +29,10 @@ const LINK_CSS = css`
 `;
 
 const BODY_CSS = css`
-  ${color.font.primary};
+  color: ${color.fontPrimary};
 
   &:visited {
-    ${color.font.primary};
+    color: ${color.fontPrimary};
   }
 `;
 

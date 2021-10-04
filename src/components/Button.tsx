@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { css } from '@emotion/react';
 
 import { ElementProps } from '@/types';
 import { A } from '@/elements/A';
 
-type Props = {
+type ButtonProps = {
   to: string;
+  children: ReactNode;
 } & ElementProps;
 
-export const Button: React.FC<Props> = ({ children, to, sx, id, className }) => {
+export const Button = ({ children, to, sx, id, className }: ButtonProps) => {
   const s = css`
     padding: 1rem 2rem;
     border: none;

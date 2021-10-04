@@ -1,39 +1,32 @@
-import { css, SerializedStyles } from '@emotion/react';
-
 type Sizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 
-export const fontSize: { [key in Sizes]: SerializedStyles } = {
-  xxs: css`
-    font-size: 12px;
-  `,
-  xs: css`
-    font-size: 15px;
-  `,
-  sm: css`
-    font-size: 18px;
-  `,
-  md: css`
-    font-size: 20px;
-  `,
-  lg: css`
-    font-size: 24px;
-  `,
-  xl: css`
-    font-size: 32px;
-  `,
-  xxl: css`
-    font-size: 36px;
-  `,
+const sansSerif = "'nunito', sans-serif";
+const mono = "'JetBrains mono', serif";
+
+const size: { [key in Sizes]: string } = {
+  xxs: '1.2rem',
+  xs: '1.5rem',
+  sm: '1.8rem',
+  md: '2.0rem',
+  lg: '2.4rem',
+  xl: '3.2rem',
+  xxl: '3.6rem',
 };
 
-export const fontFamily = {
-  body: css`
-    font-family: 'nunito', sans-serif;
-  `,
-  heading: css`
-    font-family: 'JetBrains mono', serif;
-  `,
-  code: css`
-    font-family: 'JetBrains mono', serif;
-  `,
+const family = {
+  body: sansSerif,
+  heading: mono,
+  code: mono,
+};
+
+const weight = {
+  normal: 'normal',
+  bold: '600',
+  bolder: '800',
+};
+
+export const font = {
+  size,
+  weight,
+  family,
 };

@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
 import { A } from '@/elements/A';
+import { color, font } from '@/constants';
 
 type Props = {
   book: any;
@@ -18,7 +19,8 @@ export const BookModal: React.FC<Props> = ({ book, closeModal }) => {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.9);
+
+    background-color: rgba(${color.bgBase} (0.9));
     backdrop-filter: blur(20px);
 
     & .content-container {
@@ -33,7 +35,7 @@ export const BookModal: React.FC<Props> = ({ book, closeModal }) => {
       position: absolute;
       right: 0;
       top: 0;
-      color: var(--color-punch);
+      color: ${color.fontPrimaryDark};
       font-size: 4rem;
       cursor: pointer;
       margin: 0;
@@ -41,7 +43,7 @@ export const BookModal: React.FC<Props> = ({ book, closeModal }) => {
       line-height: 0;
 
       &:hover {
-        color: var(--color-punch-dark);
+        color: ${color.fontPrimaryDark};
       }
     }
 
@@ -69,14 +71,11 @@ export const BookModal: React.FC<Props> = ({ book, closeModal }) => {
     }
 
     & .title {
-      font-family: var(--font-special);
-      color: black;
-      border: none;
-      font-size: 3rem;
+      ${font.family.body}
+      color: ${color.fontPrimary}
     }
 
     & .author {
-      font-size: 2rem;
       font-weight: 600;
       margin-bottom: 2rem;
     }

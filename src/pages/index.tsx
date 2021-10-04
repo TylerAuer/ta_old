@@ -3,7 +3,7 @@ import { graphql, PageProps } from 'gatsby';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { Box } from '@/elements/Box';
 import { Chip } from '@/components/Chip';
@@ -14,7 +14,7 @@ import { Flex, FlexJustification } from '@/components/Flex';
 import { A } from '@/elements/A';
 import { TruthsAndLies } from '@/components/TruthsAndLies';
 
-import { Icon } from '@/constants/Icon';
+import { Icon } from '@/elements/Icon';
 import { PageBox } from '@/components/PageBox';
 import { Heading } from '@/elements/Heading';
 
@@ -45,40 +45,28 @@ const Home: React.FC<PageProps> = ({ data }: { data: any }) => {
 
 export default Home;
 
-const Bio = () => {
-  const titleCss = css`
-    margin: 0.5rem auto;
-  `;
-
-  const subtitleCss = css`
-    font-family: var(--font-special);
-    font-size: 1.8rem;
-    margin-bottom: ${SPACING.xl};
-  `;
-
-  return (
-    <section id="name-and-bio">
-      <Block>
-        <p>
-          After teaching math for twelve years, I taught myself to code. Now I build social capital
-          systems at <A to="http://nextdoor.com">Nextdoor</A> that motivate users to build community
-          in their neighborhoods.
-        </p>
-        <p>
-          When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
-          playing board games, and long walks on exposed ridgelines.
-        </p>
-      </Block>
-    </section>
-  );
-};
+const Bio = () => (
+  <section id="name-and-bio">
+    <Block>
+      <p>
+        After teaching math for twelve years, I taught myself to code. Now I build social capital
+        systems at <A to="http://nextdoor.com">Nextdoor</A> that motivate users to build community
+        in their neighborhoods.
+      </p>
+      <p>
+        When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
+        playing board games, and long walks on exposed ridgelines.
+      </p>
+    </Block>
+  </section>
+);
 
 const Projects = () => {
   const projectCss = css`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: ${SPACING.xl} 0;
+    margin: ${spacing.xl} 0;
 
     & h3 {
       width: auto;
@@ -232,11 +220,11 @@ const Writing = ({ posts }) => {
   const featAdventurePosts = posts.filter((post) => post.fields.blog === 'adventure');
 
   const blogCss = css`
-    margin-bottom: ${SPACING.xxl};
+    margin-bottom: ${spacing.xxl};
     & h3 {
       display: inline-block;
       vertical-align: center;
-      margin: ${SPACING.md} 0;
+      margin: ${spacing.md} 0;
 
       & a {
         border: none;
@@ -257,7 +245,7 @@ const Writing = ({ posts }) => {
 
   const btnCss = css`
     text-align: center;
-    margin: ${SPACING.xl} 0;
+    margin: ${spacing.xl} 0;
   `;
 
   return (

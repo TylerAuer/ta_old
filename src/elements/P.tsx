@@ -1,13 +1,17 @@
-import * as React from 'react';
-import { css, SerializedStyles } from '@emotion/react';
-import { SPACING } from '@/constants';
+import { ReactNode } from 'react';
+import { css } from '@emotion/react';
+import { spacing } from '@/constants';
 
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 
-export const P: React.FC<HtmlElementPropsType> = ({ sx, id, className, children }) => {
+type PProps = {
+  children: ReactNode;
+} & ElementProps;
+
+export const P = ({ sx, id, className, children }: PProps) => {
   const pCss = css`
     box-sizing: content-box;
-    margin: ${SPACING.lg} auto;
+    margin: ${spacing.lg} auto;
     padding-right: 150px;
     width: 650px;
     max-width: 100%;

@@ -4,7 +4,7 @@ import { Chip } from '@/components/Chip';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { Heading, A } from '@/elements';
 
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 
 type PostPreviewType = {
   frontmatter: {
@@ -67,7 +67,7 @@ export const PostPreview: React.FC<Props> = ({ post, role, hLevel = 2 }) => {
   return (
     <article
       css={css`
-        margin: ${SPACING.xl} 0;
+        margin: ${spacing.xl} 0;
       `}
       role={role}
     >

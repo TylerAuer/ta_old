@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import { Icon } from '@/constants/Icon';
+import { Icon } from '@/elements/Icon';
 
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 import { A } from '@/elements/A';
 
 type Props = {
@@ -12,12 +12,12 @@ type Props = {
 export const IconNavList: React.FC<Props> = ({ includeHomeLink = true }) => {
   const s = css`
     & a {
-      margin: 0 ${SPACING.md};
+      margin: 0 ${spacing.md};
       width: 3rem;
       display: inline-block;
 
       @media only screen and (max-width: 450px) {
-        margin: 0 ${SPACING.md};
+        margin: 0 ${spacing.md};
       }
     }
   `;

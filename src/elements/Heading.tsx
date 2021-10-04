@@ -1,30 +1,30 @@
-import { color, fontFamily, fontSize } from '@/constants';
+import { color, font } from '@/constants';
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/utils';
 import { ReactNode } from 'react';
 
 const h1Css = css`
-  ${fontSize.xxl};
-  ${fontFamily.heading};
-  ${color.font.primary};
+  font-size: ${font.size.xxl};
+  font-family: ${font.family.heading};
+  color: ${color.fontPrimary};
 `;
 
 const h2Css = css`
-  ${fontSize.xl};
-  ${fontFamily.heading};
-  ${color.font.secondary};
+  font-size: ${font.size.xl};
+  font-family: ${font.family.heading};
+  color: ${color.fontSecondary};
 `;
 
 const h3Css = css`
-  ${fontSize.lg};
-  ${fontFamily.heading};
-  ${color.font.base};
+  font-size: ${font.size.lg};
+  font-family: ${font.family.heading};
+  color: ${color.fontBase};
 `;
 
 const h4Css = css`
-  ${fontSize.md};
-  ${fontFamily.heading};
-  ${color.font.secondary};
+  font-size: ${font.size.md};
+  font-family: ${font.family.heading};
+  color: ${color.fontSecondary};
 `;
 
 type HeadingProps = {
