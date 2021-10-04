@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { css } from '@emotion/react';
-import { spacing } from '@/constants';
+import { color, spacing } from '@/constants';
 
 import { ElementProps } from '@/types';
 
@@ -12,10 +12,9 @@ export const P = ({ sx, id, className, children }: PProps) => {
   const pCss = css`
     box-sizing: content-box;
     margin: ${spacing.lg} auto;
-    padding-right: 150px;
-    width: 650px;
     max-width: 100%;
-    ${sx}
+    color: ${color.fontBase};
+    ${sx};
   `;
 
   return (

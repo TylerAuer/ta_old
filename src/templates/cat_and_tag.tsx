@@ -7,7 +7,7 @@ import { GlobalStyles } from '@/components/GlobalStyles';
 import { PostPreview } from '@/components/PostPreview';
 import { A } from '@/elements/A';
 
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 import { PageBox } from '@/components/PageBox';
 
 export default ({ data, pageContext }) => {
@@ -48,7 +48,7 @@ export default ({ data, pageContext }) => {
           <Box
             css={css`
               border-bottom: 3px solid var(--color-punch);
-              padding-bottom: ${SPACING.xxl};
+              padding-bottom: ${spacing.xxl};
             `}
           >
             <header>

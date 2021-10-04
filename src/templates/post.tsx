@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Box } from '@/elements/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 import { Chip } from '@/components/Chip';
 import PostProvider from '@/components/PostProvider';
 import { PageBox } from '@/components/PageBox';
@@ -15,12 +15,12 @@ const SUBTITLE_CSS = css`
   color: #242424;
   font-family: var(--font-special);
   font-weight: bold;
-  margin: ${SPACING.lg} inherit;
+  margin: ${spacing.lg} inherit;
 `;
 
 const TitleAndSubtitle = ({ title, subtitle }) => {
   return (
-    <Box id="title-and-subtitle" vMargin={SPACING.lg}>
+    <Box id="title-and-subtitle" vMargin={spacing.lg}>
       <Heading level={1} id="title">
         {title}
       </Heading>
@@ -38,7 +38,7 @@ const Tags = ({ tags, blog }) => {
   if (!tags || !tags?.length) return null;
 
   return (
-    <Box id="post-tags" vMargin={SPACING.lg}>
+    <Box id="post-tags" vMargin={spacing.lg}>
       {tags.map((tag: string) => {
         const to = `/${blog}/tag/${tag.toLowerCase()}`;
         return (
@@ -84,7 +84,7 @@ const PostMeta = ({ blog, category, date, update }) => {
   `;
 
   return (
-    <Box vMargin={SPACING.xl} sx={container} id="post-meta">
+    <Box vMargin={spacing.xl} sx={container} id="post-meta">
       {/* <div>
         <span css={keyStyle}>By</span> Tyler Auer
       </div> */}

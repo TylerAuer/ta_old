@@ -20,6 +20,7 @@ const blueGrey = '#9a9bad';
 const lightGrey = '#fcfcfc';
 // const lightGreyless = 'rgb(252, 252, 252)';
 // const lightGreyleast = 'rgb(252, 252, 252)';
+const lightGreyTransparent = (opacity: number) => `rgba(252, 252, 252, ${opacity})`;
 
 // const pinkest = '#da4167';
 // const pinker = '#da4167';
@@ -64,6 +65,7 @@ const bg = {
   bgBase: lightGrey,
   bgBaseDark: black,
   bgPrimary: pinkless,
+  bgBaseTransparent: lightGreyTransparent,
 };
 
 const border = {

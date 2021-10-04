@@ -3,21 +3,20 @@ import { Box } from '@/elements/Box';
 
 import { GenreFilterToggleStateType, GenresEnum } from '@/types';
 import { Flex, FlexJustification } from '../components/Flex';
-import { spacing } from '@/constants';
 
-type Props = {
+type BookshelfFilterProps = {
   toggleFilter: (filter: GenresEnum) => void;
   resetFilters: () => void;
   filterStates: GenreFilterToggleStateType;
   genresWithEnoughUses: GenresEnum[];
 };
 
-export const BookshelfFilters: React.FC<Props> = ({
+export const BookshelfFilters = ({
   toggleFilter,
   resetFilters,
   filterStates,
   genresWithEnoughUses,
-}) => {
+}: BookshelfFilterProps) => {
   const btns = Object.keys(filterStates).map((genre) => {
     if (genresWithEnoughUses.includes(GenresEnum[genre]))
       return (
@@ -31,7 +30,7 @@ export const BookshelfFilters: React.FC<Props> = ({
   });
 
   return (
-    <Box vMargin={spacing.xl}>
+    <Box vMargin="xl">
       <Flex flex={FlexJustification.center}>{btns}</Flex>
     </Box>
   );
