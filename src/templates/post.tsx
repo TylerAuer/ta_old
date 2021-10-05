@@ -6,7 +6,7 @@ import { Box } from '@/elements/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { css } from '@emotion/react';
 import { spacing } from '@/constants';
-import { Chip } from '@/components/Chip';
+import { Chip } from '@/elements/Chip';
 import PostProvider from '@/components/PostProvider';
 import { PageBox } from '@/components/PageBox';
 import { Heading } from '@/elements/Heading';

@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { ElementProps } from '@/types';
 
 import { A } from '@/elements/A';
+import { color, font } from '@/constants';
 
 type Props = {
   to: string;
@@ -13,11 +14,11 @@ export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
     padding: 2px 1rem 0 1rem;
     display: inline-block;
     border: none;
-    background: var(--color-punch-bright);
+    background: ${color.bgPrimary};
     border-radius: 3px;
     font-size: 1.2rem;
-    color: var(--color-text-on-punch);
-    font-family: var(--font-special);
+    color: ${color.fontBase};
+    font-family: ${font.family.chip};
     cursor: pointer;
     transition: all 0.2s;
     font-weight: 400;
@@ -27,7 +28,7 @@ export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
     }
 
     &:hover {
-      background: var(--color-punch-bg);
+      background: ${color.bgPrimaryHover};
       color: black;
     }
 

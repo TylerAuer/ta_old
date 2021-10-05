@@ -5,7 +5,7 @@ import { Box } from '@/elements/Box';
 import { Icon } from '@/elements/Icon';
 import { css } from '@emotion/react';
 import { ReactNode } from 'react';
-import { Chip } from '../Chip';
+import { Chip } from '../../elements/Chip';
 import { Flex, FlexJustification } from '../Flex';
 import { IconType } from '@/elements/Icon';
 

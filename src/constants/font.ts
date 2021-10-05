@@ -17,6 +17,7 @@ const family = {
   body: sansSerif,
   heading: mono,
   code: mono,
+  chip: mono,
 };
 
 const weight = {

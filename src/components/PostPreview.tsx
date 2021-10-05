@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import { Chip } from '@/components/Chip';
+import { Chip } from '@/elements/Chip';
 import { Flex, FlexJustification } from '@/components/Flex';
 import { Heading, A } from '@/elements';
 

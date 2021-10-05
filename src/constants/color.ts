@@ -23,8 +23,9 @@ const lightGrey = '#fcfcfc';
 const lightGreyTransparent = (opacity: number) => `rgba(252, 252, 252, ${opacity})`;
 
 // const pinkest = '#da4167';
-// const pinker = '#da4167';
+const pinkDark = '#ba2348';
 const pink = '#da4167';
+const pinkDim = '#ff93b0';
 const pinkless = 'rgba(255, 175, 196, 0.7)';
 // const pinkleast = 'rgba(255, 175, 196, 0.7)';
 
@@ -67,6 +68,7 @@ const bg = {
   bgBase: lightGrey,
   bgBaseDark: black,
   bgPrimary: pinkless,
+  bgPrimaryHover: pinkDim,
   bgBaseTransparent: lightGreyTransparent,
 };
 
