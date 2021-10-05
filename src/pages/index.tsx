@@ -1,13 +1,7 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
 import { Helmet } from 'react-helmet';
-
-import { spacing } from '@/constants';
 import { GlobalStyles } from '@/components/GlobalStyles';
-import { Box } from '@/elements/Box';
-import { PostPreview } from '@/components/PostPreview';
-import { TruthsAndLies } from '@/components/TruthsAndLies';
-
 import { PageBox } from '@/components/PageBox';
 import { Projects } from '@/components/landing_page/Projects';
 import { Bio } from '@/components/landing_page/Bio';
