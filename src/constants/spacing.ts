@@ -8,6 +8,7 @@ export const spacing = {
   xl: '16px',
   xxl: '20px',
   xxxl: '24px',
-  xxxxl: '28px',
-  xxxxxl: '32px',
+  huge: '30px',
+  huger: '40px',
+  hugest: '60px',
 };

@@ -6,17 +6,16 @@ import { Helmet } from 'react-helmet';
 import { spacing } from '@/constants';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { Box } from '@/elements/Box';
-import { Chip } from '@/components/Chip';
 import { Button } from '@/components/Button';
 import { PostPreview } from '@/components/PostPreview';
 import { Block } from '@/components/Block';
-import { Flex, FlexJustification } from '@/components/Flex';
 import { A } from '@/elements/A';
 import { TruthsAndLies } from '@/components/TruthsAndLies';
 
 import { Icon } from '@/elements/Icon';
 import { PageBox } from '@/components/PageBox';
 import { Heading } from '@/elements/Heading';
+import { Projects } from '@/components/index/Projects';
 
 // TODO: Figure out how to get this component to recognize data.allMdx
 // currently the "data: any" just ignores it
@@ -60,150 +59,6 @@ const Bio = () => (
     </Block>
   </section>
 );
-
-const Projects = () => {
-  const projectCss = css`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: ${spacing.xl} 0;
-
-    & h3 {
-      width: auto;
-      margin: 0.5rem 1.5rem 0.5rem 0;
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    & .icon {
-      width: 5rem;
-      flex-shrink: 0;
-      margin-left: 3rem;
-
-      & svg {
-        fill: var(--color-punch);
-      }
-    }
-  `;
-
-  const chipCss = css`
-    padding: 3px 1rem 2px 1rem;
-  `;
-
-  return (
-    <section role="list" id="projects">
-      <Heading level={2}>Projects</Heading>
-      <Box role="listitem">
-        <div css={projectCss}>
-          <div>
-            <Flex flex={FlexJustification.start}>
-              <Heading level={3}>Bad Calculators</Heading>
-              <div>
-                <Chip sx={chipCss} to="https://www.badcalculators.com/">
-                  Live
-                </Chip>
-                <Chip sx={chipCss} to="https://github.com/TylerAuer/bad-calculators">
-                  Source
-                </Chip>
-              </div>
-            </Flex>
-            <p>
-              Mathy puzzles on pitiful, miserable calculators. These brain melters are addictive:
-              ~5K users have amassed over 150k puzzle attempts. Bring a pencil (or a BFS algorithm).
-            </p>
-          </div>
-          <div className="icon">
-            <Icon icon="calculator" />
-          </div>
-        </div>
-      </Box>
-      <Box role="listitem">
-        <div css={projectCss}>
-          <div>
-            <Flex flex={FlexJustification.start}>
-              <Heading level={3}>Super Stupid Props</Heading>
-              <div>
-                <Chip
-                  sx={chipCss}
-                  to="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform"
-                >
-                  Sign Up
-                </Chip>
-                <Chip sx={chipCss} to="https://github.com/TylerAuer/super-bowl-props-lv">
-                  Source
-                </Chip>
-              </div>
-            </Flex>
-            <p>
-              A Super Bowl props game where players optionally contribute to a community pot donated
-              to a charity of the winner's choosing. In 2021 we donated $1,568 to the Pancreatic
-              Cancer Action Network!{' '}
-              <A to="https://docs.google.com/forms/d/e/1FAIpQLSddqaaSxbJne8yJ7XNdAsxFPC68cmjq2aHG6IpHRqRmZKnYAg/viewform">
-                Sign up
-              </A>{' '}
-              to play next year; donations optional.
-            </p>
-          </div>
-          <div className="icon">
-            <Icon icon="football" />
-          </div>
-        </div>
-      </Box>
-
-      <Box role="listitem">
-        <div css={projectCss}>
-          <div>
-            <Flex flex={FlexJustification.start}>
-              <Heading level={3}>Fruit Matrix</Heading>
-              <div>
-                <Chip sx={chipCss} to="https://fruit.tylerauer.com">
-                  Live
-                </Chip>
-                <Chip sx={chipCss} to="https://fruit.tylerauer.com/#/data">
-                  Data
-                </Chip>
-                <Chip sx={chipCss} to="https://github.com/TylerAuer/fruit">
-                  Source
-                </Chip>
-              </div>
-            </Flex>
-            <p>
-              Drag-and-drop fruit on a two-axis graph to rate each's tastiness and ease of eating.
-              Submit your ratings and get hit with a smorgasbord of unnecessarily involved{' '}
-              <A to="https://fruit.tylerauer.com/#/data/#histograms">charts</A> aggregating every
-              rating the site has ever seen.
-            </p>
-          </div>
-          <div className="icon">
-            <Icon icon="fruit" />
-          </div>
-        </div>
-      </Box>
-
-      <Box role="listitem">
-        <div css={projectCss}>
-          <div>
-            <Flex flex={FlexJustification.start}>
-              <Heading level={3}>Bookshelf</Heading>
-              <div>
-                <Chip sx={chipCss} to="/bookshelf">
-                  Live
-                </Chip>
-              </div>
-            </Flex>
-            <p>
-              A big 'ol pile of my favorite books presented in a slick masonry grid with filters for
-              themes and genres.
-            </p>
-          </div>
-          <div className="icon">
-            <Icon icon="book" />
-          </div>
-        </div>
-      </Box>
-    </section>
-  );
-};
 
 const BlogWithFeatPosts = ({ posts }) => {
   return (

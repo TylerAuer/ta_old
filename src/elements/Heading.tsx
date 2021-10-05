@@ -12,7 +12,7 @@ const h1Css = css`
   font-size: ${font.size.xxl};
   font-family: ${font.family.heading};
   color: ${color.fontPrimary};
-  margin: ${spacing.lg} 0;
+  margin: ${spacing.xl} 0;
 `;
 
 const h2Css = css`
@@ -20,14 +20,14 @@ const h2Css = css`
   font-size: ${font.size.xl};
   font-family: ${font.family.heading};
   color: ${color.fontSecondary};
-  margin: ${spacing.lg} 0;
+  margin: ${spacing.huge} 0;
 `;
 
 const h3Css = css`
   ${hCss}
   font-size: ${font.size.lg};
   font-family: ${font.family.heading};
-  color: ${color.fontBase};
+  color: ${color.fontPrimary};
   margin: ${spacing.md} 0;
 `;
 

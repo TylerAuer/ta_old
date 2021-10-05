@@ -4,7 +4,7 @@ import { SerializedStyles } from '@emotion/serialize';
 const blackest = 'black';
 //const blacker =
 const black = '#252638';
-// const blackless
+const blackless = '#32292f';
 // const blackleast
 
 // const greyest = '#434343';
@@ -31,6 +31,8 @@ const pinkless = 'rgba(255, 175, 196, 0.7)';
 const redPink = '#ba2348';
 
 const blue = '#4361ee';
+
+const plum = '#731C56';
 
 // --color-punch-soft: rgba(255, 175, 196, 0.7);
 // --color-punch-bright: #ffafc4;
@@ -74,6 +76,7 @@ const border = {
 };
 
 export const color = {
+  icon: pink,
   ...font,
   ...bg,
   ...border,
