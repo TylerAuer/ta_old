@@ -37,6 +37,14 @@ const globalStyles = css`
   }
 
   body {
+    font-size: ${font.size.sm};
+    line-height: 2;
+    max-width: 95%;
+    margin: 0 auto;
+    color: ${color.fontBase};
+  }
+
+  /* body {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2;
@@ -100,6 +108,7 @@ const globalStyles = css`
     margin: 0 3px 0 1px;
     font-weight: bold;
   }
+   */
 
   // Used for accessibility
   .visible-hidden {

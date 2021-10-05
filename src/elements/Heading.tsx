@@ -1,4 +1,4 @@
-import { color, font } from '@/constants';
+import { color, font, spacing } from '@/constants';
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/utils';
 import { ReactNode } from 'react';
@@ -7,6 +7,7 @@ const h1Css = css`
   font-size: ${font.size.xxl};
   font-family: ${font.family.heading};
   color: ${color.fontPrimary};
+  margin: ${spacing.lg} 0;
 `;
 
 const h2Css = css`
