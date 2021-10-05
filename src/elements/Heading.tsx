@@ -3,7 +3,12 @@ import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/utils';
 import { ReactNode } from 'react';
 
+const hCss = css`
+  line-height: 1.4;
+`;
+
 const h1Css = css`
+  ${hCss}
   font-size: ${font.size.xxl};
   font-family: ${font.family.heading};
   color: ${color.fontPrimary};
@@ -11,21 +16,27 @@ const h1Css = css`
 `;
 
 const h2Css = css`
+  ${hCss}
   font-size: ${font.size.xl};
   font-family: ${font.family.heading};
   color: ${color.fontSecondary};
+  margin: ${spacing.lg} 0;
 `;
 
 const h3Css = css`
+  ${hCss}
   font-size: ${font.size.lg};
   font-family: ${font.family.heading};
   color: ${color.fontBase};
+  margin: ${spacing.md} 0;
 `;
 
 const h4Css = css`
+  ${hCss}
   font-size: ${font.size.md};
   font-family: ${font.family.heading};
   color: ${color.fontSecondary};
+  margin: ${spacing.md} 0;
 `;
 
 type HeadingProps = {

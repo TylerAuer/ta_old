@@ -9,8 +9,8 @@ const size: { [key in Sizes]: string } = {
   sm: '1.8rem',
   md: '2.0rem',
   lg: '2.4rem',
-  xl: '3.2rem',
-  xxl: '3.6rem',
+  xl: '2.8rem',
+  xxl: '3.2rem',
 };
 
 const family = {
