@@ -16,6 +16,7 @@ import { Icon } from '@/elements/Icon';
 import { PageBox } from '@/components/PageBox';
 import { Heading } from '@/elements/Heading';
 import { Projects } from '@/components/index/Projects';
+import { Bio } from '@/components/index/Bio';
 
 // TODO: Figure out how to get this component to recognize data.allMdx
 // currently the "data: any" just ignores it
@@ -43,22 +44,6 @@ const Home: React.FC<PageProps> = ({ data }: { data: any }) => {
 };
 
 export default Home;
-
-const Bio = () => (
-  <section id="name-and-bio">
-    <Block>
-      <p>
-        After teaching math for twelve years, I taught myself to code. Now I build social capital
-        systems at <A to="http://nextdoor.com">Nextdoor</A> that motivate users to build community
-        in their neighborhoods.
-      </p>
-      <p>
-        When not staring at a screen I enjoy reading sci-fi and fantasy series, making puzzles,
-        playing board games, and long walks on exposed ridgelines.
-      </p>
-    </Block>
-  </section>
-);
 
 const BlogWithFeatPosts = ({ posts }) => {
   return (
