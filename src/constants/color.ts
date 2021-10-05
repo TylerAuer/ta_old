@@ -1,26 +1,18 @@
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/serialize';
 
-const blackest = 'black';
-//const blacker =
-const black = '#252638';
+const blackFull = 'black';
+const blackNear = '#252638';
 const blackless = '#32292f';
-// const blackleast
 
-// const greyest = '#434343';
-// const greyer = '#434343';
-const grey = '#434343';
-// const greyless = '#434343';
-// const greyleast = '#434343';
-
-const blueGrey = '#9a9bad';
+const greyDark = '#434343';
+const greyBlue = '#9a9bad';
+const greyMedium = '#C0C0C0';
+const greyLight = '#fcfcfc';
+const greyLightTransparent = (opacity: number) => `rgba(252, 252, 252, ${opacity})`;
 
 // const lightGreyest = 'rgb(252, 252, 252)';
 // const lightGreyer = '#ebebeb';
-const lightGrey = '#fcfcfc';
-// const lightGreyless = 'rgb(252, 252, 252)';
-// const lightGreyleast = 'rgb(252, 252, 252)';
-const lightGreyTransparent = (opacity: number) => `rgba(252, 252, 252, ${opacity})`;
 
 // const pinkest = '#da4167';
 const pinkDark = '#ba2348';
@@ -56,20 +48,20 @@ const plum = '#731C56';
 // --color-grey-bg-dark: #2b2b2b;
 
 const font = {
-  fontBase: grey,
-  fontBaseDark: black,
-  fontBaseLight: blueGrey,
+  fontBase: greyDark,
+  fontBaseDark: blackNear,
+  fontBaseLight: greyBlue,
   fontPrimary: pink,
   fontPrimaryDark: redPink,
   fontSecondary: blue,
 };
 
 const bg = {
-  bgBase: lightGrey,
-  bgBaseDark: black,
+  bgBase: greyLight,
+  bgBaseHover: greyMedium,
+  bgBaseTransparent: greyLightTransparent,
   bgPrimary: pinkless,
   bgPrimaryHover: pinkDim,
-  bgBaseTransparent: lightGreyTransparent,
 };
 
 const border = {

@@ -1,15 +1,16 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { css } from '@emotion/react';
 import { ElementProps } from '@/types';
 
 import { A } from '@/elements/A';
 import { color, font } from '@/constants';
 
-type Props = {
+type ChipProps = {
   to: string;
+  children: ReactNode;
 } & ElementProps;
 
-export const Chip: React.FC<Props> = ({ children, to, sx, id, className }) => {
+export const Chip = ({ children, to, sx, id, className }: ChipProps) => {
   const s = css`
     padding: 2px 1rem 0 1rem;
     display: inline-block;

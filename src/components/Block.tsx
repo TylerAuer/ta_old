@@ -12,7 +12,7 @@ export const Block: React.FC<Props> = ({ children, sx, className, id, style = 'n
   const s = css`
     padding: 1rem 2rem;
     border: none;
-    color: ${color.bgBaseDark};
+    color: ${color.fontBaseDark};
     border-radius: 5px;
     border-left: 10px solid ${color.borderPrimary};
     font-size: 1.6rem;
