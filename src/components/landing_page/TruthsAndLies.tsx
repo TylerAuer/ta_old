@@ -63,24 +63,12 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
     Math.min(shuffledStartIdx + count, shuffledIds.length),
   );
 
-  const Score = useCallback(() => {
-    if (!rightCount && !wrongCount) return null;
-
-    return (
-      <div css={scoreCss}>
-        {rightCount} / {rightCount + wrongCount}
-      </div>
-    );
-  }, [rightCount, wrongCount]);
-
-  const onRight = (shuffleIdx: number) => {
+  const onRight = () => {
     setRightCount((prev) => prev + 1);
-    truthsAndLies[shuffledIds[shuffleIdx]].answer = 'right';
   };
 
-  const onWrong = (shuffleIdx: number) => {
+  const onWrong = () => {
     setWrongCount((prev) => prev + 1);
-    truthsAndLies[shuffledIds[shuffleIdx]].answer = 'wrong';
   };
 
   // const getMore = () => {
@@ -92,7 +80,11 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
 
   return (
     <div>
-      <HeadingRow level={2} title="Get to know the real me" rightNode={<Score />} />
+      <HeadingRow
+        level={2}
+        title="Get to know the real me"
+        rightNode={<Score rightCount={rightCount} wrongCount={wrongCount} />}
+      />
       <div>
         {currentShuffledIds
           .map((id) => truthsAndLies[id])
@@ -197,5 +189,20 @@ function LiarIcon() {
     >
       😈
     </motion.div>
+  );
+}
+
+type ScoreProps = {
+  rightCount: number;
+  wrongCount: number;
+};
+
+function Score({ rightCount, wrongCount }: ScoreProps) {
+  if (!rightCount && !wrongCount) return null;
+
+  return (
+    <div css={scoreCss}>
+      {rightCount} / {rightCount + wrongCount}
+    </div>
   );
 }
