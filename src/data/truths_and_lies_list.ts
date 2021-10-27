@@ -1,7 +1,9 @@
+type AnsweredStates = 'right' | 'wrong' | 'unanswered';
+
 export type TruthOrLie = {
   statement: string;
   truthyness: boolean;
-  answeredCorrectly?: boolean;
+  answer: AnsweredStates;
   id: number;
 };
 
@@ -41,13 +43,13 @@ const lies = [
   'Tyler prefers spaces',
 ].map((s) => ({ statement: s, truthyness: false }));
 
-const truthsAndLiesList = [...truths, ...lies].map((tol, id) => ({
+const truthsAndLiesList: TruthOrLie[] = [...truths, ...lies].map((tol, id) => ({
   ...tol,
   id,
+  answer: 'unanswered',
 }));
 
 export const truthsAndLies: { [key: number]: TruthOrLie } = {};
-
 truthsAndLiesList.forEach((tol) => {
   truthsAndLies[tol.id] = tol;
 });

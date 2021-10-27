@@ -6,6 +6,9 @@ import { font, spacing } from '@/constants';
 import { HeadingRow } from '@/elements';
 import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
 
+// TODO: Get more ToLs after and answer
+// TODO: Need to figure out how to update the state; maybe the state should live in Right/Wrong component?
+
 const scoreCss = css`
   font-size: ${font.size.md};
 `;
@@ -44,7 +47,9 @@ type TruthsAndLiesProps = {
   count?: number;
 };
 
-const shuffledIds = fisherYatesShuffle(Object.keys(truthsAndLies));
+const shuffledIds = fisherYatesShuffle<number>(
+  Object.keys(truthsAndLies).map((key) => Number(key)),
+);
 
 export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
   const [shuffledStartIdx, setShuffledStartIdx] = useState(0);
@@ -70,12 +75,12 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
 
   const onRight = (shuffleIdx: number) => {
     setRightCount((prev) => prev + 1);
-    truthsAndLies[shuffledIds[shuffleIdx]].answeredCorrectly = true;
+    truthsAndLies[shuffledIds[shuffleIdx]].answer = 'right';
   };
 
   const onWrong = (shuffleIdx: number) => {
     setWrongCount((prev) => prev + 1);
-    truthsAndLies[shuffledIds[shuffleIdx]].answeredCorrectly = false;
+    truthsAndLies[shuffledIds[shuffleIdx]].answer = 'wrong';
   };
 
   // const getMore = () => {
@@ -83,14 +88,21 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
   //   setIndex(newStartIdx);
   // };
 
+  console.log('TOL', truthsAndLies);
+
   return (
     <div>
-      <HeadingRow level={2} title="Get to know me the real me" rightNode={<Score />} />
+      <HeadingRow level={2} title="Get to know the real me" rightNode={<Score />} />
       <div>
         {currentShuffledIds
           .map((id) => truthsAndLies[id])
           .map((truthOrLie) => (
-            <TruthOrLieRow truthOrLie={truthOrLie} onRight={onRight} onWrong={onWrong} />
+            <TruthOrLieRow
+              key={truthOrLie.id}
+              truthOrLie={truthOrLie}
+              onRight={onRight}
+              onWrong={onWrong}
+            />
           ))}
       </div>
     </div>
@@ -119,20 +131,35 @@ type TruthOrLieChooserProps = {
 };
 
 function TruthOrLieChooser({ onRight, onWrong, truthOrLie }: TruthOrLieChooserProps) {
+  const hasBeenAnswered = truthOrLie.answer !== 'unanswered';
+
   const handleChoice = (guess: boolean) => {
     const { id } = truthOrLie;
     guess === truthOrLie.truthyness ? onRight(id) : onWrong(id);
   };
 
-  return (
+  const TruthButton = () => (
+    <button onClick={() => handleChoice(true)} css={buttonCss}>
+      <TruthIcon />
+    </button>
+  );
+
+  const LieButton = () => (
+    <button onClick={() => handleChoice(false)} css={buttonCss}>
+      <LiarIcon />
+    </button>
+  );
+
+  return hasBeenAnswered ? (
     <div css={chooserContainerCss}>
-      <button onClick={() => handleChoice(true)} css={buttonCss}>
-        <TruthIcon />
-      </button>
+      {truthOrLie.truthyness === true && <TruthIcon />}
+      {truthOrLie.truthyness === false && <LiarIcon />}
+    </div>
+  ) : (
+    <div css={chooserContainerCss}>
+      <TruthButton />
       <span css={orCss}>/</span>
-      <button onClick={() => handleChoice(false)} css={buttonCss}>
-        <LiarIcon />
-      </button>
+      <LieButton />
     </div>
   );
 }
