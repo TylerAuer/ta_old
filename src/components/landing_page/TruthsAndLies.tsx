@@ -58,14 +58,15 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
     Math.min(shuffledStartIdx + count, shuffledIds.length),
   );
 
-  const Score = useCallback(
-    () => (
+  const Score = useCallback(() => {
+    if (!rightCount && !wrongCount) return null;
+
+    return (
       <div css={scoreCss}>
         {rightCount} / {rightCount + wrongCount}
       </div>
-    ),
-    [rightCount, wrongCount],
-  );
+    );
+  }, [rightCount, wrongCount]);
 
   const onRight = (shuffleIdx: number) => {
     setRightCount((prev) => prev + 1);
@@ -84,7 +85,7 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
 
   return (
     <div>
-      <HeadingRow level={2} title="Truth Or Lie?" rightNode={<Score />} />
+      <HeadingRow level={2} title="Get to know me the real me" rightNode={<Score />} />
       <div>
         {currentShuffledIds
           .map((id) => truthsAndLies[id])
