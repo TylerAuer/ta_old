@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
 
 export enum FlexJustification {
   split = 'space-between',
@@ -15,7 +15,7 @@ type Props = {
   direction?: 'rows' | 'col';
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
   align?: 'center';
-} & HtmlElementPropsType;
+} & ElementProps;
 
 export const Flex: React.FC<Props> = ({
   children,

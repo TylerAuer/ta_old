@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 
-import { TruthOrLie, truthsAndLiesList } from '../data/truths_and_lies_list';
-import { Box } from './Box';
+import { TruthOrLie, truthsAndLiesList } from '../../data/truths_and_lies_list';
+import { Box } from '../../elements/Box';
 
 const tolRowCss = css`
   display: flex;

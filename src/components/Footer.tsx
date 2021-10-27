@@ -1,8 +1,7 @@
-import React from 'react';
 import { css } from '@emotion/react';
 
-import { Box } from '@/components/Box';
-import { SPACING } from '@/constants';
+import { Box } from '@/elements/Box';
+import { spacing } from '@/constants';
 import { IconNavList } from './IconNavList';
 
 type PropsType = {
@@ -42,7 +41,7 @@ export function Footer({ includeHomeLink = true }: PropsType) {
 
   return (
     <footer>
-      <Box sx={s} vMargin={SPACING.xxxl}>
+      <Box sx={s} vMargin={'xxxl'}>
         <div>
           <div className="name">Tyler Auer</div>
           <div className="desc">Teacher turned developer</div>

@@ -1,29 +1,31 @@
-import { StyleConstantObject } from '@/types';
 import { css } from '@emotion/react';
+import { SerializedStyles } from '@emotion/serialize';
 
-const font: StyleConstantObject = {
-  standard: css`
-    color: #434343;
-  `,
-  dark: css`
-    color: #252638;
-  `,
-  light: css`
-    color: #9a9bad;
-  `,
-  blue: css`
-    color: #4361ee;
-  `,
-  red: css`
-    color: #da4167;
-  `,
-};
+const blackFull = 'black';
+const blackNear = '#252638';
+const blackless = '#32292f';
 
-export const color = {
-  font,
-};
+const greyDark = '#434343';
+const greyBlue = '#9a9bad';
+const greyMedium = '#C0C0C0';
+const greyLight = '#fcfcfc';
+const greyLightTransparent = (opacity: number) => `rgba(252, 252, 252, ${opacity})`;
 
-// --color-page-bg: rgb(252, 252, 252);
+// const lightGreyest = 'rgb(252, 252, 252)';
+// const lightGreyer = '#ebebeb';
+
+// const pinkest = '#da4167';
+const pinkDark = '#ba2348';
+const pink = '#da4167';
+const pinkDim = '#ff93b0';
+const pinkless = 'rgba(255, 175, 196, 0.7)';
+// const pinkleast = 'rgba(255, 175, 196, 0.7)';
+
+const redPink = '#ba2348';
+
+const blue = '#4361ee';
+
+const plum = '#731C56';
 
 // --color-punch-soft: rgba(255, 175, 196, 0.7);
 // --color-punch-bright: #ffafc4;
@@ -44,3 +46,32 @@ export const color = {
 // --color-grey-bg: #ebebeb;
 // --color-grey-bg-medium: #c0c0c0;
 // --color-grey-bg-dark: #2b2b2b;
+
+const font = {
+  fontBase: greyDark,
+  fontBaseDark: blackNear,
+  fontBaseLight: greyBlue,
+  fontPrimary: pink,
+  fontPrimaryDark: redPink,
+  fontSecondary: blue,
+};
+
+const bg = {
+  bgBase: greyLight,
+  bgBaseHover: greyMedium,
+  bgBaseTransparent: greyLightTransparent,
+  bgPrimary: pinkless,
+  bgPrimaryHover: pinkDim,
+};
+
+const border = {
+  borderPrimary: pink,
+  borderSecondary: blue,
+};
+
+export const color = {
+  icon: pink,
+  ...font,
+  ...bg,
+  ...border,
+};

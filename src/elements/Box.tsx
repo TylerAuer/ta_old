@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import { HtmlElementPropsType } from '@/types';
-import { SPACING } from '@/constants';
+import { ElementProps } from '@/types';
+import { spacing } from '@/constants';
 
 const wideCss = css`
   width: 1000px;
@@ -27,9 +27,9 @@ const widthOptions = {
 
 type Props = {
   width?: Width;
-  vMargin?: SPACING;
+  vMargin?: keyof typeof spacing;
   role?: string;
-} & HtmlElementPropsType;
+} & ElementProps;
 
 export const Box: React.FC<Props> = ({
   children,
@@ -45,7 +45,7 @@ export const Box: React.FC<Props> = ({
     ${widthOptions[width]}
 
     max-width: 100%;
-    margin: ${vMargin ?? 0} auto;
+    margin: ${spacing[vMargin] ?? 0} auto;
 
     // Pass along any styling
     ${sx}

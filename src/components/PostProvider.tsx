@@ -1,16 +1,16 @@
 import { Fragment } from 'react';
-import { MDXProvider } from '@mdx-js/react';
+import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 import { SyntaxHighlighter } from '@/components/SyntaxHighlighter';
-import { P } from '@/components/P';
-import { A } from '@/components/A';
+import { P } from '@/elements/P';
+import { A } from '@/elements/A';
 import { FootnoteList } from '@/components/FootnotesList';
 import { H1, H2, H3, H4 } from '@/elements/Heading';
 
-const components = {
+const components: MDXProviderComponents = {
   // Target elements based on HTML tags
   pre: SyntaxHighlighter,
   p: P,
-  a: A,
+  a: (props) => <A to={props.href} children={props.children} />,
   h1: H1,
   h2: H2,
   h3: H3,

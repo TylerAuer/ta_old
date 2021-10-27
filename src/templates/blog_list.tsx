@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { PageBox } from '@/components/PageBox';
 import { PostPreview } from '@/components/PostPreview';
@@ -39,7 +39,7 @@ export default ({ data, pageContext }) => {
           <Box>
             <section>
               {posts.map((p) => (
-                <PostPreview post={p} key={p.path} />
+                <PostPreview hLevel={3} post={p} key={p.path} />
               ))}
             </section>
           </Box>

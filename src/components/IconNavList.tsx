@@ -1,9 +1,9 @@
-import { Link } from 'gatsby';
 import { css } from '@emotion/react';
 
-import { Icon } from '@/components/Icon';
+import { Icon } from '@/elements/Icon';
 
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
+import { A } from '@/elements/A';
 
 type Props = {
   includeHomeLink?: boolean;
@@ -12,12 +12,12 @@ type Props = {
 export const IconNavList: React.FC<Props> = ({ includeHomeLink = true }) => {
   const s = css`
     & a {
-      margin: 0 ${SPACING.md};
+      margin: 0 ${spacing.md};
       width: 3rem;
       display: inline-block;
 
       @media only screen and (max-width: 450px) {
-        margin: 0 ${SPACING.md};
+        margin: 0 ${spacing.md};
       }
     }
   `;
@@ -25,31 +25,31 @@ export const IconNavList: React.FC<Props> = ({ includeHomeLink = true }) => {
   return (
     <nav css={s}>
       {includeHomeLink && (
-        <Link to="/">
+        <A to="/">
           <span className="visible-hidden">Home</span>
           <Icon icon="home" />
-        </Link>
+        </A>
       )}
-      <Link to="/code">
+      <A to="/code">
         <span className="visible-hidden">Code blog</span>
         <Icon icon="code" />
-      </Link>
-      <Link to="/adventure">
+      </A>
+      <A to="/adventure">
         <span className="visible-hidden">Adventure blog</span>
         <Icon icon="mountains" />
-      </Link>
-      <Link to="/bookshelf">
+      </A>
+      <A to="/bookshelf">
         <span className="visible-hidden">Bookshelf</span>
         <Icon icon="book" />
-      </Link>
-      <a href="https://twitter.com/TylerAuer">
+      </A>
+      <A to="https://twitter.com/TylerAuer">
         <span className="visible-hidden">Twitter</span>
         <Icon icon="twitter" />
-      </a>
-      <a href="https://github.com/TylerAuer">
+      </A>
+      <A to="https://github.com/TylerAuer">
         <span className="visible-hidden">GitHub</span>
         <Icon icon="github" />
-      </a>
+      </A>
     </nav>
   );
 };

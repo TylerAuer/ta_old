@@ -3,16 +3,22 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/react';
 
 import { BookshelfFilters } from '@/bookshelf/BookshelfFilters';
-import { BookshelfMasonryGrid } from '@/bookshelf/BookshelfMasonryGrid';
+import { BookshelfGrid } from '@/bookshelf/BookshelfGrid';
 import { IconNavList } from '@/components/IconNavList';
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 
 import { fisherYatesShuffle } from '../utils/fisher_yates_shuffle';
 import { GenreFilterToggleStateType, GenresEnum, BookFromGQLType } from '@/types';
 import { Heading } from '@/elements/Heading';
+import { P } from '@/elements/P';
+import { font } from '@/constants';
 
 const initialToggleState = generateInitialActiveFilterState();
 const MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY = 5;
+
+const INTRO_SX = css`
+  font-size: ${font.size.sm};
+`;
 
 export const Bookshelf: React.FC = () => {
   const [activeFilters, setActiveFilters] = useState(initialToggleState);
@@ -87,7 +93,7 @@ export const Bookshelf: React.FC = () => {
         filterStates={activeFilters}
         genresWithEnoughUses={genresWithEnoughUses}
       />
-      <BookshelfMasonryGrid activeFilters={activeFilters} books={shuffledBooks} />
+      <BookshelfGrid activeFilters={activeFilters} books={shuffledBooks} />
     </>
   );
 };
@@ -106,15 +112,15 @@ const BookshelfHeader: React.FC = () => {
       <Heading level={1}>Tyler's Bookshelf</Heading>
       <IconNavList includeHomeLink />
       <Box>
-        <p>
+        <P sx={INTRO_SX}>
           I love reading and discussing books. So, it just felt right to throw together a list of
           some of my favorites for others to peruse.
-        </p>
-        <p>
+        </P>
+        <P sx={INTRO_SX}>
           My favorite genres are sci-fi, fantasy, graphic novels, and nonfiction adventure. I read
           around a book a week and am always trying to read more books than my wife in a year. I was
           close in 2020, but she's crushed me every other year.
-        </p>
+        </P>
       </Box>
     </div>
   );

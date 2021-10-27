@@ -1,12 +1,6 @@
 import { SerializedStyles } from '@emotion/react';
 import { ImageDataLike } from 'gatsby-plugin-image';
 
-export type HtmlElementPropsType = {
-  sx?: SerializedStyles;
-  id?: string;
-  className?: string;
-};
-
 export enum GenresEnum {
   'adventure' = 'adventure',
   'best of the best' = 'best of the best',
@@ -60,4 +54,9 @@ export type EndpointJsonFile = {
   errorPages: string[];
 };
 
-export type StyleConstantObject = { [key: string]: SerializedStyles };
+export type ElementProps = {
+  className?: string;
+  id?: string;
+  sx?: SerializedStyles;
+  dataTestId?: string;
+};

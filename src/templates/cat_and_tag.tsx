@@ -2,12 +2,12 @@ import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
-import { Box } from '@/components/Box';
+import { Box } from '@/elements/Box';
 import { GlobalStyles } from '@/components/GlobalStyles';
 import { PostPreview } from '@/components/PostPreview';
-import { A } from '@/components/A';
+import { A } from '@/elements/A';
 
-import { SPACING } from '@/constants';
+import { spacing } from '@/constants';
 import { PageBox } from '@/components/PageBox';
 
 export default ({ data, pageContext }) => {
@@ -48,13 +48,13 @@ export default ({ data, pageContext }) => {
           <Box
             css={css`
               border-bottom: 3px solid var(--color-punch);
-              padding-bottom: ${SPACING.xxl};
+              padding-bottom: ${spacing.xxl};
             `}
           >
             <header>
               <h1>
                 <span css={h1LabelCss}>{label}</span> in{' '}
-                <A sx={blogLinkCss} href={`/${blog}`}>
+                <A sx={blogLinkCss} to={`/${blog}`}>
                   {blog}
                 </A>
               </h1>

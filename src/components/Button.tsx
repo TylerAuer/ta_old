@@ -1,14 +1,15 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { ReactNode } from 'react';
 import { css } from '@emotion/react';
 
-import { HtmlElementPropsType } from '@/types';
+import { ElementProps } from '@/types';
+import { A } from '@/elements/A';
 
-type Props = {
+type ButtonProps = {
   to: string;
-} & HtmlElementPropsType;
+  children: ReactNode;
+} & ElementProps;
 
-export const Button: React.FC<Props> = ({ children, to, sx, id, className }) => {
+export const Button = ({ children, to, sx, id, className }: ButtonProps) => {
   const s = css`
     padding: 1rem 2rem;
     border: none;
@@ -31,8 +32,8 @@ export const Button: React.FC<Props> = ({ children, to, sx, id, className }) => 
   `;
 
   return (
-    <Link id={id} className={className} css={s} to={to}>
+    <A id={id} className={className} css={s} to={to}>
       {children}
-    </Link>
+    </A>
   );
 };

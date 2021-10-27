@@ -9,12 +9,12 @@ import { useWindowWidth } from '@/hooks/useWindowWidth';
 
 import { GenreFilterToggleStateType, BookFromGQLType } from '@/types';
 
-type Props = {
+type BookshelfGridProps = {
   activeFilters: GenreFilterToggleStateType;
   books: BookFromGQLType[];
 };
 
-export const BookshelfMasonryGrid: React.FC<Props> = ({ activeFilters, books }) => {
+export const BookshelfGrid = ({ activeFilters, books }: BookshelfGridProps) => {
   const [modalBook, setModalBook] = useState(null);
   const windowWidth = useWindowWidth();
 
