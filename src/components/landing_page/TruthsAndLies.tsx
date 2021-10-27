@@ -1,10 +1,14 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { css } from '@emotion/react';
-
+import { motion } from 'framer-motion';
 import { TruthOrLie, truthsAndLies } from '../../data/truths_and_lies_list';
 import { font, spacing } from '@/constants';
 import { HeadingRow } from '@/elements';
 import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
+
+const scoreCss = css`
+  font-size: ${font.size.md};
+`;
 
 const tolRowCss = css`
   display: flex;
@@ -25,7 +29,7 @@ const chooserContainerCss = css`
 const buttonCss = css`
   background: none;
   border: none;
-  font-size: ${font.size.xxl};
+  font-size: ${font.size.xl};
   vertical-align: middle;
   cursor: pointer;
 `;
@@ -56,7 +60,7 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
 
   const Score = useCallback(
     () => (
-      <div>
+      <div css={scoreCss}>
         {rightCount} / {rightCount + wrongCount}
       </div>
     ),
@@ -65,13 +69,11 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
 
   const onRight = (shuffleIdx: number) => {
     setRightCount((prev) => prev + 1);
-    alert('Correct!');
     truthsAndLies[shuffledIds[shuffleIdx]].answeredCorrectly = true;
   };
 
   const onWrong = (shuffleIdx: number) => {
     setWrongCount((prev) => prev + 1);
-    alert('Wrong!');
     truthsAndLies[shuffledIds[shuffleIdx]].answeredCorrectly = false;
   };
 
@@ -104,7 +106,7 @@ function TruthOrLieRow({ truthOrLie, onRight, onWrong }: TruthOrLieRowProps) {
   return (
     <div css={tolRowCss} key={truthOrLie.statement}>
       <TruthOrLieChooser truthOrLie={truthOrLie} onRight={onRight} onWrong={onWrong} />
-      <span css={statementCss}>Tyler {truthOrLie.statement}</span>
+      <span css={statementCss}>{truthOrLie.statement}</span>
     </div>
   );
 }
@@ -124,12 +126,48 @@ function TruthOrLieChooser({ onRight, onWrong, truthOrLie }: TruthOrLieChooserPr
   return (
     <div css={chooserContainerCss}>
       <button onClick={() => handleChoice(true)} css={buttonCss}>
-        😇
+        <TruthIcon />
       </button>
       <span css={orCss}>/</span>
       <button onClick={() => handleChoice(false)} css={buttonCss}>
-        👿
+        <LiarIcon />
       </button>
     </div>
+  );
+}
+
+const HOVER_SCALE = 1.4;
+const CLICK_SCALE = 0.9;
+const TRANS_DIST = 4;
+
+function TruthIcon() {
+  return (
+    <motion.div
+      whileHover={{
+        scale: HOVER_SCALE,
+        y: [0, TRANS_DIST, -TRANS_DIST, TRANS_DIST, -TRANS_DIST, 0],
+      }}
+      whileTap={{
+        scale: CLICK_SCALE,
+      }}
+    >
+      😇
+    </motion.div>
+  );
+}
+
+function LiarIcon() {
+  return (
+    <motion.div
+      whileHover={{
+        scale: HOVER_SCALE,
+        x: [0, -TRANS_DIST, TRANS_DIST, -TRANS_DIST, TRANS_DIST, 0],
+      }}
+      whileTap={{
+        scale: CLICK_SCALE,
+      }}
+    >
+      😈
+    </motion.div>
   );
 }
