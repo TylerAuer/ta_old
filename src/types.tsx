@@ -60,3 +60,5 @@ export type ElementProps = {
   sx?: SerializedStyles;
   dataTestId?: string;
 };
+
+export type HeadingLevelsType = 1 | 2 | 3 | 4;

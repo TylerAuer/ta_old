@@ -1,4 +1,5 @@
 import { color, font, spacing } from '@/constants';
+import { HeadingLevelsType } from '@/types';
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/utils';
 import { ReactNode } from 'react';
@@ -41,7 +42,7 @@ const h4Css = css`
 
 type HeadingProps = {
   children: ReactNode;
-  level?: 1 | 2 | 3 | 4;
+  level?: HeadingLevelsType;
   sx?: SerializedStyles;
   id?: string;
   className?: string;
