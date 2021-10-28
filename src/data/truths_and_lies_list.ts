@@ -19,8 +19,7 @@ const truths = [
   'Tyler loves The Beatles',
   'Tyler loves Ratatat',
   'Tyler is lactose-tolerant',
-  "Tyler's favorite prime is 1000000000000066600000000000001",
-  'Tyler prefers tabs',
+  "Tyler's favorite prime is 8675309",
 ].map((s) => ({ statement: s, truthyness: true }));
 
 const lies = [
@@ -34,7 +33,6 @@ const lies = [
   'Tyler can start a fire with just sticks',
   'Tyler loves Phish',
   'Tyler loves Ed Shereen',
-  "Tyler's favorite prime is 8675309",
   'Tyler can dunk a basketball',
   'Tyler prefers spaces',
 ].map((s) => ({ statement: s, truthyness: false }));
