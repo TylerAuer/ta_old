@@ -1,8 +1,9 @@
 // Shuffles list in place
-export function fisherYatesShuffle<T>(list: T[]): T[] {
+export function fisherYatesShuffle<T>(list: T[], returnNewArray: boolean = false): T[] {
   let currentIndex = list.length;
   let temporaryValue: any;
   let randomIndex: number;
+  let arrToReturn: T[] = returnNewArray ? list.slice() : list;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
@@ -11,10 +12,10 @@ export function fisherYatesShuffle<T>(list: T[]): T[] {
     currentIndex -= 1;
 
     // And swap it with the current element.
-    temporaryValue = list[currentIndex];
-    list[currentIndex] = list[randomIndex];
-    list[randomIndex] = temporaryValue;
+    temporaryValue = arrToReturn[currentIndex];
+    arrToReturn[currentIndex] = arrToReturn[randomIndex];
+    arrToReturn[randomIndex] = temporaryValue;
   }
 
-  return list;
+  return arrToReturn;
 }

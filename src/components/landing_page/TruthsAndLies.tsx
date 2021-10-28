@@ -1,10 +1,11 @@
-import { useCallback, useState } from 'react';
+import { useState, Fragment } from 'react';
 import { css } from '@emotion/react';
 import { motion } from 'framer-motion';
-import { TruthOrLie, truthsAndLies } from '../../data/truths_and_lies_list';
+import { TruthOrLie, truthsAndLiesList } from '../../data/truths_and_lies_list';
 import { font, spacing } from '@/constants';
 import { HeadingRow } from '@/elements';
 import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
+import { useLocalState } from '@/hooks/useLocalState';
 
 // TODO: Get more ToLs after and answer
 // TODO: Need to figure out how to update the state; maybe the state should live in Right/Wrong component?
@@ -27,6 +28,7 @@ const statementCss = css`
 const chooserContainerCss = css`
   width: 150px;
   vertical-align: middle;
+  text-align: center;
 `;
 
 const buttonCss = css`
@@ -43,40 +45,19 @@ const orCss = css`
   vertical-align: middle;
 `;
 
-type TruthsAndLiesProps = {
-  count?: number;
-};
+const shuffled = fisherYatesShuffle<TruthOrLie>(truthsAndLiesList, true);
 
-const shuffledIds = fisherYatesShuffle<number>(
-  Object.keys(truthsAndLies).map((key) => Number(key)),
-);
+export const TruthsAndLies = () => {
+  const [showCount, setShowCount] = useState<number>(Math.min(shuffled.length, 3));
+  const [rightCount, setRightCount] = useLocalState<number>('tol_right_count', 0);
+  const [wrongCount, setWrongCount] = useLocalState<number>('tol_wrong_count', 0);
 
-export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
-  const [shuffledStartIdx, setShuffledStartIdx] = useState(0);
-  const shuffledEndIdx = Math.min(shuffledStartIdx + count, shuffledIds.length - 1);
+  const getNextToL = () => setShowCount((prev) => Math.min(prev + 1, shuffled.length));
 
-  const [rightCount, setRightCount] = useState(0);
-  const [wrongCount, setWrongCount] = useState(0);
-
-  const currentShuffledIds = shuffledIds.slice(
-    shuffledStartIdx,
-    Math.min(shuffledStartIdx + count, shuffledIds.length),
-  );
-
-  const onRight = () => {
-    setRightCount((prev) => prev + 1);
+  const handleAnswer = (isRight: boolean) => {
+    isRight ? setRightCount((prev) => prev + 1) : setWrongCount((prev) => prev + 1);
+    getNextToL();
   };
-
-  const onWrong = () => {
-    setWrongCount((prev) => prev + 1);
-  };
-
-  // const getMore = () => {
-  //   const newStartIdx = Math.min(index + count, shuffledIds.length - 1);
-  //   setIndex(newStartIdx);
-  // };
-
-  console.log('TOL', truthsAndLies);
 
   return (
     <div>
@@ -86,48 +67,42 @@ export const TruthsAndLies = ({ count = 3 }: TruthsAndLiesProps) => {
         rightNode={<Score rightCount={rightCount} wrongCount={wrongCount} />}
       />
       <div>
-        {currentShuffledIds
-          .map((id) => truthsAndLies[id])
-          .map((truthOrLie) => (
-            <TruthOrLieRow
-              key={truthOrLie.id}
-              truthOrLie={truthOrLie}
-              onRight={onRight}
-              onWrong={onWrong}
-            />
-          ))}
+        {shuffled.slice(0, showCount).map((tol) => (
+          <TruthOrLieRow key={tol.statement} truthOrLie={tol} handleAnswer={handleAnswer} />
+        ))}
       </div>
     </div>
   );
 };
 
 type TruthOrLieRowProps = {
-  onRight: (id: number) => void;
-  onWrong: (id: number) => void;
+  handleAnswer: (isRight: boolean) => void;
   truthOrLie: TruthOrLie;
 };
 
-function TruthOrLieRow({ truthOrLie, onRight, onWrong }: TruthOrLieRowProps) {
+function TruthOrLieRow({ truthOrLie, handleAnswer }: TruthOrLieRowProps) {
   return (
     <div css={tolRowCss} key={truthOrLie.statement}>
-      <TruthOrLieChooser truthOrLie={truthOrLie} onRight={onRight} onWrong={onWrong} />
+      <TruthOrLieChooser truthOrLie={truthOrLie} handleAnswer={handleAnswer} />
       <span css={statementCss}>{truthOrLie.statement}</span>
     </div>
   );
 }
 
 type TruthOrLieChooserProps = {
-  onRight: (id: number) => void;
-  onWrong: (id: number) => void;
+  handleAnswer: (isRight: boolean) => void;
   truthOrLie: TruthOrLie;
 };
 
-function TruthOrLieChooser({ onRight, onWrong, truthOrLie }: TruthOrLieChooserProps) {
-  const hasBeenAnswered = truthOrLie.answer !== 'unanswered';
+type AnsweredStates = 'right' | 'wrong' | 'unanswered';
+
+function TruthOrLieChooser({ handleAnswer, truthOrLie }: TruthOrLieChooserProps) {
+  const [answer, setAnswer] = useLocalState<AnsweredStates>(truthOrLie.statement, 'unanswered');
 
   const handleChoice = (guess: boolean) => {
-    const { id } = truthOrLie;
-    guess === truthOrLie.truthyness ? onRight(id) : onWrong(id);
+    const answeredCorrectly = guess === truthOrLie.truthyness;
+    handleAnswer(answeredCorrectly);
+    const newVal = setAnswer(answeredCorrectly ? 'right' : 'wrong');
   };
 
   const TruthButton = () => (
@@ -142,17 +117,23 @@ function TruthOrLieChooser({ onRight, onWrong, truthOrLie }: TruthOrLieChooserPr
     </button>
   );
 
-  return hasBeenAnswered ? (
-    <div css={chooserContainerCss}>
-      {truthOrLie.truthyness === true && <TruthIcon />}
-      {truthOrLie.truthyness === false && <LiarIcon />}
-    </div>
-  ) : (
-    <div css={chooserContainerCss}>
+  const Unanswered = () => (
+    <Fragment>
       <TruthButton />
       <span css={orCss}>/</span>
       <LieButton />
-    </div>
+    </Fragment>
+  );
+
+  const Answered = () => (
+    <Fragment>
+      {truthOrLie.truthyness === true && <TruthIcon />}
+      {truthOrLie.truthyness === false && <LiarIcon />}
+    </Fragment>
+  );
+
+  return (
+    <div css={chooserContainerCss}>{answer === 'unanswered' ? <Unanswered /> : <Answered />}</div>
   );
 }
 

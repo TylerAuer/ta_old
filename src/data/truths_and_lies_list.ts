@@ -1,7 +1,6 @@
 export type TruthOrLie = {
   statement: string;
   truthyness: boolean;
-  id: number;
 };
 
 const truths = [
@@ -14,7 +13,7 @@ const truths = [
   'Tyler owns over 100 board games',
   'Tyler has been pushed through the water by dolphins',
   'Tyler won an ultimate frisbee silver medal',
-  'Tyler designed mini-golf courses as a kid',
+  'Tyler designed mini-golf courses as a kid (for fun)',
   "Tyler doesn't believe in split ends",
   'Tyler prefers dinner over dessert',
   'Tyler loves The Beatles',
@@ -40,12 +39,4 @@ const lies = [
   'Tyler prefers spaces',
 ].map((s) => ({ statement: s, truthyness: false }));
 
-export const truthsAndLiesList: TruthOrLie[] = [...truths, ...lies].map((tol, id) => ({
-  ...tol,
-  id,
-}));
-
-export const truthsAndLies: { [key: number]: TruthOrLie } = {};
-truthsAndLiesList.forEach((tol) => {
-  truthsAndLies[tol.id] = tol;
-});
+export const truthsAndLiesList: TruthOrLie[] = [...truths, ...lies];

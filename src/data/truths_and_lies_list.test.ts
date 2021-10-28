@@ -14,10 +14,6 @@ describe('Validate truths and lies formatting', () => {
           true,
         );
       });
-
-      it('has ID', () => {
-        expect(tol.id).toBeDefined();
-      });
     });
   });
 });
