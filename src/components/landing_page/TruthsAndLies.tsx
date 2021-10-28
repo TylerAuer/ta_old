@@ -6,9 +6,6 @@ import { HeadingRow } from '@/elements';
 import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
 import { useLocalState } from '@/hooks/useLocalState';
 
-// TODO: Get more ToLs after and answer
-// TODO: Need to figure out how to update the state; maybe the state should live in Right/Wrong component?
-
 const scoreCss = css`
   font-size: ${font.size.md};
 `;
