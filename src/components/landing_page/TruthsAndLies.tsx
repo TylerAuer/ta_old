@@ -1,11 +1,11 @@
-import { useState, Fragment } from 'react';
 import { css } from '@emotion/react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { TruthOrLie, truthsAndLiesList } from '../../data/truths_and_lies_list';
 import { font, spacing } from '@/constants';
 import { HeadingRow } from '@/elements';
 import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
 import { useLocalState } from '@/hooks/useLocalState';
+import { Icon } from '@/elements/Icon';
 
 // TODO: Get more ToLs after and answer
 // TODO: Need to figure out how to update the state; maybe the state should live in Right/Wrong component?
@@ -26,23 +26,22 @@ const statementCss = css`
 `;
 
 const chooserContainerCss = css`
-  width: 150px;
+  width: 100px;
+  margin-right: ${spacing.xl};
   vertical-align: middle;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const buttonCss = css`
-  background: none;
-  border: none;
+const chooserOptionCss = css`
   font-size: ${font.size.xl};
-  vertical-align: middle;
   cursor: pointer;
 `;
 
 const orCss = css`
-  margin: ${spacing.xl};
-  font-size: ${font.size.lg};
-  vertical-align: middle;
+  margin: 0 ${spacing.xl};
+  font-size: ${font.size.sm};
 `;
 
 const shuffled = fisherYatesShuffle<TruthOrLie>(truthsAndLiesList, true);
@@ -99,77 +98,87 @@ type TruthOrLieChooserProps = {
 
 type AnsweredStates = 'right' | 'wrong' | 'unanswered';
 
+const HOVER_SCALE = 1.4;
+const TRANS_DIST = 4;
+
+const variants = {
+  noAnimation: {},
+  hoverLie: {
+    scale: HOVER_SCALE,
+    x: [0, -TRANS_DIST, TRANS_DIST, -TRANS_DIST, TRANS_DIST, 0],
+  },
+  hoverTruth: {
+    scale: HOVER_SCALE,
+    y: [0, TRANS_DIST, -TRANS_DIST, TRANS_DIST, -TRANS_DIST, 0],
+  },
+  tap: { scale: 0.9 },
+  exit: { opacity: 0, scale: 0.8, transition: { duration: 0.2 } },
+};
+
 function TruthOrLieChooser({ handleAnswer, truthOrLie }: TruthOrLieChooserProps) {
   const [answer, setAnswer] = useLocalState<AnsweredStates>(truthOrLie.statement, 'unanswered');
+  const isAnswered = answer !== 'unanswered';
+  const showTruthOption = !isAnswered || truthOrLie.truthyness === true;
+  const showFalseOption = !isAnswered || truthOrLie.truthyness === false;
 
-  const handleChoice = (guess: boolean) => {
+  const handleClick = (guess: boolean) => {
     const answeredCorrectly = guess === truthOrLie.truthyness;
     handleAnswer(answeredCorrectly);
     const newVal = setAnswer(answeredCorrectly ? 'right' : 'wrong');
   };
 
-  const TruthButton = () => (
-    <button onClick={() => handleChoice(true)} css={buttonCss}>
-      <TruthIcon />
-    </button>
-  );
-
-  const LieButton = () => (
-    <button onClick={() => handleChoice(false)} css={buttonCss}>
-      <LiarIcon />
-    </button>
-  );
-
-  const Unanswered = () => (
-    <Fragment>
-      <TruthButton />
-      <span css={orCss}>/</span>
-      <LieButton />
-    </Fragment>
-  );
-
-  const Answered = () => (
-    <Fragment>
-      {truthOrLie.truthyness === true && <TruthIcon />}
-      {truthOrLie.truthyness === false && <LiarIcon />}
-    </Fragment>
-  );
-
   return (
-    <div css={chooserContainerCss}>{answer === 'unanswered' ? <Unanswered /> : <Answered />}</div>
+    <div css={chooserContainerCss}>
+      <AnimateSharedLayout>
+        <AnimatePresence>
+          {showTruthOption && (
+            <TruthOption key="truth" handleClick={handleClick} disableAnimations={isAnswered} />
+          )}
+          {!isAnswered && (
+            <motion.span key="/" variants={variants} exit="exit" css={orCss}>
+              /
+            </motion.span>
+          )}
+          {showFalseOption && (
+            <LiarOption key="lie" handleClick={handleClick} disableAnimations={isAnswered} />
+          )}
+        </AnimatePresence>
+      </AnimateSharedLayout>
+    </div>
   );
 }
 
-const HOVER_SCALE = 1.4;
-const CLICK_SCALE = 0.9;
-const TRANS_DIST = 4;
+type AnswerButtonProps = {
+  handleClick: (kind: boolean) => void;
+  disableAnimations: boolean;
+};
 
-function TruthIcon() {
+function TruthOption({ handleClick, disableAnimations }: AnswerButtonProps) {
   return (
     <motion.div
-      whileHover={{
-        scale: HOVER_SCALE,
-        y: [0, TRANS_DIST, -TRANS_DIST, TRANS_DIST, -TRANS_DIST, 0],
-      }}
-      whileTap={{
-        scale: CLICK_SCALE,
-      }}
+      variants={variants}
+      whileHover={disableAnimations ? 'noAnimation' : 'hoverTruth'}
+      whileTap={disableAnimations ? 'noAnimation' : 'tap'}
+      exit={'exit'}
+      css={chooserOptionCss}
+      onClick={() => handleClick(true)}
+      layout
     >
       😇
     </motion.div>
   );
 }
 
-function LiarIcon() {
+function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
   return (
     <motion.div
-      whileHover={{
-        scale: HOVER_SCALE,
-        x: [0, -TRANS_DIST, TRANS_DIST, -TRANS_DIST, TRANS_DIST, 0],
-      }}
-      whileTap={{
-        scale: CLICK_SCALE,
-      }}
+      variants={variants}
+      whileHover={disableAnimations ? 'noAnimation' : 'hoverLie'}
+      whileTap={disableAnimations ? 'noAnimation' : 'tap'}
+      exit={'exit'}
+      css={chooserOptionCss}
+      onClick={() => handleClick(false)}
+      layout
     >
       😈
     </motion.div>
