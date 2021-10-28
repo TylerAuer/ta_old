@@ -48,7 +48,10 @@ const orCss = css`
 const shuffled = fisherYatesShuffle<TruthOrLie>(truthsAndLiesList, true);
 
 export const TruthsAndLies = () => {
-  const [showCount, setShowCount] = useState<number>(Math.min(shuffled.length, 3));
+  const [showCount, setShowCount] = useLocalState<number>(
+    'tol_show_count',
+    Math.min(shuffled.length, 3),
+  );
   const [rightCount, setRightCount] = useLocalState<number>('tol_right_count', 0);
   const [wrongCount, setWrongCount] = useLocalState<number>('tol_wrong_count', 0);
 
