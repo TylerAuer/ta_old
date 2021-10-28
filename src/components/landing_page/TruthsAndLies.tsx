@@ -1,11 +1,10 @@
 import { css } from '@emotion/react';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { TruthOrLie, truthsAndLiesList } from '../../data/truths_and_lies_list';
-import { font, spacing } from '@/constants';
+import { color, font, spacing } from '@/constants';
 import { HeadingRow } from '@/elements';
 import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
 import { useLocalState } from '@/hooks/useLocalState';
-import { Icon } from '@/elements/Icon';
 
 // TODO: Get more ToLs after and answer
 // TODO: Need to figure out how to update the state; maybe the state should live in Right/Wrong component?
@@ -39,9 +38,10 @@ const chooserOptionCss = css`
   cursor: pointer;
 `;
 
-const orCss = css`
+const slashCss = css`
   margin: 0 ${spacing.xl};
   font-size: ${font.size.sm};
+  color: ${color.fontBaseLight};
 `;
 
 const shuffled = fisherYatesShuffle<TruthOrLie>(truthsAndLiesList, true);
@@ -135,7 +135,7 @@ function TruthOrLieChooser({ handleAnswer, truthOrLie }: TruthOrLieChooserProps)
             <TruthOption key="truth" handleClick={handleClick} disableAnimations={isAnswered} />
           )}
           {!isAnswered && (
-            <motion.span key="/" variants={variants} exit="exit" css={orCss}>
+            <motion.span key="/" variants={variants} exit="exit" css={slashCss}>
               /
             </motion.span>
           )}
