@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
-type UpdaterFunction<T> = (prevState: T) => T;
+type SetLocalValueInput<T> = T | ((prev: T) => T);
 
 // Works just like useState, but keeps a copy of the state in local storage and tries to use
 // the value in local storage if it exists when initialized
-export function useLocalState<T>(key: string, initialValueIfNotFoundLocally: T) {
+export function useLocalState<T>(
+  key: string,
+  initialValueIfNotFoundLocally: T,
+): [T, (SetLocalValueInput) => void] {
   const [value, setValue] = useState(() => {
     const localStorateValue = localStorage.getItem(key);
     return localStorateValue !== null
@@ -12,12 +15,15 @@ export function useLocalState<T>(key: string, initialValueIfNotFoundLocally: T) 
       : initialValueIfNotFoundLocally;
   });
 
-  const setLocalValue = (newValueOrUpdaterFunction: T | UpdaterFunction<T>) => {
-    if (newValueOrUpdaterFunction instanceof Function) {
-      newValueOrUpdaterFunction(value);
+  const setLocalValue = (input: SetLocalValueInput<T>): void => {
+    if (input instanceof Function) {
+      const computedNewValue = input(value);
+      localStorage.setItem(key, JSON.stringify(computedNewValue));
+      setValue(computedNewValue);
+    } else {
+      localStorage.setItem(key, JSON.stringify(input));
+      setValue(input);
     }
-    localStorage.setItem(key, JSON.stringify(newValueOrUpdaterFunction));
-    setValue(newValueOrUpdaterFunction);
   };
 
   return [value, setLocalValue];
