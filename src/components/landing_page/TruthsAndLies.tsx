@@ -1,10 +1,18 @@
 import { css } from '@emotion/react';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
-import { TruthOrLie, truthsAndLiesList } from '../../data/truths_and_lies_list';
 import { color, font, spacing } from '@/constants';
 import { HeadingRow } from '@/elements';
-import { fisherYatesShuffle } from '@/utils/fisher_yates_shuffle';
-import { useLocalState } from '@/hooks/useLocalState';
+import {
+  useTolCorrectCount,
+  useTolHandleAnswer,
+  useTolIncorrectCount,
+  useTolsToShow,
+} from '@/hooks';
+import {
+  TruthOrLieHandleAnswerType,
+  TruthOrLieObjectType,
+  TruthOrLieTruthynessType,
+} from '@/types';
 
 const scoreCss = css`
   font-size: ${font.size.md};
@@ -41,33 +49,15 @@ const slashCss = css`
   color: ${color.fontBaseLight};
 `;
 
-const shuffled = fisherYatesShuffle<TruthOrLie>(truthsAndLiesList, true);
-
 export const TruthsAndLies = () => {
-  const [showCount, setShowCount] = useLocalState<number>(
-    'tol_show_count',
-    Math.min(shuffled.length, 3),
-  );
-  const [rightCount, setRightCount] = useLocalState<number>('tol_right_count', 0);
-  const [wrongCount, setWrongCount] = useLocalState<number>('tol_wrong_count', 0);
-
-  const getNextToL = () => setShowCount((prev) => Math.min(prev + 1, shuffled.length));
-
-  const handleAnswer = (isRight: boolean) => {
-    isRight ? setRightCount((prev) => prev + 1) : setWrongCount((prev) => prev + 1);
-    getNextToL();
-  };
+  const tolToShow = useTolsToShow();
 
   return (
     <div>
-      <HeadingRow
-        level={2}
-        title="Get to know the real me"
-        rightNode={<Score rightCount={rightCount} wrongCount={wrongCount} />}
-      />
+      <HeadingRow level={2} title="Get to know the real me" rightNode={<Score />} />
       <div>
-        {shuffled.slice(0, showCount).map((tol) => (
-          <TruthOrLieRow key={tol.statement} truthOrLie={tol} handleAnswer={handleAnswer} />
+        {tolToShow.map((tol) => (
+          <TruthOrLieRow key={tol.id} truthOrLie={tol} />
         ))}
       </div>
     </div>
@@ -75,25 +65,21 @@ export const TruthsAndLies = () => {
 };
 
 type TruthOrLieRowProps = {
-  handleAnswer: (isRight: boolean) => void;
-  truthOrLie: TruthOrLie;
+  truthOrLie: TruthOrLieObjectType;
 };
 
-function TruthOrLieRow({ truthOrLie, handleAnswer }: TruthOrLieRowProps) {
+function TruthOrLieRow({ truthOrLie }: TruthOrLieRowProps) {
   return (
     <div css={tolRowCss} key={truthOrLie.statement}>
-      <TruthOrLieChooser truthOrLie={truthOrLie} handleAnswer={handleAnswer} />
+      <TruthOrLieChooser truthOrLie={truthOrLie} />
       <span css={statementCss}>{truthOrLie.statement}</span>
     </div>
   );
 }
 
 type TruthOrLieChooserProps = {
-  handleAnswer: (isRight: boolean) => void;
-  truthOrLie: TruthOrLie;
+  truthOrLie: TruthOrLieObjectType;
 };
-
-type AnsweredStates = 'right' | 'wrong' | 'unanswered';
 
 const HOVER_SCALE = 1.4;
 const TRANS_DIST = 4;
@@ -112,16 +98,18 @@ const variants = {
   exit: { opacity: 0, scale: 0.8, transition: { duration: 0.2 } },
 };
 
-function TruthOrLieChooser({ handleAnswer, truthOrLie }: TruthOrLieChooserProps) {
-  const [answer, setAnswer] = useLocalState<AnsweredStates>(truthOrLie.statement, 'unanswered');
-  const isAnswered = answer !== 'unanswered';
-  const showTruthOption = !isAnswered || truthOrLie.truthyness === true;
-  const showFalseOption = !isAnswered || truthOrLie.truthyness === false;
+function TruthOrLieChooser({ truthOrLie }: TruthOrLieChooserProps) {
+  const handleAnswer = useTolHandleAnswer();
 
-  const handleClick = (guess: boolean) => {
-    const answeredCorrectly = guess === truthOrLie.truthyness;
-    handleAnswer(answeredCorrectly);
-    const newVal = setAnswer(answeredCorrectly ? 'right' : 'wrong');
+  const isAnswered = truthOrLie.userCorrectness !== 'unanswered';
+
+  // Only show option if the question is unanswered or if...
+  // the question is answered and the option was the correct answer
+  const showTruthOption = !isAnswered || truthOrLie.truthyness === 'truth';
+  const showFalseOption = !isAnswered || truthOrLie.truthyness === 'lie';
+
+  const handleClick = (userAnswer: TruthOrLieTruthynessType) => {
+    handleAnswer(truthOrLie.id, userAnswer);
   };
 
   return (
@@ -146,7 +134,7 @@ function TruthOrLieChooser({ handleAnswer, truthOrLie }: TruthOrLieChooserProps)
 }
 
 type AnswerButtonProps = {
-  handleClick: (kind: boolean) => void;
+  handleClick: (answer: TruthOrLieTruthynessType) => void;
   disableAnimations: boolean;
 };
 
@@ -158,7 +146,7 @@ function TruthOption({ handleClick, disableAnimations }: AnswerButtonProps) {
       whileTap={disableAnimations ? 'noAnimation' : 'tap'}
       exit={'exit'}
       css={chooserOptionCss}
-      onClick={() => handleClick(true)}
+      onClick={() => handleClick('truth')}
       layout
     >
       😇
@@ -174,7 +162,7 @@ function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
       whileTap={disableAnimations ? 'noAnimation' : 'tap'}
       exit={'exit'}
       css={chooserOptionCss}
-      onClick={() => handleClick(false)}
+      onClick={() => handleClick('lie')}
       layout
     >
       😈
@@ -182,17 +170,16 @@ function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
   );
 }
 
-type ScoreProps = {
-  rightCount: number;
-  wrongCount: number;
-};
+// TODO: Add animations and make use colors to represent good vs bad scores
+function Score() {
+  const correctCount = useTolCorrectCount();
+  const incorrectCount = useTolIncorrectCount();
 
-function Score({ rightCount, wrongCount }: ScoreProps) {
-  if (!rightCount && !wrongCount) return null;
+  if (!correctCount && !incorrectCount) return null;
 
   return (
     <div css={scoreCss}>
-      {rightCount} / {rightCount + wrongCount}
+      {correctCount} / {correctCount + incorrectCount}
     </div>
   );
 }
