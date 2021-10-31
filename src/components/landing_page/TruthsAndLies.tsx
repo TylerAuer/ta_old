@@ -58,7 +58,9 @@ const slashCss = css`
   color: ${color.fontBaseLight};
 `;
 
-const correctnessCss = css``;
+const correctnessCss = css`
+  font-size: ${font.size.xl};
+`;
 
 export const TruthsAndLies = () => {
   const tolToShow = useTolsToShow();
@@ -184,27 +186,28 @@ function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
 
 const scoreVariants = {
   initial: {
-    y: -50,
+    y: -25,
     opacity: 0,
+    scale: 0.2,
   },
   animate: {
     y: 0,
     opacity: 1,
+    scale: 1,
     transition: {
-      delay: 0.3,
+      delay: 0.6,
     },
   },
   exit: {
-    y: 25,
+    scale: 0.2,
     opacity: 0,
+    y: 20,
     transition: {
-      duration: 0.2,
-      type: 'tween',
+      delay: 0.5,
     },
   },
 };
 
-// TODO: Add animations and make use colors to represent good vs bad scores
 function Score() {
   const correctCount = useTolCorrectCount();
   const incorrectCount = useTolIncorrectCount();
@@ -239,6 +242,20 @@ function Score() {
   );
 }
 
+const correctnessVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+    },
+  },
+};
+
 type TruthOrLieCorrectnessProps = {
   truthOrLie: TruthOrLieObjectType;
 };
@@ -248,5 +265,16 @@ function TruthOrLieCorrectness({ truthOrLie }: TruthOrLieCorrectnessProps) {
 
   const userIsCorrect = truthOrLie.userCorrectness === 'correct';
 
-  return <div css={correctnessCss}>{userIsCorrect ? '✅' : '❌'}</div>;
+  return (
+    <AnimatePresence>
+      <motion.div
+        variants={correctnessVariants}
+        initial="initial"
+        animate="animate"
+        css={correctnessCss}
+      >
+        {userIsCorrect ? '✅' : '❌'}
+      </motion.div>
+    </AnimatePresence>
+  );
 }
