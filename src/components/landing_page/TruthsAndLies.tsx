@@ -23,7 +23,7 @@ const scoreCss = css`
   font-size: ${font.size.md};
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 `;
 
 const tolRowCss = css`
@@ -184,18 +184,23 @@ function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
 
 const scoreVariants = {
   initial: {
-    x: -100,
+    y: -50,
     opacity: 0,
   },
   animate: {
-    x: 0,
+    y: 0,
     opacity: 1,
-    // zIndex: 1,
+    transition: {
+      delay: 0.3,
+    },
   },
   exit: {
-    x: 50,
+    y: 25,
     opacity: 0,
-    // zIndex: 0,
+    transition: {
+      duration: 0.2,
+      type: 'tween',
+    },
   },
 };
 
