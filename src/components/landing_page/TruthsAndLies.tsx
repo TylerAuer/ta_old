@@ -8,14 +8,17 @@ import {
   useTolIncorrectCount,
   useTolsToShow,
 } from '@/hooks';
-import {
-  TruthOrLieHandleAnswerType,
-  TruthOrLieObjectType,
-  TruthOrLieTruthynessType,
-} from '@/types';
+import { TruthOrLieObjectType, TruthOrLieTruthynessType } from '@/types';
+
+const scoreContainerCss = css`
+  position: relative;
+`;
 
 const scoreCss = css`
   font-size: ${font.size.md};
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const tolRowCss = css`
@@ -84,7 +87,7 @@ type TruthOrLieChooserProps = {
 const HOVER_SCALE = 1.4;
 const TRANS_DIST = 4;
 
-const variants = {
+const tolChooserVariants = {
   noAnimation: {},
   hoverLie: {
     scale: HOVER_SCALE,
@@ -120,7 +123,7 @@ function TruthOrLieChooser({ truthOrLie }: TruthOrLieChooserProps) {
             <TruthOption key="truth" handleClick={handleClick} disableAnimations={isAnswered} />
           )}
           {!isAnswered && (
-            <motion.span key="/" variants={variants} exit="exit" css={slashCss}>
+            <motion.span key="/" variants={tolChooserVariants} exit="exit" css={slashCss}>
               /
             </motion.span>
           )}
@@ -141,7 +144,7 @@ type AnswerButtonProps = {
 function TruthOption({ handleClick, disableAnimations }: AnswerButtonProps) {
   return (
     <motion.div
-      variants={variants}
+      variants={tolChooserVariants}
       whileHover={disableAnimations ? 'noAnimation' : 'hoverTruth'}
       whileTap={disableAnimations ? 'noAnimation' : 'tap'}
       exit={'exit'}
@@ -157,7 +160,7 @@ function TruthOption({ handleClick, disableAnimations }: AnswerButtonProps) {
 function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
   return (
     <motion.div
-      variants={variants}
+      variants={tolChooserVariants}
       whileHover={disableAnimations ? 'noAnimation' : 'hoverLie'}
       whileTap={disableAnimations ? 'noAnimation' : 'tap'}
       exit={'exit'}
@@ -170,6 +173,23 @@ function LiarOption({ disableAnimations, handleClick }: AnswerButtonProps) {
   );
 }
 
+const scoreVariants = {
+  initial: {
+    x: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    // zIndex: 1,
+  },
+  exit: {
+    x: 50,
+    opacity: 0,
+    // zIndex: 0,
+  },
+};
+
 // TODO: Add animations and make use colors to represent good vs bad scores
 function Score() {
   const correctCount = useTolCorrectCount();
@@ -177,9 +197,33 @@ function Score() {
 
   if (!correctCount && !incorrectCount) return null;
 
+  const uniqueID = correctCount + incorrectCount;
+
+  const roundedPercent = Math.round((correctCount / (correctCount + incorrectCount)) * 100) + '%';
+
   return (
-    <div css={scoreCss}>
-      {correctCount} / {correctCount + incorrectCount}
+    <div css={scoreContainerCss}>
+      <div
+        css={css`
+          visibility: hidden;
+          z-index: -1000;
+        `}
+      >
+        {roundedPercent}
+      </div>
+      <AnimatePresence>
+        <motion.div
+          key={uniqueID} // Causes unmount/remount when score changes
+          css={scoreCss}
+          style={{ zIndex: uniqueID }}
+          variants={scoreVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          {roundedPercent}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
