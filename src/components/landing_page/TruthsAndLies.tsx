@@ -14,6 +14,11 @@ const scoreContainerCss = css`
   position: relative;
 `;
 
+const scorePlaceholderCss = css`
+  visibility: hidden;
+  z-index: -1000;
+`;
+
 const scoreCss = css`
   font-size: ${font.size.md};
   position: absolute;
@@ -30,6 +35,7 @@ const tolRowCss = css`
 
 const statementCss = css`
   font-size: ${font.size.md};
+  flex-grow: 1;
 `;
 
 const chooserContainerCss = css`
@@ -51,6 +57,8 @@ const slashCss = css`
   font-size: ${font.size.sm};
   color: ${color.fontBaseLight};
 `;
+
+const correctnessCss = css``;
 
 export const TruthsAndLies = () => {
   const tolToShow = useTolsToShow();
@@ -76,6 +84,7 @@ function TruthOrLieRow({ truthOrLie }: TruthOrLieRowProps) {
     <div css={tolRowCss} key={truthOrLie.statement}>
       <TruthOrLieChooser truthOrLie={truthOrLie} />
       <span css={statementCss}>{truthOrLie.statement}</span>
+      <TruthOrLieCorrectness truthOrLie={truthOrLie} />
     </div>
   );
 }
@@ -203,12 +212,9 @@ function Score() {
 
   return (
     <div css={scoreContainerCss}>
-      <div
-        css={css`
-          visibility: hidden;
-          z-index: -1000;
-        `}
-      >
+      {/* This div holds space so that the flexbox knows the size of the element and then the
+      the absolutely positioned motion.div has a correct parent reference for positioning */}
+      <div aria-hidden="true" css={scorePlaceholderCss}>
         {roundedPercent}
       </div>
       <AnimatePresence>
@@ -226,4 +232,16 @@ function Score() {
       </AnimatePresence>
     </div>
   );
+}
+
+type TruthOrLieCorrectnessProps = {
+  truthOrLie: TruthOrLieObjectType;
+};
+
+function TruthOrLieCorrectness({ truthOrLie }: TruthOrLieCorrectnessProps) {
+  if (truthOrLie.userCorrectness === 'unanswered') return null;
+
+  const userIsCorrect = truthOrLie.userCorrectness === 'correct';
+
+  return <div css={correctnessCss}>{userIsCorrect ? '✅' : '❌'}</div>;
 }
