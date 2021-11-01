@@ -9,6 +9,7 @@ import {
   useTolsToShow,
 } from '@/hooks';
 import { TruthOrLieObjectType, TruthOrLieTruthynessType } from '@/types';
+import { getLetterGrade } from '@/utils/get_letter_grade';
 
 const scoreContainerCss = css`
   position: relative;
@@ -217,14 +218,14 @@ function Score() {
 
   const uniqueID = correctCount + incorrectCount;
 
-  const roundedPercent = Math.round((correctCount / (correctCount + incorrectCount)) * 100) + '%';
+  const letterGrade = getLetterGrade(correctCount, incorrectCount);
 
   return (
     <div css={scoreContainerCss}>
       {/* This div holds space so that the flexbox knows the size of the element and then the
       the absolutely positioned motion.div has a correct parent reference for positioning */}
       <div aria-hidden="true" css={scorePlaceholderCss}>
-        {roundedPercent}
+        {letterGrade}
       </div>
       <AnimatePresence>
         <motion.div
@@ -236,7 +237,7 @@ function Score() {
           animate="animate"
           exit="exit"
         >
-          {roundedPercent}
+          {letterGrade}
         </motion.div>
       </AnimatePresence>
     </div>
