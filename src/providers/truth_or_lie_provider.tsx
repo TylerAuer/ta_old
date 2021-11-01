@@ -6,6 +6,9 @@ import {
   TruthOrLieHandleAnswerType,
   TruthOrLieObjectType,
 } from '@/types';
+import useSound from 'use-sound';
+import sadSound from '../../sound/sad_double_boop.mp3';
+import happySound from '../../sound/two_happy_boops.mp3';
 import { feature } from '@/constants/feature';
 
 const VisibleTolsContext = createContext<TruthOrLieObjectType[]>([]);
@@ -29,6 +32,8 @@ export const TruthOrLieProvider = ({ children }: TruthOrLieProviderProps) => {
   const [nextIdxToGetFromRandomList, setNextIdxToGetFromRandomList] = useState(
     feature.INITIAL_TRUTH_OR_LIE_COUNT_TO_DISPLAY,
   );
+  const [playCorrect] = useSound(happySound);
+  const [playIncorrect] = useSound(sadSound);
 
   const tolsToShow = idsOfVisibleTols.map((id) => tols[id]);
 
@@ -37,6 +42,9 @@ export const TruthOrLieProvider = ({ children }: TruthOrLieProviderProps) => {
     answerGiven: TruthOrLieTruthynessType,
   ) => {
     const userIsCorrect = tols[id].truthyness === answerGiven;
+
+    // Play sound
+    userIsCorrect ? playCorrect() : playIncorrect();
 
     // Update the correctness of the answered tol
     setTols((prevTols) => ({
