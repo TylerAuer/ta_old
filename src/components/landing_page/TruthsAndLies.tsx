@@ -31,6 +31,7 @@ const tolRowCss = css`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  line-height: 1.6;
 `;
 
 const statementCss = css`
