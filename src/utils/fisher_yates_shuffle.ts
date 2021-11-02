@@ -1,4 +1,3 @@
-// Shuffles list in place
 export function fisherYatesShuffle<T>(list: T[], returnNewArray: boolean = false): T[] {
   let currentIndex = list.length;
   let temporaryValue: any;
