@@ -1,6 +1,6 @@
 import { TruthOrLieTupleType } from 'types';
 
-const tolRawData: TruthOrLieTupleType[] = [
+export const tolRawData: TruthOrLieTupleType[] = [
   [0, 'truth', 'Tyler hates bread'],
   [1, 'truth', 'Tyler high jumped 5\'10"'],
   [2, 'truth', 'Tyler collects $1 casino chips'],
