@@ -60,3 +60,27 @@ export type ElementProps = {
   sx?: SerializedStyles;
   dataTestId?: string;
 };
+
+export type HeadingLevelsType = 1 | 2 | 3 | 4;
+
+export type IsDeprecatedType = boolean;
+
+export type TruthOrLieStatementType = `Tyler${string}`;
+export type TruthOrLieTruthynessType = 'truth' | 'lie';
+export type TruthOrLieTupleType = [
+  number,
+  TruthOrLieTruthynessType,
+  TruthOrLieStatementType,
+  IsDeprecatedType?,
+];
+export type TruthOrLieHandleAnswerType = (
+  id: number,
+  answerGiven: TruthOrLieTruthynessType,
+) => void;
+export type UserCorrectnessType = 'correct' | 'incorrect' | 'unanswered';
+export type TruthOrLieObjectType = {
+  id: number;
+  statement: TruthOrLieStatementType;
+  truthyness: TruthOrLieTruthynessType;
+  userCorrectness: UserCorrectnessType;
+};

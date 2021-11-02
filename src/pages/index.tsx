@@ -6,6 +6,7 @@ import { PageBox } from '@/components/PageBox';
 import { Projects } from '@/components/landing_page/Projects';
 import { Bio } from '@/components/landing_page/Bio';
 import { Blogs } from '@/components/landing_page/Blogs';
+import { TruthsAndLies } from '@/components/landing_page/TruthsAndLies';
 
 // TODO: Figure out how to get this component to recognize data.allMdx
 // currently the "data: any" just ignores it
@@ -23,7 +24,7 @@ const Home: React.FC<PageProps> = ({ data }: { data: any }) => {
       <PageBox includeHomeLink={false}>
         <main>
           <Bio />
-          {/* <TruthsAndLies count={5} /> */}
+          <TruthsAndLies />
           <Projects />
           <Blogs posts={posts} />
         </main>

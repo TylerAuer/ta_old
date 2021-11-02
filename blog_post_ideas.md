@@ -2,7 +2,6 @@
 
 ## Adventure
 
-- Code Peak Scramble
 - Angels Landing
 - Peekaboo and Spooky Slots
 - The Narrows

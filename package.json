@@ -46,7 +46,8 @@
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.32.0",
     "react-test-renderer": "^17.0.2",
-    "tsconfig-paths-webpack-plugin": "3.5.1"
+    "tsconfig-paths-webpack-plugin": "3.5.1",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.28",
