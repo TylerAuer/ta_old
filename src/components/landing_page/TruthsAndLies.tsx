@@ -79,17 +79,42 @@ export const TruthsAndLies = () => {
   );
 };
 
+const truthOrLieRowVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      delay: 0.6,
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
 type TruthOrLieRowProps = {
   truthOrLie: TruthOrLieObjectType;
 };
 
 function TruthOrLieRow({ truthOrLie }: TruthOrLieRowProps) {
   return (
-    <div css={tolRowCss} key={truthOrLie.statement}>
-      <TruthOrLieChooser truthOrLie={truthOrLie} />
-      <span css={statementCss}>{truthOrLie.statement}</span>
-      <TruthOrLieCorrectness truthOrLie={truthOrLie} />
-    </div>
+    <AnimatePresence>
+      <motion.div
+        css={tolRowCss}
+        key={truthOrLie.statement}
+        variants={truthOrLieRowVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <TruthOrLieChooser truthOrLie={truthOrLie} />
+        <span css={statementCss}>{truthOrLie.statement}</span>
+        <TruthOrLieCorrectness truthOrLie={truthOrLie} />
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
