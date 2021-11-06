@@ -1,9 +1,13 @@
 import { screen, render } from '@testing-library/react';
-import { Icon } from './Icon';
+import { Icon, icons } from './Icon';
 
 describe('<Icon />', () => {
-  it('renders', () => {
-    render(<Icon icon="book" />);
+  describe('renders each icon option', () => {
+    icons.forEach((icon) => {
+      it(`renders ${icon}`, () => {
+        render(<Icon icon={icon} />);
+      });
+    });
   });
 
   it('passes data-testid, id, and classname', () => {
