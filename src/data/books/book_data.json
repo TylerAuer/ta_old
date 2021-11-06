@@ -1605,5 +1605,18 @@
       "mystery & thriller",
       "sci-fi"
     ]
+  },
+  {
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "cover": "./covers/Isaac-Asimov-Foundation.jpg",
+    "pages": "244",
+    "goodreads_url": "https://www.goodreads.com/book/show/55692750-foundation",
+    "indiebound_url": "https://www.indiebound.org/book/9780553803716",
+    "library_url": "https://www.worldcat.org/search?q=9780553803716",
+    "genres": [
+      "sci-fi",
+      "series"
+    ]
   }
 ]

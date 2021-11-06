@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/react';
 
@@ -8,23 +8,16 @@ import { IconNavList } from '@/components/IconNavList';
 import { Box } from '@/elements/Box';
 
 import { fisherYatesShuffle } from '../../utils/fisher_yates_shuffle';
-import { GenreFilterToggleStateType, GenresEnum, BookFromGQLType } from '@/types';
+import { GenreFilterToggleStateType, GenresConst, GenreType, BookFromGQLType } from '@/types';
 import { Heading } from '@/elements/Heading';
 import { P } from '@/elements/P';
-import { font } from '@/constants';
-
-const initialToggleState = generateInitialActiveFilterState();
-const MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY = 5;
+import { font, feature } from '@/constants';
 
 const INTRO_SX = css`
   font-size: ${font.size.sm};
 `;
 
 export const Bookshelf: React.FC = () => {
-  const [activeFilters, setActiveFilters] = useState(initialToggleState);
-  const [shuffledBooks, setShuffledBooks] = useState([]);
-  const [genresWithEnoughUses, setGenresWithEnoughUses] = useState<GenresEnum[]>([]);
-
   const query = useStaticQuery(graphql`
     {
       allBookDataJson {
@@ -50,49 +43,20 @@ export const Bookshelf: React.FC = () => {
     }
   `);
   const books: BookFromGQLType[] = query.allBookDataJson.nodes;
+  const shuffledBooks = useMemo(() => fisherYatesShuffle(books), [books]);
+  const [activeFilters, setActiveFilters] = useState(generateInitialActiveFilterState(books));
 
-  // On mount: counts how many times each genre is used so that filters without enough books
-  // can be stripped from the list
-  useEffect(() => {
-    const genreCounts = {};
-    books.forEach((book) => {
-      book.genres.forEach((genre) => {
-        if (!genreCounts[genre]) genreCounts[genre] = 0;
-        genreCounts[genre]++;
-      });
-    });
-
-    const genresWithMinUses = [];
-    Object.entries(genreCounts).forEach(([genre, count]) => {
-      if (count >= MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY) genresWithMinUses.push(genre);
-    });
-
-    setGenresWithEnoughUses(genresWithMinUses);
-  }, []);
-
-  // Shuffle the books
-  useEffect(() => {
-    setShuffledBooks(fisherYatesShuffle(books));
-  }, []);
-
-  // Don't render until all processing is finished
-  if (!genresWithEnoughUses.length || !shuffledBooks.length) return null;
-
-  const toggleFilter = (filterToToggle: GenresEnum) => {
-    setActiveFilters((prev) => ({ ...prev, [filterToToggle]: !prev[filterToToggle] }));
+  const toggleFilter = (filterToToggle: GenreType) => {
+    setActiveFilters((prev) => ({
+      ...prev,
+      [filterToToggle]: !prev[filterToToggle],
+    }));
   };
-
-  const resetFilters = () => setActiveFilters(initialToggleState);
 
   return (
     <>
       <BookshelfHeader />
-      <BookshelfFilters
-        toggleFilter={toggleFilter}
-        resetFilters={resetFilters}
-        filterStates={activeFilters}
-        genresWithEnoughUses={genresWithEnoughUses}
-      />
+      <BookshelfFilters toggleFilter={toggleFilter} filterStates={activeFilters} />
       <BookshelfGrid activeFilters={activeFilters} books={shuffledBooks} />
     </>
   );
@@ -126,12 +90,29 @@ const BookshelfHeader: React.FC = () => {
   );
 };
 
-// Grabs each genre from the enum and populates and object
-// with a key for each genre as the key set to false
-function generateInitialActiveFilterState(): GenreFilterToggleStateType {
+// Grabs each genre and populates and object
+// with each genre as the key and the value set to false
+function generateInitialActiveFilterState(books: BookFromGQLType[]): GenreFilterToggleStateType {
+  const genresWithEnoughBooks = getGenresWithEnoughBooks(books);
   const state = {};
-  for (let genre in GenresEnum) {
+  genresWithEnoughBooks.forEach((genre) => {
     state[genre] = false;
-  }
+  });
   return state as GenreFilterToggleStateType; // TS doesn't understand my genius, so override it
+}
+
+function getGenresWithEnoughBooks(books: BookFromGQLType[]): GenreType[] {
+  // Counts books with each genre
+  const genreCounts = {};
+  books.forEach((book) => {
+    book.genres.forEach((genre: GenreType) => {
+      if (!genreCounts[genre]) genreCounts[genre] = 0;
+      genreCounts[genre]++;
+    });
+  });
+
+  // Filters out genres without enough books
+  return Object.keys(genreCounts).filter(
+    (genre) => genreCounts[genre] > feature.MINIMUM_GENRE_FOR_FILTER_TO_DISPLAY,
+  ) as GenreType[];
 }

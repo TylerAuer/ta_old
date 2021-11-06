@@ -1,5 +1,5 @@
 import bookData from './book_data.json';
-import { GenresEnum } from '../../types';
+import { GenresConst as genresList, GenreType } from '../../types';
 import { existsSync } from 'fs';
 import path from 'path';
 
@@ -28,10 +28,10 @@ bookData.forEach((book) => {
       expect(indiebound_url.length).toBeGreaterThanOrEqual(30);
     });
 
-    it('has genre(s) from GenresEnum', () => {
+    it('has genre(s) from GenreType', () => {
       expect(genres.length).toBeGreaterThanOrEqual(1);
       genres.forEach((genre) => {
-        expect(genre in GenresEnum).toBe(true);
+        expect(genresList.includes(genre as GenreType)).toBe(true);
       });
     });
 

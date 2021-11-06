@@ -26,19 +26,18 @@ export const BookshelfGrid = ({ activeFilters, books }: BookshelfGridProps) => {
   }
 
   let filteredBooks = [];
-  const isAnyFilterActive = Object.values(activeFilters).some((value) => value);
+  const isAnyFilterActive = Object.values(activeFilters).some((isActive) => isActive);
   if (isAnyFilterActive) {
     for (let book of books) {
-      if (book.genres) {
-        for (let genre of book.genres) {
-          if (genre && activeFilters[genre]) {
-            filteredBooks.push(book);
-            break;
-          }
+      for (let genre of book.genres) {
+        if (activeFilters[genre]) {
+          filteredBooks.push(book);
+          break;
         }
       }
     }
   } else {
+    // If no filters are active, show all books
     filteredBooks = books;
   }
 
@@ -83,7 +82,7 @@ export const BookshelfGrid = ({ activeFilters, books }: BookshelfGridProps) => {
             `}
           >
             {col.map((book) => (
-              <BookCover book={book} setModalBook={setModalBook} />
+              <BookCover key={book.title} book={book} setModalBook={setModalBook} />
             ))}
           </div>
         ))}

@@ -1,18 +1,20 @@
 import { ElementProps } from '@/types';
 import React from 'react';
 
-export type IconType =
-  | 'book'
-  | 'calculator'
-  | 'code'
-  | 'football'
-  | 'fruit'
-  | 'github'
-  | 'home'
-  | 'linkedIn'
-  | 'mountains'
-  | 'signature'
-  | 'twitter';
+export const icons = [
+  'book',
+  'calculator',
+  'code',
+  'football',
+  'fruit',
+  'github',
+  'home',
+  'linkedIn',
+  'mountains',
+  'signature',
+  'twitter',
+] as const;
+type IconType = typeof icons[number];
 
 type IconProps = {
   icon: IconType;
