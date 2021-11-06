@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/react';
 
-import { BookshelfFilters } from '@/bookshelf/BookshelfFilters';
-import { BookshelfGrid } from '@/bookshelf/BookshelfGrid';
+import { BookshelfFilters } from '@/components/bookshelf/BookshelfFilters';
+import { BookshelfGrid } from '@/components/bookshelf/BookshelfGrid';
 import { IconNavList } from '@/components/IconNavList';
 import { Box } from '@/elements/Box';
 
-import { fisherYatesShuffle } from '../utils/fisher_yates_shuffle';
+import { fisherYatesShuffle } from '../../utils/fisher_yates_shuffle';
 import { GenreFilterToggleStateType, GenresEnum, BookFromGQLType } from '@/types';
 import { Heading } from '@/elements/Heading';
 import { P } from '@/elements/P';
