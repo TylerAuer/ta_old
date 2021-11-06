@@ -1,32 +1,33 @@
 import { SerializedStyles } from '@emotion/react';
 import { ImageDataLike } from 'gatsby-plugin-image';
 
-export enum GenresEnum {
-  'adventure' = 'adventure',
-  'best of the best' = 'best of the best',
-  'comedy' = 'comedy',
-  'fantasy' = 'fantasy',
-  'graphic novel' = 'graphic novel',
-  'history' = 'history',
-  'memoir' = 'memoir',
-  'mystery & thriller' = 'mystery & thriller',
-  'picture book' = 'picture book',
-  'sci-fi' = 'sci-fi',
-  'science & math' = 'science & math',
-  'series' = 'series',
-  'short stories' = 'short stories',
-  'social & political sciences' = 'social & political sciences',
-  'sports & games' = 'sports & games',
-  'tech' = 'tech',
-  'under the radar' = 'under the radar',
-  'young adult' = 'young adult',
-}
+export const GenresConst = [
+  'adventure',
+  'best of the best',
+  'comedy',
+  'fantasy',
+  'graphic novel',
+  'history',
+  'memoir',
+  'mystery & thriller',
+  'picture book',
+  'sci-fi',
+  'science & math',
+  'series',
+  'short stories',
+  'social & political sciences',
+  'sports & games',
+  'tech',
+  'under the radar',
+  'young adult',
+] as const;
+export type GenreType = typeof GenresConst[number];
 
-export type GenreFilterToggleStateType = { [key in keyof typeof GenresEnum]: boolean };
+export type GenreFilterToggleStateType = { [key in GenreType]: boolean };
 
 export type BookFromGQLType = {
   cover: ImageDataLike;
-  genres: GenresEnum[];
+  genres: GenreType[];
   author: string;
   title: string;
   pages: string;
@@ -39,7 +40,7 @@ export type BookDataType = {
   title: string;
   cover: string;
   pages: string;
-  genres: GenresEnum[];
+  genres: GenreType[];
   goodreads_url?: string;
   indiebound_url?: string;
   library_url?: string;

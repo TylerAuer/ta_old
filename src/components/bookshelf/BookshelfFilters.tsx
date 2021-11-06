@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { Box } from '@/elements/Box';
-import { GenreFilterToggleStateType, GenresEnum } from '@/types';
+import { GenreFilterToggleStateType, GenresConst, GenreType } from '@/types';
 import { Flex, FlexJustification } from '../Flex';
 import { color, font, spacing } from '@/constants';
 
@@ -36,28 +36,21 @@ const INACTIVE_TOGGLE_SX = css`
 `;
 
 type BookshelfFilterProps = {
-  toggleFilter: (filter: GenresEnum) => void;
-  resetFilters: () => void;
+  toggleFilter: (filter: GenreType) => void;
   filterStates: GenreFilterToggleStateType;
-  genresWithEnoughUses: GenresEnum[];
 };
 
-export const BookshelfFilters = ({
-  toggleFilter,
-  resetFilters,
-  filterStates,
-  genresWithEnoughUses,
-}: BookshelfFilterProps) => {
-  const btns = Object.keys(filterStates).map((genre) => {
-    if (genresWithEnoughUses.includes(GenresEnum[genre]))
-      return (
-        <Pill
-          key={genre}
-          state={filterStates[genre]}
-          content={genre}
-          onClick={() => toggleFilter(GenresEnum[genre])}
-        />
-      );
+export const BookshelfFilters = ({ toggleFilter, filterStates }: BookshelfFilterProps) => {
+  const filtersWithEnoughBooks = Object.keys(filterStates) as GenreType[];
+  const btns = filtersWithEnoughBooks.map((genre) => {
+    return (
+      <Pill
+        key={genre}
+        state={filterStates[genre]}
+        content={genre}
+        onClick={() => toggleFilter(genre)}
+      />
+    );
   });
 
   return (

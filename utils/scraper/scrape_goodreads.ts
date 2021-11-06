@@ -1,8 +1,7 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
-import { pathToFileURL } from 'url';
-import { pathToBookData, pathToBooksDir } from './constants';
+import { pathToBooksDir } from './constants';
 
 type ScrappedGoodreadsDataType = {
   title: string;
