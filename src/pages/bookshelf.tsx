@@ -2,7 +2,7 @@ import { Global, css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
 import { GlobalStyles } from '@/components/GlobalStyles';
-import { Bookshelf } from '@/bookshelf/Bookshelf';
+import { Bookshelf } from '@/components/bookshelf/Bookshelf';
 
 const BookshelfPage: React.FC = () => (
   <GlobalStyles>
