@@ -1,22 +1,21 @@
 import { ElementProps } from '@/types';
 import React from 'react';
 
-export enum IconType {
-  'book',
-  'calculator',
-  'code',
-  'football',
-  'fruit',
-  'github',
-  'home',
-  'linkedIn',
-  'mountains',
-  'signature',
-  'twitter',
-}
+export type IconType =
+  | 'book'
+  | 'calculator'
+  | 'code'
+  | 'football'
+  | 'fruit'
+  | 'github'
+  | 'home'
+  | 'linkedIn'
+  | 'mountains'
+  | 'signature'
+  | 'twitter';
 
 type IconProps = {
-  icon: keyof typeof IconType;
+  icon: IconType;
 } & ElementProps;
 
 export const Icon: React.FC<IconProps> = ({ sx, icon, id, className, dataTestId }) => {

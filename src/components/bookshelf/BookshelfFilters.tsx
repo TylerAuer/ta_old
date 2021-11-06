@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { Box } from '@/elements/Box';
 import { GenreFilterToggleStateType, GenresEnum } from '@/types';
-import { Flex, FlexJustification } from '../components/Flex';
+import { Flex, FlexJustification } from '../Flex';
 import { color, font, spacing } from '@/constants';
 
 const CONTAINER_SX = css`
