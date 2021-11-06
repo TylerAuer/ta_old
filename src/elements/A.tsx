@@ -25,6 +25,9 @@ export const A = ({ to, children, className, id, dataTestId, sx }: AProps) => {
   // Gatsby's Link component should only be passed internal links so it can preload them
   const isExternal = to.match(/^http/);
 
-  if (isExternal) return <a href={to} css={composedCss} {...linkProps} />;
-  else return <Link to={to} {...linkProps} css={composedCss} />;
+  return isExternal ? (
+    <a href={to} css={composedCss} {...linkProps} />
+  ) : (
+    <Link to={to} {...linkProps} css={composedCss} />
+  );
 };
