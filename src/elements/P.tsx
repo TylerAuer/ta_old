@@ -8,7 +8,7 @@ type PProps = {
   children: ReactNode;
 } & ElementProps;
 
-export const P = ({ sx, id, className, children }: PProps) => {
+export const P = ({ sx, id, className, children, dataTestId }: PProps) => {
   const pCss = css`
     box-sizing: content-box;
     margin: ${spacing.lg} auto;
@@ -18,7 +18,7 @@ export const P = ({ sx, id, className, children }: PProps) => {
   `;
 
   return (
-    <p id={id} className={className} css={pCss}>
+    <p data-testid={dataTestId} id={id} className={className} css={pCss}>
       {children}
     </p>
   );
