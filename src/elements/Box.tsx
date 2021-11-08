@@ -39,6 +39,7 @@ export const Box: React.FC<Props> = ({
   vMargin,
   width = 'standard',
   role = '',
+  dataTestId,
 }) => {
   const style = css`
     // Use selected width
@@ -52,7 +53,7 @@ export const Box: React.FC<Props> = ({
   `;
 
   return (
-    <div role={role} id={id} className={className} css={style}>
+    <div role={role} id={id} className={className} css={style} data-testid={dataTestId}>
       {children}
     </div>
   );
