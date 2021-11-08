@@ -6,11 +6,11 @@ import { A } from '@/elements/A';
 import { color, font } from '@/constants';
 
 type ChipProps = {
-  to: string;
+  to?: string;
   children: ReactNode;
 } & ElementProps;
 
-export const Chip = ({ children, to, sx, id, className }: ChipProps) => {
+export const Chip = ({ children, to, sx, id, className, dataTestId }: ChipProps) => {
   const s = css`
     padding: 2px 1rem 0 1rem;
     display: inline-block;
@@ -37,9 +37,13 @@ export const Chip = ({ children, to, sx, id, className }: ChipProps) => {
     ${sx}
   `;
 
-  return (
-    <A sx={s} id={id} className={className} to={to}>
+  return to ? (
+    <A sx={s} id={id} data-testid={dataTestId} className={className} to={to}>
       {children}
     </A>
+  ) : (
+    <div css={s} id={id} data-testid={dataTestId} className={className}>
+      {children}
+    </div>
   );
 };
