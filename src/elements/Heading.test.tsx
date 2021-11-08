@@ -5,7 +5,6 @@ const headingText = "Hi! I'm Heading.";
 const dataTestId = 'heading-test';
 const id = 'heading-id';
 const className = 'heading-classname';
-const toLink = '/heading_link';
 
 describe('<Heading />', () => {
   it('passes data-testid, id, and classname', () => {

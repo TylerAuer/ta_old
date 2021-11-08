@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Heading } from './Heading';
-import { HeadingLevelsType } from '@/types';
+import { ElementProps, HeadingLevelsType } from '@/types';
 import { css } from '@emotion/react';
 
 const containerCss = css`
@@ -14,11 +14,18 @@ type HeadingRowProps = {
   title: string;
   level?: HeadingLevelsType;
   rightNode?: ReactNode;
-};
+} & ElementProps;
 
-export function HeadingRow({ title, level = 2, rightNode }: HeadingRowProps) {
+export function HeadingRow({
+  title,
+  level = 2,
+  rightNode,
+  id,
+  className,
+  dataTestId,
+}: HeadingRowProps) {
   return (
-    <div css={containerCss}>
+    <div data-testid={dataTestId} css={containerCss} id={id} className={className}>
       <Heading level={level}>{title}</Heading>
       {rightNode}
     </div>
