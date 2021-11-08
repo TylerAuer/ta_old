@@ -1,5 +1,5 @@
 import { color, font, spacing } from '@/constants';
-import { HeadingLevelsType } from '@/types';
+import { ElementProps, HeadingLevelsType } from '@/types';
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/utils';
 import { ReactNode } from 'react';
@@ -44,12 +44,10 @@ type HeadingProps = {
   children: ReactNode;
   level?: HeadingLevelsType;
   sx?: SerializedStyles;
-  id?: string;
-  className?: string;
-};
+} & ElementProps;
 
-export const Heading = ({ children, level = 2, sx, id, className }: HeadingProps) => {
-  const hProps = { id, className, sx };
+export const Heading = ({ children, level = 2, sx, id, className, dataTestId }: HeadingProps) => {
+  const hProps = { id, className, sx, dataTestId };
 
   switch (level) {
     case 1:
@@ -66,32 +64,30 @@ export const Heading = ({ children, level = 2, sx, id, className }: HeadingProps
 type HProps = {
   children: ReactNode;
   sx?: SerializedStyles;
-  id?: string;
-  className?: string;
-};
+} & ElementProps;
 
 // These each need to be their own separate components so they can be used in
 // the MDX provider to map markdown to the correct element.
-export const H1 = ({ children, sx, id, className }: HProps) => (
-  <h1 id={id} className={className} css={[h1Css, sx]}>
+export const H1 = ({ children, sx, id, className, dataTestId }: HProps) => (
+  <h1 id={id} className={className} data-testid={dataTestId} css={[h1Css, sx]}>
     {children}
   </h1>
 );
 
-export const H2 = ({ children, sx, id, className }: HProps) => (
-  <h2 id={id} className={className} css={[h2Css, sx]}>
+export const H2 = ({ children, sx, id, className, dataTestId }: HProps) => (
+  <h2 id={id} className={className} data-testid={dataTestId} css={[h2Css, sx]}>
     {children}
   </h2>
 );
 
-export const H3 = ({ children, sx, id, className }: HProps) => (
-  <h3 id={id} className={className} css={[h3Css, sx]}>
+export const H3 = ({ children, sx, id, className, dataTestId }: HProps) => (
+  <h3 id={id} className={className} data-testid={dataTestId} css={[h3Css, sx]}>
     {children}
   </h3>
 );
 
-export const H4 = ({ children, sx, id, className }: HProps) => (
-  <h4 id={id} className={className} css={[h4Css, sx]}>
+export const H4 = ({ children, sx, id, className, dataTestId }: HProps) => (
+  <h4 id={id} className={className} data-testid={dataTestId} css={[h4Css, sx]}>
     {children}
   </h4>
 );
