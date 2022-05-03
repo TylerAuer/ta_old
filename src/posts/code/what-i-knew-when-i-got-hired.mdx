@@ -1,0 +1,114 @@
+---
+title: 'What I Knew When I Got My First Job'
+subtitle: 'The skill set that landed me an internship at Nextdoor as a self-taught developer'
+date_created: '2021-01-07'
+date_last_updated: false
+category: 'Career'
+tags: ['JavaScript', 'React']
+featured: false
+draft: false
+---
+
+import { DropCapP } from '../../components/DropCapP.tsx';
+
+<DropCapP>
+  Are you prepared for your first engineering job? If you are a self-taught coder, this question can
+  feel overwhelming. There are so many technologies and concepts to learn. It can seem like you'll
+  never know enough.
+</DropCapP>
+
+The only answer true answer to your question is that you are ready when you can convince someone to hire you. And, different companies -- or even different people at the same company -- will expect different things.
+
+But that's not a particularly helpful answer, and I'd like to be at least a little helpful here. So, instead, I thought I would share a summary of what I knew when I got my first opportunity: an internship at Nextdoor.
+
+## What I knew
+
+This is just a single data-point. It's definitely **not** a suggestion about what to learn or how well to learn them. It's more to provide a sense of scale, a sense of the volume and depth that you'll need. But, take even that with a grain of salt. It's certainly possible that I could have landed a job knowing far less. I'm just a single data point here.
+
+So here's what I knew when I got my first opportunity. I really tried to list _everything_ and roughly sorted them in the order of importance and value.
+
+### JavaScript
+
+I was pretty comfortable with JavaScript. I'd seen most of the common patterns and had visited a couple of JS's dustier corners[^1]. I knew about differences between its [different versions](/code/versions-of-javascript/), know what a closure is, and grok promises. Maybe most importantly, I know how to use [MDN](https://developer.mozilla.org/en-US/) to get answers for things I don't know. I understand what people mean when they say JavaScript is dynamically typed and interpreted. I am certainly not an expert, but I feel confident working in JavaScript.
+
+[^1]: Looking at you [drag-and-drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+
+### React
+
+My last three personal projects were built with React. I used functional components, wrote my own hooks, and utilized libraries like Emotion for CSS-in-JS, Recoil for state management, and React-router for routing. I knew common patterns and how to resolve common issues. I could, for example, quickly build a to-do app without referencing the docs.
+
+Yet, I still felt like I had a lot to learn with React, particularly in architecting a DRY and robust system. As I developed apps I could intuit that some of my components had grow too large or that I hadn't separated concerns fully or logically.
+
+### HTML + CSS + Sass/SCSS
+
+I understood how HTML and CSS are utilized to render web pages. I knew the most common HTML tags and CSS solutions for things like centering, including `flexbox`. I didn't know too much about supporting older browsers, though I did have a sense for what is and is not supported. I could use breakpoints to make designs responsive. I used BEM for class names, and preferred to use SCSS for its simplicity and readability. I had some sense about how CSS determines specificity, but mostly could identify when it was the source of an issue. I had a rough idea of polyfills, vendor prefixes, and minification, but wasn't much help without Stack Overflow.
+
+### Git & GitHub
+
+I used Git and GitHub with all of my projects. I used branches to isolate and then merge feature changes through pull requests. I could also set up simple GitHub actions to run tests or other scripts at specific times. I had also used git hooks for things like providing a warning before committing directly to the main branch. I still got confused when I wanted to revert changes or check out an older branches and needed to learn more about how GitHub branching and pull requests are used when working as part of a team.
+
+### Browser Dev Tools
+
+I often used the developer tools in Chrome and Firefox to troubleshoot and solve problems. I would often try out CSS changes for instant visual feedback, view network activity, and see cookies & local storage. I also regularly used the console as a REPL for testing simple examples to better understand JavaScript.
+
+### TypeScript
+
+I had just begun learning TypeScript when I got hired. I understood how basic typing worked in vanilla JS, but had a bit of a harder time integrating it with React. I knew that TypeScript gets transpiled into JS, but had a hard time integrating that into build steps. I was definitley not familiar with [utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) and knew of generics, but couldn't make use of them on my own.
+
+### Node/Express
+
+I understood than Node was a way to execute JavaScript outside of a browser and used Node with Express for the backend of my personal projects. I had a hard time using Node for things like reading a file from my machine, but was comfortable using it for routing with Express and an ORM. I used Express middleware for things like authentication, but did not have a great mental model of how it worked.
+
+### Sequelize + Postgres
+
+All of my personal projects used PostgreSQL as a database and Sequelize as an ORM. My understanding of these technologies was pretty limited. Basically just enough to do some CRUD operations and create a simple API. I didn't use migrations or make very much use of the ORM. I actually ended up having to write SQL queries because a lot of my queries were aggregations for [Fruit Matrix](https://fruit.tylerauer.com/#/).
+
+### Testing
+
+I knew what test-driven development was but obviously didn't use it -- my projects barely had any tests (ah!). I wrote a few tests in Jest and Cypress, but didn't understand how mocking worked. Because of this, I really struggled to get my tests to pass when I knew my code was working and often avoided writing tests altogether.[^2]
+
+[^2]: It won't surprise you to learn that my knowledge around testing has grown a TON in my first 6 months at Nextdoor.
+
+### Python
+
+Python was actually the first language I learned when I was just coding for fun. So, I was familiar with Python's sytax, it's reliance on white-space, and how much built-in functionality it had. But, since I'd been working with JS, React, Node, and Express, I was really rusty.
+
+### Command Line
+
+I could navigate around the file system, create files with `touch`, and use Git. But, otherwise, I didn't do much at the command line. Frankly, I was still pretty intimidated by it.
+
+### Markdown
+
+I learned the basic syntax of Markdown -- headings, links, bold, italics, and lists -- for writing `README.md` files for GitHub. I actually really liked Markdown (and still do).
+
+### D3
+
+I used D3 for the charts on the Fruit Matrix's [data page](https://fruit.tylerauer.com/#/data). I definitely felt the steep learning curve and only got into the most basic aspects of it.
+
+### Data-structures and algorithms
+
+I studied the basics of data structures and algorithms in preparation for interviews. I actually really enjoy learning about these and solving coding problems -- as long as I'm not actually doing it live in an interview. I completed two Udemy courses ([this one](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/learn/lecture/8533042#overview) which I highly recommend and [this one](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344866?start=0#overview) which was fine).
+
+I felt like my background teaching math was a huge help here. Not because it made me some math god -- I'm fine but won't wow anyone -- but more because it gave me a ton of experience understanding ideas deeply. That sounds...odd, I know. But, I spent 12 years trying to package ideas so others could make sense of them. That's also 12 years of seeing what it takes to go from not knowing to knowing. I figured out where to take shortcuts and where to take the long way.
+
+While studying I covered linked-lists, stacks, queues, sorting, and binary trees pretty thoroughly. I grokked Big O notation. And saw a little bit of graphs and tries. I did all of the LeetCode questions from the [Easy Top Interview Questions](https://leetcode.com/explore/featured/card/top-interview-questions-easy/) collection and a bunch of other problems from [Project Euler](https://projecteuler.net/) and [CodeWars](https://www.codewars.com/).
+
+### Other random things
+
+- I used to be pretty into digital photograph, so I was familiar with the Adobe Creative Suite
+- I hosted my projects on Heroku
+- I bought my domains from AWS
+- I tried a Gatsby, Hugo, and Jekyll. All 3 of which are static site generators
+- I spent a good bit of time working on getting more efficient in VS Code with custom snippets and shortcuts
+- I did most of a Udemy course on Docker but a lot of it went over my head
+- I'd messed around with Wordpress themes a few times, so I'd seen PHP before
+
+## Conclusion
+
+Woof. That was a lot.
+
+If you are just getting started on you developer journey don't let that the length of that list intimidate you. For many of these areas, my understanding was quite shallow -- think: watched a few YouTube videos or read a blog post. You definitely don't need to "know" all of these things.
+
+When I got hired, I was confident with JS, React, and basic data structures and algorithms (though definitely not an expert). But my bits of understanding and experience in other areas helped provide context and background when I encountered new ideas at Nextdoor. They helped me be a fast learner.
+
+I'd encourage anyone looking for their first job and teaching themselves to code to get comfortable in a few areas and then stay curious, read about, and dabble in other technologies. There are only so many patterns and approaches and you'll find that experience with one technology often translates to others.
